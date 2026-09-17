@@ -1,4 +1,4 @@
-import { loader } from 'fumadocs-core/source';
+import { llms, loader } from 'fumadocs-core/source';
 import { toFumadocsSource } from 'fumadocs-mdx/runtime/server';
 import { docs, meta } from 'collections/server';
 import { icons } from 'lucide-react';
@@ -17,4 +17,11 @@ export const source = loader({
 
     return createElement(Icon);
   },
+});
+
+export const docsLlms = llms(source, {
+  renderPage: async (page) =>
+    `# ${page.data.title} (${page.url})
+
+${await page.data.getText('processed')}`,
 });
