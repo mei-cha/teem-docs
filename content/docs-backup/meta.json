@@ -1,0 +1,25 @@
+﻿{
+  "title": "Teem.id",
+  "pages": [
+    "index",
+
+    "---PENGENALAN---",
+    "pengenalan/gambaran-umum",
+    "pengenalan/tampilan-teem",
+
+    "---PANDUAN PENGGUNA BARU---",
+    "panduan-pengguna-baru/pendaftaran",
+    "panduan-pengguna-baru/login",
+
+    "---MENU ADMIN---",
+    "administrator",
+    "penjualan",
+    "pembelian",
+    "kemitraan",
+    "keuangan",
+    "produk",
+    "kupon-poin",
+    "master-data",
+    "dukungan"
+  ]
+}

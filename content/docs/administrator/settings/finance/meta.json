@@ -1,0 +1,8 @@
+﻿{
+    "title":  "Keuangan",
+    "icon":  "WalletCards",
+    "pages":  [
+                  "aplication-fee",
+                  "withdraw"
+              ]
+}

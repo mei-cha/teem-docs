@@ -1,0 +1,59 @@
+﻿---
+title: Master Data Bank
+icon: Landmark
+---
+Halaman **Master Data Bank** digunakan oleh Administrator untuk mengelola daftar bank yang didukung di sistem **Teem.id**. Data ini digunakan sebagai pilihan opsi bank saat mitra mengajukan pendaftaran maupun penarikan dana (*withdraw*).
+
+## Ringkasan Indikator Bank
+
+Di bagian atas halaman, terdapat 2 kartu informasi:
+* **Total Bank:** Jumlah keseluruhan bank yang terdaftar di dalam sistem (contoh: *156 Bank terdaftar*).
+* **Bank Aktif:** Jumlah bank yang saat ini dalam status aktif dan dapat dipilih oleh pengguna/mitra (contoh: *156 Bisa digunakan*).
+
+## Alur Mengelola & Memfiltrasi Data Bank (Step-by-Step)
+
+### Langkah 1: Mencari & Memfilter Tampilan Data
+1. Buka modul **Master Data > Bank**.
+2. **Pencarian Cepat:** Gunakan kolom input **Cari bank / kode...** di sebelah kiri untuk mencari nama bank atau kode singkat (contoh: ketik *BCA* atau *ALLO*).
+3. **Penyaringan Berdasarkan Status (Dropdown Semua Status):**  
+   Klik menu dropdown **Semua Status** untuk menyaring baris tabel yang tampil:
+   * **Semua Status:** Menampilkan seluruh bank baik yang aktif maupun nonaktif.
+   * **Aktif:** Hanya menampilkan bank yang sedang diizinkan untuk transaksi.
+   * **Nonaktif:** Hanya menampilkan bank yang sedang dimatikan dari pilihan sistem.
+
+### Langkah 2: Mengatur Tampilan Kolom Tabel (Visibilitas Kolom)
+Di sebelah kiri tombol **+ Tambah**, terdapat ikon **Pengaturan Kolom (Ikon Sakelar / Sliders)**. Fitur ini berfungsi untuk menyembunyikan atau menampilkan kolom tertentu pada tabel:
+1. Klik ikon **Pengaturan Kolom**.
+2. Centang atau hapus centang pada opsi yang muncul:
+   * **Kode:** Menampilkan/menyembunyikan kolom kode bank pada tabel.
+   * **Status:** Menampilkan/menyembunyikan kolom label status pada tabel.
+
+### Langkah 3: Menambah Bank Baru
+1. Klik tombol **+ Tambah** berwarna merah di pojok kanan atas.
+2. Pada modal **Tambah Bank**:
+   * Masukkan **Kode \*** bank (contoh: `BCA`).
+   * Masukkan **Nama \*** bank (contoh: `Bank Central Asia`).
+   * Aktifkan sakelar **Aktif** agar bank dapat langsung digunakan.
+3. Klik tombol **Tambah**.
+
+### Langkah 4: Mengedit Data Bank
+1. Cari bank pada tabel, lalu klik ikon **Pensil (Edit)** pada kolom **Aksi**.
+2. Pada modal **Edit Bank**, ubah **Kode**, **Nama**, atau status **Aktif** sesuai kebutuhan.
+3. Klik tombol **Simpan**.
+
+### Langkah 5: Mengubah Status Cepat & Menghapus Bank
+Pada kolom **Aksi** di tabel, gunakan tombol pintas:
+* **Ikon Toggle (Sakelar Merah):** Mengubah status bank (*Aktif/Nonaktif*) secara langsung tanpa perlu membuka pop-up edit.
+* **Ikon Pensil:** Membuka jendela pengubahan data bank.
+* **Ikon Tempat Sampah:** Menghapus data bank dari sistem jika tidak lagi digunakan.
+
+## Tabel Fitur Penyaringan & Kolom
+
+| Fitur | Jenis | Fungsi Utama |
+| :--- | :--- | :--- |
+| **Dropdown Status** | Filter | Memilih filter data berdasarkan status (*Semua Status*, *Aktif*, *Nonaktif*). |
+| **Ikon Sliders** | Pengaturan Kolom | Menyesuaikan tampilan kolom tabel (centang *Kode* atau *Status* untuk menampilkan/menyembunyikan). |
+| **Tombol Toggle (Aksi)** | Kontrol Cepat | Mengaktifkan atau mematikan status operasional bank secara instan. |
+
+> **Tips**  
+> Jika tabel terasa penuh, gunakan ikon **Pengaturan Kolom** untuk menyembunyikan kolom yang tidak sedang Anda periksa agar tampilan tabel di layar menjadi lebih ringkas.

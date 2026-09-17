@@ -1,0 +1,8 @@
+﻿{
+  "title": "Kupon & Poin",
+  "icon":"Ticket",
+  "pages": [
+    "kupon",
+    "leaderboard-poin"
+  ]
+}

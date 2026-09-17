@@ -1,0 +1,76 @@
+﻿---
+title: Kelola Daftar Produk
+icon: Package
+---
+
+Halaman **Produk** digunakan oleh Administrator untuk mengelola seluruh katalog barang pada platform **Teem.id**, mulai dari pencarian, penyaringan, ekspor data, hingga penambahan produk baru beserta rincian spesifikasi, satuan, aturan poin reward, dan galeri media.
+
+---
+
+## Alur Mengelola Produk (Step-by-Step)
+
+### Langkah 1: Pencarian & Filter Data Produk
+1. Masuk ke modul **Produk**.
+2. **Pencarian Cepat:** Gunakan kolom input **Cari...** di pojok kiri atas untuk menyaring produk berdasarkan nama barang atau kode SKU.
+3. **Filter Status (Dropdown Semua Status):** Menyaring daftar barang berdasarkan status keaktifan di platform (*Aktif* atau *Nonaktif*).
+4. **Filter Kategori (Dropdown Semua Kategori):** Menyaring barang berdasarkan kelompok kategori tertentu.
+5. **Pengaturan Kolom (Ikon Sliders):** Menampilkan atau menyembunyikan kolom tertentu pada tabel.
+6. **Tombol Export:** Mengunduh daftar data produk ke dalam berkas spreadsheet.
+
+---
+
+### Langkah 2: Menambah Produk Baru
+1. Klik tombol **+ Tambah** berwarna merah di pojok kanan atas halaman.
+2. Halaman akan beralih ke formulir **Tambah Produk Baru**. Lengkapi bagian-bagian berikut:
+
+#### A. Informasi Produk
+* **Nama Produk \*:** Masukkan nama lengkap barang yang akan ditampilkan ke pengguna.
+* **Slug:** Alamat URL unik produk (otomatis terisi berdasarkan nama produk).
+* **SKU:** Kode identifikasi unik stok barang (*Stock Keeping Unit*).
+* **Harga Dasar (Rp):** Nominal harga acuan dasar sebelum disesuaikan dengan skema matriks level mitra.
+* **Dimensi & Berat:** Masukkan nilai **Berat (gram)**, **Panjang (cm)**, **Lebar (cm)**, dan **Tinggi (cm)** untuk keperluan kalkulasi ongkos kirim ekspedisi.
+* **Deskripsi:** Tuliskan rincian informasi, keunggulan, atau spesifikasi barang.
+
+#### B. Satuan Produk
+* Klik tombol **+ Tambah** pada section Satuan Produk untuk menentukan variasi unit pengemasan barang (seperti *Pcs*, *Slop*, *Karton*) serta rasio konversinya.
+
+#### C. Aturan Poin Reward
+* Klik tombol **+ Tambah** pada section Aturan Poin Reward jika ingin menetapkan jumlah perolehan poin bonus bagi pembeli yang bertransaksi produk ini.
+
+#### D. Galeri Produk
+* Klik tombol **+ Tambah File** untuk mengunggah foto atau video pendukung produk.
+* **Ketentuan Berkas:** Format gambar JPG, PNG, WebP (maksimal 2MB) atau video MP4, WebM (maksimal 15MB).
+
+#### E. Pengaturan Panel Kanan
+* **Status:** Nyalakan sakelar toggle **Aktif** agar produk dapat dilihat oleh pengguna di platform.
+* **Kategori & Tipe:** Pilih **Kategori** kelompok barang pada dropdown dan tentukan **Tipe** produk.
+* **Foto Utama:** Klik area unggah **Foto Utama** untuk memilih gambar penutup (*cover*) utama produk (Maksimal 2MB, format JPG, PNG, atau WebP).
+
+3. Klik tombol **Simpan** berwarna merah di pojok kanan bawah untuk mengonfirmasi pembuatan produk.
+
+---
+
+### Langkah 3: Menggunakan Popover Menu Aksi
+Pada kolom **Aksi** di tabel utama, klik ikon **Tiga Titik (`...`)** pada baris produk yang ingin dikelola. Menu popover akan menampilkan 3 opsi pintas:
+
+* **Ikon Pensil (Edit):** Membuka kembali formulir data produk untuk memperbarui informasi, foto, atau harga dasar.
+* **Ikon Mata (Aktifkan / Nonaktifkan):** Mengubah status tayang produk secara instan. Jika produk sedang *Aktif*, opsi akan berubah menjadi *Nonaktifkan* (begitu pula sebaliknya).
+* **Ikon Tempat Sampah Merah (Hapus):** Menghapus produk secara permanen dari katalog database platform.
+
+---
+
+## Struktur Tabel Daftar Produk
+
+| Kolom | Fungsi & Keterangan |
+| :--- | :--- |
+| **Produk** | Gambar thumbnail, nama lengkap produk, serta tanggal pembuatan/pembaruan data. |
+| **SKU** | Kode unik identifikasi stok produk (*Stock Keeping Unit*). |
+| **Kategori** | Kelompok kategori produk. |
+| **Harga Dasar** | Nominal harga acuan awal barang dalam rupiah. |
+| **Status** | Badge indikator keaktifan penayangan produk (*Aktif* / *Nonaktif*). |
+| **Aksi** | Popover menu (`...`) berisi opsi **Edit**, **Aktifkan/Nonaktifkan**, dan **Hapus**. |
+
+---
+
+> **Tips Pengguna Awam**  
+> Gunakan opsi **Nonaktifkan** pada menu aksi jika produk sedang habis (*out of stock*) sementara waktu, agar data produk beserta histori penjualannya tidak terhapus dari sistem.

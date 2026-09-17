@@ -1,0 +1,83 @@
+﻿---
+title: Leaderboard Poin
+icon: Trophy
+---
+
+Halaman **Leaderboard Poin** digunakan oleh Administrator untuk memantau peringkat mitra atau konsumen berdasarkan perolehan poin imbalan (*reward points*) pada platform **Teem.id**, serta menelusuri rincian mutasi riwayat transaksi poin milik setiap pengguna.
+
+Data peringkat ini berguna untuk analisis loyalitas pengguna, evaluasi performa mitra, serta acuan pemberian apresiasi/reward periode tertentu.
+
+---
+
+## Perbedaan Opsi Tampilan Poin
+
+Di pojok kiri atas tabel, terdapat dua tombol beralih (*tab toggle*) mode perhitungan poin:
+
+### 1. Saldo Poin Saat Ini
+* **Definisi:** Menampilkan sisa poin bersih yang **masih dimiliki dan belum ditukarkan** (*redeem*) oleh pengguna saat ini.
+* **Sifat Nilai:** Bervariasi dan dapat berkurang apabila pengguna menukarkan poinnya dengan *reward* atau voucher belanja.
+* **Kegunaan Admin:** Memantau ketersediaan saldo poin aktif pengguna yang siap dipakai transaksi/penukaran imbalan.
+
+### 2. Total Poin (Lifetime)
+* **Definisi:** Menampilkan **akumulasi seluruh poin** yang pernah didapatkan pengguna sepanjang riwayat akunnya terbuat di sistem.
+* **Sifat Nilai:** Akumulatif dan tidak pernah berkurang, meskipun poin tersebut sudah pernah ditukarkan (*redeemed*).
+* **Kegunaan Admin:** Menjadi acuan murni peringkat loyalitas pengguna dari awal bergabung hingga saat ini.
+
+---
+
+## Alur Mengoperasikan Leaderboard Poin (Step-by-Step)
+
+### Langkah 1: Membuka Halaman Leaderboard
+1. Buka modul **Poin > Leaderboard Poin**.
+2. Halaman secara *default* akan menampilkan daftar peringkat pengguna berdasarkan **Saldo Poin Saat Ini**.
+
+---
+
+### Langkah 2: Mengubah Mode Peringkat (Toggle Tab)
+1. Klik tab **Saldo Poin Saat Ini** jika ingin melihat peringkat pengguna berdasarkan sisa poin aktif.
+2. Klik tab **Total Poin (Lifetime)** jika ingin melihat peringkat pengguna berdasarkan total poin historis terbanyak.
+3. Urutan peringkat pada tabel akan otomatis dimuat ulang sesuai opsi yang dipilih.
+
+---
+
+### Langkah 3: Pencarian Pengguna (Search)
+1. Gunakan kolom input **Cari nama mitra / pengguna...** di pojok kanan atas tabel.
+2. Ketikkan nama pengguna atau mitra yang ingin dicari (contoh: *Bimasakti Gunawan Beja* atau *Komang Ayu*).
+3. Tabel akan menyaring dan menampilkan urutan peringkat pengguna tersebut secara instan.
+
+---
+
+### Langkah 4: Meninjau Riwayat Transaksi Poin (Drill-Down)
+1. Pada tabel leaderboard, klik pada **Nama Pengguna** yang ingin Anda periksa riwayat poinnya (contoh: klik *Bimasakti Gunawan Beja*).
+2. Sistem akan membuka halaman **Riwayat Transaksi Poin** pengguna tersebut.
+3. Di bagian header profil, Admin dapat melihat ringkasan **Level Mitra** dan sisa **Saldo Poin Saat Ini**.
+4. Periksa mutasi arus poin pada tabel riwayat transaksi:
+   * **Masuk (+):** Poin bertambah (ditandai *badge* hijau) dari transaksi pembelanjaan (contoh: *Poin dari pesanan INV-26090200091*).
+   * **Keluar (-):** Poin berkurang (ditandai *badge* merah) akibat penggunaan potongan harga saat *checkout*.
+5. Setiap baris transaksi dilengkapi dengan saldo setelah mutasi (**Saldo Sesudah**), kode nomor referensi (**Ref**), serta stempel **Waktu** terjadinya transaksi.
+
+---
+
+## Struktur Tabel Leaderboard & Riwayat
+
+### 1. Tabel Utama Leaderboard
+| Kolom | Fungsi & Keterangan |
+| :--- | :--- |
+| **Peringkat** | Urutan posisi peringkat pengguna (dimulai dari peringkat 1). |
+| **Nama** | Nama lengkap akun pengguna/mitra (dapat diklik untuk melihat riwayat transaksi poin). |
+| **Level** | Label jenjang keanggotaan akun (contoh: *distributor*, *konsumen*, *agen*). |
+| **Saldo Poin / Total Poin** | Jumlah poin pengguna (menyesuaikan dengan mode tab yang aktif). |
+
+### 2. Tabel Detail Riwayat Transaksi Poin
+| Kolom | Fungsi & Keterangan |
+| :--- | :--- |
+| **Tipe** | Indikator jenis mutasi poin (*Masuk (+)* atau *Keluar (-)*). |
+| **Poin** | Nominal penambahan atau pengurangan jumlah poin. |
+| **Saldo Sesudah** | Sisa kalkulasi saldo poin pengguna setelah transaksi tersebut terjadi. |
+| **Keterangan / Ref** | Catatan alasan mutasi poin beserta nomor ID invoice/referensinya. |
+| **Waktu** | Informasi stempel waktu kapan transaksi poin terjadi (contoh: *14 hari yang lalu*). |
+
+---
+
+> **Tips Pengguna Awam**  
+> Jika seorang mitra mengklaim poin transaksi belanjaannya belum masuk, Admin dapat mengeklik nama mitra tersebut di Leaderboard lalu memeriksa baris mutasi **Masuk (+)** pada **Riwayat Transaksi Poin** untuk mencocokkan nomor *Ref* Invoice-nya.

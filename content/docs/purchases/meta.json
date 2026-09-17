@@ -1,0 +1,8 @@
+﻿{
+    "title":  "Pembelian",
+    "icon":  "ShoppingBag",
+    "pages":  [
+                  "stock-purchase",
+                  "company-stock"
+              ]
+}

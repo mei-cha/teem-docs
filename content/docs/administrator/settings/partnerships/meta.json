@@ -1,0 +1,11 @@
+﻿{
+    "title":  "Kemitraan",
+    "icon":  "Handshake",
+    "pages":  [
+                  "level",
+                  "deposit",
+                  "document",
+                  "contract-duration",
+                  "top-5"
+              ]
+}

@@ -1,0 +1,23 @@
+﻿{
+  "title": "Teem.id",
+  "pages": [
+    "index",
+    "---PENGENALAN---",
+    "introduction/overview",
+    "introduction/teem-display",
+    "---PERSIAPAN---",
+    "initial-setup/import-partners",
+    "initial-setup/import-stock",
+    "initial-setup/wallet-cutover",
+    "---MENU ADMIN---",
+    "sales",
+    "purchases",
+    "partnerships",
+    "finance",
+    "products",
+    "coupons-points",
+    "master-data",
+    "administrator",
+    "support"
+  ]
+}

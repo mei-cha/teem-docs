@@ -1,0 +1,85 @@
+﻿---
+title: Master Data Biaya Payout
+icon: Banknote
+---
+
+Halaman **Biaya Layanan Payout Xendit** digunakan oleh Administrator untuk mengonfigurasi potongan biaya pencairan dana (*payout/disbursement fee*) beserta Pajak Pertambahan Nilai (PPN) dari penyedia gerbang pembayaran (Xendit) ketika sistem mentransfer dana *withdraw* ke rekening pribadi mitra.
+
+Biaya ini akan menjadi acuan pemotongan otomatis pada saat proses penarikan saldo mitra berhasil dieksekusi.
+
+---
+
+## Penjelasan Kartu Statistik (Stat Card)
+
+Di bagian atas halaman, terdapat 3 **Stat Card** (kartu indikator ringkasan) untuk memantau status saluran pencairan dana:
+
+### 1. Total Fee (Ikon Kartu Kredit)
+* **Angka Utama:** Menampilkan total akumulasi saluran pencairan (*channel disbursement*) yang terdaftar di dalam sistem (contoh: **1**).
+* **Fungsi:** Membantu Admin melihat berapa banyak aturan biaya pencairan yang terkonfigurasi.
+
+### 2. Aktif (Ikon Centang Hijau)
+* **Angka Utama:** Menampilkan jumlah saluran pencairan dana yang sedang berstatus aktif (contoh: **1**).
+* **Fungsi:** Membantu Admin memastikan aturan biaya pencairan dana mana saja yang sedang memotong transaksi pencairan mitra.
+
+### 3. Nonaktif (Ikon Silang Merah)
+* **Angka Utama:** Menampilkan jumlah saluran pencairan yang sedang dimatikan/ditangguhkan (contoh: **0**).
+* **Fungsi:** Membantu Admin memantau aturan biaya pencairan yang sedang tidak diberlakukan.
+
+---
+
+## Alur Mengelola Biaya Payout Xendit (Step-by-Step)
+
+### Langkah 1: Mencari & Memfilter Data Payout
+1. Masuk ke modul **Master Data > Biaya Payout**.
+2. **Pencarian Cepat:** Gunakan kolom input **Cari...** di sebelah kiri untuk mencari nama saluran pencairan (contoh: ketik *Default Disbursement* atau *BCA*).
+3. **Filter Status (Dropdown Semua Status):**  
+   Klik menu dropdown ini untuk menyaring tabel berdasarkan status:
+   * **Semua Status:** Menampilkan seluruh saluran pencairan baik aktif maupun nonaktif.
+   * **Aktif:** Hanya menampilkan saluran pencairan yang siap digunakan.
+   * **Nonaktif:** Hanya menampilkan saluran pencairan yang sedang dimatikan.
+
+---
+
+### Langkah 2: Menambah Fee Payout Baru
+1. Klik tombol **+ Tambah** berwarna merah di pojok kanan atas.
+2. Pada modal pop-up **Tambah Fee Payout Xendit**, lengkapi parameter:
+   * **Kode Channel \*:** Masukkan kode pengenal saluran pencairan (contoh: `BCA` atau `DEFAULT`).
+   * **Nama Tampilan \*:** Masukkan nama saluran pencairan yang mudah dipahami (contoh: `Bank BCA` atau `Default Disbursement`).
+   * **Tipe Fee \*:** Pilih skema potongan pada dropdown (contoh: `Flat (Rp)` untuk pemotongan nilai rupiah tetap).
+   * **Nilai Fee \* (Rp):** Masukkan nominal rupiah biaya pencairan per transaksi (contoh: isi `2500` untuk fee Rp 2.500).
+   * **PPN (%) \*:** Masukkan persentase pajak transaksi (contoh: `11,00` untuk PPN 11%).
+   * **Aktif (Sakelar Toggle):** Nyalakan sakelar ke warna merah agar aturan pencairan dana ini langsung berlaku.
+3. Klik tombol **Tambah** untuk menyimpan data.
+
+---
+
+### Langkah 3: Mengedit Data Fee Payout (Edit)
+1. Cari baris saluran pencairan yang ingin diperbarui pada tabel.
+2. Pada kolom **Aksi**, klik ikon **Pensil (Edit)**.
+3. Pada modal **Edit Fee Payout Xendit**, sesuaikan nominal **Nilai Fee (Rp)**, **PPN (%)**, atau **Nama Tampilan** sesuai perbaruan biaya resmi Xendit.
+4. Klik tombol **Simpan**.
+
+---
+
+### Langkah 4: Mengubah Status Cepat & Menghapus Fee Payout
+Pada kolom **Aksi**, gunakan 3 tombol kontrol pintas:
+* **Ikon Toggle (Sakelar Merah):** Mengubah status aturan pencairan (*Aktif/Nonaktif*) secara langsung tanpa membuka pop-up edit. *Perubahan ini akan langsung mengupdate angka pada Stat Card Aktif/Nonaktif.*
+* **Ikon Pensil:** Membuka jendela pop-up untuk mengubah data fee pencairan.
+* **Ikon Tempat Sampah:** Menghapus aturan biaya pencairan dari sistem jika sudah tidak digunakan.
+
+---
+
+## Struktur Tabel Data Payout
+
+| Kolom | Fungsi & Keterangan |
+| :--- | :--- |
+| **Nama Channel** | Nama tampilan dan kode unik saluran pencairan (contoh: *Default Disbursement / DEFAULT*). |
+| **Fee Payout** | Nominal rupiah potongan biaya transfer per transaksi beserta tipenya (contoh: *Rp 2.500 / Fixed (Flat)*). |
+| **PPN** | Persentase beban Pajak Pertambahan Nilai (contoh: *11%*). |
+| **Status** | Label indikator operasional (*Aktif* / *Nonaktif*). |
+| **Aksi** | Terdiri dari tombol pintas **Toggle Status**, **Pensil (Edit)**, dan **Tempat Sampah (Hapus)**. |
+
+---
+
+> **Tips Pengguna Awam**  
+> Sebagian besar transfer pencairan dana menggunakan **Default Disbursement**. Pastikan nominal **Nilai Fee** pada saluran *default* ini diisi dengan benar agar potongan pencairan saldo mitra presisi dengan tagihan dari Xendit.

@@ -1,0 +1,84 @@
+---
+title: Import Stok Perusahaan
+icon: Boxes
+---
+
+Halaman **Import Stok** digunakan oleh Administrator untuk mengunggah dan memperbarui data persediaan barang awal (*initial stock*) dalam jumlah banyak (*bulk import*) ke dalam gudang penyimpanan perusahaan menggunakan berkas spreadsheet (Excel/CSV).
+
+Fitur ini mempermudah pencatatan penyesuaian stok (*stock cut-off*) secara kolektif tanpa perlu menginput persediaan produk satu per satu secara manual.
+
+---
+
+> **Catatan Sebelum Impor:**  
+> Pastikan **produk dan gudang sudah ditambahkan** pada menu *Produk* & *Gudang* sebelum melakukan impor. Selain itu, **jumlah stok wajib diisi dalam satuan terkecil produk**.
+
+---
+
+## Alur Melakukan Import Stok (Step-by-Step)
+
+Proses impor stok barang wajib mengikuti alur 5 tahap berikut agar persediaan fisik di gudang terdata secara presisi:
+
+### Langkah 1: Membuka Halaman & Mengunduh Template
+1. Buka modul **Stok Perusahaan**.
+2. Di pojok kanan atas halaman daftar stok, klik tombol **Import Stok**.
+3. Perhatikan catatan petunjuk di atas, lalu klik tombol **Download Template**. Berkas spreadsheet standar akan otomatis terunduh.
+
+---
+
+### Langkah 2: Mengisi Kolom Data Spreadsheet
+Buka berkas yang telah diunduh, lalu lengkapi kolom-kolom data stok sesuai ketentuan sistem:
+
+#### Rincian Struktur Kolom Template:
+
+| Header Kolom | Deskripsi Pengisian |
+| :--- | :--- |
+| **SKU Produk** | Kode unik identifikasi produk (*Stock Keeping Unit*). |
+| **Nama Gudang** | Nama gudang atau lokasi palet penyimpanan tujuan. |
+| **Jumlah Stok (satuan terkecil)** | Kuantitas jumlah stok barang yang diinput (wajib diisi dalam **satuan terkecil produk**). |
+
+---
+
+### Langkah 3: Mengunggah Berkas (Upload)
+1. Kembali ke halaman **Import Stok** di panel Administrator.
+2. Klik tombol **Upload** berwarna merah di sebelah tombol *Download Template*.
+3. Pilih berkas spreadsheet persediaan yang telah diisi dari perangkat komputer Anda.
+4. Tunggu beberapa saat hingga sistem selesai membaca dan memverifikasi isi berkas.
+
+---
+
+### Langkah 4: Memeriksa Hasil Validasi & Eksekusi Impor
+Setelah berkas diunggah, periksa indikator validasi di atas tabel:
+* **Indikator Valid (Centang Hijau):** Jumlah baris data persediaan yang lolos verifikasi dan siap dimasukkan ke gudang.
+* **Indikator Bermasalah (Tanda Seru Merah):** Jumlah baris data yang mengalami kendala/error.
+
+#### Meninjau Tabel Validasi:
+
+| Kolom Tabel | Keterangan & Deskripsi Fungsi |
+| :--- | :--- |
+| **Baris** | Menunjukkan nomor baris lokasi data pada berkas Excel Anda. |
+| **SKU** | Kode pengenal unik produk yang diverifikasi. |
+| **Gudang** | Nama lokasi gudang atau palet tujuan pengalokasian stok. |
+| **Jumlah Cut-off** | Kuantitas unit persediaan produk yang diajukan. |
+| **Status** | Label hasil verifikasi sistem (*Valid* berwarna hijau, atau pesan rincian *Error* berwarna merah). |
+
+#### Menyelesaikan Impor:
+* Jika terdapat data bermasalah pada kolom **Status** (misal: *SKU tidak ditemukan* atau *Gudang tidak valid*), perbaiki baris data tersebut pada berkas Excel Anda lalu unggah kembali.
+* Jika seluruh data sudah tervalidasi (*Valid*), klik tombol **Import** berwarna merah di pojok kanan bawah untuk memasukkan nilai stok awal ke dalam database gudang secara resmi.
+
+---
+
+## Ringkasan Fungsi Elemen Utama
+
+| Elemen | Jenis | Fungsi Utama |
+| :--- | :--- | :--- |
+| **Kotak Catatan** | Petunjuk Penting | Menekankan prasyarat data master (SKU & Gudang) serta acuan satuan terkecil. |
+| **Download Template** | Tombol | Mengunduh berkas acuan spreadsheet stok resmi. |
+| **Upload** | Tombol | Mengunggah berkas Excel stok yang telah diisi. |
+| **Badge Valid & Bermasalah** | Indikator | Ringkasan jumlah baris data stok yang sukses vs error. |
+| **Kolom Status Tabel** | Informasi Status | Menampilkan label *Valid* atau alasan error penolakan stok. |
+| **Tombol Import** | Eksekusi | Memasukkan seluruh data persediaan barang tervalidasi ke gudang. |
+
+---
+
+> **Tips Pengguna Awam**  
+> Pastikan penulisan nama gudang dan SKU di berkas Excel sama persis dengan data yang sudah terdaftar di sistem (perhatikan huruf besar dan kecilnya) agar tidak memicu error saat validasi.

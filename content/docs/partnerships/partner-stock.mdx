@@ -1,0 +1,66 @@
+﻿---
+title: Stok Mitra
+icon: Boxes
+---
+Halaman **Stok Mitra** digunakan oleh Administrator untuk memantau ketersediaan dan sebaran persediaan barang (*inventory*) yang dikuasai oleh masing-masing mitra di setiap wilayah operasional pada platform **Teem.id**.
+
+Pemantauan stok ini berguna untuk mengukur kapasitas pemenuhan pesanan (*fulfillment*) di tingkat mitra serta menjadi pertimbangan sebelum mengalokasikan penugasan pesanan baru.
+
+---
+
+## Alur Memantau Stok Mitra (Step-by-Step)
+
+### Langkah 1: Membuka Halaman & Mengatur Filter Data
+1. Masuk ke modul **Stok Perusahaan > Stok Mitra** (atau **Kemitraan > Stok Mitra**).
+2. Tentukan kriteria penyaringan data pada panel **FILTER DATA**:
+   * **Level:** Menyaring tingkatan mitra (*Distributor*, *Agen*, *Sub Agen*).
+   * **Wilayah (Provinsi, Kab/Kota, Kecamatan, Desa/Kelurahan):** Menyaring sebaran mitra di lokasi geografis tertentu secara berjenjang.
+3. Klik tombol **Tampilkan** berwarna merah untuk menerapkan penyaringan pada tabel.
+
+---
+
+### Langkah 2: Mengubah Opsi Mode Tampilan Tabel
+Pilih salah satu sakelar mode pada bagian **Tampilan**:
+
+#### A. Mode Top 5 Produk
+* **Cara Kerja:** Menampilkan matriks persediaan barang secara mendatar (*horizontal matrix*) khusus untuk 5 produk teratas.
+* **Tampilan Tabel:** Setiap kolom akan langsung menampilkan nama produk utama beserta nominal jumlah unit stok milik tiap mitra.
+* **Pengaturan Kustom:** Klik teks **Atur Top 5 Produk** di bawah panel filter untuk menentukan 5 jenis produk unggulan yang ingin ditampilkan pada kolom matriks.
+
+#### B. Mode Semua Produk
+* **Cara Kerja:** Menampilkan ringkasan data mitra secara vertikal sederhana.
+* **Tampilan Tabel:** Memuat kolom *Id Mitra*, *Nama*, *Level*, *Wilayah*, dan *Total* akumulasi stok.
+* **Drill-Down Detail:** Klik ikon panah `>` di sebelah kiri ID Mitra untuk membuka daftar rincian persediaan seluruh jenis produk yang dimiliki oleh mitra tersebut.
+
+---
+
+### Langkah 3: Mengunduh Laporan Stok (Export)
+1. Setelah mengatur filter dan mode tampilan yang sesuai, klik tombol **Export** di sebelah kanan indikator hasil pencarian.
+2. Sistem akan mengunduh berkas laporan sebaran stok mitra ke dalam perangkat komputer Anda.
+
+---
+
+## Struktur Tabel Stok Mitra
+
+### 1. Mode Tampilan: Top 5 Produk
+| Kolom | Fungsi & Keterangan |
+| :--- | :--- |
+| **Id Mitra** | Kode unik identifikasi akun mitra. |
+| **Level** | Tingkatan kemitraan akun (*Distributor*, *Agen*, *Sub Agen*). |
+| **[Nama Produk 1 - 5]** | Kolom matriks dinamis yang menampilkan nominal kuantitas stok per produk. |
+| **Total** | Akumulasi keseluruhan jumlah unit stok dari produk yang ditampilkan. |
+
+### 2. Mode Tampilan: Semua Produk
+| Kolom | Fungsi & Keterangan |
+| :--- | :--- |
+| **[>] (Expand)** | Tombol panah untuk membuka rincian persediaan barang milik mitra. |
+| **Id Mitra** | Kode unik identifikasi akun mitra. |
+| **Nama** | Nama lengkap pemilik akun mitra. |
+| **Level** | Tingkatan kemitraan akun. |
+| **Wilayah** | Alamat lokasi domisili/cakupan wilayah operasional mitra. |
+| **Total** | Akumulasi total kuantitas unit barang yang dimiliki mitra. |
+
+---
+
+> **Tips Pengguna Awam**  
+> Gunakan mode **Top 5 Produk** untuk memantau pergerakan produk *fast-moving* secara cepat, dan gunakan mode **Semua Produk** saat ingin memeriksa audit persediaan barang secara menyeluruh pada satu mitra tertentu.

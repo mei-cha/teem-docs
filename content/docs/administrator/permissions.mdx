@@ -1,0 +1,30 @@
+﻿---
+title: Permission
+icon: ShieldCheck
+---
+Halaman **Permission** digunakan oleh Administrator untuk mengatur hak akses fitur secara spesifik di platform **Teem.id**. Pengaturan ini memastikan setiap peran (*role*) hanya dapat membuka menu dan menjalankan fungsi yang diizinkan.
+
+## Ringkasan Informasi Permission
+
+* **Permission:** Menampilkan total modul izin akses unik yang terdaftar di dalam sistem (contoh: *9 Total Permission*).
+* **Role Permission:** Menampilkan total relasi keterikatan antara hak akses dengan peran tertentu (contoh: *11 Relasi Role-Permission*).
+
+
+## Alur Mengelola Hak Akses Sistem (Step-by-Step)
+
+### Langkah 1: Akses Menu & Pilihan Tab
+1. Buka menu **Administrator > Permission**.
+2. Pilih tab **Permission** untuk melihat daftar kunci izin akses, atau tab **Role Permission** untuk memetakan kunci izin akses ke role tertentu.
+
+### Langkah 2: Menambah Hak Akses Baru
+1. Klik tombol **+ Tambah** di pojok kanan atas.
+2. Masukkan nama **Deskripsi** fungsi (contoh: *Lihat Penjualan*) dan kode **Permission** (contoh: `lihat.penjualan`).
+3. Klik **Simpan**.
+
+## Struktur Tabel Permission
+
+| Kolom | Deskripsi Fungsi |
+| :--- | :--- |
+| **Deskripsi** | Penjelasan fungsi hak akses yang dapat dimengerti manusia (contoh: *Akses Menu Support & Tiket*, *Dashboard Utama*, *Lihat Penjualan*). |
+| **Permission** | Kode teknis penamaan hak akses sistem (contoh: `support.lihat`, `dashboard.lihat`, `mitra.lihat`, `lihat.penjualan`, `produk.lihat`). |
+| **Aksi** | Tombol **Pensil** untuk mengubah deskripsi/kode dan **Tempat Sampah** untuk merilis/menghapus hak akses. |

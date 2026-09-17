@@ -1,0 +1,9 @@
+{
+      "title": "Persiapan Awal",
+      "icon": "Settings",
+      "pages": [
+        "wallet-cutover",
+        "import-stock",
+        "import-partners"
+      ]
+    }

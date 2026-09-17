@@ -1,0 +1,95 @@
+﻿---
+title: Wilayah
+icon: MapPin
+---
+
+Halaman **Master Data Wilayah** digunakan oleh Administrator untuk mengelola struktur data geografis Indonesia di dalam sistem **Teem.id**. Data wilayah ini digunakan sebagai acuan penetapan lokasi pengiriman, alamat kantor pusat, serta penentuan batas area distribusi mitra.
+
+Sistem menggunakan navigasi hirarki berjenjang (*drill-down*): **Provinsi > Kota/Kabupaten > Kecamatan > Desa/Kelurahan**.
+
+---
+
+## Alur Navigasi Wilayah Berjenjang (Step-by-Step)
+
+### Level 1: Tampilan Provinsi
+1. Masuk ke modul **Master Data > Wilayah**.
+2. Halaman pertama yang tampil adalah **Provinsi** (ditandai jejak navigasi *Semua Provinsi*).
+3. Tabel menampilkan daftar nama provinsi beserta koordinat lokasi (**Latitude** dan **Longitude**).
+4. **Masuk ke Level Kota/Kabupaten:** Klik pada salah satu **Nama Provinsi** yang memiliki tanda panah `>` (contoh: klik *ACEH >*).
+
+---
+
+### Level 2: Tampilan Kota/Kabupaten
+1. Setelah provinsi dipilih, judul halaman berubah menjadi **Kota/Kabupaten**.
+2. Jejak navigasi (*breadcrumbs*) di bagian atas akan menampilkan: `Semua Provinsi > ACEH`.
+3. Gunakan kolom **Cari kota/kabupaten...** jika ingin menemukan daerah tertentu.
+4. **Masuk ke Level Kecamatan:** Klik pada salah satu **Nama Kota/Kabupaten** yang memiliki tanda panah `>` (contoh: klik *KABUPATEN ACEH BARAT >*).
+
+---
+
+### Level 3: Tampilan Kecamatan
+1. Judul halaman berubah menjadi **Kecamatan**.
+2. Jejak navigasi di bagian atas menampilkan: `Semua Provinsi > ACEH > KABUPATEN ACEH BARAT`.
+3. Tabel menampilkan daftar kecamatan beserta data titik koordinatnya.
+4. **Masuk ke Level Desa/Kelurahan:** Klik pada salah satu **Nama Kecamatan** yang memiliki tanda panah `>` (contoh: klik *ARONGAN LAMBALEK >*).
+
+---
+
+### Level 4: Tampilan Desa/Kelurahan (Tingkat Akhir)
+1. Judul halaman berubah menjadi **Desa/Kelurahan** (merupakan tingkatan wilayah paling dasar/mentok).
+2. Jejak navigasi di bagian atas menampilkan: `Semua Provinsi > ACEH > KABUPATEN ACEH BARAT > ARONGAN LAMBALEK`.
+3. Pada level ini, tabel menampilkan kolom data tambahan berupa **Kode Pos**, **Latitude**, dan **Longitude**.
+4. Karena sudah merupakan hirarki paling dasar, nama desa/kelurahan tidak lagi memiliki tanda panah `>` dan tidak dapat diklik masuk lebih dalam lagi.
+
+---
+
+## Alur Menambah, Mengedit, dan Menghapus Wilayah (Step-by-Step)
+
+Administrator dapat menambah data wilayah baru, mengubah koordinat/nama, atau menghapus entitas daerah pada setiap level hirarki yang sedang dibuka:
+
+### 1. Menambah Wilayah Baru
+1. Buka level wilayah tempat data baru ingin ditambahkan (misal: di level Provinsi atau Kecamatan).
+2. Klik tombol **+ Provinsi** (atau **+ Kota/Kabupaten**, **+ Kecamatan**, **+ Desa**) berwarna merah di pojok kanan atas.
+3. Pada jendela pop-up **Tambah Wilayah**:
+   * Masukkan **Nama Wilayah \*** (contoh: *Jawa Timur*).
+   * Masukkan koordinat lokasi **Latitude** dan **Longitude** (contoh: `-7.123456` dan `112.123456`).
+   * *(Khusus level Desa/Kelurahan)* Masukkan angka **Kode Pos**.
+4. Klik tombol **Tambah**. Data baru akan otomatis terdaftar di bawah induk wilayah yang sedang dibuka.
+
+### 2. Mengedit Data Wilayah (Edit)
+1. Cari nama wilayah yang ingin diperbarui pada tabel.
+2. Pada kolom **Aksi** di baris wilayah tersebut, klik ikon **Pensil (Edit)**.
+3. Pada jendela pop-up **Edit Wilayah**:
+   * Sesuaikan pengisian **Nama Wilayah**, **Latitude**, **Longitude**, atau **Kode Pos**.
+4. Klik tombol **Simpan** untuk mengonfirmasi perubahan data.
+
+### 3. Menghapus Data Wilayah (Hapus)
+1. Cari baris wilayah yang ingin dihapus.
+2. Pada kolom **Aksi**, klik ikon **Tempat Sampah (Hapus)** berwarna merah.
+3. Pada dialog konfirmasi yang muncul, klik **Ya, Hapus** untuk menghapus data daerah tersebut dari database sistem.
+
+---
+
+## Menggunakan Jejak Navigasi (Breadcrumbs) untuk Kembali
+
+Untuk kembali ke tingkatan wilayah sebelumnya tanpa perlu memuat ulang halaman:
+* Klik salah satu nama wilayah pada baris jejak navigasi di bawah judul halaman:
+  * Klik **Semua Provinsi** untuk melompat kembali ke daftar paling awal.
+  * Klik **Nama Provinsi** atau **Nama Kabupaten** untuk kembali ke level menengah yang diinginkan.
+
+---
+
+## Struktur Tabel Data Wilayah
+
+| Kolom | Tampil di Level | Fungsi & Keterangan |
+| :--- | :--- | :--- |
+| **Nama** | Semua Level | Nama daerah. Memiliki tanda panah `>` untuk masuk ke level di bawahnya (kecuali level Desa). |
+| **Kode Pos** | Desa/Kelurahan | 5 digit angka kode pos pengiriman. |
+| **Latitude** | Semua Level | Titik koordinat garis lintang peta. |
+| **Longitude** | Semua Level | Titik koordinat garis bujur peta. |
+| **Aksi** | Semua Level | Terdiri dari ikon **Pensil** (buka pop-up edit nama/koordinat) dan **Tempat Sampah** (hapus data wilayah). |
+
+---
+
+> **Tips**  
+> Berhati-hatilah saat menghapus data wilayah pada level atas (seperti Provinsi atau Kabupaten), karena menghapus entitas induk dapat berdampak pada ketersediaan pilihan data wilayah turunan di bawahnya.

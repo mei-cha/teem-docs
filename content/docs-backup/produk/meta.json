@@ -1,0 +1,10 @@
+﻿{
+  "title": "Produk",
+  "icon":"Package",
+  "pages": [
+    "kategori",
+    "produk",
+    "harga-jual",
+    "satuan"
+  ]
+}

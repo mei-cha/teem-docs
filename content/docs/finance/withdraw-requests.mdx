@@ -1,0 +1,74 @@
+﻿---
+title: Persetujuan Withdraw
+icon: CheckCircle
+---
+
+Halaman **Persetujuan Withdraw** digunakan oleh Administrator Keuangan untuk meninjau, menyetujui (*approval*), atau menolak permohonan penarikan saldo aktif dari mitra ke rekening bank pribadi mereka pada platform **Teem.id**.
+
+Setiap penarikan dana yang masuk wajib diverifikasi agar nominal transfer dan data rekening tujuan mitra sesuai dengan catatan finansial perusahaan.
+
+---
+
+## Alur Mengelola Persetujuan Withdraw (Step-by-Step)
+
+### Langkah 1: Membuka Halaman & Pencarian Pengajuan
+1. Masuk ke modul **Keuangan > Persetujuan Withdraw**.
+2. **Pencarian Cepat:** Gunakan kolom input **Cari pengajuan...** di pojok kanan atas untuk menyaring permohonan berdasarkan nama pemohon atau ID mitra.
+3. Halaman terbagi menjadi dua area utama: tabel **Pengajuan Menunggu Persetujuan** (bagian atas) dan **Riwayat Pengajuan** (bagian bawah).
+
+---
+
+### Langkah 2: Menyetujui Penarikan Saldo (Setujui)
+1. Periksa rincian permohonan pada tabel **Pengajuan Menunggu Persetujuan**:
+   * **Id & Level:** ID unik dan tingkatan kemitraan pemohon.
+   * **Nama Pemohon:** Nama pemilik akun penarik saldo.
+   * **Rekening Tujuan:** Nama bank/e-wallet, nomor rekening (termasyhur sebagian), dan nama pemilik rekening.
+   * **Nominal:** Jumlah dana rupiah yang ingin ditarik.
+   * **Tgl Pengajuan:** Waktu stempel saat mitra mengajukan penarikan.
+2. Jika seluruh data rekening dan nominal sudah sesuai, klik tombol **✓ Setujui** berwarna hijau pada kolom **Aksi**.
+3. Sistem akan memproses pencairan dana dan memindahkan baris pengajuan tersebut ke tabel **Riwayat Pengajuan** dengan status *Disetujui*.
+
+---
+
+### Langkah 3: Menolak Penarikan Saldo (Tolak)
+1. Jika terdapat ketidaksesuaian data (seperti nomor rekening tidak valid atau nama pemohon berbeda), klik tombol **✕ Tolak** berwarna merah pada kolom **Aksi**.
+2. Pada modal pop-up **Tolak Withdraw**, periksa rincian nominal penarikan yang akan ditolak.
+3. Tuliskan alasan spesifik penolakan pada kolom teks yang disediakan (contoh: *Nomor rekening tidak valid atau data pemilik berbeda*).
+4. Klik tombol **Tolak** berwarna merah untuk mengonfirmasi penolakan. Saldo penarikan akan dikembalikan ke dompet akun mitra dan pengajuan masuk ke riwayat dengan status *Ditolak*.
+
+---
+
+### Langkah 4: Memantau Riwayat Pengajuan
+Pada bagian bawah halaman, Administrator dapat memantau seluruh transaksi penarikan saldo yang pernah diproses:
+1. **Filter Status:** Gunakan dropdown **Semua Status** untuk menyaring riwayat berdasarkan status transaksi (*Disetujui* atau *Ditolak*).
+2. **Filter Periode:** Gunakan dropdown periode (contoh: *Tahun Ini*) untuk membatasi rentang waktu pencatatan.
+3. Periksa informasi **Diproses Oleh** (nama admin penanggung jawab) dan **Tgl Diproses** untuk audit internal.
+
+---
+
+## Struktur Tabel Persetujuan & Riwayat
+
+### 1. Pengajuan Menunggu Persetujuan
+| Kolom | Fungsi & Keterangan |
+| :--- | :--- |
+| **Id & Level** | ID unik akun mitra beserta jenjang tingkatan kemitraannya. |
+| **Nama Pemohon** | Nama lengkap mitra yang mengajukan pencairan dana. |
+| **Rekening Tujuan** | Nama bank, nomor rekening, dan nama pemilik rekening tujuan transfer. |
+| **Nominal** | Jumlah rupiah dana saldo yang diajukan untuk ditarik. |
+| **Tgl Pengajuan** | Informasi stempel waktu pengajuan penarikan dana dikirim mitra. |
+| **Aksi** | Terdiri dari tombol eksekusi **✓ Setujui** (Hijau) dan **✕ Tolak** (Merah). |
+
+### 2. Riwayat Pengajuan
+| Kolom | Fungsi & Keterangan |
+| :--- | :--- |
+| **Nama Pemohon** | Nama lengkap dan ID unik mitra. |
+| **Rekening Tujuan** | Bank dan nomor rekening tujuan transfer. |
+| **Nominal** | Jumlah nominal pencairan dana. |
+| **Status** | Badge indikator penanganan (*Disetujui* / *Ditolak*). |
+| **Diproses Oleh** | Nama akun Administrator yang mengeksekusi pengajuan. |
+| **Tgl Diproses** | Informasi stempel waktu kapan keputusan pengajuan dieksekusi. |
+
+---
+
+> **Tips Pengguna Awam**  
+> Selalu berikan alasan penolakan yang jelas saat menolak pengajuan *withdraw*, agar mitra memahami kendala pada akun/rekening mereka dan dapat memperbaruinya sebelum mengajukan kembali.

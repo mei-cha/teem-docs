@@ -1,0 +1,73 @@
+﻿---
+title: Bank Mitra
+icon: Landmark
+---
+
+Halaman **Bank Mitra** digunakan oleh Administrator untuk mengelola daftar akun bank dan rekening *e-wallet* milik mitra yang terdaftar pada platform **Teem.id**.
+
+Data rekening ini digunakan sebagai acuan tujuan pencairan dana (*payout/disbursement*) hasil penjualan mitra serta pencatatan penarikan komisi.
+
+---
+
+## Alur Mengelola Bank Mitra (Step-by-Step)
+
+### Langkah 1: Mencari Data Rekening Mitra
+1. Masuk ke modul **Kemitraan > Bank Mitra**.
+2. **Pencarian Cepat:** Gunakan kolom input **Cari mitra / no. rekening...** di pojok kiri atas tabel untuk menyaring data berdasarkan nama mitra atau nomor rekening.
+3. Tabel akan menampilkan daftar akun bank yang sesuai secara *real-time*.
+
+---
+
+### Langkah 2: Mengatur Visibilitas Kolom
+Di sebelah kanan atas tabel, terdapat ikon **Pengaturan Kolom (Ikon Sliders)**:
+1. Klik ikon **Pengaturan Kolom**.
+2. Centang atau hapus centang pada opsi nama kolom untuk menampilkan atau menyembunyikan kolom tertentu pada tabel.
+
+---
+
+### Langkah 3: Menambah Rekening Mitra Baru
+1. Klik tombol **+ Tambah** berwarna merah di pojok kanan atas.
+2. Pada modal pop-up **Tambah Rekening Mitra**, lengkapi parameter berikut:
+   * **Pilih Mitra \*:** Pilih nama mitra terdaftar pada dropdown.
+   * **Nama Bank \*:** Pilih institusi perbankan atau penyedia *e-wallet* tujuan pada dropdown.
+   * **No. Rekening \*:** Masukkan digit nomor rekening bank atau nomor akun *e-wallet*.
+   * **Atas Nama \*:** Masukkan nama lengkap pemilik rekening sesuai yang tertera di buku tabungan/aplikasi bank.
+   * **Rekening Utama:** Nyalakan sakelar toggle ini jika ingin menjadikan rekening baru sebagai setelan *default* tujuan pencairan dana mitra.
+   * **Status Aktif:** Nyalakan sakelar toggle agar rekening dapat digunakan dalam proses transaksi pencairan.
+3. Klik tombol **Simpan** berwarna merah untuk menyimpan data.
+
+---
+
+### Langkah 4: Mengedit Data Rekening Mitra (Edit)
+1. Cari baris rekening mitra yang ingin diperbarui pada tabel.
+2. Pada kolom **Aksi**, klik ikon **Pensil (Edit)**.
+3. Pada modal edit, ubah data nomor rekening, nama pemilik, atau opsi rekening utama sesuai kebutuhan.
+4. Klik tombol **Simpan**.
+
+---
+
+### Langkah 5: Mengubah Sakelar Pintas & Menghapus Rekening
+Pada kolom tabel utama, Administrator dapat menggunakan tombol sakelar langsung:
+* **Sakelar Utama:** Geser toggle pada kolom **Utama** untuk mengubah status rekening utama (*default*) pencairan mitra tanpa perlu membuka menu edit.
+* **Sakelar Aktif:** Geser toggle pada kolom **Aktif** untuk mematikan atau mengaktifkan keabsahan rekening secara instan.
+* **Ikon Tempat Sampah:** Menghapus data rekening mitra dari database sistem jika sudah tidak berlaku.
+
+---
+
+## Struktur Tabel Bank Mitra
+
+| Kolom | Fungsi & Keterangan |
+| :--- | :--- |
+| **ID Mitra** | Kode unik identifikasi akun mitra. |
+| **Nama Mitra** | Sebutan nama lengkap mitra terdaftar. |
+| **Bank** | Nama institusi bank atau penyedia *e-wallet*. |
+| **No Rekening** | Digit nomor rekening atau akun pembayaran. |
+| **Atas Nama** | Nama pemilik rekening yang tertera di sistem bank. |
+| **Utama** | Sakelar toggle penentu rekening utama (*default*) pencairan dana. |
+| **Aktif** | Sakelar toggle status operasional rekening. |
+| **Aksi** | Terdiri dari tombol pintas **Pensil (Edit)** dan **Tempat Sampah (Hapus)**. |
+
+---
+
+> **Tips Pengguna Awam**  
+> Setiap mitra disarankan memiliki minimal satu sakelar **Utama** yang aktif agar proses penarikan saldo (*payout*) otomatis terarah ke rekening yang tepat tanpa mengalami penundaan sistem.

@@ -1,0 +1,58 @@
+﻿---
+title: Saldo Saya
+icon: Wallet
+---
+Halaman **Saldo Perusahaan** digunakan oleh Administrator Keuangan untuk memantau ringkasan saldo kas internal perusahaan pada platform **Teem.id**, serta melacak seluruh histori mutasi aliran dana masuk dan keluar secara *real-time*.
+
+---
+
+## Ringkasan Kartu Saldo Utama
+
+Di bagian atas halaman, terdapat dua kartu indikator keuangan perusahaan:
+
+### 1. Saldo Aktif
+* **Keterangan:** Menampilkan total akumulasi saldo kas perusahaan dari **pesanan yang telah selesai** (*completed orders*).
+* **Fungsi:** Dana bersih yang sudah resmi menjadi hak perusahaan dan siap digunakan untuk operasional.
+
+### 2. Saldo Pending
+* **Keterangan:** Menampilkan nilai dana tertunda dari **pesanan yang belum selesai** (*in-progress orders*).
+* **Fungsi:** Dana cadangan yang masih ditahan sementara di sistem hingga proses pengiriman/pembelian diselesaikan oleh pelanggan.
+
+---
+
+## Alur Mengelola & Memantau Transaksi (Step-by-Step)
+
+### Langkah 1: Membuka Halaman Saldo Perusahaan
+1. Masuk ke modul **Keuangan > Saldo Perusahaan**.
+2. Periksa nominal pada kartu **Saldo Aktif** dan **Saldo Pending** di bagian atas.
+
+---
+
+### Langkah 2: Menggunakan Fitur Penyaringan (Filter)
+1. **Filter Kategori (Tombol Filter):** Klik tombol **Filter** di pojok kanan atas tabel untuk menyaring riwayat berdasarkan jenis mutasi (seperti *ORDER* atau *REFUND*).
+2. **Filter Periode (Dropdown Periode):** Gunakan dropdown periode waktu (contoh: *Tahun Ini*) untuk membatasi rentang pencatatan transaksi yang ditampilkan pada tabel.
+
+---
+
+### Langkah 3: Mengunduh Laporan (Export)
+1. Klik tombol **Export** di pojok kanan atas tabel.
+2. Sistem akan mengunduh berkas rekapitulasi riwayat transaksi saldo perusahaan ke dalam perangkat komputer Anda untuk kebutuhan audit/pembukuan.
+
+---
+
+## Struktur Tabel Riwayat Transaksi
+
+| Kolom | Fungsi & Keterangan |
+| :--- | :--- |
+| **Tipe** | Indikator arah arus kas (Ikon **Panah Hijau Ke Bawah** untuk dana masuk, atau **Panah Merah Ke Atas** untuk dana keluar/refund). |
+| **Nominal** | Jumlah nilai rupiah mutasi transaksi (ditandai tanda `+` hijau untuk pemasukan, atau `-` merah untuk pengeluaran). |
+| **Jenis** | Kategori sifat transaksi (*PENDING* atau *ACTIVE*). |
+| **Dari** | Sumber transaksi keuangan (contoh: *ORDER* dari pesanan pembeli, atau *REFUND* dari pengembalian dana). |
+| **Keterangan** | Informasi detail atau nomor referensi invoice terkait transaksi tersebut. |
+| **Tgl Transaksi** | Informasi stempel waktu kapan transaksi terjadi. |
+| **Status** | Badge indikator keabsahan status transaksi (*Success*). |
+
+---
+
+> **Tips Pengguna Awam**  
+> Nilai pada **Saldo Pending** akan otomatis berpindah ke **Saldo Aktif** secara sistem begitu pesanan pembeli dikonfirmasi selesai oleh pelanggan atau sistem.

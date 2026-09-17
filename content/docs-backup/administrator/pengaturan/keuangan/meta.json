@@ -1,0 +1,8 @@
+﻿{
+  "title": "Keuangan",
+  "icon":"WalletCards",
+  "pages": [
+    "biaya-aplikasi",
+    "otomatisasi-withdraw"
+  ]
+}

@@ -1,0 +1,13 @@
+﻿{
+    "title":  "Kemitraan",
+    "icon":  "Handshake",
+    "pages":  [
+                  "dashboard",
+                  "request",
+                  "partners",
+                  "partner-stock",
+                  "target-realization",
+                  "set-target",
+                  "rejection-categories"
+              ]
+}

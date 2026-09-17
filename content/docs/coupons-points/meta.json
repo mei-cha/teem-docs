@@ -1,0 +1,8 @@
+﻿{
+    "title":  "Kupon \u0026 Poin",
+    "icon":  "Ticket",
+    "pages":  [
+                  "coupons",
+                  "points-leaderboard"
+              ]
+}

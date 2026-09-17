@@ -1,0 +1,58 @@
+﻿---
+title: Gudang
+icon: Warehouse
+---
+
+Halaman **Master Data Gudang** digunakan oleh Administrator untuk mengelola titik lokasi penyimpanan atau palet persediaan barang milik perusahaan pada platform **Teem.id**.
+
+Data gudang ini menjadi acuan lokasi fisik alokasi persediaan barang pada modul **Pembelian Stok** dan **Stok Perusahaan**.
+
+---
+
+## Alur Mengelola Data Gudang (Step-by-Step)
+
+### Langkah 1: Akses Menu & Pencarian Gudang (Search)
+1. Buka navigasi utama di sebelah kiri, pilih modul **Master Data > Gudang**.
+2. **Pencarian Cepat:** Gunakan kolom input **Cari...** di pojok kanan atas tabel untuk mencari gudang berdasarkan nama gudang atau alamat lokasi (contoh: ketik *Palet A* atau *Lowokwaru*).
+3. Tabel akan menyaring dan menampilkan baris gudang yang sesuai secara *real-time*.
+
+---
+
+### Langkah 2: Menambah Gudang Baru
+1. Klik tombol **+ Tambah** (ikon tambah user/gudang) berwarna merah di pojok kanan atas.
+2. Pada modal pop-up **Tambah Gudang**, lengkapi formulir:
+   * **Nama Gudang:** Masukkan nama penanda gudang atau lokasi palet penyimpanan (contoh: `Gudang Utama Jakarta` atau `Palet D`).
+   * **Alamat:** Tuliskan alamat lengkap atau area lokasi fisik gudang berada (contoh: `Jl. Soekarno Hatta No. 12, Lowokwaru`).
+3. Klik tombol **Tambah** untuk menyimpan data gudang baru ke dalam sistem.
+
+---
+
+### Langkah 3: Mengedit Data Gudang (Edit)
+1. Cari baris nama gudang yang ingin diperbarui pada tabel.
+2. Pada kolom **Aksi**, klik ikon **Pensil (Edit)**.
+3. Jendela modal **Edit Gudang** akan muncul. Sesuaikan pengisian **Nama Gudang** atau **Alamat** sesuai perbaruan lokasi gudang terkini.
+4. Klik tombol **Simpan** untuk mengonfirmasi perubahan data.
+
+---
+
+### Langkah 4: Menghapus Data Gudang (Hapus)
+1. Cari baris gudang yang ingin dihapus dari daftar.
+2. Pada kolom **Aksi**, klik ikon **Tempat Sampah (Hapus)** berwarna merah.
+3. Pada dialog konfirmasi yang muncul, klik **Ya, Hapus** untuk menghapus entitas gudang tersebut.  
+   *(Catatan: Hapus data gudang sebaiknya dilakukan jika gudang tersebut tidak lagi menampung stok barang aktif).*
+
+---
+
+## Struktur Tabel Data Gudang
+
+| Kolom | Fungsi & Keterangan |
+| :--- | :--- |
+| **Nama** | Nama penanda identitas gudang atau palet persediaan (contoh: *Palet A*, *Palet B*, *Palet C*). |
+| **Item Produk** | Menampilkan jumlah variasi jenis produk yang tersimpan di gudang tersebut (contoh: *5 Item*, *3 Item*, *2 Item*). |
+| **Alamat** | Informasi area lokasi tempat gudang berada (contoh: *Lowokwaru*, *Sukun*, *Dampit*). |
+| **Aksi** | Terdiri dari 2 tombol kontrol: **Pensil** (membuka modal edit data gudang) dan **Tempat Sampah** (menghapus gudang dari sistem). |
+
+---
+
+> **Tips Pengguna Awam**  
+> Kolom **Item Produk** terhitung secara otomatis oleh sistem berdasarkan alokasi barang yang dimasukkan ke gudang tersebut. Pastikan memindahkan persediaan barang ke gudang lain sebelum menghapus gudang yang masih berisi item produk.

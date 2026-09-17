@@ -1,0 +1,10 @@
+﻿{
+    "title":  "Penjualan",
+    "icon":  "ShoppingCart",
+    "pages":  [
+                  "dashboard",
+                  "orders",
+                  "pending-orders",
+                  "delivery-notes"
+              ]
+}

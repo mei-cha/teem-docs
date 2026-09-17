@@ -1,0 +1,84 @@
+---
+title: Import Saldo Awal
+icon: Wallet
+---
+
+Halaman **Import Saldo Awal** digunakan oleh Administrator untuk memasukkan saldo deposit awal (*initial balance*), baik saldo aktif maupun saldo tertunda (*pending*), ke dalam akun pengguna/mitra secara massal menggunakan berkas spreadsheet (Excel/CSV).
+
+Fitur ini mempermudah migrasi data finansial saldo mitra lama ke dalam platform **Teem.id** secara bersamaan tanpa perlu menambah saldo satu per satu secara manual.
+
+---
+
+> **Catatan Sebelum Impor:**  
+> Pastikan akun **user/mitra sudah terdaftar** di platform sebelum melakukan impor. Jika salah satu nilai saldo (saldo aktif atau saldo pending) bernilai **0**, **kosongkan saja kolom tersebut** di berkas spreadsheet (jangan diisi angka 0).
+
+---
+
+## Alur Melakukan Import Saldo Awal (Step-by-Step)
+
+Proses penginputan saldo awal mengikuti 5 tahap urut berikut agar tercatat presisi di buku kas sistem:
+
+### Langkah 1: Mengunduh Format Berkas (Download Template)
+1. Akses halaman **Import Saldo Awal**.
+2. Di dalam kotak instruksi, klik tombol **Download Template**.
+3. Berkas spreadsheet acuan resmi akan otomatis terunduh ke komputer Anda.
+
+---
+
+### Langkah 2: Mengisi Kolom Data Spreadsheet
+Buka berkas yang telah diunduh, lalu lengkapi kolom-kolom data finansial akun:
+
+#### Rincian Struktur Kolom Template:
+
+| Header Kolom | Deskripsi Pengisian |
+| :--- | :--- |
+| **Email** | Alamat email terdaftar milik pengguna/mitra (*Wajib*). |
+| **Saldo Aktif (Rp)** | Nominal rupiah saldo aktif yang dapat langsung digunakan untuk transaksi (*Kosongkan jika 0*). |
+| **Saldo Pending (Rp)** | Nominal rupiah saldo tertunda yang sedang ditahan/dalam proses (*Kosongkan jika 0*). |
+
+---
+
+### Langkah 3: Mengunggah Berkas (Upload)
+1. Kembali ke halaman **Import Saldo Awal** di panel Administrator.
+2. Klik tombol **Upload** berwarna merah.
+3. Pilih berkas spreadsheet saldo yang sudah diisi dari perangkat komputer Anda.
+4. Tunggu beberapa saat hingga sistem selesai memproses dan memvalidasi data.
+
+---
+
+### Langkah 4: Memeriksa Hasil Validasi & Eksekusi Impor
+Setelah berkas diunggah, periksa indikator validasi di atas tabel:
+* **Indikator Valid (Centang Hijau):** Jumlah akun yang lolos verifikasi dan siap menerima masukan saldo.
+* **Indikator Bermasalah (Tanda Seru Merah):** Jumlah baris data yang mengalami kendala/error.
+
+#### Meninjau Tabel Validasi:
+
+| Kolom Tabel | Keterangan & Deskripsi Fungsi |
+| :--- | :--- |
+| **Baris** | Menunjukkan nomor baris lokasi data pada berkas Excel Anda. |
+| **Email** | Alamat email akun pengguna yang diverifikasi. |
+| **Saldo Aktif** | Nominal saldo aktif yang siap dimasukkan. |
+| **Saldo Pending** | Nominal saldo pending yang siap dimasukkan. |
+| **Status** | Label hasil verifikasi sistem (*Valid* berwarna hijau, atau pesan *Error* berwarna merah). |
+
+#### Menyelesaikan Impor:
+* Jika terdapat data bermasalah pada kolom **Status** (misal: *Email belum terdaftar*), perbaiki baris data tersebut pada berkas Excel Anda lalu unggah kembali.
+* Jika seluruh data sudah tervalidasi (*Valid*), klik tombol **Import Saldo Awal** di pojok kanan bawah untuk mengkreditkan saldo ke akun pengguna secara resmi.
+
+---
+
+## Ringkasan Fungsi Elemen Utama
+
+| Elemen | Jenis | Fungsi Utama |
+| :--- | :--- | :--- |
+| **Kotak Catatan** | Petunjuk Penting | Menekankan prasyarat keaktifan akun user serta aturan penanganan nilai saldo 0. |
+| **Download Template** | Tombol | Mengunduh berkas acuan spreadsheet saldo resmi. |
+| **Upload** | Tombol | Mengunggah berkas Excel saldo yang telah diisi. |
+| **Badge Valid & Bermasalah** | Indikator | Ringkasan jumlah baris akun yang sukses vs error. |
+| **Kolom Status Tabel** | Informasi Status | Menampilkan label *Valid* atau alasan error penolakan data saldo. |
+| **Tombol Import Saldo Awal** | Eksekusi | Mengkreditkan seluruh saldo tervalidasi ke dalam dompet akun pengguna. |
+
+---
+
+> **Tips Pengguna Awam**  
+> Selalu pastikan format nominal angka saldo di Excel ditulis polosan tanpa simbol mata uang (`Rp`) atau titik pemisah ribuan agar tidak terbaca error oleh sistem.

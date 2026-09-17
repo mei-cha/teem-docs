@@ -1,0 +1,80 @@
+﻿---
+title: Kupon & Promo
+icon: Ticket
+---
+
+Halaman **Kupon** digunakan oleh Administrator untuk mengonfigurasi voucher potongan harga (diskon) promosi bagi pelanggan atau mitra pada platform **Teem.id**.
+
+Pengaturan kupon mencakup fleksibilitas penentuan persentase/nominal diskon, cakupan wilayah, batasan penggunaan pengguna (*limitasi*), masa berlaku, hingga kriteria batas minimal pembelian.
+
+---
+
+## Alur Mengelola Kupon (Step-by-Step)
+
+### Langkah 1: Akses Menu & Pencarian Kupon (Search)
+1. Buka modul **Promosi > Kupon** (atau **Kupon**).
+2. **Pencarian Cepat:** Gunakan kolom input **Cari nama atau kode kupon...** di pojok kanan atas tabel untuk menyaring voucher berdasarkan nama promo atau kode kupon (contoh: ketik *KPNPRS* atau *8.8 Mid Night*).
+3. Tabel akan menyaring dan menampilkan baris promo yang sesuai secara *real-time*.
+
+---
+
+### Langkah 2: Membuat Promo/Kupon Baru
+1. Klik tombol **+ Tambah** berwarna merah di pojok kanan atas.
+2. Halaman akan beralih ke formulir **Tambah Promo / Kupon**. Lengkapi bagian-bagian berikut:
+
+#### A. Informasi Umum
+* **Nama \*:** Masukkan sebutan nama program promosi (contoh: `Kupon Persen` atau `Kejar 7.7`).
+* **Code \*:** Masukkan kode voucher unik yang akan diketik pengguna saat *checkout* (contoh: `KPNPRS` atau `KJR-77`).
+* **Status:** Pilih status awal voucher pada dropdown (*Aktif* / *Nonaktif*).
+
+#### B. Pengaturan Diskon
+* **Diskon Untuk:** Pilih cakupan produk yang berhak mendapat potongan pada dropdown (contoh: *Semua Produk* atau produk tertentu).
+* **Tipe:** Pilih skema potongan (*Persentase (%)* atau *Nominal Rupiah*).
+* **Nilai Diskon \*:** Masukkan angka besaran potongan (contoh: isi `5` untuk diskon 5% atau `5000` untuk diskon Rp 5.000).
+
+#### C. Pembatasan Tambahan (Centang Kotak / Checkbox Opsi):
+* **Zona (Wilayah):** Centang jika promo hanya berlaku khusus untuk area geografis/wilayah tertentu.
+* **Limitasi:**
+  * *Maksimal User*: Batas kuota berapa kali voucher ini dapat digunakan.
+  * *Pembayaran*: Memilih saluran metode pembayaran tertentu.
+  * *Pengguna Baru*: Centang jika promo khusus pengguna yang pertama kali bertransaksi.
+* **Rentang Tanggal:** Centang untuk menentukan tanggal mulai dan batas waktu berakhirnya kupon.
+* **Min Order:** Centang untuk menetapkan batas minimal total nilai transaksi belanja.
+* **Maks Diskon:** Centang untuk menentukan batas maksimal nominal potongan (khusus tipe persentase).
+* **Min Pembelian:** Centang untuk menetapkan syarat minimal jumlah unit kuantitas barang yang dibeli.
+
+3. Klik tombol **Tambah** berwarna merah di pojok kiri atas untuk menyimpan kupon.
+
+---
+
+### Langkah 3: Mengedit Data Kupon (Edit)
+1. Cari baris kupon yang ingin diubah pada tabel utama.
+2. Pada kolom **Aksi**, klik ikon **Pensil (Edit)**.
+3. Sesuaikan parameter kupon pada formulir edit, lalu klik **Simpan/Perbarui**.
+
+---
+
+### Langkah 4: Mengubah Status & Menghapus Kupon
+Pada kolom **Aksi**, gunakan tombol kontrol cepat berikut:
+* **Ikon Toggle (Sakelar Red/Green):** Mengaktifkan atau menonaktifkan masa berlaku kupon secara instan tanpa perlu membuka halaman edit.
+* **Ikon Pensil:** Membuka formulir untuk memperbarui ketentuan voucher.
+* **Ikon Tempat Sampah:** Menghapus kupon dari sistem.
+
+---
+
+## Struktur Tabel Data Kupon
+
+| Kolom | Fungsi & Keterangan |
+| :--- | :--- |
+| **Nama Kupon** | Sebutan nama program promosi. |
+| **Kode** | Badge kode unik voucher yang diinput pengguna saat transaksi (contoh: *KPNPRS*, *KJR-77*). |
+| **Diskon** | Besaran nilai potongan harga (contoh: *5%*, *Rp 5.000*, *Rp 100.000*). |
+| **Masa Berlaku** | Periode aktif kupon (contoh: *Tidak terbatas* atau tanggal *1 Sep 2026 – 1 Okt 2026*). |
+| **Penggunaan** | Menampilkan jumlah akumulasi berapa kali voucher telah berhasil dipakai belanja (contoh: *0x dipakai*). |
+| **Status** | Label indikator keaktifan kupon (*Aktif* / *Nonaktif*). |
+| **Aksi** | Terdiri dari tombol pintas **Toggle Status**, **Pensil (Edit)**, dan **Tempat Sampah (Hapus)**. |
+
+---
+
+> **Tips Pengguna Awam**  
+> Gunakan fitur **Maks Diskon** pada promo tipe *Persentase (%)* untuk mengamankan marjin keuntungan agar besaran potongan harga tidak melampaui batas anggaran promosi perusahaan.

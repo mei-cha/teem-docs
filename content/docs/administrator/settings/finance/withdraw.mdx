@@ -1,0 +1,35 @@
+---
+title: Pengaturan Otomatisasi Withdraw
+icon: Zap
+---
+Halaman **Otomatisasi Withdraw** digunakan oleh Administrator untuk mengatur mekanisme persetujuan penarikan dana (*withdraw*) saldo hasil penjualan atau komisi milik mitra[cite: 30].
+
+Fitur ini memberikan opsi apakah penarikan dana mitra harus melalui persetujuan manual oleh admin terlebih dahulu atau diproses secara otomatis oleh sistem[cite: 30].
+
+
+## Alur Konfigurasi Otomatisasi Withdraw (Step-by-Step)
+
+Sebagai Administrator, Anda dapat mengaktifkan atau menonaktifkan fitur persetujuan otomatis melalui langkah-langkah berikut:
+
+### Langkah 1: Membuka Menu Otomatisasi Withdraw
+1. Masuk ke menu **Administrator > Pengaturan**.
+2. Pada bilah navigasi kiri di bawah kategori **KEUANGAN**, pilih sub-menu **Otomatisasi Withdraw**.
+3. Halaman akan menampilkan opsi sakelar (*toggle*) **Auto-approve pengajuan withdraw**.
+
+### Langkah 2: Memilih Mode Persetujuan Penarikan
+Geser sakelar (*toggle switch*) di pojok kanan kartu sesuai dengan kebijakan keuangan perusahaan:
+
+* **Mode Nonaktif (Off / Abu-abu):**
+  Setiap pengajuan penarikan dana dari mitra akan masuk ke daftar antrean *Pengajuan Withdraw* terlebih dahulu untuk diperiksa dan disetujui (*approve*) secara manual oleh tim Admin sebelum dana ditransfer.
+* **Mode Aktif (On / Merah atau Hijau):**
+  Setiap pengajuan penarikan dana baru dari mitra akan **langsung disetujui secara otomatis oleh sistem** tanpa menunggu persetujuan manual Admin, dan dana akan langsung ditransfer ke rekening pribadi mitra yang terdaftar[cite: 
+## Perbandingan Mode Persetujuan
+
+| Mode | Kebijakan | Kelebihan | Risiko / Catatan |
+| :--- | :--- | :--- | :--- |
+| **Manual (Nonaktif)** | Admin memeriksa satu per satu pengajuan. | Kontrol dan keamanan keuangan lebih terjamin dari kesalahan audit. | Membutuhkan waktu pemrosesan lebih lama oleh Admin. |
+| **Otomatis (Aktif)** | Sistem menyetujui penarikan dana secara instan[cite: 30]. | Proses pencairan dana mitra sangat cepat dan efisien[cite: 30]. | Pastikan integrasi *payment gateway / payout* terkonfigurasi dengan aman[cite: 30]. |
+
+
+> **Tips**  
+> Bagi perusahaan yang baru beroperasi, disarankan untuk membiarkan mode ini **Nonaktif** terlebih dahulu agar tim Admin dapat memverifikasi kesesuaian data rekening dan riwayat saldo mitra secara manual sebelum pencairan dana dilakukan.

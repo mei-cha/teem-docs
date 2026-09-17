@@ -1,0 +1,13 @@
+﻿{
+  "title": "Kemitraan",
+  "icon":"Handshake",
+  "pages": [
+    "dashboard",
+    "pengajuan",
+    "mitra",
+    "stok-mitra",
+    "realisasi-target",
+    "set-target",
+    "kategori-tolak"
+  ]
+}

@@ -1,0 +1,11 @@
+﻿{
+  "title": "Keuangan",
+  "icon":"Wallet",
+  "pages": [
+    "saldo-awal",
+    "saldo-saya",
+    "saldo-mitra",
+    "pengajuan-withdraw",
+    "bank-mitra"
+  ]
+}

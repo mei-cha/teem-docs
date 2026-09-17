@@ -1,0 +1,69 @@
+﻿---
+title: Pembelian Stok
+icon: ShoppingBag
+---
+
+Halaman **Pembelian Stok** digunakan oleh Administrator untuk mencatat transaksi pengadaan/pembelian barang masuk dari pemasok (*vendor*) ke gudang penyimpanan perusahaan pada platform **Teem.id**.
+
+Pencatatan ini berfungsi merekam penerimaan barang berdasarkan surat jalan resmi vendor serta memperbarui jumlah stok dan harga beli produk secara otomatis.
+
+---
+
+> **Catatan Penting Konversi Stok:**  
+> Kuantitas (*Qty*) yang diinput pada formulir akan dikonversi secara otomatis oleh sistem ke **satuan dasar produk** sebelum disimpan ke dalam database stok gudang.
+
+---
+
+## Alur Melakukan Pencatatan Stok Masuk (Step-by-Step)
+
+### Langkah 1: Membuka Halaman & Modal Form
+1. Masuk ke modul **Stok Perusahaan > Pembelian Stok** (atau **Inventori > Pembelian Stok**).
+2. Klik tombol **+ Tambah** berwarna merah di pojok kanan atas halaman.
+3. Modal pop-up **Catat Stok Masuk** akan muncul di layar.
+
+---
+
+### Langkah 2: Mengisi Informasi Dokumen & Vendor
+1. **Vendor:** Pilih nama perusahaan pemasok barang pada dropdown *Pilih vendor*.
+2. **Tanggal Surat Jalan:** Tentukan tanggal penerimaan barang sesuai dokumen fisik.
+3. **No. Surat Jalan:** Ketikkan nomor referensi unik surat jalan dari vendor.
+
+---
+
+### Langkah 3: Menambahkan Item Produk
+1. Klik tombol **+ Tambah Item** di sebelah kanan section *Item Produk*.
+2. Rincian formulir barang baru akan terbuka. Lengkapi kolom-kolom berikut:
+   * **Produk:** Pilih barang yang diterima dari vendor pada dropdown.
+   * **Jumlah:** Masukkan kuantitas unit barang yang diterima.
+   * **Satuan:** Pilih opsi unit pengemasan barang (seperti *Pcs*, *Slop*, *Karton*, *Ball*).
+   * **Harga / Satuan:** Masukkan nominal harga beli per unit barang.
+   * **Gudang:** Pilih lokasi gudang atau area palet penampungan barang.
+3. Periksa ketersediaan catatan kalkulasi otomatis di bagian bawah formulir (seperti *Akan ditambahkan ke stok* dan *Subtotal*).
+4. Jika terdapat lebih dari satu jenis barang dalam satu surat jalan, klik kembali tombol **+ Tambah Item** untuk menambahkan baris produk berikutnya.
+
+---
+
+### Langkah 4: Memeriksa Total Nilai & Menyimpan
+1. Periksa ringkasan **Total nilai** akumulasi seluruh item pada pojok kanan bawah modal.
+2. Pastikan tidak ada kesalahan pengisian produk, jumlah unit, maupun lokasi gudang.
+3. Klik tombol **Simpan** berwarna merah untuk membukukan transaksi pengadaan stok ke dalam sistem.
+
+---
+
+## Ringkasan Struktur Modal Catat Stok Masuk
+
+| Field / Elemen | Fungsi & Keterangan |
+| :--- | :--- |
+| **Vendor** | Opsi pilihan perusahaan penyedia/pemasok barang. |
+| **Tanggal Surat Jalan** | Pemilih tanggal resmi dokumen pengiriman barang. |
+| **No. Surat Jalan** | Input teks nomor referensi pengiriman fisik dari vendor. |
+| **Tombol + Tambah Item** | Menambahkan baris input produk baru ke dalam daftar transaksi. |
+| **Ikon Tempat Sampah** | Menghapus baris item produk dari daftar modal. |
+| **Field Produk & Gudang** | Pilihan nama barang dan penetapan lokasi palet penyimpanan. |
+| **Field Jumlah, Satuan & Harga** | Rincian kuantitas, unit kemasan, dan nominal harga beli per unit. |
+| **Tombol Simpan** | Eksekusi untuk menyimpan data pembelian dan menambah stok gudang. |
+
+---
+
+> **Tips Pengguna Awam**  
+> Gunakan ikon **Tempat Sampah** di pojok kanan atas tiap kartu item untuk menghapus baris produk jika terjadi kekeliruan saat memilih barang sebelum mengeklik tombol simpan.

@@ -1,0 +1,10 @@
+﻿{
+  "title": "Penjualan",
+   "icon": "ShoppingCart",
+  "pages": [
+    "dashboard",
+    "pesanan",
+    "pesanan-pending",
+    "surat-jalan"
+  ]
+}

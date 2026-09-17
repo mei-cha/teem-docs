@@ -1,0 +1,89 @@
+﻿---
+title: Master Data Biaya Xendit
+icon: CreditCard
+---
+
+Halaman **Biaya Layanan Xendit** digunakan oleh Administrator untuk mengonfigurasi rincian biaya penanganan (*gateway fee*) dan Pajak Pertambahan Nilai (PPN) dari saluran pembayaran *online* pihak ketiga (Xendit) pada platform **Teem.id**.
+
+Konfigurasi ini digunakan sebagai acuan perhitungan kalkulasi biaya transaksi saat pembeli/mitra melakukan pembayaran melalui opsi *Direct Debit*, *E-Wallet*, *QRIS*, maupun *Virtual Account*.
+
+---
+
+## Penjelasan Kartu Statistik (Stat Card)
+
+Di bagian atas halaman, terdapat 2 **Stat Card** (kartu indikator ringkasan) untuk memantau variasi metode pembayaran:
+
+### 1. Metode Pembayaran (Ikon Kartu Kredit)
+* **Angka Utama:** Menampilkan jumlah total saluran pembayaran yang terdaftar di dalam sistem (contoh: **19**).
+* **Keterangan:** *Daftar metode pembayaran*.
+* **Fungsi:** Membantu Admin melihat berapa banyak jenis metode transaksi elektronik yang didukung oleh sistem.
+
+### 2. Kategori (Ikon Tumpukan Layer)
+* **Angka Utama:** Menampilkan jumlah kelompok/kategori metode pembayaran yang aktif di sistem (contoh: **4**).
+* **Keterangan:** *Kategori metode pembayaran*.
+* **Fungsi:** Membantu Admin mengelompokkan saluran pembayaran berdasarkan tipenya (misal: *DIRECT_DEBIT*, *EWALLET*, *QR_CODE*, *VIRTUAL_ACCOUNT*).
+
+---
+
+## Alur Mengelola & Memfiltrasi Biaya Xendit (Step-by-Step)
+
+### Langkah 1: Mencari & Memfilter Data Pembayaran
+1. Masuk ke modul **Master Data > Biaya Xendit**.
+2. **Pencarian Cepat:** Gunakan kolom input **Cari...** di sebelah kiri untuk mencari nama atau kode kanal pembayaran (contoh: ketik *GoPay*, *OVO*, atau *BRI*).
+3. **Filter Kategori (Dropdown Semua Kategori):**  
+   Pilih opsi pada dropdown ini jika ingin memfilter tabel berdasarkan jenis kategori tertentu (contoh: menyaring khusus kelompok *EWALLET* atau *DIRECT_DEBIT*).
+4. **Filter Status (Dropdown Semua Status):**  
+   Pilih opsi **Aktif** untuk melihat metode yang siap digunakan pembeli, atau **Nonaktif** untuk metode pembayaran yang sedang ditangguhkan.
+
+---
+
+### Langkah 2: Mengatur Visibilitas Kolom Tabel
+Di sebelah kanan filter status, terdapat ikon **Pengaturan Kolom (Ikon Sliders)**:
+1. Klik ikon **Pengaturan Kolom**.
+2. Centang atau hapus centang pada opsi nama kolom untuk menampilkan atau menyembunyikan kolom informasi tertentu pada tabel agar tampilan layar lebih ringkas.
+
+---
+
+### Langkah 3: Menambah Metode Pembayaran & Fee Baru
+1. Klik tombol **+ Tambah** berwarna merah di pojok kanan atas.
+2. Pada jendela modal pop-up **Tambah Fee Xendit**, lengkapi parameter:
+   * **Kode Metode Pembayaran \*:** Masukkan kode unik saluran transaksi Xendit (contoh: `OVO` atau `DC_BRI`).
+   * **Kategori \*:** Masukkan nama kelompok transaksi (contoh: `EWALLET`, `DIRECT_DEBIT`, `QR_CODE`).
+   * **Nama Tampilan \*:** Masukkan sebutan nama metode pembayaran yang akan dibaca oleh pengguna (contoh: `OVO` atau `BRI Direct Debit`).
+   * **Tipe Fee \*:** Klik dropdown dan pilih salah satu skema pemotongan biaya transaksi:
+     * **Persentase (%)**: Biaya dihitung berdasarkan persentase dari total nilai transaksi belanja.
+     * **Flat (Rp)**: Biaya ditetapkan dengan nominal angka rupiah pasti per transaksi.
+   * **Nilai Fee \* (% / Rp):** Masukkan persentase atau nominal rupiah potongan (contoh: isi `1.5` untuk fee 1,5% atau isi `4500` untuk fee flat Rp 4.500).
+   * **PPN (%) \*:** Masukkan persentase pajak transaksi (contoh: `11,00` untuk PPN 11%).
+   * **Aktif (Sakelar Toggle):** Nyalakan sakelar ke warna merah agar opsi pembayaran ini langsung aktif di halaman *checkout*.
+3. Klik tombol **Tambah** untuk menyimpan data.
+
+---
+
+### Langkah 4: Mengedit Data Biaya Xendit (Edit)
+1. Cari baris metode pembayaran yang ingin diperbarui pada tabel.
+2. Pada kolom **Aksi**, klik ikon **Pensil (Edit)**.
+3. Pada modal **Edit Fee Xendit**, sesuaikan opsi **Tipe Fee** (*Persentase (%)* atau *Flat (Rp)*), **Nilai Fee**, tarif **PPN**, atau **Nama Tampilan** sesuai perbaruan tarif resmi dari Xendit.
+4. Klik tombol **Simpan**.
+
+---
+
+### Langkah 5: Mengubah Status Cepat & Menghapus Metode
+Pada kolom **Aksi**, gunakan 3 tombol kontrol pintas:
+* **Ikon Toggle (Sakelar Merah):** Mengubah status metode pembayaran (*Aktif/Nonaktif*) secara langsung tanpa membuka menu edit.
+* **Ikon Pensil:** Membuka jendela pop-up pengubahan rincian fee.
+* **Ikon Tempat Sampah:** Menghapus metode pembayaran dari sistem jika saluran transaksi tersebut sudah tidak didukung lagi.
+
+---
+
+## Ringkasan Opsi Tipe Fee
+
+| Opsi Tipe Fee | Cara Kerja Perhitungan | Contoh Penerapan |
+| :--- | :--- | :--- |
+| **Persentase (%)** | Potongan dihitung dari persentase total nominal *checkout*. | Isi `1.5` pada Nilai Fee untuk potongan 1,5% per transaksi (seperti pada E-Wallet/QRIS). |
+| **Flat (Rp)** | Potongan tetap tanpa terpengaruh total nominal belanja. | Isi `4500` pada Nilai Fee untuk potongan Rp 4.500 per transaksi (seperti pada Direct Debit/VA). |
+
+---
+
+> **Tips Pengguna Awam**  
+> Pastikan memilih **Tipe Fee** yang tepat (*Persentase (%)* atau *Flat (Rp)*) sebelum memasukkan angka pada kolom **Nilai Fee**, agar kalkulasi potongan biaya penanganan transaksi di sistem tidak keliru.

@@ -4,42 +4,66 @@ import {
   DocsDescription,
   DocsPage,
   DocsTitle,
-  MarkdownCopyButton,
-  ViewOptionsPopover,
-} from 'fumadocs-ui/layouts/docs/page';
+} from 'fumadocs-ui/layouts/notebook/page';
 import { notFound } from 'next/navigation';
 import { getMDXComponents } from '@/components/mdx';
 import type { Metadata } from 'next';
 import { createRelativeLink } from 'fumadocs-ui/mdx';
-import { getPageImageUrl, getPageMarkdownUrl, gitConfig } from '@/lib/shared';
+import { getPageImageUrl } from '@/lib/shared';
+import { icons } from 'lucide-react';
+import { createElement } from 'react';
 
-export default async function Page(props: PageProps<'/docs/[[...slug]]'>) {
+export default async function Page(
+  props: PageProps<'/docs/[[...slug]]'>
+) {
   const params = await props.params;
   const page = source.getPage(params.slug);
+
   if (!page) notFound();
 
   const MDX = page.data.body;
-  const markdownUrl = getPageMarkdownUrl(page).url;
+
+  const Icon =
+    page.data.icon &&
+    icons[page.data.icon as keyof typeof icons];
 
   return (
     <DocsPage toc={page.data.toc} full={page.data.full}>
-      <DocsTitle>{page.data.title}</DocsTitle>
-      <DocsDescription className="mb-0">{page.data.description}</DocsDescription>
-      <div className="flex flex-row gap-2 items-center border-b pb-6">
-        <MarkdownCopyButton markdownUrl={markdownUrl} />
-        <ViewOptionsPopover
-          markdownUrl={markdownUrl}
-          githubUrl={`https://github.com/${gitConfig.user}/${gitConfig.repo}/blob/${gitConfig.branch}/content/docs/${page.path}`}
-        />
+      <div className="mb-5">
+        <DocsTitle>
+          <div className="flex items-center gap-3">
+            {Icon &&
+              createElement(Icon, {
+                className: 'size-8 shrink-0',
+              })}
+
+            <span>{page.data.title}</span>
+          </div>
+        </DocsTitle>
       </div>
+
+      <DocsDescription className="mb-0">
+        {page.data.description}
+      </DocsDescription>
+
       <DocsBody>
         <MDX
           components={getMDXComponents({
-            // this allows you to link to other pages with relative file paths
             a: createRelativeLink(source, page),
           })}
         />
       </DocsBody>
+
+      <div className="mt-12 border-t pt-8 pb-4 text-base text-muted-foreground">
+        Jika Anda membutuhkan bantuan lebih lanjut atau mengalami kendala saat menggunakan Teem.id, silakan hubungi kami melalui{' '}
+        <a
+          href="mailto:info@teem.id"
+          className="font-medium text-foreground underline underline-offset-4"
+        >
+          Pusat Bantuan
+        </a>
+        .
+      </div>
     </DocsPage>
   );
 }
@@ -48,9 +72,12 @@ export async function generateStaticParams() {
   return source.generateParams();
 }
 
-export async function generateMetadata(props: PageProps<'/docs/[[...slug]]'>): Promise<Metadata> {
+export async function generateMetadata(
+  props: PageProps<'/docs/[[...slug]]'>
+): Promise<Metadata> {
   const params = await props.params;
   const page = source.getPage(params.slug);
+
   if (!page) notFound();
 
   return {

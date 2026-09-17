@@ -1,0 +1,26 @@
+﻿---
+title: Log Aktivitas Sistem
+icon: Clock
+---
+Halaman **Log Aktivitas Sistem** (*Audit Log*) menyajikan catatan riwayat jejak digital secara transparan mengenai seluruh tindakan dan perubahan data yang dilakukan oleh para pengguna (terutama Administrator) di dalam sistem **Teem.id**.
+
+Halaman ini sangat penting untuk kebutuhan pengawasan keamanan, audit internal, serta pelacakan kendala operasional.
+
+## Alur Melakukan Audit & Filter Log (Step-by-Step)
+
+1. Masuk ke menu **Administrator > Log Aktivitas**.
+2. Jika ingin memperbarui data catatan terbaru secara manual, klik tombol **Refresh** di pojok kanan atas.
+3. Gunakan bilah **Filter** di bagian atas tabel untuk mempersempit pencarian log:
+   * **Pengguna:** Filter riwayat aksi berdasarkan nama pengguna/admin tertentu (misal: *javarata*).
+   * **Aktivitas:** Filter berdasarkan tipe aksi teknis (misal: *ORDER_ACCEPTED*, *WITHDRAW_APPROVED*).
+   * **Dari & Sampai:** Tentukan rentang tanggal pencarian (*dd/mm/yyyy*).
+
+## Struktur Tabel Log Aktivitas
+
+| Kolom | Deskripsi Fungsi |
+| :--- | :--- |
+| **Pengguna / Role** | Menampilkan nama pemrakarsa aksi beserta perannya (contoh: *javarata - Administrator*). |
+| **Aktivitas** | Kode kategori tindakan sistem (contoh: `USER_ROLE_MAPPED`, `ORDER_DISPATCHED`, `ORDER_ACCEPTED`, `WITHDRAW_APPROVED`, `COMPANY_PROFILE_UPDATED`). |
+| **Keterangan** | Penjelasan rinci mengenai aksi yang terjadi (contoh: *Mengatur pesanan INV26-000067 siap diambil*, *Memperbarui profil perusahaan "Teem.id"*). |
+| **Target** | Entitas modul sistem yang dikenai perubahan data (contoh: `USER_ROLE`, `ORDER`, `WITHDRAW_REQUEST`, `PROFILE_PT`). |
+| **Waktu** | Informasi *relative time* kapan tindakan tersebut dieksekusi (contoh: *sekitar 18 jam yang lalu*, *1 hari yang lalu*). |

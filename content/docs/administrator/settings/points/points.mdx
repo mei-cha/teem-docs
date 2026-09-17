@@ -1,0 +1,48 @@
+---
+title: Pengaturan Poin
+icon: Coins
+---
+Halaman **Pengaturan Poin** digunakan oleh Administrator untuk mengonfigurasi skema program *loyalty point*, mulai dari batas masa aktif poin hingga konversi nilai tukar poin menjadi potongan harga (*diskon*) saat transaksi belanja.
+
+
+## Alur Konfigurasi Pengaturan Poin (Step-by-Step)
+
+Sebagai Administrator, Anda dapat menentukan aturan penggunaan poin melalui langkah-langkah berikut:
+
+### Langkah 1: Membuka Menu Pengaturan Poin
+1. Masuk ke menu **Administrator > Pengaturan**.
+2. Pada bilah navigasi kiri di bawah kategori **POIN**, pilih sub-menu **Pengaturan Poin**.
+3. Halaman akan menampilkan dua blok konfigurasi utama: **Masa Kadaluarsa** dan **Nilai Tukar**.
+
+### Langkah 2: Mengatur Masa Kadaluarsa Poin
+Pada blok **Masa Kadaluarsa**:
+1. Tentukan batas waktu aktif poin pada kolom **Masa Aktif Poin (Bulan)** (contoh: isi `12` jika poin hangus setelah 12 bulan dari waktu didapatkan).
+2. Jika perusahaan menginginkan poin dapat digunakan kapan saja tanpa batas waktu hangus, isi angka `0` (poin berlaku selamanya).
+
+
+### Langkah 3: Mengatur Nilai Tukar & Maksimal Potongan Belanja
+Pada blok **Nilai Tukar**:
+1. **Nilai 1 Poin (Rupiah):** Masukkan kesetaraan 1 poin dalam rupiah pada kolom **Rp** (contoh: isi `1` jika 1 poin bernilai Rp 1).
+2. **Maksimal Potongan Belanja (%):** Masukkan persentase batas maksimal penggunaan poin untuk memotong total tagihan belanja pada kolom **%** (contoh: isi `50` jika poin hanya bisa memotong maksimal 50% dari total nilai transaksi).
+
+#### Simulasi Perhitungan Otomatis
+Sistem menyediakan kotak penjelas **Simulasi Pembayaran** di bawah kolom input untuk membantu Anda memahami penerapannya:
+> *Contoh:* Dengan total transaksi **Rp 100.000** dan batas **50%**, pembeli dapat menggunakan maksimal **50.000 Poin** (Setara Potongan Rp 50.000).
+
+
+### Langkah 4: Menyimpan Perubahan
+1. Klik tombol **Simpan** di pojok kanan bawah halaman.
+2. Aturan masa berlaku dan konversi tukar poin yang baru akan langsung diterapkan di seluruh transaksi pembeli/mitra.
+
+
+## Ringkasan Parameter Poin
+
+| Parameter | Fungsi & Dampak |
+| :--- | :--- |
+| **Masa Aktif Poin** | Menentukan durasi akumulasi poin sebelum kadaluarsa (isi `0` untuk tanpa batas waktu). |
+| **Nilai 1 Poin** | Nilai konversi rupiah per 1 poin saat digunakan untuk belanja. |
+| **Maksimal Potongan** | Persentase kuota maksimal diskon poin dari total nilai pesanan *checkout*. |
+
+
+> **Tips**  
+> Penetapan **Maksimal Potongan Belanja (%)** sangat berguna untuk menjaga arus kas perusahaan agar transaksi belanja tidak terpotong 100% menggunakan poin penuh.

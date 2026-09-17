@@ -1,0 +1,11 @@
+﻿{
+  "title": "Administrator",
+  "icon": "Shield",
+  "pages": [
+    "pengguna",
+    "role",
+    "permission",
+    "log-aktivitas",
+    "pengaturan"
+  ]
+}

@@ -1,0 +1,8 @@
+﻿{
+    "title":  "Dukungan",
+    "icon":  "LifeBuoy",
+    "pages":  [
+                  "tickets",
+                  "faq"
+              ]
+}

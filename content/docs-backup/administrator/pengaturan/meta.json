@@ -1,0 +1,12 @@
+﻿{
+  "title": "Pengaturan",
+  "icon": "Settings",
+  "pages": [
+    "profil-perusahaan",
+    "tampilan",
+    "kemitraan",
+    "keuangan",
+    "poin",
+    "konten"
+  ]
+}

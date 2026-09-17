@@ -1,0 +1,12 @@
+﻿{
+  "title": "Master Data",
+  "icon":"Database",
+  "pages": [
+    "bank",
+    "wilayah",
+    "vendor",
+    "gudang",
+    "biaya-xendit",
+    "biaya-payout"
+  ]
+}

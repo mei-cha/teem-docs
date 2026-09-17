@@ -1,0 +1,11 @@
+﻿{
+    "title":  "Keuangan",
+    "icon":  "Wallet",
+    "pages":  [
+                  "opening-balance",
+                  "my-balance",
+                  "partner-balance",
+                  "withdraw-requests",
+                  "partner-bank"
+              ]
+}

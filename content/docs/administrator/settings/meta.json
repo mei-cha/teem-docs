@@ -1,0 +1,12 @@
+﻿{
+    "title":  "Pengaturan",
+    "icon":  "Settings",
+    "pages":  [
+                  "company-profile",
+                  "appearance",
+                  "partnerships",
+                  "finance",
+                  "points",
+                  "content"
+              ]
+}

@@ -1,0 +1,11 @@
+﻿{
+  "title": "Kemitraan",
+  "icon":"Handshake",
+  "pages": [
+    "level",
+    "deposit-pembelian-awal",
+    "dokumen-mitra",
+    "durasi-kontrak",
+    "top-5-produk"
+  ]
+}

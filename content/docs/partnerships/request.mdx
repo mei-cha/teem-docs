@@ -1,0 +1,72 @@
+﻿---
+title: Pengajuan
+icon: UserPlus
+---
+Halaman **Pengajuan Kemitraan** digunakan oleh Administrator untuk meninjau, memverifikasi, serta memproses permohonan pendaftaran atau kenaikan jenjang (*upgrade level*) kemitraan dari pengguna pada platform **Teem.id**.
+
+Melalui modul ini, Admin mengevaluasi kelayakan dokumen identitas, lokasi domisili, dan foto verifikasi calon mitra sebelum memberikan persetujuan status keanggotaan.
+
+---
+
+## Alur Mengelola Pengajuan Kemitraan (Step-by-Step)
+
+### Langkah 1: Membuka Halaman & Menyaring Data
+1. Masuk ke modul **Kemitraan > Pengajuan Kemitraan**.
+2. **Pencarian Cepat:** Gunakan kolom input **Cari...** di pojok kanan atas tabel untuk mencari pemohon berdasarkan nama atau alamat email.
+3. **Penyaringan Bertingkat (Filter):** Gunakan baris filter di atas tabel untuk menyaring permohonan spesifik:
+   * **Status:** Menyaring status berkas (*Belum Diverifikasi*, *Disetujui*, *Ditolak*, atau *Dibatalkan*).
+   * **Level:** Menyaring target tingkatan kemitraan yang diajukan.
+   * **Wilayah (Provinsi, Kota/Kab, Kecamatan, Desa):** Menyaring domisili lokasi pemohon secara spesifik.
+   * **Tgl Pengajuan:** Membatasi rentang waktu tanggal masuknya pengajuan.
+   * **Pengaturan Kolom (Ikon Sliders):** Menampilkan atau menyembunyikan kolom tertentu pada tabel.
+
+---
+
+### Langkah 2: Meninjau Detail Verifikasi Pemohon (Drill-Down)
+1. Klik pada baris nama **Pemohon** yang ingin ditinjau (terutama yang berstatus *Belum Diverifikasi*).
+2. Sistem akan membuka halaman **Detail Pengajuan**. Tinjau seluruh komponen berkas verifikasi:
+
+#### A. Informasi Akun & Kemitraan
+* **Profil Pemohon:** Memeriksa nama lengkap, alamat email, nomor telepon, dan foto profil.
+* **Perubahan Level:** Memeriksa tingkatan *level* saat ini serta target *level* baru yang diajukan.
+* **Data Bank & Usaha:** Memeriksa nama bank, nomor rekening, nama pemilik rekening, serta rincian kontak bisnis.
+
+#### B. Pemeriksaan Berkas Identitas (Media Verifikasi)
+Periksa kelayakan tiga dokumen visual yang diunggah pemohon:
+* **Pas Foto (Foto Diri):** Foto formal pemohon.
+* **Foto KTP:** Kejelasan dokumen Kartu Tanda Penduduk beserta kesesuaian Nomor NIK.
+* **Selfie dengan KTP:** Foto pemohon memegang KTP asli untuk memastikan keabsahan pemilik akun.
+
+---
+
+### Langkah 3: Eksekusi Keputusan Verifikasi
+Pada bagian bawah halaman detail pengajuan, pilih tindakan penanganan:
+
+* **Menyetujui Pengajuan (Setujui):** Klik tombol **Setujui** jika seluruh data identitas dan lokasi wilayah sudah valid. Status akun pengguna akan otomatis naik ke tingkatan *level* kemitraan yang diajukan.
+* **Menolak Pengajuan (Tolak):** Klik tombol **Tolak** jika dokumen tidak jelas, NIK tidak sesuai, atau data identitas diragukan. Masukkan alasan penolakan agar pemohon dapat memperbarui berkasnya.
+
+---
+
+## Struktur Tabel & Detail Pengajuan
+
+### 1. Tabel Utama Pengajuan Kemitraan
+| Kolom | Fungsi & Keterangan |
+| :--- | :--- |
+| **Pemohon** | Nama lengkap dan alamat email akun pemohon (dapat diklik untuk membuka detail verifikasi). |
+| **Level** | Indikator perubahan tingkatan (*Level Awal* $\rightarrow$ *Target Level Baru*). |
+| **Wilayah** | Nama daerah domisili lokasi operasional pemohon. |
+| **Status** | Badge indikator berkas (*Belum Diverifikasi*, *Disetujui*, *Ditolak*, *Dibatalkan*). |
+| **Tgl Pengajuan** | Stempel durasi waktu sejak formulir pendaftaran dikirimkan. |
+
+### 2. Komponen Halaman Detail Pengajuan
+| Section | Informasi yang Diverifikasi |
+| :--- | :--- |
+| **Profil & Level** | Nama, email, nomor HP, foto profil, dan perubahan tingkatan kemitraan. |
+| **Bank & Kontak** | Rekening pencairan dana, nama bank, serta kontak usaha. |
+| **Dokumen Media** | Pas Foto, Foto KTP, dan Selfie holding KTP. |
+| **Tindakan Verifikasi** | Tombol penanganan persetujuan (**Setujui**) atau penolakan (**Tolak**). |
+
+---
+
+> **Tips Pengguna Awam**  
+> Pastikan tanggal lahir dan NIK pada Foto KTP terbaca dengan jelas serta cocok dengan wajah pemohon pada foto *Selfie dengan KTP* sebelum mengeklik tombol persetujuan verifikasi.

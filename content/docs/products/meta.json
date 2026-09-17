@@ -1,0 +1,10 @@
+﻿{
+    "title":  "Produk",
+    "icon":  "Package",
+    "pages":  [
+                  "categories",
+                  "product",
+                  "selling-price",
+                  "units"
+              ]
+}
