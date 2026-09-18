@@ -2,22 +2,78 @@
   "title": "Teem.id",
   "pages": [
     "index",
+
     "---PENGENALAN---",
     "introduction/overview",
     "introduction/teem-display",
+
+    "---PANDUAN PENGGUNA BARU---",
+    "getting-started/registration",
+    "getting-started/login",
+
     "---PERSIAPAN---",
     "initial-setup/import-partners",
     "initial-setup/import-stock",
     "initial-setup/wallet-cutover",
-    "---MENU ADMIN---",
-    "sales",
-    "purchases",
-    "partnerships",
-    "finance",
-    "products",
-    "coupons-points",
-    "master-data",
-    "administrator",
-    "support"
+
+    "---PENJUALAN---",
+    "sales/dashboard",
+    "sales/orders",
+    "sales/pending-orders",
+    "sales/delivery-notes",
+
+    "---PEMBELIAN---",
+    "purchases/stock-purchase",
+    "purchases/company-stock",
+
+    "---KEMITRAAN---",
+    "partnerships/dashboard",
+    "partnerships/request",
+    "partnerships/partners",
+    "partnerships/partner-stock",
+    "partnerships/target-realization",
+    "partnerships/set-target",
+    "partnerships/rejection-categories",
+
+    "---KEUANGAN---",
+    "finance/opening-balance",
+    "finance/my-balance",
+    "finance/partner-balance",
+    "finance/withdraw-requests",
+    "finance/partner-bank",
+
+    "---PRODUK---",
+    "products/categories",
+    "products/product",
+    "products/selling-price",
+    "products/units",
+
+    "---KUPON & POIN---",
+    "coupons-points/coupons",
+    "coupons-points/points-leaderboard",
+
+    "---MASTER DATA---",
+    "master-data/bank",
+    "master-data/regions",
+    "master-data/vendors",
+    "master-data/warehouse",
+    "master-data/xendit-fee",
+    "master-data/payout-fee",
+
+    "---ADMINISTRATOR---",
+    "administrator/users",
+    "administrator/roles",
+    "administrator/permissions",
+    "administrator/activity-log",
+    "administrator/settings/company-profile",
+    "administrator/settings/appearance",
+    "administrator/settings/partnerships",
+    "administrator/settings/finance",
+    "administrator/settings/points",
+    "administrator/settings/content",
+
+    "---DUKUNGAN---",
+    "support/tickets",
+    "support/faq"
   ]
 }
