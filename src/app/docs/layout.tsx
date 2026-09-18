@@ -10,17 +10,14 @@ export default function Layout({
 }) {
   const { nav, ...base } = baseOptions();
 
-  return (
-    <DocsLayout
-      {...base}
-      nav={{
-        ...nav,
-        mode: 'top',
-      }}
-      tree={source.getPageTree()}
-      tabMode="navbar"
-    >
-      {children}
-    </DocsLayout>
-  );
+return (
+  <DocsLayout
+    {...base}
+    nav={nav}
+    tree={source.getPageTree()}
+    tabMode="navbar"
+  >
+    {children}
+  </DocsLayout>
+);
 }
