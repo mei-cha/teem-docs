@@ -2,82 +2,47 @@
 title: Stok Perusahaan
 icon: Package
 ---
-Halaman **Import Stok** digunakan oleh Administrator untuk mengunggah dan memperbarui data persediaan barang awal (*initial stock*) dalam jumlah banyak (*bulk import*) ke dalam gudang penyimpanan perusahaan menggunakan berkas spreadsheet (Excel/CSV).
 
-Fitur ini mempermudah pencatatan penyesuaian stok (*stock cut-off*) secara kolektif tanpa perlu menginput persediaan produk satu per satu secara manual.
+Halaman **Stok Perusahaan** digunakan oleh Administrator untuk memantau akumulasi seluruh persediaan barang milik perusahaan yang tersebar di berbagai lokasi gudang penyimpanan atau palet operasional platform **Teem.id**.
 
----
-
-> **Catatan Sebelum Impor:**  
-> Pastikan **produk dan gudang sudah ditambahkan** pada menu *Produk* & *Gudang* sebelum melakukan impor. Selain itu, **jumlah stok wajib diisi dalam satuan terkecil produk**.
+Melalui modul ini, Admin dapat melihat rincian alokasi kuantitas produk per gudang secara *real-time*, baik dalam satuan terbesar maupun satuan terkecil.
 
 ---
 
-## Alur Melakukan Import Stok (Step-by-Step)
+## Alur Memantau Stok Perusahaan (Step-by-Step)
 
-Proses impor stok barang wajib mengikuti alur 5 tahap berikut agar persediaan fisik di gudang terdata secara presisi:
-
-### Langkah 1: Membuka Halaman & Mengunduh Template
-1. Buka modul **Stok Perusahaan**.
-2. Di pojok kanan atas halaman daftar stok, klik tombol **Import Stok**.
-3. Perhatikan catatan petunjuk di atas, lalu klik tombol **Download Template**. Berkas spreadsheet standar akan otomatis terunduh.
+### Langkah 1: Membuka Halaman & Pencarian Produk
+1. Masuk ke modul **Pembelian > Stok Perusahaan**.
+2. **Pencarian Cepat:** Gunakan kolom input **Cari produk...** di pojok kanan atas tabel untuk menemukan barang berdasarkan nama atau SKU produk.
 
 ---
 
-### Langkah 2: Mengisi Kolom Data Spreadsheet
-Buka berkas yang telah diunduh, lalu lengkapi kolom-kolom data stok sesuai ketentuan sistem:
+### Langkah 2: Meninjau Rincian Stok Per Gudang
+1. Pada daftar produk, klik **ikon panah (*dropdown*)** di sebelah kiri nama produk.
+2. Section **Rincian Per Gudang** akan terbuka, menampilkan kartu alokasi stok untuk masing-masing gudang (contoh: *Palet A*, *Palet B*, *Palet C*).
+3. Periksa ketersediaan unit pada tiap kartu:
+   * **Angka Utama:** Menampilkan konversi stok ke satuan terbesar dan sisa satuan terkecil (contoh: `1.245 Karton, 18 Slop`).
+   * **Angka dalam Kurung:** Menampilkan total kuantitas murni dalam satuan terkecil produk (contoh: `99.618 Slop`).
 
-#### Rincian Struktur Kolom Template:
+---
 
-| Header Kolom | Deskripsi Pengisian |
+### Langkah 3: Melakukan Impor Stok Awal (Cut-off)
+Jika Anda ingin memasukkan atau menyesuaikan kuantitas stok awal (*initial stock*) ke banyak gudang sekaligus menggunakan berkas Excel:
+1. Klik tombol **Import Stok** di pojok kanan atas halaman.
+2. Sistem akan mengarahkan Anda ke halaman khusus validasi dan pengunggahan berkas stok.
+
+<Callout type="info" title="Panduan Lengkap Impor Stok">
+  Untuk melihat instruksi pengisian berkas spreadsheet, format SKU, serta solusi penanganan error validasi data stok, silakan buka halaman **[Panduan Import Stok Perusahaan](/docs/initial-setup/import-stock)**.
+</Callout>
+
+---
+
+## Struktur Tabel & Komponen Stok Perusahaan
+
+| Elemen / Kolom | Keterangan & Deskripsi Fungsi |
 | :--- | :--- |
-| **SKU Produk** | Kode unik identifikasi produk (*Stock Keeping Unit*). |
-| **Nama Gudang** | Nama gudang atau lokasi palet penyimpanan tujuan. |
-| **Jumlah Stok (satuan terkecil)** | Kuantitas jumlah stok barang yang diinput (wajib diisi dalam **satuan terkecil produk**). |
-
----
-
-### Langkah 3: Mengunggah Berkas (Upload)
-1. Kembali ke halaman **Import Stok** di panel Administrator.
-2. Klik tombol **Upload** berwarna merah di sebelah tombol *Download Template*.
-3. Pilih berkas spreadsheet persediaan yang telah diisi dari perangkat komputer Anda.
-4. Tunggu beberapa saat hingga sistem selesai membaca dan memverifikasi isi berkas.
-
----
-
-### Langkah 4: Memeriksa Hasil Validasi & Eksekusi Impor
-Setelah berkas diunggah, periksa indikator validasi di atas tabel:
-* **Indikator Valid (Centang Hijau):** Jumlah baris data persediaan yang lolos verifikasi dan siap dimasukkan ke gudang.
-* **Indikator Bermasalah (Tanda Seru Merah):** Jumlah baris data yang mengalami kendala/error.
-
-#### Meninjau Tabel Validasi:
-
-| Kolom Tabel | Keterangan & Deskripsi Fungsi |
-| :--- | :--- |
-| **Baris** | Menunjukkan nomor baris lokasi data pada berkas Excel Anda. |
-| **SKU** | Kode pengenal unik produk yang diverifikasi. |
-| **Gudang** | Nama lokasi gudang atau palet tujuan pengalokasian stok. |
-| **Jumlah Cut-off** | Kuantitas unit persediaan produk yang diajukan. |
-| **Status** | Label hasil verifikasi sistem (*Valid* berwarna hijau, atau pesan rincian *Error* berwarna merah). |
-
-#### Menyelesaikan Impor:
-* Jika terdapat data bermasalah pada kolom **Status** (misal: *SKU tidak ditemukan* atau *Gudang tidak valid*), perbaiki baris data tersebut pada berkas Excel Anda lalu unggah kembali.
-* Jika seluruh data sudah tervalidasi (*Valid*), klik tombol **Import** berwarna merah di pojok kanan bawah untuk memasukkan nilai stok awal ke dalam database gudang secara resmi.
-
----
-
-## Ringkasan Fungsi Elemen Utama
-
-| Elemen | Jenis | Fungsi Utama |
-| :--- | :--- | :--- |
-| **Kotak Catatan** | Petunjuk Penting | Menekankan prasyarat data master (SKU & Gudang) serta acuan satuan terkecil. |
-| **Download Template** | Tombol | Mengunduh berkas acuan spreadsheet stok resmi. |
-| **Upload** | Tombol | Mengunggah berkas Excel stok yang telah diisi. |
-| **Badge Valid & Bermasalah** | Indikator | Ringkasan jumlah baris data stok yang sukses vs error. |
-| **Kolom Status Tabel** | Informasi Status | Menampilkan label *Valid* atau alasan error penolakan stok. |
-| **Tombol Import** | Eksekusi | Memasukkan seluruh data persediaan barang tervalidasi ke gudang. |
-
----
-
-> **Tips**  
-> Pastikan penulisan nama gudang dan SKU di berkas Excel sama persis dengan data yang sudah terdaftar di sistem (perhatikan huruf besar dan kecilnya) agar tidak memicu error saat validasi.
+| **Nama Produk** | Daftar nama produk terdaftar yang memiliki catatan persediaan. |
+| **Total** | Akumulasi total seluruh stok produk dari gabungan semua gudang. |
+| **Rincian Per Gudang** | Panel *accordion* yang menampilkan kartu rincian fisik stok di tiap palet/gudang. |
+| **Cari produk...** | Kolom filter pencarian cepat nama atau SKU barang. |
+| **Tombol Import Stok** | Tombol pintas untuk menuju ke halaman pengunggahan berkas spreadsheet *stock cut-off*. |

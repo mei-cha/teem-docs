@@ -7,21 +7,21 @@ Halaman **Import Stok** digunakan oleh Administrator untuk mengunggah dan memper
 
 Fitur ini mempermudah pencatatan penyesuaian stok (*stock cut-off*) secara kolektif tanpa perlu menginput persediaan produk satu per satu secara manual.
 
----
-
-> **Catatan Sebelum Impor:**  
-> Pastikan **produk dan gudang sudah ditambahkan** pada menu *Produk* & *Gudang* sebelum melakukan impor. Selain itu, **jumlah stok wajib diisi dalam satuan terkecil produk**.
+<Callout type="warn" title="Prasyarat Penting Sebelum Impor">
+  * **Master Data Wajib:** Pastikan **Produk (SKU)** dan **Gudang** sudah terdaftar pada sistem sebelum menjalankan proses impor.
+  * **Satuan Terkecil:** Kuantitas persediaan yang diinput **WAJIB menggunakan nilai satuan terkecil produk** (misal: *Pcs/Saset/Unit*, bukan *Kardus/Karton*).
+</Callout>
 
 ---
 
 ## Alur Melakukan Import Stok (Step-by-Step)
 
-Proses impor stok barang wajib mengikuti alur 5 tahap berikut agar persediaan fisik di gudang terdata secara presisi:
+Proses impor stok barang wajib mengikuti alur 4 tahap berikut agar persediaan fisik di gudang terdata secara presisi:
 
 ### Langkah 1: Membuka Halaman & Mengunduh Template
-1. Buka modul **Stok Perusahaan**.
-2. Di pojok kanan atas halaman daftar stok, klik tombol **Import Stok**.
-3. Perhatikan catatan petunjuk di atas, lalu klik tombol **Download Template**. Berkas spreadsheet standar akan otomatis terunduh.
+1. Buka modul **Pembelian > Stok Perusahaan** (atau halaman impor stok).
+2. Di pojok kanan atas halaman, klik tombol **Import Stok**.
+3. Klik tombol **Download Template** berkas. Berkas spreadsheet standar (`template-import-stok-cutoff.xlsx`) akan otomatis terunduh ke perangkat Anda.
 
 ---
 
@@ -32,16 +32,16 @@ Buka berkas yang telah diunduh, lalu lengkapi kolom-kolom data stok sesuai keten
 
 | Header Kolom | Deskripsi Pengisian |
 | :--- | :--- |
-| **SKU Produk** | Kode unik identifikasi produk (*Stock Keeping Unit*). |
-| **Nama Gudang** | Nama gudang atau lokasi palet penyimpanan tujuan. |
-| **Jumlah Stok (satuan terkecil)** | Kuantitas jumlah stok barang yang diinput (wajib diisi dalam **satuan terkecil produk**). |
+| **SKU Produk** | Kode pengenal unik produk (*Stock Keeping Unit*), contoh: `SKU-CONTOH-001` (*Wajib*). |
+| **Nama Gudang** | Nama lokasi gudang atau palet tujuan penyimpanan, contoh: `Gudang Pusat Malang` (*Wajib*). |
+| **Jumlah Stok (satuan terkecil)** | Kuantitas persediaan dalam bentuk angka bulat (*integer*) bernilai lebih dari 0 (*Wajib*). |
 
 ---
 
 ### Langkah 3: Mengunggah Berkas (Upload)
 1. Kembali ke halaman **Import Stok** di panel Administrator.
 2. Klik tombol **Upload** berwarna merah di sebelah tombol *Download Template*.
-3. Pilih berkas spreadsheet persediaan yang telah diisi dari perangkat komputer Anda.
+3. Pilih berkas spreadsheet persediaan yang telah diisi dari komputer Anda.
 4. Tunggu beberapa saat hingga sistem selesai membaca dan memverifikasi isi berkas.
 
 ---
@@ -62,8 +62,33 @@ Setelah berkas diunggah, periksa indikator validasi di atas tabel:
 | **Status** | Label hasil verifikasi sistem (*Valid* berwarna hijau, atau pesan rincian *Error* berwarna merah). |
 
 #### Menyelesaikan Impor:
-* Jika terdapat data bermasalah pada kolom **Status** (misal: *SKU tidak ditemukan* atau *Gudang tidak valid*), perbaiki baris data tersebut pada berkas Excel Anda lalu unggah kembali.
+* Jika terdapat data bermasalah pada kolom **Status**, perbaiki baris data tersebut pada berkas Excel Anda lalu unggah kembali.
 * Jika seluruh data sudah tervalidasi (*Valid*), klik tombol **Import** berwarna merah di pojok kanan bawah untuk memasukkan nilai stok awal ke dalam database gudang secara resmi.
+
+---
+
+## Panduan Mengatasi Masalah Validasi (Troubleshooting)
+
+Apabila sistem menampilkan pesan error berwarna merah pada tabel validasi, gunakan tabel acuan berikut untuk mengetahui penyebab dan cara penyelesaiannya:
+
+### 1. Masalah SKU & Master Produk
+| Pesan Error Sistem | Penyebab Utama | Solusi Penanganan |
+| :--- | :--- | :--- |
+| `SKU kosong` | Kolom *SKU Produk* pada baris spreadsheet tidak diisi. | Isi kode SKU produk yang ingin disesuaikan persediaannya. |
+| `SKU "[kode]" belum terdaftar di menu Produk` | Kode SKU yang dimasukkan tidak ditemukan di dalam master database produk. | Daftarkan terlebih dahulu produk tersebut di menu **Produk > Produk**, atau perbaiki kesalahan ejaan SKU pada berkas Excel Anda. |
+
+### 2. Masalah Gudang Penyimpanan
+| Pesan Error Sistem | Penyebab Utama | Solusi Penanganan |
+| :--- | :--- | :--- |
+| `Nama Gudang kosong` | Kolom *Nama Gudang* pada berkas Excel tidak diisi. | Lengkapi nama gudang penyimpanan tujuan. |
+| `Gudang "[nama]" tidak ditemukan` | Ejaan nama gudang tidak cocok dengan daftar master data gudang sistem. | Periksa daftar gudang di menu **Master Data > Gudang**. Pastikan penulisan nama di Excel sama persis (huruf besar/kecil tidak sensitif, tetapi ejaan harus sesuai). |
+
+### 3. Masalah Kombinasi & Kuantitas Stok
+| Pesan Error Sistem | Penyebab Utama | Solusi Penanganan |
+| :--- | :--- | :--- |
+| `Kombinasi SKU + Gudang duplikat di file ini (baris X, Y)` | Item produk yang sama untuk gudang yang sama ditulis lebih dari 1 kali di dalam satu berkas Excel. | Gabungkan kuantitas stok produk tersebut menjadi 1 baris saja pada berkas Excel Anda, lalu hapus baris duplikatnya. |
+| `Jumlah Stok kosong` | Kolom kuantitas persediaan ditinggalkan tanpa angka. | Isi kuantitas jumlah stok produk. |
+| `Jumlah Stok "[nilai]" tidak valid (harus angka > 0)` | Teks bernilai negatif, angka `0`, atau format non-angka (seperti huruf/simbol) dimasukkan ke kolom kuantitas. | Masukkan nilai kuantitas dalam bentuk angka positif murni tanpa tambahan teks atau simbol (contoh: `1200`). |
 
 ---
 
@@ -71,7 +96,6 @@ Setelah berkas diunggah, periksa indikator validasi di atas tabel:
 
 | Elemen | Jenis | Fungsi Utama |
 | :--- | :--- | :--- |
-| **Kotak Catatan** | Petunjuk Penting | Menekankan prasyarat data master (SKU & Gudang) serta acuan satuan terkecil. |
 | **Download Template** | Tombol | Mengunduh berkas acuan spreadsheet stok resmi. |
 | **Upload** | Tombol | Mengunggah berkas Excel stok yang telah diisi. |
 | **Badge Valid & Bermasalah** | Indikator | Ringkasan jumlah baris data stok yang sukses vs error. |
@@ -81,4 +105,4 @@ Setelah berkas diunggah, periksa indikator validasi di atas tabel:
 ---
 
 > **Tips**  
-> Pastikan penulisan nama gudang dan SKU di berkas Excel sama persis dengan data yang sudah terdaftar di sistem (perhatikan huruf besar dan kecilnya) agar tidak memicu error saat validasi.
+> Pastikan penulisan nama gudang dan SKU di berkas Excel sama persis dengan data yang sudah terdaftar di sistem agar tidak memicu error saat validasi.

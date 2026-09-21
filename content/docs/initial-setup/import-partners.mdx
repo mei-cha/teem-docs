@@ -16,7 +16,7 @@ Proses impor data mitra wajib mengikuti alur 4 tahap urut berikut agar data dapa
 ### Langkah 1: Mengunduh Format Berkas (Download Template)
 1. Buka modul **Kemitraan > Mitra**, lalu klik tombol **Import Mitra** (atau akses halaman impor).
 2. Di bagian atas kotak instruksi, klik tombol **Download Template** berkas.
-3. Berkas *template* spreadsheet akan otomatis terunduh ke komputer Anda.
+3. Berkas *template* spreadsheet (`template-import-mitra.xlsx`) akan otomatis terunduh ke komputer Anda.
 
 ---
 
@@ -28,21 +28,21 @@ Buka berkas yang telah diunduh, lalu lengkapi kolom-kolom data mitra sesuai petu
 | Header Kolom | Deskripsi Pengisian |
 | :--- | :--- |
 | **Email** | Alamat email mitra terdaftar (*Wajib*). |
-| **Level Mitra** | Tingkatan jenjang kemitraan (ditulis dengan huruf kecil). |
-| **NIK** | Nomor Induk Kependudukan (16 digit angka). |
-| **NPWP** | Nomor Pokok Wajib Pajak mitra. |
-| **Alamat Lengkap** | Alamat domisili atau kantor mitra. |
-| **Provinsi** | Nama provinsi domisili. |
-| **Kota/Kabupaten** | Nama kota atau kabupaten. |
-| **Kecamatan** | Nama kecamatan. |
-| **Desa/Kelurahan** | Nama desa atau kelurahan. |
-| **Latitude** | Koordinat garis lintang peta. |
-| **Longitude** | Koordinat garis bujur peta. |
-| **Nama Bank** | Nama/kode institusi perbankan pilihan mitra. |
-| **Nomor Rekening** | Nomor rekening bank atau akun e-wallet mitra. |
-| **Nama Pemilik Rekening** | Nama pemilik sesuai yang tertera pada buku tabungan. |
-| **Tanggal Mulai Kontrak** | Tanggal awal berlakunya masa aktif kemitraan. |
-| **Tanggal Berakhir Kontrak** | Tanggal kadaluarsa masa berlaku kontrak (*Kosongkan jika tanpa batas/selamanya*). |
+| **Level Mitra** | Tingkatan jenjang kemitraan, contoh: `reseller`, `agen`, `distributor` (*Wajib*). |
+| **NIK** | Nomor Induk Kependudukan 16 digit angka (*Wajib*). |
+| **NPWP** | Nomor Pokok Wajib Pajak mitra (*Opsional*). |
+| **Alamat Lengkap** | Alamat domisili atau lokasi jalan/nomor rumah (*Wajib*). |
+| **Provinsi** | Nama provinsi domisili (*Wajib*). |
+| **Kota/Kabupaten** | Nama kota atau kabupaten (*Wajib*). |
+| **Kecamatan** | Nama kecamatan (*Wajib*). |
+| **Desa/Kelurahan** | Nama desa atau kelurahan (*Wajib*). |
+| **Latitude** | Koordinat garis lintang peta, rentang `-90` s/d `90` (*Opsional*). |
+| **Longitude** | Koordinat garis bujur peta, rentang `-180` s/d `180` (*Opsional*). |
+| **Nama Bank** | Nama/kode bank resmi terdaftar di sistem, contoh: `BCA`, `MANDIRI` (*Opsional*). |
+| **Nomor Rekening** | Nomor rekening bank/e-wallet mitra (*Wajib jika Nama Bank diisi*). |
+| **Nama Pemilik Rekening** | Nama pemilik sesuai yang tertera pada buku tabungan (*Opsional*). |
+| **Tanggal Mulai Kontrak** | Tanggal awal berlakunya masa aktif kemitraan dengan format `YYYY-MM-DD` (*Wajib*). |
+| **Tanggal Berakhir Kontrak** | Tanggal kadaluarsa kontrak dengan format `YYYY-MM-DD` (*Kosongkan jika tanpa batas/selamanya*). |
 
 ---
 
@@ -71,6 +71,41 @@ Setelah berkas berhasil diunggah, periksa indikator ringkasan di atas tabel hasi
 #### Menyelesaikan Impor:
 * Jika terdapat data bermasalah pada kolom **Status**, perbaiki baris data tersebut pada berkas Excel Anda lalu unggah kembali.
 * Jika seluruh data sudah valid, klik tombol **Import [X] Mitra** di pojok kanan bawah untuk memasukkan data mitra secara resmi ke dalam database.
+
+---
+
+## Panduan Mengatasi Masalah Validasi (Troubleshooting)
+
+Apabila sistem menampilkan pesan error berwarna merah pada tabel validasi, gunakan tabel acuan berikut untuk mengetahui penyebab dan cara penyelesaiannya:
+
+### 1. Masalah Akun & Role Mitra
+| Pesan Error Sistem | Penyebab Utama | Solusi Penanganan |
+| :--- | :--- | :--- |
+| `Email "[email]" tidak ditemukan` | Email belum terdaftar pada tabel profil sistem. | Pastikan mitra sudah membuat/didaftarkan akun dasarnya di platform **Teem.id**. |
+| `Email "[email]" duplikat di file ini` | Alamat email terdeteksi ditulis lebih dari 1 kali di dalam berkas Excel. | Hapus baris duplikat pada berkas Excel Anda dan tinggalkan 1 baris saja. |
+| `Email "[email]" sudah terdaftar sebagai mitra sebelumnya` | Akun tersebut sudah memiliki profil mitra aktif. | Tidak perlu diimpor ulang. Kelola data mitra tersebut langsung dari menu **Kemitraan > Mitra**. |
+| `Email "[email]" belum mendaftar akun di platform...` | Profil ada, tetapi belum memiliki *role external* yang sesuai. | Minta user mendaftar via aplikasi/web publik terlebih dahulu sebelum diimpor sebagai mitra. |
+| `Level "[kode]" tidak dikenali` | Teks kode level kemitraan tidak sesuai dengan master *role* eksternal. | Gunakan penulisan huruf kecil standar (contoh: `reseller`, `agen`, `distributor`). |
+
+### 2. Masalah Wilayah & Alamat
+| Pesan Error Sistem | Penyebab Utama | Solusi Penanganan |
+| :--- | :--- | :--- |
+| `Provinsi "[nama]" tidak ditemukan` | Penulisan nama provinsi tidak cocok dengan master data wilayah. | Sesuaikan ejaan nama provinsi (contoh: gunakan `JAWA TIMUR`). |
+| `Kota/Kabupaten "[nama]" tidak ditemukan di provinsi tersebut` | Nama kota terdeteksi salah eja atau tidak berada di bawah provinsi yang dipilih. | Pastikan penulisan kota benar (contoh: `KOTA MALANG`) dan sesuai dengan provinsinya. |
+| `Kecamatan "[nama]" tidak ditemukan di kota tersebut` | Nama kecamatan tidak terdaftar di dalam hirarki kota tersebut. | Cek kembali ejaan kecamatan (contoh: `KLOJEN`) sesuai data Wilayah BPS/Sistem. |
+| `Desa/Kelurahan "[nama]" tidak ditemukan...` | Nama desa/kelurahan tidak berada di bawah kecamatan yang diisi. | Cek kembali ejaan desa/kelurahan (contoh: `KIDUL DALEM`). |
+
+<Callout type="warn" title="Ketelitian Wilayah Berjenjang">
+  Validasi wilayah bersifat **hirarkis berjenjang** (Provinsi &rarr; Kota &rarr; Kecamatan &rarr; Kelurahan). Pastikan relasi antar wilayah dari tingkat atas ke bawah sudah benar. Salah eja pada nama kecamatan akan menyebabkan desa/kelurahan di bawahnya otomatis gagal terdeteksi.
+</Callout>
+
+### 3. Masalah Format Format Data & Koordinat
+| Pesan Error Sistem | Penyebab Utama | Solusi Penanganan |
+| :--- | :--- | :--- |
+| `Latitude / Longitude tidak valid` | Format koordinat salah atau bernilai di luar batas koordinat bumi. | Pastikan Latitude di rentang `-90` s/d `90` dan Longitude `-180` s/d `180` (contoh: `-7.9797` dan `112.6304`). |
+| `Tanggal Mulai Kontrak kosong/format salah...` | Format tanggal bukan `YYYY-MM-DD` atau sel kosong. | Ubah format kolom di Excel menjadi `YYYY-MM-DD` (contoh: `2024-01-15`). |
+| `Bank "[nama]" tidak ditemukan` | Nama bank tidak ada pada master data perbankan sistem. | Gunakan nama bank standar yang terdaftar di sistem (contoh: `BCA`, `MANDIRI`, `BRI`). |
+| `Nama Bank diisi tapi Nomor Rekening kosong` | Kolom *Nama Bank* diisi, tetapi *Nomor Rekening* ditinggalkan kosong. | Lengkapi kolom *Nomor Rekening* atau kosongkan kedua kolom tersebut sekalian jika tidak ada data bank. |
 
 ---
 
