@@ -13,7 +13,7 @@ Data vendor ini digunakan sebagai acuan asal-usul barang pada modul **Pembelian 
 
 ### Langkah 1: Akses Menu & Pencarian Vendor (Search)
 1. Buka modul **Master Data > Vendor**.
-2. **Pencarian Cepat:** Gunakan kolom input **Cari vendor...** di pojok kanan atas tabel untuk mencari vendor berdasarkan nama, kode vendor, atau email (contoh: ketik *PT IndoKretek Tobacco* atau *IKT-002*).
+2. **Pencarian Cepat:** Gunakan kolom input **Cari vendor...** di pojok kanan atas tabel untuk mencari vendor berdasarkan nama, kode vendor, atau email.
 3. Tabel akan menyaring dan menampilkan baris data vendor yang sesuai secara *real-time*.
 
 ---
@@ -21,12 +21,12 @@ Data vendor ini digunakan sebagai acuan asal-usul barang pada modul **Pembelian 
 ### Langkah 2: Menambah Vendor Baru
 1. Klik tombol **+ Tambah** berwarna merah di pojok kanan atas halaman.
 2. Pada modal pop-up **Tambah Vendor**, lengkapi formulir profil vendor:
-   * **Kode Vendor:** Masukkan kode identifikasi unik vendor (contoh: `VND-001` atau `IKT-002`).
-   * **Nama Vendor \*:** Masukkan nama resmi perusahaan/pemasok (contoh: `PT IndoKretek Tobacco`).
-   * **Kontak:** Masukkan nomor telepon/WhatsApp operasional vendor (contoh: `08123456789`).
-   * **Email:** Masukkan alamat email resmi vendor (contoh: `vendor@email.com`).
+   * **Kode Vendor:** Masukkan kode identifikasi unik vendor.
+   * **Nama Vendor \*:** Masukkan nama resmi perusahaan/pemasok.
+   * **Kontak:** Masukkan nomor telepon/WhatsApp operasional vendor.
+   * **Email:** Masukkan alamat email resmi vendor.
    * **Alamat:** Tuliskan alamat lengkap kantor atau gudang pengiriman vendor.
-   * **Vendor Aktif:** Berikan tanda centang (*checkbox*) merah agar vendor langsung berstatus aktif di sistem.
+   * **Vendor Aktif:** Berikan tanda centang (*checkbox*) agar vendor langsung berstatus aktif di sistem.
 3. Klik tombol **Tambah** untuk menyimpan data.
 
 ---
@@ -40,10 +40,10 @@ Data vendor ini digunakan sebagai acuan asal-usul barang pada modul **Pembelian 
 ---
 
 ### Langkah 4: Mengubah Status Operasional Vendor (Toggle Status)
-1. Pada kolom **Aksi**, perhatikan ikon **Sakelar (Toggle)** berwarna merah.
+1. Pada kolom **Aksi**, perhatikan ikon **Sakelar (Toggle)**.
 2. Klik ikon sakelar tersebut untuk mengubah status vendor secara instan:
-   * **Aktif (Label Hijau):** Vendor diizinkan untuk dipilih dalam pembuatan transaksi pembelian stok baru.
-   * **Nonaktif (Label Abu-abu/Merah):** Vendor ditangguhkan sementara dari sistem sehingga tidak muncul pada opsi pengadaan barang.
+   * **Aktif:** Vendor diizinkan untuk dipilih dalam pembuatan transaksi pembelian stok baru.
+   * **Nonaktif:** Vendor ditangguhkan sementara dari sistem sehingga tidak muncul pada opsi pengadaan barang.
 
 ---
 
@@ -53,14 +53,14 @@ Data vendor ini digunakan sebagai acuan asal-usul barang pada modul **Pembelian 
 3. Konfirmasi penghapusan pada pesan peringatan yang muncul.  
    *(Catatan: Hapus data vendor hanya dilakukan jika vendor tersebut belum pernah terikat dalam riwayat transaksi pembelian stok).*
 
----`
+---
 
 ## Struktur Tabel Data Vendor
 
 | Kolom | Fungsi & Keterangan |
 | :--- | :--- |
-| **Kode** | Kode unik pengenal entitas vendor (contoh: `IKT-002`). |
-| **Nama** | Nama resmi perusahaan/pemasok barang (contoh: *PT IndoKretek Tobacco*). |
+| **Kode** | Kode unik pengenal entitas vendor. |
+| **Nama** | Nama resmi perusahaan/pemasok barang. |
 | **Kontak** | Informasi nomor telepon dan email vendor (dilengkapi ikon mata untuk membuka sensor data sensitif). |
 | **Status** | Label indikator operasional vendor (*Aktif* / *Nonaktif*). |
-| **Aksi** | Terdiri dari 3 tombol kontrol cepat: **Toggle Status** (ubah status aktif/nonaktif), **Pensil** (edit data), dan **Tempat Sampah** (hapus vendor). |
+| **Aksi** | Terdiri dari 3 tombol kontrol cepat: **Toggle Status** (ubah status aktif/nonaktif), **Pensil (Edit)** untuk mengubah data, dan **Tempat Sampah (Hapus)** untuk menghapus vendor. |

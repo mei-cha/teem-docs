@@ -1,16 +1,17 @@
 ﻿---
-title: Harga Jual Produk
+title: Harga Jual
 icon: Tag
 ---
 
-Halaman **Harga Jual Produk** digunakan oleh Administrator untuk mengonfigurasi skema harga jual barang berdasarkan jenjang tingkatan (*level*) pengguna (seperti *Distributor*, *Agen*, *Sub Agen*, dan *Konsumen*) serta variasi satuan kemasan produk yang tersedia pada platform **Teem.id**.
+Halaman **Harga Jual Produk** digunakan oleh Administrator untuk mengonfigurasi skema harga jual barang berdasarkan jenjang tingkatan (*level*) pengguna serta variasi satuan kemasan produk yang tersedia pada platform **Teem.id**.
 
 Pengaturan ini memastikan setiap tingkatan mitra mendapatkan penetapan harga jual yang presisi dan otomatis sesuai dengan kualifikasi akun masing-masing saat melakukan pemesanan.
 
 ---
 
-> **Catatan Sebelum Mengatur Harga:**  
-> Pastikan data produk, jenjang *level* mitra, dan opsi satuan kemasan sudah dikonfigurasi terlebih dahulu pada menu master data sebelum menentukan nominal harga jual.
+<Callout type="warn" title="Prasyarat Konfigurasi">
+  Pastikan data produk, jenjang level mitra, dan opsi satuan kemasan sudah dikonfigurasi terlebih dahulu pada menu master data sebelum menentukan nominal harga jual.
+</Callout>
 
 ---
 
@@ -31,17 +32,13 @@ Pengaturan ini memastikan setiap tingkatan mitra mendapatkan penetapan harga jua
 
 ### Langkah 3: Meninjau Informasi & Satuan Kemasan
 1. Di bagian atas panel detail, periksa **Nama Produk** beserta **SKU** barang yang sedang diatur.
-2. Periksa baris label **Satuan** untuk melihat konfigurasi jenis kemasan barang (seperti satuan dasar serta satuan kelipatannya).
+2. Periksa baris label **Satuan** untuk melihat konfigurasi jenis kemasan barang.
 
 ---
 
 ### Langkah 4: Mengisi Matriks Nominal Harga Jual
 1. Perhatikan tabel matriks harga yang terbagi berdasarkan **Level** pada baris dan jenis **Satuan Kemasan** pada kolom.
-2. Masukkan nominal angka harga jual pada setiap kolom input yang tersedia untuk masing-masing tingkatan:
-   * **Level Distributor:** Masukkan nominal harga khusus untuk akun tingkatan distributor.
-   * **Level Agen:** Masukkan nominal harga khusus untuk akun tingkatan agen.
-   * **Level Sub Agen:** Masukkan nominal harga khusus untuk akun tingkatan sub agen.
-   * **Level Konsumen:** Masukkan nominal harga eceran untuk pembeli umum/konsumen.
+2. Masukkan nominal angka harga jual pada setiap kolom input yang tersedia untuk masing-masing tingkatan akun.
 3. Pastikan nominal disesuaikan secara berjenjang untuk setiap opsi kolom satuan kemasan yang ada.
 
 ---
@@ -58,7 +55,7 @@ Pengaturan ini memastikan setiap tingkatan mitra mendapatkan penetapan harga jua
 | Elemen Matriks | Keterangan & Deskripsi Fungsi |
 | :--- | :--- |
 | **Daftar Produk (Sisi Kiri)** | Navigasi untuk memilih barang yang akan dikonfigurasi harganya, dilengkapi kolom pencarian SKU/nama. |
-| **Baris Level** | Tingkatan keanggotaan pengguna (*Distributor*, *Agen*, *Sub Agen*, *Konsumen*). |
+| **Baris Level** | Tingkatan keanggotaan pengguna. |
 | **Kolom Satuan** | Variasi unit pengemasan barang dari satuan dasar hingga satuan berukuran lebih besar. |
-| **Field Input Harga** | Kotak teks untuk memasukkan nominal angka harga jual sesuai kombinasi *level* dan *satuan*. |
+| **Field Input Harga** | Kotak teks untuk memasukkan nominal angka harga jual sesuai kombinasi level dan satuan. |
 | **Tombol Simpan** | Eksekusi untuk memperbarui dan menerapkan skema harga ke dalam database sistem. |

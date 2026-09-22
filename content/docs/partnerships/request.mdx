@@ -2,58 +2,67 @@
 title: Pengajuan
 icon: UserPlus
 ---
-Halaman **Pengajuan Kemitraan** digunakan oleh Administrator untuk meninjau, memverifikasi, serta memproses permohonan pendaftaran atau kenaikan jenjang (*upgrade level*) kemitraan dari pengguna pada platform **Teem.id**.
 
-Melalui modul ini, Admin mengevaluasi kelayakan dokumen identitas, lokasi domisili, dan foto verifikasi calon mitra sebelum memberikan persetujuan status keanggotaan.
+Halaman **Pengajuan Kemitraan** digunakan oleh Administrator untuk meninjau, memverifikasi, serta memproses permohonan pendaftaran baru atau kenaikan jenjang kemitraan dari pengguna pada platform **Teem.id**.
+
+Melalui modul ini, Admin mengevaluasi kelayakan identitas (NIK/NPWP), lokasi domisili, foto verifikasi diri, dokumen kesepakatan (*MoU*), hingga invoice pendaftaran sebelum memberikan persetujuan status keanggotaan.
 
 ---
 
 ## Alur Mengelola Pengajuan Kemitraan (Step-by-Step)
 
 ### Langkah 1: Membuka Halaman & Menyaring Data
-1. Masuk ke modul **Kemitraan > Pengajuan Kemitraan**.
+1. Masuk ke modul **Kemitraan > Pengajuan**.
 2. **Pencarian Cepat:** Gunakan kolom input **Cari...** di pojok kanan atas tabel untuk mencari pemohon berdasarkan nama atau alamat email.
-3. **Penyaringan Bertingkat (Filter):** Gunakan baris filter di atas tabel untuk menyaring permohonan spesifik:
-   * **Status:** Menyaring status berkas (*Belum Diverifikasi*, *Disetujui*, *Ditolak*, atau *Dibatalkan*).
+3. **Penyaringan Bertingkat (Filter):** Gunakan baris dropdown filter di atas tabel untuk membatasi tampilan pengajuan:
+   * **Status:** Menyaring status berkas (*Semua Status*, *Belum Diverifikasi*, *Ditolak*, atau *Dibatalkan*).
    * **Level:** Menyaring target tingkatan kemitraan yang diajukan.
-   * **Wilayah (Provinsi, Kota/Kab, Kecamatan, Desa):** Menyaring domisili lokasi pemohon secara spesifik.
-   * **Tgl Pengajuan:** Membatasi rentang waktu tanggal masuknya pengajuan.
-   * **Pengaturan Kolom (Ikon Sliders):** Menampilkan atau menyembunyikan kolom tertentu pada tabel.
+   * **Wilayah (Provinsi, Kota/Kab, Kecamatan, Desa):** Menyaring lokasi operasional pemohon secara spesifik.
+   * **Tgl Pengajuan:** Membatasi rentang waktu pengajuan.
+   * **Pengaturan Kolom (Ikon Sliders):** Menyesuaikan visibilitas kolom pada tabel.
 
 ---
 
 ### Langkah 2: Meninjau Detail Verifikasi Pemohon (Drill-Down)
-1. Klik pada baris nama **Pemohon** yang ingin ditinjau (terutama yang berstatus *Belum Diverifikasi*).
-2. Sistem akan membuka halaman **Detail Pengajuan**. Tinjau seluruh komponen berkas verifikasi:
+1. Pada tabel utama, klik pada baris nama **Pemohon** yang ingin ditinjau.
+2. Sistem akan membuka halaman **Detail Pengajuan**. Tinjau seluruh informasi verifikasi:
 
-#### A. Informasi Akun & Kemitraan
-* **Profil Pemohon:** Memeriksa nama lengkap, alamat email, nomor telepon, dan foto profil.
-* **Perubahan Level:** Memeriksa tingkatan *level* saat ini serta target *level* baru yang diajukan.
-* **Data Bank & Usaha:** Memeriksa nama bank, nomor rekening, nama pemilik rekening, serta rincian kontak bisnis.
+#### A. Ringkasan Profil & Data Legalitas
+* **Informasi Akun:** Memeriksa nama pemohon, foto profil, nomor HP, jenis kelamin, serta status pengajuan.
+* **Data Bank:** Memeriksa nama bank, nomor rekening, dan nama pemilik rekening untuk pencairan dana.
+* **Data Mitra (Legalitas):** Memeriksa keabsahan NIK dan NPWP pemohon.
+* **Level & Wilayah:** Memeriksa level saat ini dibanding level yang diajukan, beserta lokasi wilayah dan detail alamat domisili.
 
-#### B. Pemeriksaan Berkas Identitas (Media Verifikasi)
-Periksa kelayakan tiga dokumen visual yang diunggah pemohon:
-* **Pas Foto (Foto Diri):** Foto formal pemohon.
-* **Foto KTP:** Kejelasan dokumen Kartu Tanda Penduduk beserta kesesuaian Nomor NIK.
-* **Selfie dengan KTP:** Foto pemohon memegang KTP asli untuk memastikan keabsahan pemilik akun.
+#### B. Meninjau Tab Lampiran Berkas
+Pilih tab tampilan berkas pada section dokumen:
+* **Tab Dokumen:** Memeriksa 3 media foto verifikasi visual pemohon mencakup **Foto Selfie**, **Foto KTP**, dan **Foto Selfie dengan KTP**.
+* **Tab MoU:** Memeriksa berkas lembar kesepakatan *Memorandum of Understanding* (dapat diklik *Buka di tab baru* untuk meninjau/mengunduh dokumen PDF).
+* **Tab Invoice:** Memeriksa tagihan rincian produk pendaftaran awal beserta subtotal nominal pembayaran.
+
+#### C. Melacak Tahapan Verifikasi
+Periksa panel **Tahapan Verifikasi** di bagian bawah halaman untuk memantau indikator alur proses verifikasi berkas hingga akun aktif.
 
 ---
 
 ## Struktur Tabel & Detail Pengajuan
 
 ### 1. Tabel Utama Pengajuan Kemitraan
-| Kolom | Fungsi & Keterangan |
+| Kolom | Keterangan & Deskripsi Fungsi |
 | :--- | :--- |
-| **Pemohon** | Nama lengkap dan alamat email akun pemohon (dapat diklik untuk membuka detail verifikasi). |
-| **Level** | Indikator perubahan tingkatan . |
-| **Wilayah** | Nama daerah domisili lokasi operasional pemohon. |
-| **Status** | Badge indikator berkas (*Belum Diverifikasi*, *Disetujui*, *Ditolak*, *Dibatalkan*). |
+| **Pemohon** | Nama lengkap dan alamat email akun pemohon (klik baris untuk membuka detail). |
+| **Level** | Indikator perubahan tingkatan kemitraan dari level asal ke level tujuan. |
+| **Wilayah** | Nama daerah lokasi domisili pengajuan pemohon. |
+| **Status** | Badge indikator berkas (*Belum Diverifikasi*, *Ditolak*, *Dibatalkan*). |
 | **Tgl Pengajuan** | Stempel durasi waktu sejak formulir pendaftaran dikirimkan. |
 
 ### 2. Komponen Halaman Detail Pengajuan
-| Section | Informasi yang Diverifikasi |
+| Section / Tab | Informasi yang Diverifikasi |
 | :--- | :--- |
-| **Profil & Level** | Nama, email, nomor HP, foto profil, dan perubahan tingkatan kemitraan. |
-| **Bank & Kontak** | Rekening pencairan dana, nama bank, serta kontak usaha. |
-| **Dokumen Media** | Pas Foto, Foto KTP, dan Selfie holding KTP. |
-| **Tindakan Verifikasi** | Tombol penanganan persetujuan (**Setujui**) atau penolakan (**Tolak**). |
+| **Profil Pemohon** | Nama, nomor HP, jenis kelamin, status pengajuan, dan lokasi domisili. |
+| **Data Bank & Mitra** | Rekening bank, nama pemilik, nomor NIK, dan NPWP. |
+| **Level & Alamat** | Perbandingan level asal vs tujuan, wilayah diajukan, dan detail alamat. |
+| **Tab Dokumen** | Pratinjau foto Selfie, Foto KTP, dan Selfie pegang KTP. |
+| **Tab MoU** | Dokumen lembar perjanjian kerja sama format PDF. |
+| **Tab Invoice** | Rincian daftar item produk pendaftaran awal dan nominal subtotal. |
+| **Tahapan Verifikasi** | *Timeline* progress langkah verifikasi berkas hingga akun aktif. |
+

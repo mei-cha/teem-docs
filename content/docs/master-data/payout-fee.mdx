@@ -1,5 +1,5 @@
 ﻿---
-title: Master Data Biaya Payout
+title: Biaya Payout
 icon: Banknote
 ---
 
@@ -14,15 +14,15 @@ Biaya ini akan menjadi acuan pemotongan otomatis pada saat proses penarikan sald
 Di bagian atas halaman, terdapat 3 **Stat Card** (kartu indikator ringkasan) untuk memantau status saluran pencairan dana:
 
 ### 1. Total Fee (Ikon Kartu Kredit)
-* **Angka Utama:** Menampilkan total akumulasi saluran pencairan (*channel disbursement*) yang terdaftar di dalam sistem (contoh: **1**).
+* **Angka Utama:** Menampilkan total akumulasi saluran pencairan (*channel disbursement*) yang terdaftar di dalam sistem.
 * **Fungsi:** Membantu Admin melihat berapa banyak aturan biaya pencairan yang terkonfigurasi.
 
 ### 2. Aktif (Ikon Centang Hijau)
-* **Angka Utama:** Menampilkan jumlah saluran pencairan dana yang sedang berstatus aktif (contoh: **1**).
+* **Angka Utama:** Menampilkan jumlah saluran pencairan dana yang sedang berstatus aktif.
 * **Fungsi:** Membantu Admin memastikan aturan biaya pencairan dana mana saja yang sedang memotong transaksi pencairan mitra.
 
 ### 3. Nonaktif (Ikon Silang Merah)
-* **Angka Utama:** Menampilkan jumlah saluran pencairan yang sedang dimatikan/ditangguhkan (contoh: **0**).
+* **Angka Utama:** Menampilkan jumlah saluran pencairan yang sedang dimatikan/ditangguhkan.
 * **Fungsi:** Membantu Admin memantau aturan biaya pencairan yang sedang tidak diberlakukan.
 
 ---
@@ -31,7 +31,7 @@ Di bagian atas halaman, terdapat 3 **Stat Card** (kartu indikator ringkasan) unt
 
 ### Langkah 1: Mencari & Memfilter Data Payout
 1. Masuk ke modul **Master Data > Biaya Payout**.
-2. **Pencarian Cepat:** Gunakan kolom input **Cari...** di sebelah kiri untuk mencari nama saluran pencairan (contoh: ketik *Default Disbursement* atau *BCA*).
+2. **Pencarian Cepat:** Gunakan kolom input **Cari...** di sebelah kiri untuk mencari nama saluran pencairan.
 3. **Filter Status (Dropdown Semua Status):**  
    Klik menu dropdown ini untuk menyaring tabel berdasarkan status:
    * **Semua Status:** Menampilkan seluruh saluran pencairan baik aktif maupun nonaktif.
@@ -43,11 +43,11 @@ Di bagian atas halaman, terdapat 3 **Stat Card** (kartu indikator ringkasan) unt
 ### Langkah 2: Menambah Fee Payout Baru
 1. Klik tombol **+ Tambah** berwarna merah di pojok kanan atas.
 2. Pada modal pop-up **Tambah Fee Payout Xendit**, lengkapi parameter:
-   * **Kode Channel \*:** Masukkan kode pengenal saluran pencairan (contoh: `BCA` atau `DEFAULT`).
-   * **Nama Tampilan \*:** Masukkan nama saluran pencairan yang mudah dipahami (contoh: `Bank BCA` atau `Default Disbursement`).
-   * **Tipe Fee \*:** Pilih skema potongan pada dropdown (contoh: `Flat (Rp)` untuk pemotongan nilai rupiah tetap).
-   * **Nilai Fee \* (Rp):** Masukkan nominal rupiah biaya pencairan per transaksi (contoh: isi `2500` untuk fee Rp 2.500).
-   * **PPN (%) \*:** Masukkan persentase pajak transaksi (contoh: `11,00` untuk PPN 11%).
+   * **Kode Channel \*:** Masukkan kode pengenal saluran pencairan.
+   * **Nama Tampilan \*:** Masukkan nama saluran pencairan yang mudah dipahami.
+   * **Tipe Fee \*:** Pilih skema potongan pada dropdown.
+   * **Nilai Fee \* (Rp):** Masukkan nominal rupiah biaya pencairan per transaksi.
+   * **PPN (%) \*:** Masukkan persentase pajak transaksi.
    * **Aktif (Sakelar Toggle):** Nyalakan sakelar ke warna merah agar aturan pencairan dana ini langsung berlaku.
 3. Klik tombol **Tambah** untuk menyimpan data.
 
@@ -63,7 +63,7 @@ Di bagian atas halaman, terdapat 3 **Stat Card** (kartu indikator ringkasan) unt
 
 ### Langkah 4: Mengubah Status Cepat & Menghapus Fee Payout
 Pada kolom **Aksi**, gunakan 3 tombol kontrol pintas:
-* **Ikon Toggle (Sakelar Merah):** Mengubah status aturan pencairan (*Aktif/Nonaktif*) secara langsung tanpa membuka pop-up edit. *Perubahan ini akan langsung mengupdate angka pada Stat Card Aktif/Nonaktif.*
+* **Ikon Toggle (Sakelar Merah):** Mengubah status aturan pencairan (*Aktif/Nonaktif*) secara langsung tanpa membuka pop-up edit.
 * **Ikon Pensil:** Membuka jendela pop-up untuk mengubah data fee pencairan.
 * **Ikon Tempat Sampah:** Menghapus aturan biaya pencairan dari sistem jika sudah tidak digunakan.
 
@@ -73,8 +73,8 @@ Pada kolom **Aksi**, gunakan 3 tombol kontrol pintas:
 
 | Kolom | Fungsi & Keterangan |
 | :--- | :--- |
-| **Nama Channel** | Nama tampilan dan kode unik saluran pencairan (contoh: *Default Disbursement / DEFAULT*). |
-| **Fee Payout** | Nominal rupiah potongan biaya transfer per transaksi beserta tipenya (contoh: *Rp 2.500 / Fixed (Flat)*). |
-| **PPN** | Persentase beban Pajak Pertambahan Nilai (contoh: *11%*). |
+| **Nama Channel** | Nama tampilan dan kode unik saluran pencairan. |
+| **Fee Payout** | Nominal rupiah potongan biaya transfer per transaksi beserta tipenya. |
+| **PPN** | Persentase beban Pajak Pertambahan Nilai. |
 | **Status** | Label indikator operasional (*Aktif* / *Nonaktif*). |
 | **Aksi** | Terdiri dari tombol pintas **Toggle Status**, **Pensil (Edit)**, dan **Tempat Sampah (Hapus)**. |

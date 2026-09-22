@@ -1,5 +1,5 @@
 ﻿---
-title: Master Data Biaya Xendit
+title: Biaya Xendit
 icon: CreditCard
 ---
 
@@ -14,14 +14,14 @@ Konfigurasi ini digunakan sebagai acuan perhitungan kalkulasi biaya transaksi sa
 Di bagian atas halaman, terdapat 2 **Stat Card** (kartu indikator ringkasan) untuk memantau variasi metode pembayaran:
 
 ### 1. Metode Pembayaran (Ikon Kartu Kredit)
-* **Angka Utama:** Menampilkan jumlah total saluran pembayaran yang terdaftar di dalam sistem (contoh: **19**).
+* **Angka Utama:** Menampilkan jumlah total saluran pembayaran yang terdaftar di dalam sistem.
 * **Keterangan:** *Daftar metode pembayaran*.
 * **Fungsi:** Membantu Admin melihat berapa banyak jenis metode transaksi elektronik yang didukung oleh sistem.
 
 ### 2. Kategori (Ikon Tumpukan Layer)
-* **Angka Utama:** Menampilkan jumlah kelompok/kategori metode pembayaran yang aktif di sistem (contoh: **4**).
+* **Angka Utama:** Menampilkan jumlah kelompok/kategori metode pembayaran yang aktif di sistem.
 * **Keterangan:** *Kategori metode pembayaran*.
-* **Fungsi:** Membantu Admin mengelompokkan saluran pembayaran berdasarkan tipenya (misal: *DIRECT_DEBIT*, *EWALLET*, *QR_CODE*, *VIRTUAL_ACCOUNT*).
+* **Fungsi:** Membantu Admin mengelompokkan saluran pembayaran berdasarkan tipenya.
 
 ---
 
@@ -29,9 +29,9 @@ Di bagian atas halaman, terdapat 2 **Stat Card** (kartu indikator ringkasan) unt
 
 ### Langkah 1: Mencari & Memfilter Data Pembayaran
 1. Masuk ke modul **Master Data > Biaya Xendit**.
-2. **Pencarian Cepat:** Gunakan kolom input **Cari...** di sebelah kiri untuk mencari nama atau kode kanal pembayaran (contoh: ketik *GoPay*, *OVO*, atau *BRI*).
+2. **Pencarian Cepat:** Gunakan kolom input **Cari...** di sebelah kiri untuk mencari nama atau kode kanal pembayaran.
 3. **Filter Kategori (Dropdown Semua Kategori):**  
-   Pilih opsi pada dropdown ini jika ingin memfilter tabel berdasarkan jenis kategori tertentu (contoh: menyaring khusus kelompok *EWALLET* atau *DIRECT_DEBIT*).
+   Pilih opsi pada dropdown ini jika ingin memfilter tabel berdasarkan jenis kategori tertentu.
 4. **Filter Status (Dropdown Semua Status):**  
    Pilih opsi **Aktif** untuk melihat metode yang siap digunakan pembeli, atau **Nonaktif** untuk metode pembayaran yang sedang ditangguhkan.
 
@@ -47,14 +47,14 @@ Di sebelah kanan filter status, terdapat ikon **Pengaturan Kolom (Ikon Sliders)*
 ### Langkah 3: Menambah Metode Pembayaran & Fee Baru
 1. Klik tombol **+ Tambah** berwarna merah di pojok kanan atas.
 2. Pada jendela modal pop-up **Tambah Fee Xendit**, lengkapi parameter:
-   * **Kode Metode Pembayaran \*:** Masukkan kode unik saluran transaksi Xendit (contoh: `OVO` atau `DC_BRI`).
-   * **Kategori \*:** Masukkan nama kelompok transaksi (contoh: `EWALLET`, `DIRECT_DEBIT`, `QR_CODE`).
-   * **Nama Tampilan \*:** Masukkan sebutan nama metode pembayaran yang akan dibaca oleh pengguna (contoh: `OVO` atau `BRI Direct Debit`).
+   * **Kode Metode Pembayaran \*:** Masukkan kode unik saluran transaksi Xendit.
+   * **Kategori \*:** Masukkan nama kelompok transaksi.
+   * **Nama Tampilan \*:** Masukkan sebutan nama metode pembayaran yang akan dibaca oleh pengguna.
    * **Tipe Fee \*:** Klik dropdown dan pilih salah satu skema pemotongan biaya transaksi:
      * **Persentase (%)**: Biaya dihitung berdasarkan persentase dari total nilai transaksi belanja.
      * **Flat (Rp)**: Biaya ditetapkan dengan nominal angka rupiah pasti per transaksi.
-   * **Nilai Fee \* (% / Rp):** Masukkan persentase atau nominal rupiah potongan (contoh: isi `1.5` untuk fee 1,5% atau isi `4500` untuk fee flat Rp 4.500).
-   * **PPN (%) \*:** Masukkan persentase pajak transaksi (contoh: `11,00` untuk PPN 11%).
+   * **Nilai Fee \* (% / Rp):** Masukkan persentase atau nominal rupiah potongan.
+   * **PPN (%) \*:** Masukkan persentase pajak transaksi.
    * **Aktif (Sakelar Toggle):** Nyalakan sakelar ke warna merah agar opsi pembayaran ini langsung aktif di halaman *checkout*.
 3. Klik tombol **Tambah** untuk menyimpan data.
 
@@ -78,7 +78,7 @@ Pada kolom **Aksi**, gunakan 3 tombol kontrol pintas:
 
 ## Ringkasan Opsi Tipe Fee
 
-| Opsi Tipe Fee | Cara Kerja Perhitungan | Contoh Penerapan |
-| :--- | :--- | :--- |
-| **Persentase (%)** | Potongan dihitung dari persentase total nominal *checkout*. | Isi `1.5` pada Nilai Fee untuk potongan 1,5% per transaksi (seperti pada E-Wallet/QRIS). |
-| **Flat (Rp)** | Potongan tetap tanpa terpengaruh total nominal belanja. | Isi `4500` pada Nilai Fee untuk potongan Rp 4.500 per transaksi (seperti pada Direct Debit/VA). |
+| Opsi Tipe Fee | Cara Kerja Perhitungan |
+| :--- | :--- |
+| **Persentase (%)** | Potongan dihitung dari persentase total nominal *checkout*. |
+| **Flat (Rp)** | Potongan tetap tanpa terpengaruh total nominal belanja. |

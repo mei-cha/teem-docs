@@ -1,59 +1,80 @@
 ﻿---
-title: Stok Perusahaan
-icon: Package
+title: Pembelian Stok
+icon: ShoppingBag
 ---
 
-Halaman **Stok Perusahaan** digunakan oleh Administrator untuk memantau akumulasi seluruh persediaan barang milik perusahaan yang tersebar di berbagai lokasi gudang penyimpanan atau palet operasional platform **Teem.id**.
+Halaman **Pembelian Stok** digunakan oleh Administrator untuk mencatat penerimaan persediaan barang dari vendor (*pemasok*) ke dalam gudang perusahaan pada platform **Teem.id**.
 
-Melalui modul ini, Admin dapat melihat rincian alokasi kuantitas produk per gudang secara *real-time*, baik dalam satuan terbesar (*Karton*) maupun satuan terkecil (*Slop/Pcs*).
+Melalui modul ini, Admin dapat mengelola riwayat surat jalan pengadaan barang, mencatat penambahan item produk secara dinamis, serta memantau konversi kuantitas otomatis ke satuan dasar produk sebelum stok tersimpan.
+
+---
+
+## Alur Pencatatan Pembelian Stok (Step-by-Step)
+
+### Langkah 1: Membuka Halaman & Mencatat Stok Masuk
+1. Masuk ke modul **Pembelian > Pembelian Stok**.
+2. **Filter Rentang Waktu:** Gunakan dropdown tanggal di pojok kiri atas tabel untuk menyaring riwayat transaksi penerimaan barang.
+3. Klik tombol **+ Tambah** berwarna merah di pojok kanan atas untuk membuka modal form **Catat Stok Masuk**.
 
 <div className="my-4 text-center">
   <img 
-    src="/stok-perusahaan.png" 
-    alt="Tampilan Halaman Stok Perusahaan" 
+    src="/stockinput.png" 
+    alt="Form Input Pembelian Stok Masuk" 
     className="max-h-[380px] w-auto mx-auto rounded-lg shadow-sm" 
   />
   <span className="block text-xs text-gray-400 mt-2">
-    Tampilan Halaman Stok Perusahaan
+    Form Input Pembelian Stok dengan Konversi Satuan Otomatis
   </span>
 </div>
 
 ---
 
-## Alur Memantau Stok Perusahaan (Step-by-Step)
-
-### Langkah 1: Membuka Halaman & Pencarian Produk
-1. Masuk ke modul **Pembelian > Stok Perusahaan**.
-2. **Pencarian Cepat:** Gunakan kolom input **Cari produk...** di pojok kanan atas tabel untuk menemukan barang berdasarkan nama atau SKU produk.
-
----
-
-### Langkah 2: Meninjau Rincian Stok Per Gudang
-1. Pada daftar produk, klik **ikon panah (*dropdown*)** di sebelah kiri nama produk.
-2. Section **Rincian Per Gudang** akan terbuka, menampilkan kartu alokasi stok untuk masing-masing gudang (contoh: *Palet A*, *Palet B*, *Palet C*).
-3. Periksa ketersediaan unit pada tiap kartu:
-   * **Angka Utama:** Menampilkan konversi stok ke satuan terbesar dan sisa satuan terkecil (contoh: `1.245 Karton, 18 Slop`).
-   * **Angka dalam Kurung:** Menampilkan total kuantitas murni dalam satuan terkecil produk (contoh: `99.618 Slop`).
+### Langkah 2: Mengisi Informasi Surat Jalan
+Pada modal **Catat Stok Masuk**, lengkapi parameter berikut:
+* **Vendor \*:** Pilih nama perusahaan pemasok pada menu dropdown.
+* **Tanggal Surat Jalan \*:** Tentukan tanggal penerimaan berkas atau masuknya barang.
+* **No. Surat Jalan \*:** Masukkan nomor dokumen resmi surat jalan dari pihak vendor.
 
 ---
 
-### Langkah 3: Melakukan Impor Stok Awal (Cut-off)
-Jika Anda ingin memasukkan atau menyesuaikan kuantitas stok awal (*initial stock*) ke banyak gudang sekaligus menggunakan berkas Excel:
-1. Klik tombol **Import Stok** di pojok kanan atas halaman.
-2. Sistem akan mengarahkan Anda ke halaman khusus validasi dan pengunggahan berkas stok.
-
-<Callout type="info" title="Panduan Lengkap Impor Stok">
-  Untuk melihat instruksi pengisian berkas spreadsheet, format SKU, serta solusi penanganan error validasi data stok, silakan buka halaman **[Panduan Import Stok Perusahaan](/docs/purchases/import-stock)**.
-</Callout>
+### Langkah 3: Menambahkan Item Produk Dinamis
+1. Pada bagian **Item Produk**, klik tombol **+ Tambah Item**.
+2. Pilih nama **Produk** yang diterima dari vendor.
+3. Tentukan **Gudang / Palet** lokasi penyimpanan barang.
+4. Masukkan **Satuan** pengiriman beserta jumlah **Kuantitas (Qty)** barang.
+5. Masukkan **Harga Beli / Unit** untuk kalkulasi total pengadaan barang.
+   *(Sistem akan secara otomatis mengonversi kuantitas input ke satuan dasar produk sebelum disimpan ke dalam database stok).*
+6. Jika terdapat lebih dari satu jenis barang dalam surat jalan yang sama, klik kembali tombol **+ Tambah Item** untuk menambah baris produk baru.
 
 ---
 
-## Struktur Tabel & Komponen Stok Perusahaan
+### Langkah 4: Menyimpan Transaksi
+1. Periksa kembali seluruh rincian barang, jumlah kuantitas, dan lokasi gudang penyimpanan.
+2. Klik tombol **Simpan**.
+3. Data penerimaan barang akan tercatat pada tabel riwayat dan penambahan persediaan akan otomatis memperbarui jumlah pada modul **Stok Perusahaan**.
 
-| Elemen / Kolom | Keterangan & Deskripsi Fungsi |
+---
+
+## Alur Ekspor Riwayat Pembelian
+1. Pada halaman utama **Pembelian Stok**, atur filter rentang waktu transaksi yang ingin diunduh.
+2. Klik tombol **Export** di pojok kanan atas tabel.
+3. Sistem akan mengunduh berkas laporan rekapitulasi pembelian stok dalam format spreadsheet.
+
+---
+
+## Struktur Tabel Riwayat Pembelian Stok
+
+| Kolom | Keterangan & Deskripsi Fungsi |
 | :--- | :--- |
-| **Nama Produk** | Daftar nama produk terdaftar yang memiliki catatan persediaan. |
-| **Total** | Akumulasi total seluruh stok produk dari gabungan semua gudang. |
-| **Rincian Per Gudang** | Panel *accordion* yang menampilkan kartu rincian fisik stok di tiap palet/gudang. |
-| **Cari produk...** | Kolom filter pencarian cepat nama atau SKU barang. |
-| **Tombol Import Stok** | Tombol pintas untuk menuju ke halaman pengunggahan berkas spreadsheet *stock cut-off*. |
+| **Tgl Masuk** | Stempel tanggal penerimaan barang ke gudang. |
+| **No. Surat Jalan** | Nomor dokumen bukti penerimaan fisik barang dari vendor. |
+| **Vendor** | Nama entitas pemasok penyedia persediaan barang. |
+| **Nama Produk / Item** | Rincian nama variasi produk beserta kuantitas dan satuan yang diterima. |
+| **Gudang** | Titik lokasi penyimpanan palet atau gudang tempat barang dialokasikan. |
+| **Harga Beli / Unit** | Nilai nominal harga perolehan barang per satuan. |
+| **Total** | Hasil kalkulasi akumulasi nominal transaksi pembelian per item maupun per surat jalan. |
+
+---
+
+> **Tips**  
+> Pastikan pemilihan **Gudang** dan penentuan **Satuan** produk sudah sesuai saat menginput item dinamis, karena penambahan stok akan langsung terakumulasi ke dalam persediaan fisik pada modul *Stok Perusahaan*.
