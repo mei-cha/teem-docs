@@ -1,53 +1,78 @@
 ﻿---
-title: Detail Tiket Dukungan
+title: Daftar Tiket
 icon: LifeBuoy
 ---
 
-Halaman **Detail Tiket** digunakan oleh Administrator dan Tim Dukungan (*Customer Service/IT/Sales*) untuk meninjau riwayat aduan, membalas pesan pelanggan, mengunggah berkas lampiran, mengubah status tiket, serta menambahkan **Catatan Internal** rahasia khusus antar staf.
+Halaman **Pusat Bantuan & Dukungan** digunakan oleh Administrator dan Tim Dukungan (*Customer Service/IT/Sales/Keuangan*) untuk memantau, mengelola, serta menangani seluruh tiket aduan dan pertanyaan yang diajukan oleh pengguna atau mitra pada platform **Teem.id**.
+
+Melalui modul ini, Admin dapat melihat metrik ringkasan status tiket, melakukan pencarian dan penyaringan aduan, mengekspor laporan tiket, membalas pesan aduan, hingga menambahkan catatan rahasia internal antarstaf.
 
 ---
 
-## Alur Mengelola Tiket & Membalas Aduan
+## Penjelasan Kartu Ringkasan Status 
 
-### Langkah 1: Membuka Detail Tiket
-1. Masuk ke menu **Dukungan > Pusat Bantuan & Dukungan**.
-2. Pada tabel daftar tiket, klik pada  **Kendala** yang ingin ditangani
-3. Halaman akan beralih ke tampilan detail yang memperlihatkan **Riwayat Permohonan** dari pelanggan.
+Di bagian atas halaman, terdapat 5 kartu indikator status tiket secara *real-time*:
 
----
-
-### Langkah 2: Mengirim Balasan ke Pelanggan (Tab Tambah Balasan)
-1. Pilih tab **Tambah Balasan** di bagian bawah riwayat percakapan.
-2. Tulis pesan jawaban atau penanganan pada kolom **Tulis balasan untuk pelanggan...**.
-3. **Unggah Lampiran (Opsional):** Jika memerlukan bukti dokumen/tangkapan layar, klik tombol **Pilih File** pada bagian *Lampiran File* (ukuran maksimal 5MB).
-4. **Opsi Navigasi:** Centang opsi **Kembali ke daftar tiket setelah balasan dikirim** jika ingin langsung kembali ke daftar utama setelah mengirim pesan.
-5. **Ubah Status Tiket:** Pilih status terbaru pada dropdown **Status Tiket** di pojok kanan bawah.
-6. Klik tombol **Kirim Balasan** berwarna merah.
+* **Baru:** Menampilkan jumlah tiket aduan baru yang baru saja dikirimkan pengguna dan belum ditangani.
+* **Diproses:** Menampilkan jumlah tiket yang sedang dalam penanganan atau investigasi oleh tim internal.
+* **Dijawab:** Menampilkan jumlah tiket yang telah diberikan tanggapan atau solusi oleh tim dukungan.
+* **Ditunda:** Menampilkan jumlah tiket aduan yang sedang ditangguhkan atau menunggu konfirmasi lanjutan.
+* **Selesai:** Menampilkan jumlah tiket yang telah selesai ditangani dan ditutup.
 
 ---
 
-### Langkah 3: Menambahkan Catatan Internal Rahasia (Internal Note)
-Catatan internal berfungsi sebagai media diskusi/koordinasi rahasia antastaf tanpa bisa dilihat oleh pelanggan.
+## Alur Mengelola & Memfiltrasi Daftar Tiket 
 
-1. Klik tab **Catatan Internal** di sebelah tab *Tambah Balasan*.
-2. Kotak input khusus berwarna oranye dengan judul **Catatan Rahasia Staf (Internal Note)** akan muncul.
-3. Ketikkan catatan koordinasi pada kolom **Tulis catatan internal...**.
-4. Klik tombol **Simpan Catatan** berwarna oranye.
-5. Catatan yang baru tersimpan akan tampil secara permanen pada riwayat tiket berupa blok **Catatan tiket oleh [Nama Admin]** lengkap dengan waktu stempelnya.
+### Langkah 1: Akses Menu & Memfilter Tampilan
+1. Buka navigasi utama di sebelah kiri, pilih modul **Dukungan > Daftar Tiket**.
+2. **Pencarian Cepat:** Gunakan kolom input **Cari kendala / no tiket...** di pojok kanan atas tabel untuk menyaring tiket berdasarkan subjek kendala atau nomor kode tiket.
+3. **Filter Lanjutan:** Klik tombol **Filter** di sebelah kanan kolom pencarian untuk menyaring aduan berdasarkan kriteria spesifik (seperti departemen atau status tertentu).
+4. **Pengaturan Baris:** Gunakan dropdown jumlah baris di pojok kiri atas tabel untuk menentukan jumlah data yang tampil per halaman.
 
 ---
 
-## Ringkasan Fitur & Tombol Akses
+### Langkah 2: Mengunduh Laporan Tiket 
+1. Atur filter atau pencarian tiket yang ingin diunduh pada tabel.
+2. Klik tombol **Ekspor** di pojok kiri atas tabel.
+3. Sistem akan mengunduh laporan rekapitulasi daftar tiket aduan ke dalam berkas spreadsheet.
 
-| Elemen / Tab | Fungsi Utama |
+---
+
+### Langkah 3: Membuka & Menangani Detail Tiket
+1. Cari tiket aduan yang ingin ditangani pada tabel utama.
+2. Klik pada baris **Kendala** atau **No. Tiket** yang bersangkutan untuk beralih ke halaman **Detail Tiket**.
+3. Tinjau **Riwayat Permohonan** dan uraian kendala yang dikirimkan oleh pemohon.
+
+---
+
+### Langkah 4: Membalas Aduan atau Menambah Catatan Internal
+Pada halaman Detail Tiket, pilih salah satu opsi aksi penanganan:
+
+* **Membalas Pesan Pelanggan (Tab Tambah Balasan):**
+  1. Tulis pesan jawaban atau instruksi solusi pada kolom balasan.
+  2. **Unggah Lampiran (Opsional):** Lampirkan berkas dokumen atau tangkapan layar pendukung (maksimal 5MB).
+  3. **Ubah Status Tiket:** Tentukan status alur penanganan terbaru (*Diproses*, *Dijawab*, *Ditunda*, atau *Selesai*).
+  4. Klik tombol **Kirim Balasan**.
+
+* **Menambahkan Catatan Internal Rahasia (Tab Catatan Internal):**
+  1. Pilih tab **Catatan Internal**.
+  2. Ketikkan catatan diskusi atau koordinasi rahasia antarstaf internal pada kolom khusus.
+  3. Klik tombol **Simpan Catatan** (pesan ini tersimpan secara permanen dan hanya dapat dibaca oleh sesama staf internal tanpa terlihat oleh pelanggan).
+
+---
+
+## Struktur Tabel Daftar Tiket
+
+| Kolom | Keterangan & Deskripsi Fungsi |
 | :--- | :--- |
-| **Riwayat Permohonan** | Menampilkan kronologi pesan dan keluhan yang dikirimkan oleh pemohon. |
-| **Tab Tambah Balasan** | Formulir untuk mengirimkan tanggapan resmi yang dapat dibaca langsung oleh pelanggan. |
-| **Tab Catatan Internal** | Formulir khusus untuk menulis catatan rahasia antarstaf internal tanpa terlihat oleh pelanggan. |
-| **Lampiran File** | Mengunggah berkas pendukung balasan (Maksimal 5MB). |
-| **Dropdown Status Tiket** | Memperbarui status alur penanganan (*Baru*, *Diproses*, *Dijawab*, *Ditunda*, *Selesai*). |
+| **No. Tiket** | Kode identifikasi unik tiket aduan sistem. |
+| **Kendala** | Judul atau perihal ringkasan masalah yang dilaporkan pengguna. |
+| **Departemen** | Kategori tim tujuan penanganan aduan (*misal: IT, Keuangan, Support, Sales*). |
+| **Kontak** | Informasi identitas pemohon beserta email terdaftar (dilengkapi ikon mata untuk sensor data sensitif). |
+| **Status** | Label indikator tahapan penanganan tiket (*Baru*, *Diproses*, *Dijawab*, *Ditunda*, *Selesai*). |
+| **Tgl** | Informasi durasi waktu relatif kapan tiket tersebut pertama kali dibuat. |
 
 ---
 
 > **Tips**  
-> Gunakan fitur **Catatan Internal** bila Anda perlu melakukan koordinasi antar-departemen agar histori diskusi penanganan kendala tersimpan rapi dan tidak membingungkan pelanggan.
+> Pantau kartu indikator **Baru** dan **Diproses** secara berkala untuk memastikan setiap aduan pengguna mendapatkan tanggapan dengan durasi respon (*response time*) yang cepat dan tepat.
