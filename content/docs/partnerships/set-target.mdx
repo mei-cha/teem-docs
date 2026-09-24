@@ -3,22 +3,25 @@ title: Set Target
 icon: Target
 ---
 
-Halaman **Set Target Mitra** digunakan oleh Administrator untuk mengonfigurasi dan menetapkan kuota target penjualan tahunan bagi setiap akun mitra pada platform **Teem.id**.
+Halaman **Set Target** digunakan oleh Administrator untuk menetapkan target penjualan tahunan bagi setiap mitra.
 
-Administrator dapat menetapkan target secara otomatis berdasarkan wilayah menggunakan template standar, atau mengonfigurasinya secara khusus per individu mitra.
+Target dapat ditetapkan secara bersamaan berdasarkan wilayah atau ditentukan secara khusus untuk mitra tertentu.
 
 ---
 
-## Alur Mengelola Set Target Mitra
+## Alur Mengelola Target Mitra
 
-### Langkah 1: Membuka Halaman & Memilih Tahun Target
+### Langkah 1: Membuka Halaman Set Target
+
 1. Masuk ke modul **Kemitraan > Set Target**.
-2. **Pengaturan Tahun:** Di sebelah judul halaman, gunakan tombol pemilih **Tahun** untuk menentukan periode target yang ingin ditinjau atau dikonfigurasi.
-3. **Pencarian Cepat:** Gunakan kolom input **Cari...** di pojok kanan atas tabel untuk mencari mitra berdasarkan nama atau ID mitra.
+2. Pilih **Tahun** untuk menentukan periode target yang ingin dikelola.
+3. Gunakan kolom **Cari...** untuk mencari mitra berdasarkan nama atau ID Mitra.
 
 ---
 
-### Langkah 2: Mengatur Template Target Standar (Prasyarat Utama)
+### Langkah 2: Mengatur Template Target
+
+Sebelum menetapkan target berdasarkan wilayah, buat terlebih dahulu template target yang akan digunakan sebagai acuan.
 
 <div className="my-4 text-center">
   <img 
@@ -31,24 +34,30 @@ Administrator dapat menetapkan target secara otomatis berdasarkan wilayah menggu
   </span>
 </div>
 
-Sebelum menetapkan target ke mitra, atur terlebih dahulu nominal acuan standar per wilayah dan level kemitraan:
-1. Klik tombol **+ Set Target** berwarna merah di pojok kanan atas halaman.
-2. Pada modal yang terbuka, klik tombol **Template Target** di pojok kanan atas.
-3. Modal **Kelola Template Target** akan terbuka:
-   * Tentukan **Tahun**, **Provinsi**, dan **Kota / Kabupaten \*** tujuan.
-   * Isi acuan nominal pada bagian **Nominal Target per Level Kemitraan** untuk *Distributor*, *Agen*, dan *Sub Agen*.
-4. Klik tombol **Simpan** untuk merekam acuan template wilayah tersebut.
+1. Klik tombol **+ Set Target** di pojok kanan atas.
+2. Pada modal **Set Target**, klik **Template Target**.
+3. Pada modal **Kelola Template Target**, tentukan:
+   * **Tahun** target.
+   * **Provinsi**.
+   * **Kota / Kabupaten**.
+   * **Target Distributor**.
+   * **Target Agen**.
+   * **Target Sub Agen**.
+4. Klik **Simpan** untuk menyimpan template.
+
+Template ini menjadi acuan nominal target berdasarkan wilayah dan level mitra.
 
 <Callout type="warn" title="Penting">
-  Template Target harus diset terlebih dahulu agar fitur penetapan target **Massal Per Wilayah** dan opsi **Ikuti Template Standar** dapat mengkalkulasi nominal target secara otomatis.
+  Template Target harus diatur terlebih dahulu jika ingin menggunakan penetapan target **Massal Per Wilayah** atau memilih **Ikuti Template Standar** pada penetapan target per mitra.
 </Callout>
 
 ---
 
-### Langkah 3: Menetapkkan Target ke Mitra
-Setelah template terpasang, pilih salah satu metode penambahan target pada modal **Set Target**:
+### Langkah 3: Menetapkan Target Mitra
 
-#### Opsi A: Tab Massal Per Wilayah
+Setelah template tersedia, target dapat ditetapkan dengan dua cara.
+
+#### Opsi A: Massal Per Wilayah
 
 <div className="my-4 text-center">
   <img 
@@ -57,17 +66,22 @@ Setelah template terpasang, pilih salah satu metode penambahan target pada modal
     className="max-h-[380px] w-auto mx-auto rounded-lg shadow-sm" 
   />
   <span className="block text-xs text-gray-400 mt-2">
-    Modal Set Target (Tab Massal Per Wilayah)
+    Modal Set Target - Massal Per Wilayah
   </span>
 </div>
 
-Metode ini digunakan untuk menerapkan target otomatis ke seluruh mitra di suatu daerah secara bersamaan berdasarkan acuan template.
-1. Pilih **Provinsi (Filter)** dan **Kota / Kabupaten \*** tujuan.
-2. Tentukan **Filter Level Kemitraan (Opsional)** jika ingin membatasi tingkatan mitra tertentu.
-3. Periksa panel *Hasil Preview Otomatis Sistem* di sebelah kanan untuk meninjau daftar mitra dan nominal target yang terambil dari template.
-4. Klik tombol **Terapkan Ke [N] Mitra Terkait** untuk menyimpan.
+Opsi ini digunakan untuk menetapkan target kepada beberapa mitra sekaligus berdasarkan wilayah.
 
-#### Opsi B: Tab Per Mitra Spesifik
+1. Pilih **Provinsi**.
+2. Pilih **Kota / Kabupaten**.
+3. Jika diperlukan, pilih **Level Kemitraan** untuk membatasi mitra berdasarkan level tertentu.
+4. Sistem akan menampilkan daftar mitra yang sesuai beserta nominal target berdasarkan Template Target.
+5. Periksa daftar mitra dan nominal target pada bagian pratinjau.
+6. Klik **Terapkan ke [N] Mitra Terkait** untuk menetapkan target kepada seluruh mitra yang ditampilkan.
+
+---
+
+#### Opsi B: Per Mitra Spesifik
 
 <div className="my-4 text-center">
   <img 
@@ -76,44 +90,54 @@ Metode ini digunakan untuk menerapkan target otomatis ke seluruh mitra di suatu 
     className="max-h-[380px] w-auto mx-auto rounded-lg shadow-sm" 
   />
   <span className="block text-xs text-gray-400 mt-2">
-    Modal Set Target (Tab Per Mitra Spesifik)
+    Modal Set Target - Per Mitra Spesifik
   </span>
 </div>
 
-Metode ini digunakan untuk menentukan target bagi satu mitra tertentu secara individu.
-1. Pilih nama akun pada dropdown **Cari / Pilih Mitra (Belum Punya Target)**.
-2. Tentukan **Sumber Target Nominal**:
-   * **Ikuti Template Standar:** Nominal target akan otomatis mengambil nilai acuan template kota/kabupaten mitra tersebut.
-   * **Custom Manual:** Memungkinkan Admin mengisi nominal target tahunan secara bebas/manual pada kolom *Nominal Target (Tahunan)* tanpa mengikuti template.
-3. Klik tombol **Simpan Target** untuk membukukan data.
+Opsi ini digunakan untuk menetapkan target kepada satu mitra tertentu.
+
+1. Pilih mitra pada bagian **Cari / Pilih Mitra**.
+2. Pilih sumber nominal target:
+   * **Ikuti Template Standar:** Menggunakan nominal target yang sudah ditentukan berdasarkan wilayah dan level mitra.
+   * **Custom Manual:** Menentukan sendiri nominal target untuk mitra tersebut.
+3. Jika memilih **Custom Manual**, masukkan nominal pada kolom **Nominal Target (Tahunan)**.
+4. Klik **Simpan Target** untuk menyimpan target mitra.
 
 ---
 
-### Langkah 4: Mengedit atau Menghapus Target Mitra
-Pada tabel utama halaman **Set Target Mitra**:
-* **Ikon Pensil (Edit):** Klik pada kolom **Aksi** untuk memperbarui nilai kuota target mitra yang sudah ada.
-* **Ikon Tempat Sampah (Hapus):** Klik untuk menghapus penetapan target mitra pada tahun berjalan.
+### Langkah 4: Mengubah atau Menghapus Target
+
+Pada tabel utama **Set Target**, gunakan kolom **Aksi** untuk mengelola target yang sudah ditetapkan:
+
+* Klik ikon **Pensil** untuk mengubah nominal target.
+* Klik ikon **Tempat Sampah** untuk menghapus target mitra.
 
 ---
 
-## Struktur Tabel & Modal Set Target
+## Struktur Tabel Set Target
 
-### 1. Tabel Utama Target Mitra
-| Kolom | Fungsi & Keterangan |
+| Kolom | Fungsi dan Keterangan |
 | :--- | :--- |
-| **Nama** | Nama lengkap dan ID unik mitra terdaftar. |
-| **Kota / Kabupaten** | Lokasi wilayah operasional mitra. |
-| **Level** | Badge tingkatan kemitraan (*Distributor*, *Agen*, *Sub Agen*). |
-| **Tahun** | Periode tahun berlakunya kuota target. |
-| **Target Tahunan** | Nominal target penjualan rupiah dalam satu tahun. |
-| **Dibuat** | Tanggal pertama kali penetapan target dibuat di sistem. |
-| **Aksi** | Terdiri dari tombol pintas **Pensil (Edit)** dan **Tempat Sampah (Hapus)**. |
+| **Nama** | Nama mitra dan ID Mitra yang memiliki target. |
+| **Kota / Kabupaten** | Wilayah tempat mitra beroperasi. |
+| **Level** | Tingkatan kemitraan mitra. |
+| **Tahun** | Tahun berlakunya target. |
+| **Target Tahunan** | Nominal target penjualan yang harus dicapai dalam satu tahun. |
+| **Dibuat** | Tanggal target ditetapkan. |
+| **Aksi** | Tombol untuk mengubah atau menghapus target. |
 
-### 2. Form Modal Set Target
-| Elemen Form | Fungsi & Keterangan |
+---
+
+## Struktur Form Set Target
+
+| Elemen | Fungsi dan Keterangan |
 | :--- | :--- |
-| **Filter Tahun Utama** | Mengunci periode tahun penetapan target mengikuti pilihan di halaman utama. |
-| **Opsi Massal / Spesifik** | Pilihan penetapan target secara kolektif per daerah atau per akun individu. |
-| **Ikuti Template / Custom** | Pemilihan sumber acuan nominal target (otomatis dari sistem vs input manual). |
-| **Preview Otomatis** | Tabel pratinjau langsung daftar mitra dan nilai target sebelum disimpan. |
-| **Tombol Template Target** | Membuka modal pengaturan nilai standar nominal per level kemitraan kota/kabupaten. |
+| **Tahun** | Menentukan tahun target yang akan ditetapkan. |
+| **Massal Per Wilayah** | Menetapkan target kepada beberapa mitra berdasarkan wilayah secara bersamaan. |
+| **Per Mitra Spesifik** | Menetapkan target kepada satu mitra tertentu. |
+| **Template Target** | Mengatur nominal target berdasarkan wilayah dan level mitra. |
+| **Ikuti Template Standar** | Menggunakan nominal target yang sudah ditentukan pada Template Target. |
+| **Custom Manual** | Memasukkan nominal target secara manual untuk mitra tertentu. |
+| **Pratinjau** | Menampilkan daftar mitra dan nominal target sebelum target diterapkan. |
+| **Simpan Target** | Menyimpan target untuk mitra yang dipilih. |
+| **Terapkan ke [N] Mitra Terkait** | Menetapkan target kepada seluruh mitra yang sesuai dengan wilayah dan filter yang dipilih. |

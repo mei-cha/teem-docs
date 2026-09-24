@@ -3,52 +3,55 @@ title: Mitra
 icon: Users
 ---
 
-Halaman **Daftar Mitra** digunakan oleh Administrator untuk memantau, menyaring, serta mengelola seluruh data profil jaringan kemitraan (*Distributor*, *Agen*, *Sub Agen*, hingga *Konsumen*) yang terdaftar pada platform **Teem.id**.
+Halaman **Mitra** digunakan oleh Administrator untuk melihat dan mengelola seluruh data mitra yang terdaftar di platform **Teem.id**.
 
-Melalui modul ini, Admin dapat melihat rincian informasi wilayah operasional, masa aktif masa berlaku kontrak, status keanggotaan, hingga mengekspor atau mengimpor data mitra secara masal.
+Melalui halaman ini, Admin dapat mencari dan menyaring data mitra, melihat informasi wilayah, level, status akun, serta masa berlaku kontrak. Admin juga dapat mengimpor dan mengekspor data mitra.
 
 ## Alur Mengelola Daftar Mitra
 
-### Langkah 1: Membuka Halaman & Pencarian Mitra
-1. Masuk ke modul **Kemitraan > Mitra**.
-2. **Pencarian Cepat:** Gunakan kolom input **Cari mitra...** di pojok kanan atas tabel untuk menemukan akun berdasarkan nama, ID Mitra, atau alamat email.
+### Langkah 1: Membuka Halaman dan Mencari Mitra
+
+1. Buka modul **Kemitraan > Mitra**.
+2. Gunakan kolom **Cari mitra...** di pojok kanan atas untuk mencari mitra berdasarkan nama, ID Mitra, atau alamat email.
 
 ---
 
-### Langkah 2: Menyaring & Mengunduh Data Mitra
-1. **Filter Data:** Klik tombol **Filter** di pojok kanan atas tabel untuk membatasi tampilan data berdasarkan kriteria spesifik (seperti level kemitraan atau wilayah).
-2. **Export Data:** Klik tombol **Export** untuk mengunduh seluruh daftar rekapitulasi data mitra yang tampil ke dalam berkas spreadsheet.
+### Langkah 2: Menyaring dan Mengunduh Data Mitra
+
+1. **Filter Data:** Klik tombol **Filter** untuk menyaring data berdasarkan kriteria tertentu, seperti level kemitraan atau wilayah.
+2. **Export Data:** Klik tombol **Export** untuk mengunduh daftar mitra yang ditampilkan dalam bentuk spreadsheet.
 
 ---
 
-### Langkah 3: Melakukan Impor Data Mitra (Bulk Import)
-Jika Anda ingin menambahkan data mitra dalam jumlah banyak sekaligus menggunakan berkas Excel:
-1. Klik tombol **Import Data Mitra** di sebelah tombol *Filter*.
-2. Sistem akan mengarahkan Anda ke halaman khusus proses validasi dan impor data.
+### Langkah 3: Mengimpor Data Mitra
+
+Jika ingin menambahkan data mitra dalam jumlah banyak menggunakan berkas Excel:
+
+1. Klik tombol **Import Data Mitra** di sebelah tombol **Filter**.
+2. Sistem akan membuka halaman untuk mengunggah dan memvalidasi data mitra.
 
 <Callout type="info" title="Panduan Lengkap Impor Data">
-  Untuk membaca instruksi lengkap pengisian format spreadsheet, pengunggahan berkas, hingga solusi penanganan error validasi, silakan buka halaman **[Panduan Import Data Mitra](/docs/initial-setup/import-partners)**.
+  Untuk melihat panduan pengisian spreadsheet, pengunggahan berkas, dan cara mengatasi kesalahan validasi, silakan buka halaman **[Panduan Import Data Mitra](/docs/initial-setup/import-partners)**.
 </Callout>
 
 ---
 
-### Langkah 4: Meninjau Detail Mitra
-1. Cari baris akun mitra yang ingin ditinjau pada tabel utama.
-2. Pada kolom **Aksi**, klik ikon **Mata (Detail)** berwarna merah.
-3. Sistem akan membuka halaman rincian profil mitra mencakup identitas KTP/NPWP, alamat lengkap, masa berlaku kontrak, hingga data rekening bank.
+### Langkah 4: Melihat Detail Mitra
+
+1. Cari mitra yang ingin diperiksa pada tabel.
+2. Pada kolom **Aksi**, klik ikon **Mata**.
+3. Sistem akan membuka halaman detail mitra yang berisi informasi identitas, alamat, kontrak, dan rekening bank.
 
 ---
 
 ## Struktur Tabel Daftar Mitra
 
-| Kolom | Keterangan & Deskripsi Fungsi |
+| Kolom | Keterangan |
 | :--- | :--- |
-| **Id** | Kode identifikasi unik akun mitra. |
-| **Mitra** | Nama lengkap mitra terdaftar beserta alamat email aktifnya. |
-| **Level** | Badge tingkatan jenjang kemitraan (*Distributor*, *Agen*, *Sub Agen*, *Konsumen*). |
-| **Wilayah** | Nama lokasi kota atau kabupaten tempat mitra beroperasi. |
-| **Berakhir** | Sisa durasi masa aktif kontrak kemitraan (*Tanpa batas* atau hitungan bulan/hari). |
-| **Status** | Badge status keaktifan akun mitra pada sistem (*Aktif* / *Nonaktif*). |
-| **Aksi** | Tombol pintas ikon **Mata (Detail)** untuk membuka profil lengkap mitra. |
-
----
+| **Id** | Menampilkan ID unik mitra. |
+| **Mitra** | Menampilkan nama mitra dan alamat email. |
+| **Level** | Menampilkan level mitra, seperti **Distributor**, **Agen**, **Sub Agen**, atau **Konsumen**. |
+| **Wilayah** | Menampilkan kota atau kabupaten tempat mitra berada. |
+| **Berakhir** | Menampilkan masa berlaku kontrak atau keterangan **Tanpa batas**. |
+| **Status** | Menampilkan status akun, yaitu **Aktif** atau **Nonaktif**. |
+| **Aksi** | Menampilkan ikon **Mata** untuk membuka detail mitra. |

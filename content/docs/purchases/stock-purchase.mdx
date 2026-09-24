@@ -3,18 +3,19 @@ title: Pembelian Stok
 icon: ShoppingBag
 ---
 
-Halaman **Pembelian Stok** digunakan oleh Administrator untuk mencatat penerimaan persediaan barang dari vendor (*pemasok*) ke dalam gudang perusahaan pada platform **Teem.id**.
+Halaman **Pembelian Stok** digunakan oleh Administrator untuk mencatat penerimaan barang dari vendor ke gudang perusahaan di platform **Teem.id**.
 
-Melalui modul ini, Admin dapat mengelola riwayat surat jalan pengadaan barang, mencatat penambahan item produk secara dinamis, serta memantau konversi kuantitas otomatis ke satuan dasar produk sebelum stok tersimpan.
+Melalui halaman ini, Admin dapat mencatat surat jalan, menambahkan produk yang diterima, menentukan lokasi penyimpanan, dan mencatat jumlah serta harga pembelian barang.
 
 ---
 
 ## Alur Pencatatan Pembelian Stok
 
-### Langkah 1: Membuka Halaman & Mencatat Stok Masuk
-1. Masuk ke modul **Pembelian > Pembelian Stok**.
-2. **Filter Rentang Waktu:** Gunakan dropdown tanggal di pojok kiri atas tabel untuk menyaring riwayat transaksi penerimaan barang.
-3. Klik tombol **+ Tambah** berwarna merah di pojok kanan atas untuk membuka modal form **Catat Stok Masuk**.
+### Langkah 1: Membuka Halaman dan Mencatat Stok Masuk
+
+1. Buka modul **Pembelian > Pembelian Stok**.
+2. Gunakan pilihan tanggal di pojok kiri atas tabel untuk menyaring riwayat penerimaan barang.
+3. Klik tombol **+ Tambah** di pojok kanan atas untuk membuka form **Catat Stok Masuk**.
 
 <div className="my-4 text-center">
   <img 
@@ -23,58 +24,64 @@ Melalui modul ini, Admin dapat mengelola riwayat surat jalan pengadaan barang, m
     className="max-h-[380px] w-auto mx-auto rounded-lg shadow-sm" 
   />
   <span className="block text-xs text-gray-400 mt-2">
-    Form Input Pembelian Stok dengan Konversi Satuan Otomatis
+    Form Input Pembelian Stok
   </span>
 </div>
 
 ---
 
 ### Langkah 2: Mengisi Informasi Surat Jalan
-Pada modal **Catat Stok Masuk**, lengkapi parameter berikut:
-* **Vendor \*:** Pilih nama perusahaan pemasok pada menu dropdown.
-* **Tanggal Surat Jalan \*:** Tentukan tanggal penerimaan berkas atau masuknya barang.
-* **No. Surat Jalan \*:** Masukkan nomor dokumen resmi surat jalan dari pihak vendor.
+
+Pada form **Catat Stok Masuk**, lengkapi data berikut:
+
+- **Vendor:** Pilih nama pemasok barang.
+- **Tanggal Surat Jalan:** Tentukan tanggal penerimaan barang.
+- **No. Surat Jalan:** Masukkan nomor surat jalan dari vendor.
 
 ---
 
-### Langkah 3: Menambahkan Item Produk Dinamis
+### Langkah 3: Menambahkan Produk
+
 1. Pada bagian **Item Produk**, klik tombol **+ Tambah Item**.
-2. Pilih nama **Produk** yang diterima dari vendor.
-3. Tentukan **Gudang / Palet** lokasi penyimpanan barang.
-4. Masukkan **Satuan** pengiriman beserta jumlah **Kuantitas (Qty)** barang.
-5. Masukkan **Harga Beli / Unit** untuk kalkulasi total pengadaan barang.
-   *(Sistem akan secara otomatis mengonversi kuantitas input ke satuan dasar produk sebelum disimpan ke dalam database stok).*
-6. Jika terdapat lebih dari satu jenis barang dalam surat jalan yang sama, klik kembali tombol **+ Tambah Item** untuk menambah baris produk baru.
+2. Pilih **Produk** yang diterima dari vendor.
+3. Pilih **Gudang / Palet** tempat barang akan disimpan.
+4. Pilih **Satuan** dan masukkan jumlah **Kuantitas (Qty)** barang.
+5. Masukkan **Harga Beli / Unit**.
+6. Jika terdapat lebih dari satu jenis produk, klik kembali **+ Tambah Item** untuk menambahkan produk lainnya.
+
+Sistem akan menyesuaikan jumlah barang ke satuan terkecil produk sebelum menambahkannya ke stok.
 
 ---
 
 ### Langkah 4: Menyimpan Transaksi
-1. Periksa kembali seluruh rincian barang, jumlah kuantitas, dan lokasi gudang penyimpanan.
+
+1. Periksa kembali produk, jumlah, harga, dan lokasi penyimpanan.
 2. Klik tombol **Simpan**.
-3. Data penerimaan barang akan tercatat pada tabel riwayat dan penambahan persediaan akan otomatis memperbarui jumlah pada modul **Stok Perusahaan**.
+3. Data penerimaan barang akan tercatat pada tabel riwayat dan jumlah stok akan diperbarui secara otomatis pada modul **Stok Perusahaan**.
 
 ---
 
 ## Alur Ekspor Riwayat Pembelian
-1. Pada halaman utama **Pembelian Stok**, atur filter rentang waktu transaksi yang ingin diunduh.
+
+1. Pada halaman **Pembelian Stok**, tentukan rentang waktu transaksi yang ingin diunduh.
 2. Klik tombol **Export** di pojok kanan atas tabel.
-3. Sistem akan mengunduh berkas laporan rekapitulasi pembelian stok dalam format spreadsheet.
+3. Sistem akan mengunduh laporan pembelian stok dalam bentuk spreadsheet.
 
 ---
 
 ## Struktur Tabel Riwayat Pembelian Stok
 
-| Kolom | Keterangan & Deskripsi Fungsi |
+| Kolom | Keterangan |
 | :--- | :--- |
-| **Tgl Masuk** | Stempel tanggal penerimaan barang ke gudang. |
-| **No. Surat Jalan** | Nomor dokumen bukti penerimaan fisik barang dari vendor. |
-| **Vendor** | Nama entitas pemasok penyedia persediaan barang. |
-| **Nama Produk / Item** | Rincian nama variasi produk beserta kuantitas dan satuan yang diterima. |
-| **Gudang** | Titik lokasi penyimpanan palet atau gudang tempat barang dialokasikan. |
-| **Harga Beli / Unit** | Nilai nominal harga perolehan barang per satuan. |
-| **Total** | Hasil kalkulasi akumulasi nominal transaksi pembelian per item maupun per surat jalan. |
+| **Tgl Masuk** | Menampilkan tanggal barang diterima di gudang. |
+| **No. Surat Jalan** | Menampilkan nomor surat jalan dari vendor. |
+| **Vendor** | Menampilkan nama pemasok barang. |
+| **Nama Produk / Item** | Menampilkan nama produk, jumlah, dan satuan barang yang diterima. |
+| **Gudang** | Menampilkan lokasi gudang atau palet tempat barang disimpan. |
+| **Harga Beli / Unit** | Menampilkan harga pembelian setiap satuan barang. |
+| **Total** | Menampilkan total nilai pembelian berdasarkan barang yang diterima. |
 
 ---
 
 > **Tips**  
-> Pastikan pemilihan **Gudang** dan penentuan **Satuan** produk sudah sesuai saat menginput item dinamis, karena penambahan stok akan langsung terakumulasi ke dalam persediaan fisik pada modul *Stok Perusahaan*.
+> Pastikan **Gudang**, **Satuan**, dan jumlah **Kuantitas (Qty)** sudah sesuai sebelum menyimpan transaksi karena data penerimaan akan langsung menambah stok pada **Stok Perusahaan**.

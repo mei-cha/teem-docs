@@ -2,34 +2,89 @@
 title: Kategori Tolak
 icon: CircleX
 ---
+
 Halaman **Kategori Tolak** digunakan oleh Administrator untuk mengelola daftar alasan standar penolakan pengajuan kemitraan pada platform **Teem.id**.
 
-Daftar opsi alasan penolakan ini akan muncul saat Admin menolak berkas pendaftaran mitra, sehingga memberikan umpan balik yang konsisten dan informatif bagi calon mitra yang ditolak.
+Daftar kategori penolakan digunakan saat Admin melakukan proses verifikasi pengajuan kemitraan. Dengan adanya kategori yang telah ditentukan, alasan penolakan dapat disampaikan secara lebih konsisten dan terstruktur kepada pemohon.
 
 ---
 
 ## Alur Mengelola Kategori Tolak
 
-### Langkah 1: Membuka Halaman & Pencarian
+### Langkah 1: Membuka Halaman Kategori Tolak
+
 1. Masuk ke modul **Kemitraan > Kategori Tolak**.
-2. **Pencarian Cepat:** Gunakan kolom input **Cari...** di pojok kanan atas tabel untuk menyaring nama alasan penolakan.
-3. Tabel akan menampilkan daftar alasan penolakan beserta status keaktifannya.
+2. Halaman akan menampilkan seluruh daftar kategori alasan penolakan yang telah tersedia.
+3. Perhatikan kolom **Status** untuk mengetahui apakah kategori tersebut sedang aktif atau nonaktif.
 
 ---
 
-### Langkah 2: Menambah Kategori Tolak Baru
+### Langkah 2: Mencari & Menyaring Kategori
+
+Gunakan kolom pencarian **Cari...** di bagian atas tabel untuk menemukan kategori penolakan tertentu.
+
+1. Klik kolom **Cari...**.
+2. Masukkan kata atau nama kategori yang ingin dicari.
+3. Sistem akan menampilkan kategori yang sesuai dengan kata pencarian.
+
+Pencarian dapat digunakan untuk mempermudah Admin menemukan kategori ketika jumlah alasan penolakan yang tersedia sudah cukup banyak.
+
+---
+
+### Langkah 3: Menambahkan Kategori Tolak Baru
+
+Untuk menambahkan alasan penolakan baru:
+
 1. Klik tombol **+ Tambah** berwarna merah di pojok kanan atas halaman.
-2. Pada modal pop-up yang muncul, masukkan **Nama Kategori** alasan penolakan baru (contoh formulir pembuatan standar).
-3. Simpan data untuk menambahkannya ke dalam daftar opsi penolakan.
+2. Modal **Tambah Kategori Tolak** akan terbuka.
+3. Masukkan nama atau alasan penolakan pada kolom **Nama Kategori**.
+4. Periksa kembali nama kategori yang dimasukkan.
+5. Klik tombol **Simpan** untuk menambahkan kategori ke dalam daftar.
+
+Kategori yang berhasil dibuat dapat digunakan sebagai pilihan alasan ketika Admin melakukan penolakan pengajuan kemitraan.
 
 ---
 
-### Langkah 3: Mengedit, Mengubah Status & Menghapus Kategori
-Pada kolom **Aksi** di tabel utama, Admin dapat memilih tindakan berikut:
+### Langkah 4: Mengubah Status Kategori
 
-* **Ikon Mata / Sakelar Visibilitas:** Mengaktifkan atau menonaktifkan alasan penolakan agar tampil/tersembunyi dari daftar pilihan modal penolakan verifikasi.
-* **Ikon Pensil (Edit):** Memperbarui teks judul nama alasan penolakan.
-* **Ikon Tempat Sampah (Hapus):** Menghapus opsi alasan penolakan dari sistem database secara permanen.
+Admin dapat mengatur apakah suatu kategori penolakan masih tersedia untuk digunakan atau tidak.
+
+1. Cari kategori yang ingin diubah pada tabel.
+2. Pada kolom **Aksi**, klik tombol **Mata / Visibilitas**.
+3. Sistem akan mengubah status kategori antara:
+   * **Aktif:** Kategori tersedia dan dapat dipilih pada proses penolakan pengajuan.
+   * **Nonaktif:** Kategori tidak ditampilkan sebagai pilihan pada proses penolakan pengajuan.
+4. Periksa kolom **Status** untuk memastikan perubahan telah diterapkan.
+
+<Callout type="info" title="Catatan">
+  Menonaktifkan kategori tidak menghapus data kategori dari sistem. Kategori hanya disembunyikan dari pilihan alasan penolakan sehingga masih dapat diaktifkan kembali apabila diperlukan.
+</Callout>
+
+---
+
+### Langkah 5: Mengedit Kategori Tolak
+
+Jika nama atau teks alasan penolakan perlu diperbaiki:
+
+1. Cari kategori yang ingin diperbarui.
+2. Pada kolom **Aksi**, klik ikon **Pensil (Edit)**.
+3. Modal edit kategori akan terbuka.
+4. Perbarui **Nama Kategori** sesuai kebutuhan.
+5. Klik tombol **Simpan** untuk menyimpan perubahan.
+
+Perubahan nama kategori akan diterapkan pada daftar kategori yang digunakan oleh sistem.
+
+---
+
+### Langkah 6: Menghapus Kategori Tolak
+
+Jika kategori sudah tidak diperlukan dan ingin dihapus dari sistem:
+
+1. Cari kategori yang ingin dihapus pada tabel.
+2. Pada kolom **Aksi**, klik ikon **Tempat Sampah (Hapus)**.
+3. Sistem akan menampilkan konfirmasi penghapusan.
+4. Periksa kembali kategori yang akan dihapus.
+5. Klik tombol konfirmasi untuk menghapus kategori.
 
 ---
 
@@ -37,6 +92,18 @@ Pada kolom **Aksi** di tabel utama, Admin dapat memilih tindakan berikut:
 
 | Kolom | Fungsi & Keterangan |
 | :--- | :--- |
-| **Nama Kategori** | Teks judul alasan standar penolakan pengajuan (disertai ikon *stop* merah). |
-| **Status** | Badge indikator keaktifan opsi (*Aktif* / *Nonaktif*). |
-| **Aksi** | Terdiri dari tombol pintas **Mata (Visibilitas)**, **Pensil (Edit)**, dan **Tempat Sampah (Hapus)**. |
+| **Nama Kategori** | Nama atau alasan standar yang digunakan sebagai kategori penolakan pengajuan kemitraan. |
+| **Status** | Badge indikator ketersediaan kategori (*Aktif* / *Nonaktif*). |
+| **Aksi** | Tombol untuk mengubah visibilitas, mengedit, atau menghapus kategori penolakan. |
+
+---
+
+## Ringkasan Aksi Kategori Tolak
+
+| Aksi | Fungsi |
+| :--- | :--- |
+| **+ Tambah** | Membuat kategori alasan penolakan baru. |
+| **Cari...** | Mencari kategori berdasarkan nama atau teks alasan penolakan. |
+| **Mata / Visibilitas** | Mengaktifkan atau menonaktifkan kategori dari daftar pilihan alasan penolakan. |
+| **Pensil / Edit** | Mengubah nama atau teks kategori penolakan. |
+| **Tempat Sampah / Hapus** | Menghapus kategori penolakan dari sistem. |

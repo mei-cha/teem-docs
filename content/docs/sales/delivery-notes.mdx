@@ -3,62 +3,69 @@ title: Surat Jalan
 icon: Truck
 ---
 
-Halaman **Surat Jalan** digunakan oleh Administrator untuk mengelola dokumen resmi pengiriman barang dari gudang perusahaan kepada distributor atau mitra penerima pada platform **Teem.id**.
+Halaman **Surat Jalan** digunakan oleh Administrator untuk mengelola dokumen pengiriman barang dari gudang perusahaan kepada distributor atau mitra penerima di platform **Teem.id**.
 
-Dokumen surat jalan ini berfungsi sebagai bukti sah penyerahan barang, acuan verifikasi saat pengambilan stok, serta dokumen pendukung pencetakan fisik untuk tim logistik.
+Surat jalan digunakan sebagai bukti penyerahan barang dan dokumen pendukung untuk proses pengambilan serta pengiriman barang.
 
 ---
 
 ## Alur Mengelola Surat Jalan
 
 ### Langkah 1: Membuka Halaman Surat Jalan
-1. Masuk ke modul **Pengiriman > Surat Jalan** (atau **Stok & Logistik > Surat Jalan**).
-2. Halaman akan menampilkan daftar seluruh dokumen surat jalan yang terbit beserta indikator status pengirimannya.
+
+1. Buka modul **Pengiriman > Surat Jalan**.
+2. Halaman akan menampilkan daftar surat jalan yang telah dibuat beserta status pengirimannya.
 
 ---
 
-### Langkah 2: Membuat Surat Jalan Baru (Modal Pop-Up)
-1. Klik tombol **+ Surat Jalan** berwarna merah di pojok kanan atas halaman.
-2. Modal pop-up **Buat Surat Jalan** akan muncul di layar. Lengkapi parameter berikut:
-   * **No. Surat Jalan \*:** Ketikkan penomoran unik kode dokumen pengiriman.
-   * **Tanggal \*:** Tentukan tanggal resmi penerbitan dokumen pengiriman.
-   * **Pesanan \*:** Pilih nomor referensi transaksi (*Invoice*) milik distributor/mitra tujuan pada dropdown.
-3. Klik tombol **Buat Surat Jalan** berwarna merah untuk mengonfirmasi dan menerbitkan dokumen.
+### Langkah 2: Membuat Surat Jalan Baru
+
+1. Klik tombol **+ Surat Jalan** di pojok kanan atas halaman.
+2. Form **Buat Surat Jalan** akan muncul. Lengkapi data berikut:
+   - **No. Surat Jalan:** Masukkan nomor surat jalan.
+   - **Tanggal:** Tentukan tanggal penerbitan surat jalan.
+   - **Pesanan:** Pilih nomor invoice pesanan distributor atau mitra.
+3. Klik tombol **Buat Surat Jalan** untuk membuat surat jalan.
 
 ---
 
-### Langkah 3: Meninjau Status Pengiriman
-Perhatikan badge indikator pada kolom **Status** untuk memantau alur penyerahan barang:
-* **Diproses:** Dokumen baru diterbitkan dan barang sedang disiapkan oleh tim gudang.
-* **Siap Diambil:** Barang telah selesai dikemas dan siap diambil oleh kurir/distributor.
-* **Selesai:** Barang telah berhasil diterima dan dikonfirmasi oleh penerima.
+### Langkah 3: Memeriksa Status Pengiriman
+
+Periksa status pada kolom **Status** untuk mengetahui proses pengiriman barang:
+
+- **Diproses:** Surat jalan telah dibuat dan barang sedang disiapkan.
+- **Siap Diambil:** Barang telah selesai disiapkan dan siap diambil.
+- **Selesai:** Barang telah diterima dan proses pengiriman selesai.
 
 ---
 
-### Langkah 4: Mencetak Dokumen Surat Jalan (Cetak)
-1. Cari baris nomor surat jalan yang ingin dicetak pada tabel.
-2. Pada kolom **Aksi**, klik tombol **Cetak** (ikon printer).
-3. Jendela pratinjau cetak (*print preview*) dokumen akan terbuka.
-4. Hubungkan ke perangkat printer, lalu cetak dokumen fisik untuk disertakan bersama kemasan pengiriman barang.
+### Langkah 4: Mencetak Surat Jalan
+
+1. Cari surat jalan yang ingin dicetak pada tabel.
+2. Pada kolom **Aksi**, klik tombol **Cetak**.
+3. Pratinjau surat jalan akan ditampilkan.
+4. Hubungkan perangkat dengan printer, lalu cetak surat jalan untuk disertakan bersama barang.
 
 ---
 
-## Ringkasan Struktur Modal & Tabel
+## Ringkasan Form dan Tabel
 
-### 1. Modal Buat Surat Jalan
-| Field / Elemen | Fungsi & Keterangan |
+### 1. Form Buat Surat Jalan
+
+| Elemen | Fungsi dan Keterangan |
 | :--- | :--- |
-| **No. Surat Jalan** | Input teks penomoran kode unik dokumen. |
-| **Tanggal** | Pemilih tanggal resmi dokumen pengiriman diterbitkan. |
-| **Pesanan** | Dropdown pilihan kode invoice pesanan mitra/distributor terdaftar. |
-| **Tombol Buat Surat Jalan** | Eksekusi untuk menerbitkan dokumen surat jalan ke dalam daftar sistem. |
+| **No. Surat Jalan** | Nomor surat jalan untuk mengidentifikasi dokumen. |
+| **Tanggal** | Tanggal penerbitan surat jalan. |
+| **Pesanan** | Pilihan invoice pesanan distributor atau mitra. |
+| **Tombol Buat Surat Jalan** | Membuat dan menyimpan surat jalan ke dalam sistem. |
 
-### 2. Tabel Utama Surat Jalan
-| Kolom | Fungsi & Keterangan |
+### 2. Tabel Surat Jalan
+
+| Kolom | Fungsi dan Keterangan |
 | :--- | :--- |
-| **No. Surat Jalan** | Kode unik identifikasi dokumen surat jalan pengiriman barang. |
-| **Tanggal** | Informasi tanggal penerbitan dokumen surat jalan. |
-| **Pesanan** | Nomor kode referensi transaksi pemesanan (*Invoice*). |
-| **Distributor** | Nama mitra atau distributor penerima pengiriman barang. |
-| **Status** | Badge indikator alur penyerahan (*Diproses*, *Siap Diambil*, *Selesai*). |
-| **Aksi** | Tombol **Cetak** untuk mengunduh/mencetak dokumen fisik surat jalan. |
+| **No. Surat Jalan** | Nomor surat jalan yang digunakan untuk mengidentifikasi dokumen. |
+| **Tanggal** | Tanggal penerbitan surat jalan. |
+| **Pesanan** | Nomor invoice pesanan yang terkait dengan surat jalan. |
+| **Distributor** | Nama distributor atau mitra penerima barang. |
+| **Status** | Menampilkan status pengiriman, yaitu **Diproses**, **Siap Diambil**, atau **Selesai**. |
+| **Aksi** | Tombol **Cetak** untuk menampilkan dan mencetak surat jalan. |

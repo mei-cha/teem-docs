@@ -2,47 +2,51 @@
 title: Pesanan Pending
 icon: Clock3
 ---
-Halaman **Pesanan Pending** digunakan oleh Administrator untuk memantau daftar transaksi pemesanan yang memerlukan tindakan penanganan, serta mengalokasikan pemenuhan pesanan (*fulfillment*) kepada mitra terdekat melalui fitur **Penugasan Pesanan** pada platform **Teem.id**.
 
-Melalui modul ini, Admin dapat mendelegasikan pengiriman pesanan pembeli ke mitra yang sesuai berdasarkan kriteria lokasi wilayah, tingkatan *level*, serta ketersediaan stok.
+Halaman **Pesanan Pending** digunakan oleh Administrator untuk memantau pesanan yang belum ditugaskan dan mengalokasikan penanganannya kepada mitra melalui fitur **Penugasan Pesanan** di platform **Teem.id**.
+
+Melalui halaman ini, Admin dapat memilih mitra yang sesuai untuk menangani pesanan berdasarkan wilayah, level mitra, dan ketersediaan stok.
 
 ---
 
-## Alur Mengelola Pesanan Pending & Penugasan
+## Alur Mengelola Pesanan Pending
 
 ### Langkah 1: Membuka Halaman Pesanan Pending
-1. Masuk ke modul **Penjualan > Pesanan Pending**.
-2. Halaman akan menampilkan daftar transaksi pemesanan yang belum ditugaskan beserta informasi pelanggan, rincian produk, status pembayaran, metode pengiriman, dan waktu transaksi.
+
+1. Buka modul **Penjualan > Pesanan Pending**.
+2. Halaman akan menampilkan daftar pesanan yang belum ditugaskan, beserta informasi pelanggan, produk, pembayaran, pengiriman, dan waktu transaksi.
 
 ---
 
-### Langkah 2: Menyaring & Mengunduh Data
-1. **Filter Periode (Dropdown Periode):** Gunakan tombol filter waktu di pojok kiri atas untuk membatasi rentang pencatatan pesanan.
-2. **Mengunduh Laporan (Export):** Klik tombol **Export** di sebelah kiri indikator jumlah pesanan untuk mengunduh rekapitulasi data pesanan pending ke berkas spreadsheet.
+### Langkah 2: Menyaring dan Mengunduh Data
+
+1. **Filter Periode:** Gunakan pilihan periode di pojok kiri atas untuk menentukan rentang waktu pesanan yang ingin ditampilkan.
+2. **Export Data:** Klik tombol **Export** untuk mengunduh data pesanan pending dalam bentuk spreadsheet.
 
 ---
 
-### Langkah 3: Melakukan Penugasan Pesanan ke Mitra (Penugasan)
-1. Cari baris transaksi pesanan yang ingin dialokasikan pada tabel.
-2. Pada kolom **Aksi**, klik tombol **Penugasan** berwarna merah.
-3. Modal pop-up **Penugasan Pesanan** akan muncul di layar. Tinjau ringkasan informasi berikut:
-   * **Invoice & Pelanggan:** Kode transaksi dan nama pembeli.
-   * **Level:** Tingkatan keanggotaan pembuat pesanan.
-   * **Riwayat:** Informasi riwayat berapa kali pesanan ini pernah ditawari ke mitra.
-4. Pada bagian **Pilih Mitra**, buka dropdown *Pilih mitra aktif* untuk memilih mitra penanggung jawab pengiriman.
-5. Jika mitra yang dicari tidak tersedia, perhatikan pesan peringatan sistem.
-6. Klik tombol **Penugasan** berwarna merah di pojok kanan bawah modal untuk mengonfirmasi pengalihan pesanan.
+### Langkah 3: Menugaskan Pesanan ke Mitra
+
+1. Cari pesanan yang ingin ditugaskan pada tabel.
+2. Pada kolom **Aksi**, klik tombol **Penugasan**.
+3. Form **Penugasan Pesanan** akan muncul. Periksa informasi pesanan yang ditampilkan:
+   - **Invoice dan Pelanggan:** Menampilkan nomor invoice dan nama pembeli.
+   - **Level:** Menampilkan level pengguna yang membuat pesanan.
+   - **Riwayat:** Menampilkan jumlah percobaan penawaran pesanan kepada mitra.
+4. Pada bagian **Pilih Mitra**, pilih mitra yang akan menangani pesanan.
+5. Jika mitra yang sesuai tidak tersedia, perhatikan informasi yang ditampilkan oleh sistem.
+6. Klik tombol **Penugasan** di pojok kanan bawah untuk mengonfirmasi penugasan pesanan.
 
 ---
 
 ## Struktur Tabel Pesanan Pending
 
-| Kolom | Fungsi & Keterangan |
+| Kolom | Fungsi dan Keterangan |
 | :--- | :--- |
-| **Pelanggan** | Nama pembeli beserta kode referensi invoice transaksi. |
-| **Produk Dibeli** | Rincian nama item produk, kuantitas, dan harga per unit. |
-| **Pembayaran** | Nominal total transaksi beserta badge status (*Lunas* / *Belum Bayar*) dan saluran pembayaran. |
-| **Ditangani** | Indikator penanggung jawab pemenuhan pesanan saat ini (*Pusat* / nama mitra). |
-| **Pengiriman** | Metode ekspedisi pengiriman beserta badge status alur pengiriman. |
-| **Waktu** | Stempel durasi waktu sejak transaksi dibuat. |
-| **Aksi** | Tombol **Penugasan** untuk mengalihkan penanganan pesanan ke mitra. |
+| **Pelanggan** | Menampilkan nama pembeli dan nomor invoice. |
+| **Produk Dibeli** | Menampilkan nama produk, jumlah unit, dan harga setiap produk. |
+| **Pembayaran** | Menampilkan total pembayaran, status pembayaran (**Lunas** atau **Belum Bayar**), dan metode pembayaran. |
+| **Ditangani** | Menampilkan pihak yang menangani pesanan, yaitu **Pusat** atau nama mitra. |
+| **Pengiriman** | Menampilkan metode pengiriman dan status pengiriman. |
+| **Waktu** | Menampilkan waktu sejak transaksi dibuat. |
+| **Aksi** | Menampilkan tombol **Penugasan** untuk menugaskan pesanan kepada mitra. |

@@ -3,88 +3,96 @@ title: Pesanan
 icon: ShoppingCart
 ---
 
-Halaman **Pesanan** digunakan oleh Administrator untuk memantau seluruh riwayat transaksi pemesanan barang pada platform **Teem.id**, baik pesanan yang ditangani langsung oleh pusat (*Pesanan Saya*) maupun pesanan yang dialokasikan ke mitra (*Pesanan Mitra*).
+Halaman **Pesanan** digunakan oleh Administrator untuk memantau seluruh transaksi pemesanan barang di platform **Teem.id**, baik pesanan yang ditangani langsung oleh pusat (**Pesanan Saya**) maupun pesanan yang ditangani oleh mitra (**Pesanan Mitra**).
 
-Melalui modul ini, Admin dapat mengeksekusi alur pemenuhan pengiriman barang via ekspedisi, menentukan metode penyerahan paket (*Pickup/Drop Off*), hingga mengubah status pesanan menjadi *Siap Diambil*.
+Melalui halaman ini, Admin dapat memproses pengiriman pesanan, menentukan metode pengiriman, dan memperbarui status pesanan sesuai proses yang dilakukan.
 
 ---
 
 ## Alur Mengelola Pesanan
 
-### Langkah 1: Memilih Tab Kategori Pesanan
-1. Masuk ke modul **Penjualan > Pesanan**.
-2. Pilih tab tampilan di pojok kiri atas halaman:
-   * **Pesanan Saya:** Menampilkan daftar transaksi yang ditangani langsung oleh Admin Pusat.
-   * **Pesanan Mitra:** Menampilkan daftar transaksi yang telah ditugaskan dan ditangani oleh mitra distributor/agen.
+### Langkah 1: Memilih Tab Pesanan
+
+1. Buka modul **Penjualan > Pesanan**.
+2. Pilih tab pesanan di pojok kiri atas halaman:
+   - **Pesanan Saya:** Menampilkan pesanan yang ditangani langsung oleh Admin Pusat.
+   - **Pesanan Mitra:** Menampilkan pesanan yang ditangani oleh mitra seperti distributor atau agen.
 
 ---
 
-### Langkah 2: Menyaring & Mengunduh Data Transaksi
-1. **Filter Periode:** Gunakan dropdown periode untuk membatasi rentang waktu pencatatan.
-2. **Filter Pengirim:** Gunakan dropdown *Semua Pengirim* untuk menyaring opsi kurir/ekspedisi.
-3. **Filter Status:** Gunakan dropdown *Semua Status* untuk menyaring kondisi pesanan (*Diproses*, *Siap Diambil*, *Selesai*, atau *Dibatalkan*).
-4. **Mengunduh Laporan (Export):** Klik tombol **Export** untuk mengunduh rekapitulasi data pesanan ke berkas spreadsheet.
+### Langkah 2: Menyaring dan Mengunduh Data
+
+1. **Filter Periode:** Gunakan pilihan periode untuk menentukan rentang waktu data yang ingin ditampilkan.
+2. **Filter Pengirim:** Gunakan pilihan **Semua Pengirim** untuk menyaring berdasarkan pengirim atau ekspedisi.
+3. **Filter Status:** Gunakan pilihan **Semua Status** untuk menyaring berdasarkan status pesanan, seperti **Diproses**, **Siap Diambil**, **Selesai**, atau **Dibatalkan**.
+4. **Export Data:** Klik tombol **Export** untuk mengunduh data pesanan dalam bentuk spreadsheet.
 
 ---
 
-### Langkah 3: Memproses Pengiriman Kurir Ekspedisi
-1. Pada tab **Pesanan Saya**, cari transaksi berstatus *Diproses* yang dikirim melalui ekspedisi kurir.
-2. Klik tombol **→ Proses** berwarna oranye pada kolom **Aksi**.
-3. Modal **Proses Pengiriman** akan muncul di layar:
+### Langkah 3: Memproses Pengiriman melalui Ekspedisi
 
-#### A. Konfigurasi Metode Penyerahan
+1. Pada tab **Pesanan Saya**, cari pesanan dengan status **Diproses** yang akan dikirim melalui ekspedisi.
+2. Klik tombol **→ Proses** pada kolom **Aksi**.
+3. Form **Proses Pengiriman** akan muncul.
+
+#### A. Memilih Metode Penyerahan
+
 Pilih salah satu metode penyerahan paket:
-* **Pickup:** Kurir ekspedisi akan mengambil paket langsung dari lokasi asal/gudang perusahaan.
-* **Drop Off:** Paket diantar sendiri oleh tim logistik perusahaan ke gerai ekspedisi terdekat.
 
-#### B. Konfirmasi Data Paket Final
-* **Jadwal Pickup:** Jika pada langkah sebelumnya Anda memilih metode *Pickup*, tentukan jadwal waktu penjemputan paket pada dropdown **Jadwal Pickup** (kolom ini otomatis tersembunyi jika Anda memilih metode *Drop Off*).
+- **Pickup:** Paket akan diambil oleh kurir ekspedisi dari lokasi asal atau gudang perusahaan.
+- **Drop Off:** Paket diantar oleh tim perusahaan ke gerai ekspedisi.
+
+#### B. Mengisi Data Paket
+
+- Jika memilih **Pickup**, tentukan jadwal penjemputan pada pilihan **Jadwal Pickup**. Pilihan ini tidak tersedia jika menggunakan metode **Drop Off**.
 
 <div className="flex flex-col sm:flex-row gap-4 my-4">
   <div className="flex-1 text-center">
     ![Form Metode Pickup](/pickup.png)
     <span className="block text-xs text-gray-500 mt-1">
-      Tampilan Form Opsi Pickup (Ada Jadwal Pickup)
+      Tampilan Form Pickup dengan Jadwal Pickup
     </span>
   </div>
   <div className="flex-1 text-center">
     ![Form Metode Drop Off](/dropoff.png)
     <span className="block text-xs text-gray-500 mt-1">
-      Tampilan Form Opsi Drop Off (Tanpa Jadwal Pickup)
+      Tampilan Form Drop Off tanpa Jadwal Pickup
     </span>
   </div>
 </div>
 
-* Masukkan spesifikasi fisik paket mencakup **Berat (gram)**, **Nilai Barang (Rp)**, serta dimensi **Panjang (cm)**, **Lebar (cm)**, dan **Tinggi (cm)**.
-* Centang opsi **Gunakan Asuransi** jika ingin mengaktifkan perlindungan asuransi pengiriman.
+- Masukkan data paket berupa **Berat (gram)**, **Nilai Barang (Rp)**, **Panjang (cm)**, **Lebar (cm)**, dan **Tinggi (cm)**.
+- Centang **Gunakan Asuransi** jika ingin menggunakan asuransi pengiriman.
 
 <Callout type="warn" title="Penting">
-  Apabila total **Nilai Barang (Rp)** pada pesanan melebihi **Rp 500.000**, opsi **Gunakan Asuransi** **WAJIB dicentang** guna menghindari risiko kerugian atau kerusakan barang selama proses pengiriman oleh pihak ekspedisi.
+  Jika total **Nilai Barang (Rp)** melebihi **Rp 500.000**, **Gunakan Asuransi** wajib dipilih untuk memberikan perlindungan terhadap risiko kerusakan atau kehilangan barang selama pengiriman.
 </Callout>
 
-* Klik tombol **Cek Harga Pengiriman** berwarna merah.
+- Klik tombol **Cek Harga Pengiriman**.
 
-#### C. Pemilihan Layanan Ekspedisi & Eksekusi
-* Sistem akan memuat pilihan paket layanan ekspedisi beserta estimasi durasi dan biaya ongkos kirim.
-* Pilih salah satu paket opsi layanan yang sesuai.
-* Klik tombol **Proses Pengiriman** berwarna merah di pojok kanan bawah modal untuk menerbitkan nomor resi dan memproses kurir.
+#### C. Memilih Layanan Ekspedisi
+
+- Sistem akan menampilkan pilihan layanan ekspedisi beserta estimasi waktu dan biaya pengiriman.
+- Pilih layanan yang sesuai.
+- Klik tombol **Proses Pengiriman** di pojok kanan bawah untuk melanjutkan proses pengiriman.
 
 ---
 
 ### Langkah 4: Memproses Pesanan Ambil Sendiri
-1. Untuk pesanan berstatus *Diproses* dengan metode *Diambil Sendiri*, klik tombol **→ Siap Diambil** berwarna oranye pada kolom **Aksi**.
-2. Status pengiriman akan diperbarui menjadi *Siap Diambil*, memberi pemberitahuan kepada pelanggan bahwa barang sudah siap diambil di lokasi.
+
+1. Untuk pesanan berstatus **Diproses** dengan metode **Diambil Sendiri**, klik tombol **→ Siap Diambil** pada kolom **Aksi**.
+2. Status pesanan akan berubah menjadi **Siap Diambil** dan pelanggan akan mendapatkan informasi bahwa barang sudah dapat diambil di lokasi.
 
 ---
 
-## Struktur Tabel Kelola Pesanan
+## Struktur Tabel Pesanan
 
-| Kolom | Fungsi & Keterangan |
+| Kolom | Fungsi dan Keterangan |
 | :--- | :--- |
-| **Pelanggan** | Nama pembeli beserta badge kode level akun dan nomor invoice transaksi. |
-| **Produk Dibeli** | Rincian nama produk, kuantitas unit, dan nominal harga per item. |
-| **Pembayaran** | Nominal total belanja beserta badge status (*Lunas* / *Belum Bayar*) dan metode pembayaran. |
-| **Ditangani** | Badge lokasi penanggung jawab pemenuhan (*Pusat* / nama mitra). |
-| **Pengiriman** | Metode pengiriman beserta badge status alur pengiriman (*Diproses*, *Siap Diambil*, *Selesai*, *Dibatalkan*). |
-| **Waktu** | Informasi durasi stempel waktu sejak transaksi dibuat. |
-| **Aksi** | Tombol eksekusi alur penanganan (**→ Proses** / **→ Siap Diambil**). |
+| **Pelanggan** | Menampilkan nama pembeli, kode level akun, dan nomor invoice. |
+| **Produk Dibeli** | Menampilkan nama produk, jumlah unit, dan harga setiap produk. |
+| **Pembayaran** | Menampilkan total pembayaran, status pembayaran (**Lunas** atau **Belum Bayar**), dan metode pembayaran. |
+| **Ditangani** | Menampilkan pihak yang menangani pesanan, yaitu **Pusat** atau nama mitra. |
+| **Pengiriman** | Menampilkan metode pengiriman dan status pengiriman, seperti **Diproses**, **Siap Diambil**, **Selesai**, atau **Dibatalkan**. |
+| **Waktu** | Menampilkan waktu sejak transaksi dibuat. |
+| **Aksi** | Menampilkan tombol untuk memproses pesanan, seperti **→ Proses** atau **→ Siap Diambil**. |

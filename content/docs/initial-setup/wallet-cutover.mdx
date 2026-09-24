@@ -3,89 +3,97 @@ title: Import Saldo Awal
 icon: Wallet
 ---
 
-Halaman **Import Saldo Awal** digunakan oleh Administrator untuk memasukkan saldo deposit awal (*initial balance*), baik saldo aktif maupun saldo tertunda (*pending*), ke dalam akun pengguna/mitra secara massal menggunakan berkas spreadsheet (Excel/CSV).
+Halaman **Import Saldo Awal** digunakan oleh Administrator untuk memasukkan saldo awal ke akun pengguna atau mitra secara massal menggunakan berkas spreadsheet (Excel/CSV).
 
-Fitur ini mempermudah migrasi data finansial saldo mitra lama ke dalam platform **Teem.id** secara bersamaan tanpa perlu menambah saldo satu per satu secara manual.
+Fitur ini mempermudah proses pemindahan data saldo mitra lama ke dalam platform **Teem.id** tanpa perlu menambahkan saldo satu per satu.
 
-<Callout type="warn" title="Prasyarat Penting Sebelum Impor">
-  * **Akun Harus Terdaftar:** Pastikan email user/mitra **sudah terdaftar di sistem** sebelum melakukan impor.
-  * **Penanganan Saldo Rp 0:** Jika salah satu jenis saldo (saldo aktif atau saldo pending) bernilai **0**, **kosongkan saja kolom tersebut** di berkas spreadsheet (sistem akan otomatis menganggapnya bernilai `0`).
+<Callout type="warn" title="Prasyarat Sebelum Impor">
+  - **Akun Harus Terdaftar:** Pastikan email pengguna atau mitra sudah terdaftar di sistem sebelum melakukan impor.
+  - **Saldo Bernilai 0:** Jika Saldo Aktif atau Saldo Pending bernilai 0, kosongkan kolom tersebut pada berkas spreadsheet. Sistem akan menganggap kolom yang kosong sebagai 0.
 </Callout>
 
 ---
 
 ## Alur Melakukan Import Saldo Awal
 
-Proses penginputan saldo awal mengikuti 4 tahap urut berikut agar tercatat presisi di buku kas sistem:
+Proses impor saldo awal dilakukan melalui 4 tahap berikut.
 
-### Langkah 1: Mengunduh Format Berkas (Download Template)
-1. Akses halaman **Keuangan > Saldo Awal** (atau halaman impor saldo).
+### Langkah 1: Mengunduh Template
+
+1. Buka halaman **Keuangan > Saldo Awal**.
 2. Di dalam kotak instruksi, klik tombol **Download Template**.
-3. Berkas spreadsheet acuan resmi akan otomatis terunduh ke komputer Anda.
+3. Berkas spreadsheet akan otomatis terunduh ke perangkat.
 
 ---
 
-### Langkah 2: Mengisi Kolom Data Spreadsheet
-Buka berkas yang telah diunduh, lalu lengkapi kolom-kolom data finansial akun:
+### Langkah 2: Mengisi Data Saldo
 
-#### Rincian Struktur Kolom Template:
+Buka berkas yang telah diunduh, lalu lengkapi data saldo sesuai ketentuan berikut.
+
+#### Struktur Kolom Template
 
 | Header Kolom | Deskripsi Pengisian |
 | :--- | :--- |
-| **Email** | Alamat email terdaftar milik pengguna/mitra (*Wajib*). |
-| **Saldo Aktif (Rp)** | Nominal rupiah saldo aktif yang dapat langsung digunakan untuk transaksi (*Kosongkan jika 0*). |
-| **Saldo Pending (Rp)** | Nominal rupiah saldo tertunda yang sedang ditahan/dalam proses (*Kosongkan jika 0*). |
+| **Email** | Alamat email pengguna atau mitra yang terdaftar (Wajib). |
+| **Saldo Aktif (Rp)** | Jumlah saldo yang dapat langsung digunakan untuk transaksi. Kosongkan jika bernilai 0. |
+| **Saldo Pending (Rp)** | Jumlah saldo yang masih tertunda atau belum dapat digunakan. Kosongkan jika bernilai 0. |
 
 ---
 
-### Langkah 3: Mengunggah Berkas (Upload)
+### Langkah 3: Mengunggah Berkas
+
 1. Kembali ke halaman **Import Saldo Awal** di panel Administrator.
-2. Klik tombol **Upload** berwarna merah di sebelah tombol *Download Template*.
-3. Pilih berkas spreadsheet saldo yang sudah diisi dari perangkat komputer Anda.
-4. Tunggu beberapa saat hingga sistem selesai memproses dan memvalidasi data.
+2. Klik tombol **Upload** di sebelah tombol **Download Template**.
+3. Pilih berkas spreadsheet yang telah diisi.
+4. Tunggu hingga sistem selesai memproses dan memvalidasi data.
 
 ---
 
-### Langkah 4: Memeriksa Hasil Validasi & Eksekusi Impor
+### Langkah 4: Memeriksa Hasil Validasi dan Menyelesaikan Impor
+
 Setelah berkas diunggah, periksa indikator validasi di atas tabel:
-* **Indikator Valid (Centang Hijau):** Jumlah akun yang lolos verifikasi dan siap menerima masukan saldo.
-* **Indikator Bermasalah (Tanda Seru Merah):** Jumlah baris data yang mengalami kendala/error.
 
-#### Meninjau Tabel Validasi:
+- **Indikator Valid:** Menampilkan jumlah akun yang lolos verifikasi dan siap menerima saldo.
+- **Indikator Bermasalah:** Menampilkan jumlah data yang mengalami kendala.
 
-| Kolom | Keterangan & Deskripsi Fungsi |
+#### Meninjau Tabel Validasi
+
+| Kolom | Keterangan |
 | :--- | :--- |
-| **Baris** | Menunjukkan nomor baris lokasi data pada berkas Excel Anda. |
-| **Email** | Alamat email akun pengguna yang diverifikasi. |
-| **Saldo Aktif** | Nominal saldo aktif yang siap dimasukkan. |
-| **Saldo Pending** | Nominal saldo pending yang siap dimasukkan. |
-| **Status** | Label hasil verifikasi sistem (*Valid* berwarna hijau, atau pesan *Error* berwarna merah). |
+| **Baris** | Menunjukkan nomor baris data pada berkas Excel. |
+| **Email** | Alamat email akun pengguna yang sedang diverifikasi. |
+| **Saldo Aktif** | Jumlah saldo aktif yang akan dimasukkan ke akun. |
+| **Saldo Pending** | Jumlah saldo pending yang akan dimasukkan ke akun. |
+| **Status** | Menampilkan hasil validasi atau alasan terjadinya kesalahan. |
 
-#### Menyelesaikan Impor:
-* Jika terdapat data bermasalah pada kolom **Status**, perbaiki baris data tersebut pada berkas Excel Anda lalu unggah kembali.
-* Jika seluruh data sudah tervalidasi (*Valid*), klik tombol **Import Saldo Awal** di pojok kanan bawah untuk memperbarui saldo ke akun pengguna secara resmi.
+#### Menyelesaikan Impor
+
+- Jika terdapat data bermasalah pada kolom **Status**, perbaiki data tersebut pada berkas Excel, lalu unggah kembali.
+- Jika seluruh data sudah valid, klik tombol **Import Saldo Awal** di pojok kanan bawah untuk memasukkan saldo ke akun pengguna.
 
 ---
 
-## Panduan Mengatasi Masalah Validasi (Troubleshooting)
+## Panduan Mengatasi Masalah Validasi
 
-Apabila sistem menampilkan pesan error berwarna merah pada tabel validasi, gunakan tabel acuan berikut untuk mengetahui penyebab dan cara penyelesaiannya:
+Apabila sistem menampilkan pesan kesalahan pada tabel validasi, gunakan tabel berikut untuk mengetahui penyebab dan cara mengatasinya.
 
-### 1. Masalah Akun User / Email
+### 1. Masalah Akun dan Email
+
 | Pesan Error Sistem | Penyebab Utama | Solusi Penanganan |
 | :--- | :--- | :--- |
-| `Email kosong` | Kolom *Email* pada baris spreadsheet tidak diisi. | Lengkapi alamat email mitra yang ingin diberi saldo awal. |
-| `Email "[email]" tidak ditemukan di sistem` | Alamat email tidak terdaftar di dalam tabel profil pengguna **Teem.id**. | Pastikan mitra sudah mendaftar/dibuatkan akunnya terlebih dahulu sebelum dilakukan impor saldo. |
-| `Email "[email]" duplikat di file ini (baris X, Y)` | Email yang sama ditulis lebih dari 1 kali di dalam berkas Excel. | Hapus baris duplikat dan tinggalkan 1 baris saja di berkas Excel Anda. |
+| Email kosong | Kolom **Email** tidak diisi. | Isi alamat email pengguna atau mitra yang akan menerima saldo awal. |
+| Email "[email]" tidak ditemukan di sistem | Alamat email belum terdaftar di sistem **Teem.id**. | Pastikan pengguna atau mitra sudah memiliki akun sebelum melakukan impor saldo. |
+| Email "[email]" duplikat di file ini (baris X, Y) | Email yang sama ditulis lebih dari satu kali dalam berkas Excel. | Hapus data duplikat dan sisakan satu baris untuk email tersebut. |
 
-### 2. Masalah Format Nominal Saldo
+### 2. Masalah Nominal Saldo
+
 | Pesan Error Sistem | Penyebab Utama | Solusi Penanganan |
 | :--- | :--- | :--- |
-| `Saldo Aktif "[nilai]" tidak valid (harus angka >= 0)` | Teks bernilai minus/negatif atau format tulisan non-angka diinput pada kolom Saldo Aktif. | Masukkan nominal angka positif atau `0` (kosongkan saja jika `0`). Jangan masukkan teks/huruf. |
-| `Saldo Pending "[nilai]" tidak valid (harus angka >= 0)` | Teks bernilai minus/negatif atau format tulisan non-angka diinput pada kolom Saldo Pending. | Masukkan nominal angka positif atau `0` (kosongkan saja jika `0`). Jangan masukkan teks/huruf. |
+| Saldo Aktif "[nilai]" tidak valid (harus angka ≥ 0) | Nilai saldo berupa angka negatif atau bukan angka. | Masukkan jumlah saldo berupa angka 0 atau lebih. Jika nilainya 0, kolom dapat dikosongkan. |
+| Saldo Pending "[nilai]" tidak valid (harus angka ≥ 0) | Nilai saldo berupa angka negatif atau bukan angka. | Masukkan jumlah saldo berupa angka 0 atau lebih. Jika nilainya 0, kolom dapat dikosongkan. |
 
-<Callout type="warn" title="Peringatan Saldo Cut-off Berulang">
-  Sistem secara otomatis mendeteksi jika suatu akun pengguna **sudah pernah menerima saldo cut-off sebelumnya**. Apabila akun yang sama diimpor kembali, nominal saldo baru di berkas spreadsheet akan **menimpa** nilai saldo aktif dan pending yang sudah ada sebelumnya.
+<Callout type="warn" title="Perhatian Saat Mengimpor Ulang">
+  Jika akun pengguna sudah memiliki saldo hasil impor sebelumnya, impor ulang dengan akun yang sama akan **mengganti nilai Saldo Aktif dan Saldo Pending sebelumnya** dengan nilai yang terdapat pada berkas baru.
 </Callout>
 
 ---
@@ -94,13 +102,13 @@ Apabila sistem menampilkan pesan error berwarna merah pada tabel validasi, gunak
 
 | Elemen | Jenis | Fungsi Utama |
 | :--- | :--- | :--- |
-| **Download Template** | Tombol | Mengunduh berkas acuan spreadsheet saldo resmi (`template-import-saldo-cutover.xlsx`). |
-| **Upload** | Tombol | Mengunggah berkas Excel saldo yang telah diisi. |
-| **Badge Valid & Bermasalah** | Indikator | Ringkasan jumlah baris akun yang sukses vs error. |
-| **Kolom Status Tabel** | Informasi Status | Menampilkan label *Valid* atau alasan error penolakan data saldo. |
-| **Tombol Import Saldo Awal** | Eksekusi | Mengkreditkan dan memperbarui seluruh saldo tervalidasi ke dalam dompet akun pengguna. |
+| **Download Template** | Tombol | Mengunduh berkas spreadsheet untuk pengisian data saldo. |
+| **Upload** | Tombol | Mengunggah berkas Excel yang telah diisi. |
+| **Badge Valid dan Bermasalah** | Indikator | Menampilkan jumlah data yang valid dan bermasalah. |
+| **Kolom Status Tabel** | Informasi Status | Menampilkan hasil validasi atau alasan terjadinya kesalahan. |
+| **Tombol Import Saldo Awal** | Eksekusi | Memasukkan saldo yang telah lolos validasi ke akun pengguna. |
 
 ---
 
 > **Tips**  
-> Selalu pastikan format nominal angka saldo di Excel ditulis murni angka tanpa tambahan simbol mata uang (`Rp`) atau titik pemisah ribuan agar tidak terbaca error oleh sistem parser.
+> Masukkan nominal saldo sebagai angka saja tanpa simbol mata uang Rp atau tanda pemisah ribuan agar data dapat dibaca oleh sistem dengan benar.

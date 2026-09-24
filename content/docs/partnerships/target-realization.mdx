@@ -3,45 +3,59 @@ title: Realisasi Target
 icon: ChartNoAxesCombined
 ---
 
-Halaman **Realisasi Target** (Target vs Realisasi Penjualan) digunakan oleh Administrator untuk memantau perbandingan antara target capaian penjualan yang ditetapkan perusahaan dengan realisasi kinerja aktual milik setiap mitra pada platform **Teem.id**.
+Halaman **Realisasi Target** digunakan oleh Administrator untuk memantau perbandingan antara target penjualan yang telah ditetapkan dengan jumlah penjualan yang berhasil dicapai oleh setiap mitra.
 
-Analisis ini membantu Admin mengidentifikasi mitra dengan kinerja melampaui target (*overachieve*) maupun mitra yang membutuhkan evaluasi akibat belum mencapai target minimum.
+Halaman ini membantu Admin melihat mitra yang sudah mencapai target maupun mitra yang masih belum memenuhi target penjualan.
 
 ---
 
 ## Alur Memantau Realisasi Target Penjualan
 
 ### Langkah 1: Membuka Halaman Realisasi Target
+
 1. Masuk ke modul **Kemitraan > Realisasi Target**.
-2. Halaman akan menampilkan tabel evaluasi perbandingan target dan capaian penjualan seluruh mitra.
+2. Sistem akan menampilkan daftar mitra beserta target dan hasil penjualan yang telah dicapai.
 
 ---
 
-### Langkah 2: Mencari & Menyaring Data Mitra (Search & Filter)
-1. **Pencarian Cepat:** Gunakan kolom input **Cari mitra...** di pojok kanan atas tabel untuk mencari pemohon berdasarkan nama atau ID mitra.
-2. **Filter Data:** Klik tombol **Filter** di pojok kanan atas tabel untuk menyaring tampilan berdasarkan periode target atau tingkatan *level* mitra tertentu.
+### Langkah 2: Mencari dan Menyaring Data Mitra
+
+1. Gunakan kolom **Cari mitra...** untuk mencari mitra berdasarkan nama atau ID Mitra.
+2. Klik tombol **Filter** untuk menyaring data sesuai kebutuhan.
+3. Atur filter yang tersedia, seperti periode target dan level mitra.
+4. Periksa hasil yang ditampilkan pada tabel.
 
 ---
 
-### Langkah 3: Meninjau Indikator Capaian Kinerja
-Perhatikan persentase dan warna indikator pada tabel evaluasi:
-* **Capaian Melampaui Target (Persentase & Selisih Hijau):** Capaian realisasi melebihi angka target (di atas 100%). Kolom selisih akan ditandai dengan angka positif (`+`) berwarna hijau.
-* **Capaian Belum Memenuhi Target (Persentase & Selisih Merah/Oranye):** Capaian realisasi berada di bawah target (di bawah 100%). Kolom selisih akan menunjukkan nilai kekurangan (`-`) berwarna merah.
+### Langkah 3: Melihat Pencapaian Target
+
+Perhatikan kolom **Target**, **Realisasi**, dan **Selisih** untuk mengetahui pencapaian masing-masing mitra.
+
+* **Target:** Menampilkan jumlah target penjualan yang ditetapkan untuk mitra.
+* **Realisasi:** Menampilkan jumlah penjualan yang telah dicapai mitra.
+* **Persentase:** Menunjukkan persentase pencapaian dibandingkan dengan target.
+* **Selisih:** Menunjukkan perbedaan antara hasil penjualan dan target yang ditetapkan.
+
+Jika realisasi sudah melebihi target, nilai pencapaian akan menunjukkan hasil di atas 100% dan selisih bernilai positif.
+
+Jika realisasi masih di bawah target, persentase pencapaian berada di bawah 100% dan selisih menunjukkan jumlah yang masih kurang dari target.
 
 ---
 
-### Langkah 4: Mengunduh Laporan (Export)
-1. Klik tombol **Export** di sebelah kanan atas tabel.
-2. Berkas rekapitulasi data perbandingan target vs realisasi penjualan mitra akan otomatis terunduh ke perangkat Anda.
+### Langkah 4: Mengunduh Data Realisasi Target
+
+1. Atur pencarian dan filter sesuai data yang ingin diunduh.
+2. Klik tombol **Export** di bagian kanan atas tabel.
+3. Sistem akan mengunduh data target dan realisasi penjualan mitra dalam bentuk berkas spreadsheet.
 
 ---
 
-## Struktur Tabel Target vs Realisasi Penjualan
+## Struktur Tabel Realisasi Target
 
-| Kolom | Fungsi & Keterangan |
+| Kolom | Fungsi dan Keterangan |
 | :--- | :--- |
-| **Nama & Id** | Nama lengkap mitra beserta kode identifikasi unik akun (*ID Mitra*). |
-| **Level** | Badge indikator tingkatan keanggotaan mitra (*Distributor*, *Agen*, *Sub Agen*). |
-| **Target** | Nominal total kuota sasaran penjualan rupiah yang ditetapkan untuk mitra. |
-| **Realisasi** | Akumulasi nilai rupiah penjualan yang berhasil dicapai mitra beserta persentase kelulusannya. |
-| **Selisih** | Margin perbedaan nominal antara realisasi dan target (ditandai kode warna hijau/merah). |
+| **Nama & ID** | Nama mitra dan ID Mitra yang terdaftar pada sistem. |
+| **Level** | Tingkatan kemitraan mitra. |
+| **Target** | Jumlah target penjualan yang ditetapkan untuk mitra. |
+| **Realisasi** | Jumlah penjualan yang telah dicapai mitra beserta persentase pencapaiannya. |
+| **Selisih** | Perbedaan antara realisasi penjualan dan target. Nilai positif menunjukkan target telah terlampaui, sedangkan nilai negatif menunjukkan target belum tercapai. |
