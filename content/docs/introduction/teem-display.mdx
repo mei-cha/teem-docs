@@ -35,7 +35,19 @@ Navbar merupakan bilah navigasi utama di bagian atas aplikasi yang dapat diakses
 
 Dashboard merupakan halaman utama yang menampilkan ringkasan aktivitas dan informasi penting secara *real-time*. Halaman ini menjadi tampilan pertama yang muncul setelah pengguna berhasil masuk ke dalam sistem **Teem.id**.
 
-Melalui dashboard, pengguna dapat memantau grafik statistik transaksi pesanan, tren penjualan antara pusat dan mitra, transaksi pesanan terbaru, serta daftar pengajuan mitra baru secara langsung dalam satu layar.
+Melalui dashboard, pengguna dapat memantau stok produk milik perusahaan, grafik statistik transaksi pesanan, tren penjualan antara pusat dan mitra, transaksi pesanan terbaru, serta daftar pengajuan mitra baru secara langsung dalam satu layar.
+
+---
+
+### Kartu Indikator Stok Perusahaan (Stat Cards)
+
+Di bagian paling atas dashboard, terdapat barisan kartu indikator ringkasan persediaan barang (*Stat Cards*) untuk memantau ketersediaan stok fisik perusahaan secara instan:
+
+* **Jumlah Stok Produk:** Menampilkan total kuantitas persediaan yang tersisa di gudang perusahaan untuk setiap jenis item produk.
+* **Satuan Dasar:** Jumlah persediaan pada Stat Card ditampilkan dalam satuan terkecil (Slop). Hal ini bertujuan untuk menjaga presisi dan akurasi data agar tidak terjadi pembulatan pecahan desimal jika terdapat sisa/lebihan stok yang tidak genap dalam kemasan besar (seperti Karton atau Bal).
+* **Aksi Navigasi Pintas:** Apabila kartu stok diklik, sistem akan langsung mengarahkan (*redirect*) pengguna ke modul **Stok Perusahaan** untuk melihat rincian alokasi gudang produk tersebut.
+
+---
 
 ### Mekanisme Grafik Statistik Pesanan
 
@@ -48,11 +60,11 @@ Melalui dashboard, pengguna dapat memantau grafik statistik transaksi pesanan, t
 
 ### Fungsi Utama Dashboard
 
+* **Memantau Stok Barang:** Melihat ketersediaan sisa persediaan fisik produk milik perusahaan secara *real-time*.
 * **Memantau Tren Pesanan:** Menyajikan perbandingan grafik statistik pesanan dari internal Pusat dan Mitra secara *real-time*.
 * **Melacak Transaksi Terbaru:** Menampilkan daftar transaksi pesanan masuk terbaru beserta nominal dan waktu transaksinya.
 * **Memantau Pengajuan Mitra Baru:** Menyajikan daftar calon mitra yang mengajukan pendaftaran baru untuk segera diproses.
 * **Filter Periode Waktu:** Memudahkan analisis data statistik berdasarkan pilihan periode tahunan.
-* **Mendukung Evaluasi Pengambilan Keputusan:** Menyediakan data operasional yang terintegrasi secara cepat dan akurat.
 
 ---
 
@@ -60,6 +72,7 @@ Melalui dashboard, pengguna dapat memantau grafik statistik transaksi pesanan, t
 
 | Fitur / Tombol | Fungsi Utama |
 | :--- | :--- |
+| **Kartu Stok Produk** | Menampilkan sisa jumlah persediaan barang milik perusahaan per item. |
 | **Pencarian** | Memudahkan pengguna mencari menu atau data secara cepat di dalam sistem. |
 | **Filter Periode** | Menyaring data grafik dan statistik pesanan berdasarkan periode yang dipilih. |
 | **Grafik Statistik Pesanan** | Menampilkan visualisasi garis perbandingan volume pesanan antara Pusat (Biru) dan Mitra (Merah). |

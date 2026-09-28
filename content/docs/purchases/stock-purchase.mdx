@@ -14,17 +14,17 @@ Melalui halaman ini, Admin dapat mencatat surat jalan, menambahkan produk yang d
 ### Langkah 1: Membuka Halaman dan Mencatat Stok Masuk
 
 1. Buka modul **Pembelian > Pembelian Stok**.
-2. Gunakan pilihan tanggal di pojok kiri atas tabel untuk menyaring riwayat penerimaan barang.
+2. **Filter Periode:** Secara *default*, halaman ini menampilkan riwayat transaksi penerimaan barang untuk periode **Bulan Ini**. Gunakan dropdown pilihan tanggal di pojok kiri atas tabel jika ingin mengubah rentang waktu.
 3. Klik tombol **+ Tambah** di pojok kanan atas untuk membuka form **Catat Stok Masuk**.
 
 <div className="my-4 text-center">
   <img 
-    src="/stockinput.png" 
-    alt="Form Input Pembelian Stok Masuk" 
+    src="/buy-stock.png" 
+    alt="Tampilan Riwayat Pembelian Stok" 
     className="max-h-[380px] w-auto mx-auto rounded-lg shadow-sm" 
   />
   <span className="block text-xs text-gray-400 mt-2">
-    Form Input Pembelian Stok
+    Tampilan Riwayat Pembelian Stok (Default: Bulan Ini)
   </span>
 </div>
 
@@ -75,13 +75,13 @@ Sistem akan menyesuaikan jumlah barang ke satuan terkecil produk sebelum menamba
 | :--- | :--- |
 | **Tgl Masuk** | Menampilkan tanggal barang diterima di gudang. |
 | **No. Surat Jalan** | Menampilkan nomor surat jalan dari vendor. |
-| **Vendor** | Menampilkan nama pemasok barang. |
 | **Nama Produk / Item** | Menampilkan nama produk, jumlah, dan satuan barang yang diterima. |
 | **Gudang** | Menampilkan lokasi gudang atau palet tempat barang disimpan. |
 | **Harga Beli / Unit** | Menampilkan harga pembelian setiap satuan barang. |
-| **Total** | Menampilkan total nilai pembelian berdasarkan barang yang diterima. |
+| **Total** | Menampilkan total nilai pembelian berdasarkan barang yang diterima per item maupun per surat jalan. |
 
 ---
 
-> **Tips**  
-> Pastikan **Gudang**, **Satuan**, dan jumlah **Kuantitas (Qty)** sudah sesuai sebelum menyimpan transaksi karena data penerimaan akan langsung menambah stok pada **Stok Perusahaan**.
+<Callout type="warn" title="Penyimpanan Data Stok">
+  Pastikan Gudang, Satuan, dan jumlah Kuantitas (Qty) sudah sesuai sebelum menyimpan transaksi karena data penerimaan akan langsung memperbarui jumlah stok pada modul Stok Perusahaan.
+</Callout>

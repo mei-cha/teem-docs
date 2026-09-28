@@ -20,12 +20,18 @@ Melalui halaman ini, Admin dapat memproses pengiriman pesanan, menentukan metode
 
 ---
 
-### Langkah 2: Menyaring dan Mengunduh Data
+### Langkah 2: Menyaring dan Mengunduh Data 
 
-1. **Filter Periode:** Gunakan pilihan periode untuk menentukan rentang waktu data yang ingin ditampilkan.
-2. **Filter Pengirim:** Gunakan pilihan **Semua Pengirim** untuk menyaring berdasarkan pengirim atau ekspedisi.
-3. **Filter Status:** Gunakan pilihan **Semua Status** untuk menyaring berdasarkan status pesanan, seperti **Diproses**, **Siap Diambil**, **Selesai**, atau **Dibatalkan**.
-4. **Export Data:** Klik tombol **Export** untuk mengunduh data pesanan dalam bentuk spreadsheet.
+1. **Default Rentang Waktu:** Secara *default*, data pada tab **Pesanan Saya** maupun **Pesanan Mitra** menampilkan transaksi dalam rentang **30 hari terakhir**.
+2. **Pencarian Cepat:** Gunakan kolom input **Cari...** di pojok kanan atas tabel untuk mencari transaksi berdasarkan **Nomor Invoice** atau **Nama Pelanggan/Mitra**.
+3. **Filter Periode:** Gunakan pilihan periode jika ingin mengubah rentang waktu data yang ditampilkan.
+4. **Filter Pengirim:** Gunakan pilihan **Semua Pengirim** untuk menyaring berdasarkan pengirim atau ekspedisi.
+5. **Filter Status:** Gunakan pilihan **Semua Status** untuk menyaring berdasarkan status pesanan, seperti **Diproses**, **Siap Diambil**, **Selesai**, atau **Dibatalkan**.
+6. **Export Data:** Klik tombol **Export** untuk mengunduh rekapitulasi data pesanan dalam bentuk spreadsheet.
+
+#### Format Struktur Berkas Ekspor Spreadsheet:
+* **Prinsip 1 Baris Per Invoice:** Setiap 1 nomor invoice transaksi hanya dicatat dalam **1 baris tunggal** pada berkas spreadsheet.
+* **Kolom Detail Produk:** Seluruh rincian item barang yang dibeli dalam invoice tersebut digabungkan ke dalam satu kolom khusus bernama **Detail Produk** dengan format penulisan `[Nama Produk]: [Kuantitas] [Satuan]` guna menjaga kerapian baris data.
 
 ---
 

@@ -11,6 +11,7 @@
     "initial-setup/import-partners",
     "initial-setup/import-stock",
     "initial-setup/wallet-cutover",
+    "initial-setup/partner-stock-import",
 
     "---PENJUALAN---",
     "sales/dashboard",
