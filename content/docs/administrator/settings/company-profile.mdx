@@ -1,9 +1,9 @@
 ﻿---
-title: Profil
+title: Profil Perusahaan
 icon: Users
 ---
 
-Halaman **Profil Perusahaan** adalah tahapan paling awal yang wajib dikonfigurasi oleh Administrator saat pertama kali menggunakan sistem **Teem.id**. Pengaturan ini bertujuan untuk menetapkan identitas resmi perusahaan, alamat pengiriman pusat, serta parameter dasar sistem sebelum Anda mulai mengelola produk, transaksi, dan jaringan mitra.
+Halaman **Profil Perusahaan** adalah tahapan paling awal yang wajib dikonfigurasi oleh Administrator saat pertama kali menggunakan sistem **Teem.id**. Pengaturan ini bertujuan untuk menetapkan identitas resmi perusahaan, berkas pengesahan dokumen, alamat pengiriman pusat, serta parameter dasar sistem sebelum Anda mulai mengelola produk, transaksi, dan jaringan mitra.
 
 ---
 
@@ -13,14 +13,22 @@ Ikuti urutan alur konfigurasi di bawah ini untuk menyelesaikan pengaturan identi
 
 ### Langkah 1: Unggah Logo Perusahaan
 1. Akses modul **Administrator > Pengaturan**.
-2. Pilih tab **Profil Perusahaan** di bawah kategori **Umum**.
+2. Pilih tab **Profil Perusahaan** di bawah kategori **UMUM**.
 3. Pada bagian **Logo Perusahaan**:
    * Klik tombol **Upload Logo** pada kotak *Logo Tema Terang* untuk menampilkan logo di tampilan latar putih.
    * Klik tombol **Upload Logo** pada kotak *Logo Tema Gelap* untuk tampilan latar gelap.
 
 ---
 
-### Langkah 2: Mengisi Identitas & Informasi Resmi Perusahaan
+### Langkah 2: Unggah Tanda Tangan & Stempel Resmi
+Pengaturan ini digunakan untuk menampilkan pengesahan berupa stempel dan tanda tangan digital secara otomatis pada dokumen resmi tercetak (seperti **Surat Jalan**):
+1. Pada blok **Tanda Tangan & Stempel**:
+   * **Tanda Tangan:** Klik tombol **Upload Logo** pada kotak *Tanda Tangan* untuk mengunggah berkas gambar tanda tangan pejabat berwenang (format transparan/PNG).
+   * **Stempel:** Klik tombol **Upload Logo** pada kotak *Stempel* untuk mengunggah berkas stempel resmi perusahaan.
+
+---
+
+### Langkah 3: Mengisi Identitas & Informasi Resmi Perusahaan
 Lengkapi kolom pada blok **Profil Perusahaan** dengan data valid:
 * **Branding:** Masukkan nama merek atau panggilan platform.
 * **Nama Perusahaan:** Masukkan nama entitas hukum resmi perusahaan.
@@ -31,13 +39,14 @@ Lengkapi kolom pada blok **Profil Perusahaan** dengan data valid:
 
 ---
 
-### Langkah 3: Menentukan Alamat Pengiriman Pusat
+### Langkah 4: Menentukan Alamat Pengiriman Pusat
 Pengaturan ini digunakan sebagai titik asal (*origin*) perhitungan ongkos kirim dan lokasi gudang utama saat memproses pesanan:
 1. Pilih **Provinsi** lokasi pengiriman.
 2. Pilih **Kota/Kabupaten** asal pengiriman.
 3. Pilih **Kecamatan** tempat lokasi gudang.
 4. Pilih **Kelurahan/Desa**.
 5. Masukkan **Detail Alamat** lengkap (nama jalan, nomor bangunan, RT/RW, dan patokan lokasi).
+6. Klik tombol **Simpan** di bagian bawah halaman untuk menerapkan seluruh perubahan data.
 
 ---
 
@@ -47,15 +56,19 @@ Selain **Profil Perusahaan**, berikut adalah bagian-bagian pengaturan lain yang 
 
 | Kategori | Menu Pengaturan | Deskripsi Fungsi |
 | :--- | :--- | :--- |
-| **Umum** | Profil Perusahaan | Mengelola logo, kontak resmi, dan alamat pengiriman pusat. |
+| **UMUM** | Profil Perusahaan | Mengelola logo, berkas tanda tangan/stempel, kontak resmi, dan alamat pengiriman pusat. |
 | | Tampilan | Mengatur tema visual dan kustomisasi warna antarmuka. |
-| **Kemitraan** | Level | Menentukan tingkatan jenjang kemitraan. |
+| **KEMITRAAN** | Level | Menentukan tingkatan jenjang kemitraan. |
 | | Deposit & Pembelian Awal | Mengatur minimal deposit dan batasan jumlah belanja perdana mitra. |
 | | Dokumen Mitra | Mengatur persyaratan berkas verifikasi identitas mitra. |
 | | Durasi Kontrak | Menentukan masa berlaku kerja sama atau keanggotaan mitra. |
 | | Top 5 Produk | Mengatur daftar produk unggulan yang muncul pada dashboard mitra. |
-| **Keuangan** | Biaya Aplikasi | Pengaturan biaya transaksi atau biaya admin platform. |
+| **PESANAN** | AutoComplete Pesanan | Mengatur batas waktu konfirmasi otomatis untuk pesanan yang telah dikirim. |
+| **KEUANGAN** | Biaya Aplikasi | Pengaturan biaya transaksi atau biaya admin platform. |
 | | Otomatisasi Withdraw | Mengatur penarikan dana otomatis bagi mitra atau akun internal. |
-| **Poin** | Pengaturan Poin | Menentukan rasio konversi perolehan poin dari setiap transaksi. |
-| **Konten** | Banner | Mengelola gambar *banner* promosi pada aplikasi. |
 
+---
+
+<Callout type="warn" title="Penting">
+  Pastikan gambar Tanda Tangan dan Stempel diunggah dalam format dengan latar belakang transparan (PNG) agar tampilan cetak pada Surat Jalan tetap rapi dan profesional.
+</Callout>
