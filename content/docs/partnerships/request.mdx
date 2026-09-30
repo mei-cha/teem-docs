@@ -5,7 +5,7 @@ icon: UserPlus
 
 Halaman **Pengajuan Kemitraan** digunakan oleh Administrator untuk meninjau dan memproses pendaftaran baru atau pengajuan kenaikan level kemitraan di platform **Teem.id**.
 
-Melalui halaman ini, Admin dapat memeriksa data pemohon, data legalitas, alamat, rekening bank, serta dokumen yang diperlukan sebelum menentukan status pengajuan.
+Melalui halaman ini, Admin dapat memverifikasi data pemohon, data legalitas, alamat, rekening bank, serta dokumen yang diperlukan sebelum menentukan status pengajuan.
 
 ---
 
@@ -48,9 +48,28 @@ Pada bagian dokumen, tersedia beberapa tab yang dapat digunakan untuk memeriksa 
 - **Tab MoU:** Menampilkan dokumen perjanjian kerja sama. Dokumen dapat dibuka di tab baru untuk diperiksa atau diunduh.
 - **Tab Invoice:** Menampilkan rincian produk pendaftaran dan total pembayaran.
 
-#### C. Memeriksa Tahapan Verifikasi
+#### C. Mengelola Tahapan Verifikasi & Status Pengajuan
 
-Periksa bagian **Tahapan Verifikasi** untuk melihat proses pemeriksaan pengajuan dan status setiap tahapnya.
+Pada bagian **Tahapan Verifikasi**, Admin dapat memeriksa dan memperbarui alur proses pengajuan mitra secara berurutan:
+
+1. **Mengubah Tahap Verifikasi:**
+   - Pilih opsi alur pada dropdown **Ubah ke tahap** (misalnya: *Belum Diverifikasi*, *Proses Verifikasi*, *TTD MoU Terverifikasi*, *Pembelian Awal*, hingga *Pengajuan Mitra Aktif*).
+   - Masukkan pesan pendukung pada kolom **Catatan untuk mitra** apabila ada informasi tambahan yang ingin disampaikan.
+   - Centang opsi **Tandai perlu revisi dari mitra** jika terdapat berkas dokumen yang belum sesuai dan membutuhkan perbaikan dari pihak pemohon.
+   - Klik tombol **Simpan** untuk mengonfirmasi perubahan tahap.
+
+2. **Mekanisme Otomatis Tahap Pembelian Awal:**
+   - Ketika status dialihkan ke tahap **Pembelian Awal** (setelah *TTD MoU Terverifikasi*), sistem secara otomatis memicu pemuatan (*trigger function*) transaksi pesanan (*order*) baru bagi calon mitra.
+   - Pesanan tersebut berisi daftar produk sesuai pengaturan paket **Pembelian Awal** dengan status pembayaran **Pending**.
+   - Calon mitra akan diarahkan untuk mengklik tombol **Bayar Sekarang** di aplikasinya guna menyelesaikan pembayaran melalui *payment gateway*.
+   - **Ketentuan Deposit:** Nominal deposit tidak digabung ke dalam pesanan produk, melainkan diproses terpisah melalui *top up* agar tetap tercatat sebagai hak saldo mitra yang dapat ditarik kembali (*withdrawable*).
+
+3. **Logika Pembatasan Transaksi Pesanan (Order Restriction):**
+   - **Status Pengajuan Sedang Diproses (*Processing*):** Selama proses pengajuan kemitraan belum disetujui (*approval*), pengguna **dibatasi dan tidak dapat melakukan transaksi pesanan lain** di luar pesanan Pembelian Awal yang telah ditentukan.
+   - **Status Pengajuan Pending / Ditolak:** Apabila pengajuan berstatus pending atau ditolak, pengguna **tetap dapat melakukan transaksi pembelian reguler** seperti biasa di platform.
+
+4. **Menolak Pengajuan (Tolak):**
+   - Selama status pengajuan **belum mencapai tahap Pengajuan Mitra Aktif**, Admin dapat membatalkan atau menolak pengajuan tersebut secara langsung dengan mengklik tombol **Tolak** di pojok kanan bawah halaman.
 
 ---
 
@@ -68,7 +87,7 @@ Periksa bagian **Tahapan Verifikasi** untuk melihat proses pemeriksaan pengajuan
 
 ## Komponen Halaman Detail Pengajuan
 
-| Komponen | Informasi yang Ditampilkan |
+| Komponen | Informasi & Fungsi Utama |
 | :--- | :--- |
 | **Profil Pemohon** | Nama, nomor HP, jenis kelamin, status pengajuan, dan alamat pemohon. |
 | **Data Bank dan Mitra** | Nama bank, nomor rekening, nama pemilik rekening, NIK, dan NPWP. |
@@ -76,4 +95,10 @@ Periksa bagian **Tahapan Verifikasi** untuk melihat proses pemeriksaan pengajuan
 | **Tab Dokumen** | Foto Selfie, Foto KTP, dan Foto Selfie dengan KTP. |
 | **Tab MoU** | Dokumen perjanjian kerja sama dalam format PDF. |
 | **Tab Invoice** | Daftar produk pendaftaran dan rincian pembayaran. |
-| **Tahapan Verifikasi** | Menampilkan tahapan proses verifikasi pengajuan. |
+| **Tahapan Verifikasi** | Panel interaktif untuk mengelola verifikasi, catatan revisi, pencetus otomatis order *Pembelian Awal* (*payment status pending*), serta batasan order selama status *processing*. |
+
+---
+
+<Callout type="info" title="Penting: Sistem Pembelian Awal">
+  Pembelian awal otomatis dibuat tanpa komponen deposit. Deposit dipisahkan sebagai saldo top up mitra agar transparan dan dapat ditarik kembali sesuai ketentuan hak kemitraan.
+</Callout>
