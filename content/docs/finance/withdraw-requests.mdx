@@ -40,9 +40,9 @@ Setiap penarikan dana yang masuk wajib diverifikasi agar nominal transfer dan da
 
 ### Langkah 4: Memantau Riwayat Pengajuan
 Pada bagian bawah halaman, Administrator dapat memantau seluruh transaksi penarikan saldo yang pernah diproses:
-1. **Filter Status:** Gunakan dropdown **Semua Status** untuk menyaring riwayat berdasarkan status transaksi.
+1. **Filter Status:** Gunakan dropdown **Semua Status** untuk menyaring riwayat berdasarkan status transaksi (*Disetujui* / *Ditolak*).
 2. **Filter Periode:** Gunakan dropdown periode untuk membatasi rentang waktu pencatatan.
-3. Periksa informasi **Diproses Oleh** dan **Tgl Diproses** untuk audit internal.
+3. Periksa informasi **Diproses Oleh** (oleh Admin internal atau *Sistem (Otomatis)*) dan **Tgl Diproses** untuk kebutuhan audit internal.
 
 ---
 
@@ -61,9 +61,9 @@ Pada bagian bawah halaman, Administrator dapat memantau seluruh transaksi penari
 ### 2. Riwayat Pengajuan
 | Kolom | Fungsi & Keterangan |
 | :--- | :--- |
-| **Nama Pemohon** | Nama lengkap dan ID unik mitra. |
-| **Rekening Tujuan** | Bank dan nomor rekening tujuan transfer. |
-| **Nominal** | Jumlah nominal pencairan dana. |
+| **Nama Pemohon** | Menampilkan hirarki informasi pemohon: **ID Withdraw** di baris paling atas (berwarna merah), **Nama Pemohon** di baris tengah, dan **ID Mitra** di baris paling bawah. |
+| **Rekening Tujuan** | Nama bank penyedia dan nomor rekening tujuan penarikan dana. |
+| **Nominal** | Jumlah total nominal pencairan dana. |
 | **Status** | Badge indikator penanganan (*Disetujui* / *Ditolak*). |
-| **Diproses Oleh** | Nama akun Administrator yang mengeksekusi pengajuan. |
-| **Tgl Diproses** | Informasi stempel waktu kapan keputusan pengajuan dieksekusi. |
+| **Diproses Oleh** | Nama akun Administrator atau *Sistem (Otomatis)* yang mengeksekusi permohonan. |
+| **Tgl Diproses** | Informasi stempel waktu kapan keputusan penarikan dana dieksekusi. |

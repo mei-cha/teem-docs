@@ -15,12 +15,18 @@ Buka modul **Penjualan > Pesanan**. Di pojok kiri atas halaman terdapat dua tab:
 
 | Tab | Keterangan |
 | :--- | :--- |
-| **Pesanan Saya** | Menampilkan pesanan yang ditangani langsung oleh Admin Pusat. Pada tab ini juga terdapat tombol khusus **Pembatalan Pesanan**. |
-| **Pesanan Mitra** | Menampilkan pesanan yang ditangani oleh mitra seperti distributor atau agen. |
+| **Pesanan Saya** | Menampilkan pesanan yang ditangani langsung oleh Admin Pusat. |
+| **Pesanan Mitra** | Menampilkan pesanan yang ditangani oleh mitra. Tab ini bersifat *read-only*: Admin hanya dapat melihat pesanan dan mencetak invoice. |
+
+<Callout type="warn" title="Penting">
+  Admin hanya dapat menangani (menerima, menolak, mencatat pembayaran, dan memproses pengiriman) pesanan pada tab **Pesanan Saya**, yaitu pesanan yang ditangani pusat. Pesanan pada tab **Pesanan Mitra** hanya dapat dilihat dan dicetak invoice-nya melalui tombol **Cetak Invoice**.
+</Callout>
 
 ---
 
 ## Menyaring dan Mengunduh Data
+
+### Filter Data
 
 Gunakan deretan filter di bagian atas tabel untuk mempersempit daftar transaksi pesanan yang ingin ditampilkan.
 
@@ -46,9 +52,9 @@ Klik tombol **Export** untuk mengunduh rekapitulasi data pesanan hasil filter ke
 
 ## Halaman Detail Pesanan
 
-Klik **nomor invoice** (misalnya **INV-2026-00167**) pada kolom **Pelanggan** untuk membuka halaman detail pesanan tersebut.
+Klik **nomor invoice** pada kolom **Pelanggan** untuk membuka halaman detail pesanan tersebut.
 
-Tombol **Cetak Invoice** selalu tersedia di pojok kanan atas halaman detail, apa pun status pesanannya. Tombol lain muncul menyesuaikan kondisi pesanan (lihat bagian **Menerima atau Menolak Pesanan Baru** dan **Mencatat Pembayaran Manual**).
+Tombol **Cetak Invoice** selalu tersedia di pojok kanan atas halaman detail, apa pun status pesanannya. Pada pesanan mitra, **Cetak Invoice** adalah satu-satunya tindakan yang tersedia. Untuk pesanan yang ditangani pusat, tombol lain muncul menyesuaikan kondisi pesanan (lihat bagian **Menerima atau Menolak Pesanan Baru** dan **Mencatat Pembayaran Manual**).
 
 Halaman detail menampilkan informasi berikut:
 
@@ -62,20 +68,27 @@ Halaman detail menampilkan informasi berikut:
 
 ---
 
-## Menerima atau Menolak Pesanan Baru
+## Menangani Pesanan
+
+Bagian ini menjelaskan tindakan Admin pada tab **Pesanan Saya** (pesanan yang ditangani pusat) sesuai kondisi pesanan. Pesanan pada tab **Pesanan Mitra** hanya dapat dilihat dan dicetak invoice-nya, sehingga tindakan di bawah ini tidak berlaku untuknya. Kerjakan bagian yang sesuai dengan kondisi pesanan yang sedang ditangani.
+
+### Menerima atau Menolak Pesanan Baru
 
 Pesanan yang baru masuk pada tab **Pesanan Saya** menampilkan status pengiriman **Menunggu** pada kolom **Pengiriman**. Pada kolom **Aksi** (dan juga pada header halaman detail pesanan), pesanan dengan status ini menampilkan dua tombol:
 
 | Tombol | Fungsi |
 | :--- | :--- |
 | **Terima** | Menerima pesanan agar dapat dilanjutkan ke proses berikutnya. |
-| **Tolak** | Menolak pesanan tersebut. |
+| **Tolak** | Menolak pesanan tersebut. Setelah diklik, akan muncul form untuk mengisi alasan penolakan. |
 
-{/* TODO: konfirmasi perilaku sistem setelah klik Terima/Tolak (perubahan status, apakah ada form alasan penolakan, notifikasi ke pelanggan, dan pengembalian dana untuk pesanan yang sudah dibayar) */}
+Setelah pesanan diterima, pesanan langsung lanjut ke tahap berikutnya. Tombol pada kolom **Aksi** menyesuaikan tipe pengiriman pesanan:
 
----
+| Tipe Pengiriman | Tombol Berikutnya | Keterangan |
+| :--- | :--- | :--- |
+| **Dikirim Kurir** | **→ Proses** | Membuka form untuk menentukan ekspedisi. Lihat bagian **Pengiriman melalui Ekspedisi**. |
+| **Diambil Sendiri** | **→ Siap Diambil** | Lihat bagian **Pesanan Ambil Sendiri**. |
 
-## Mencatat Pembayaran Manual
+### Mencatat Pembayaran Manual
 
 Untuk pesanan berstatus **Menunggu** dan **Belum Bayar** yang pembayarannya tidak melalui *payment gateway* Teem.id, halaman detail pesanan menampilkan tombol hijau **Proses Bayar**. Tombol ini digunakan Admin untuk mencatat bahwa pesanan sudah dilunasi di luar sistem pembayaran.
 
@@ -89,17 +102,11 @@ Tombol **Proses Bayar** hanya tersedia untuk pesanan yang ditangani pusat (tab *
 
 Setelah disimpan, status pembayaran pesanan otomatis berubah menjadi **Lunas**.
 
-{/* TODO: konfirmasi apakah setelah pembayaran Lunas status pesanan ikut berubah atau tetap Menunggu sampai Admin menekan Terima */}
-
----
-
-## Memproses Pesanan
-
-Pesanan berstatus **Diproses** pada tab **Pesanan Saya** dapat ditangani dengan dua cara, tergantung metode pengiriman yang dipilih pelanggan.
+Proses ini hanya memperbarui status pembayaran. Keputusan **Terima** atau **Tolak** pesanan tetap dilakukan secara terpisah.
 
 ### Pengiriman melalui Ekspedisi
 
-Gunakan cara ini untuk pesanan berstatus **Diproses** yang akan dikirim melalui ekspedisi.
+Pesanan berstatus **Diproses** dapat ditangani dengan dua cara, tergantung metode pengiriman yang dipilih pelanggan. Bagian ini untuk pesanan yang akan dikirim melalui ekspedisi.
 
 1. Pada tab **Pesanan Saya**, cari pesanan tersebut.
 2. Klik tombol **→ Proses** pada kolom **Aksi**.
@@ -113,21 +120,6 @@ Pilih salah satu metode penyerahan paket:
 - **Drop Off:** Paket diantar oleh tim perusahaan ke gerai ekspedisi.
 
 Jika memilih **Pickup**, tentukan jadwal penjemputan pada pilihan **Jadwal Pickup**. Pilihan ini tidak tersedia jika menggunakan metode **Drop Off**.
-
-<div className="flex flex-col sm:flex-row gap-4 my-4">
-  <div className="flex-1 text-center">
-    ![Form Metode Pickup](/pickup.png)
-    <span className="block text-xs text-gray-500 mt-1">
-      Tampilan Form Pickup dengan Jadwal Pickup
-    </span>
-  </div>
-  <div className="flex-1 text-center">
-    ![Form Metode Drop Off](/dropoff.png)
-    <span className="block text-xs text-gray-500 mt-1">
-      Tampilan Form Drop Off tanpa Jadwal Pickup
-    </span>
-  </div>
-</div>
 
 #### Data Paket
 
@@ -148,21 +140,20 @@ Setelah data terisi, klik tombol **Cek Harga Pengiriman**.
 
 ### Pesanan Ambil Sendiri
 
-Gunakan cara ini untuk pesanan berstatus **Diproses** dengan metode **Diambil Sendiri**.
+Bagian ini untuk pesanan berstatus **Diproses** dengan metode **Diambil Sendiri**.
 
 1. Klik tombol **→ Siap Diambil** pada kolom **Aksi**.
-2. Status pesanan akan berubah menjadi **Siap Diambil** dan pelanggan akan mendapatkan informasi bahwa barang sudah dapat diambil di lokasi.
+2. Pelanggan akan mendapatkan informasi bahwa barang sudah dapat diambil di lokasi.
+3. Pesanan langsung berstatus **Selesai**.
 
-### Pesanan yang Sudah Diproses atau Dikirim
+### Cetak Resi dan Tracking
 
-Setelah pengiriman diproses, kolom **Pengiriman** menampilkan metode pengiriman (misalnya **Dikirim Kurir**), status pengiriman, serta layanan ekspedisi yang dipakai (misalnya **JNE · OKE**). Tombol pada kolom **Aksi** menyesuaikan status pesanan:
+Setelah pengiriman diproses, kolom **Pengiriman** menampilkan metode pengiriman, status pengiriman, serta layanan ekspedisi yang dipakai. Tombol pada kolom **Aksi** menyesuaikan status pesanan:
 
 | Status Pengiriman | Tombol Aksi | Fungsi |
 | :--- | :--- | :--- |
 | **Diproses** | **Cetak Resi** | Mencetak resi pengiriman pesanan. |
 | **Dikirim** | **Tracking** | Melacak status pengiriman paket. |
-
-{/* TODO: konfirmasi detail Cetak Resi (format/isi resi, apakah bisa dicetak ulang), tampilan Tracking (riwayat perjalanan paket), dan arti label ekspedisi "EXTERNAL · external" pada pesanan berstatus Dikirim */}
 
 ---
 
@@ -203,7 +194,7 @@ Pada kolom **Aksi**, Admin dapat meninjau **Alasan Pembatalan** lalu memilih unt
 | **Produk Dibeli** | Menampilkan nama produk, jumlah unit, dan harga setiap produk. |
 | **Pembayaran** | Menampilkan total pembayaran, status pembayaran (**Lunas** atau **Belum Bayar**), dan metode pembayaran. |
 | **Ditangani** | Menampilkan pihak yang menangani pesanan, yaitu **Pusat** atau nama mitra. |
-| **Pengiriman** | Menampilkan metode pengiriman dan status pengiriman, seperti **Menunggu**, **Diproses**, **Dikirim**, **Siap Diambil**, **Selesai**, atau **Dibatalkan**. Untuk pengiriman ekspedisi, ditampilkan juga layanan yang dipakai (misalnya **JNE · OKE**). |
+| **Pengiriman** | Menampilkan metode pengiriman dan status pengiriman, seperti **Menunggu**, **Diproses**, **Dikirim**, **Siap Diambil**, **Selesai**, atau **Dibatalkan**. Untuk pengiriman ekspedisi, ditampilkan juga layanan yang dipakai. |
 | **Waktu** | Menampilkan waktu sejak transaksi dibuat. |
 | **Aksi** | Menampilkan tombol untuk memproses pesanan, seperti **Terima**, **Tolak**, **→ Proses**, **→ Siap Diambil**, **Cetak Resi**, atau **Tracking**. |
 
