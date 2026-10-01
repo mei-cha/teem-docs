@@ -15,8 +15,8 @@ Buka modul **Penjualan > Pesanan**. Di pojok kiri atas halaman terdapat dua tab:
 
 | Tab | Keterangan |
 | :--- | :--- |
-| **Pesanan Saya** | Menampilkan pesanan yang ditangani langsung oleh Admin Pusat. |
-| **Pesanan Mitra** | Menampilkan pesanan yang ditangani oleh mitra. Tab ini bersifat *read-only*: Admin hanya dapat melihat pesanan dan mencetak invoice. |
+| **Pesanan Saya** | Menampilkan pesanan yang ditangani langsung oleh Admin Pusat. Pada tab ini juga terdapat tombol khusus **Pembatalan Pesanan**. |
+| **Pesanan Mitra** | Menampilkan pesanan yang ditangani oleh mitra seperti distributor atau agen. Tab ini bersifat *read-only*: Admin hanya dapat melihat pesanan dan mencetak invoice. |
 
 <Callout type="warn" title="Penting">
   Admin hanya dapat menangani (menerima, menolak, mencatat pembayaran, dan memproses pengiriman) pesanan pada tab **Pesanan Saya**, yaitu pesanan yang ditangani pusat. Pesanan pada tab **Pesanan Mitra** hanya dapat dilihat dan dicetak invoice-nya melalui tombol **Cetak Invoice**.
@@ -111,32 +111,93 @@ Pesanan berstatus **Diproses** dapat ditangani dengan dua cara, tergantung metod
 1. Pada tab **Pesanan Saya**, cari pesanan tersebut.
 2. Klik tombol **→ Proses** pada kolom **Aksi**.
 3. Form **Proses Pengiriman** akan muncul.
+4. Pilih **Metode Pengiriman**. Isi form akan menyesuaikan pilihan tersebut.
 
-#### Metode Penyerahan
+| Metode Pengiriman | Keterangan | Lanjut ke |
+| :--- | :--- | :--- |
+| **Dikirim Kurir** | Pengiriman menggunakan KiriminAja. | [Dikirim Kurir (KiriminAja)](#dikirim-kurir-kiriminaja) |
+| **Dikirim Kurir Lain** | Menggunakan ekspedisi selain KiriminAja. | [Dikirim Kurir Lain](#dikirim-kurir-lain) |
 
-Pilih salah satu metode penyerahan paket:
+#### Dikirim Kurir (KiriminAja)
+
+**Opsi Penjemputan**
+
+Pilih salah satu opsi penjemputan paket:
 
 - **Pickup:** Paket akan diambil oleh kurir ekspedisi dari lokasi asal atau gudang perusahaan.
 - **Drop Off:** Paket diantar oleh tim perusahaan ke gerai ekspedisi.
 
-Jika memilih **Pickup**, tentukan jadwal penjemputan pada pilihan **Jadwal Pickup**. Pilihan ini tidak tersedia jika menggunakan metode **Drop Off**.
+Jika memilih **Pickup**, tentukan jadwal penjemputan pada pilihan **Jadwal Pickup**. Pilihan ini tidak tersedia jika menggunakan opsi **Drop Off**.
 
-#### Data Paket
+<div className="flex flex-col sm:flex-row gap-4 my-4">
+  <div className="flex-1 text-center">
+    <img
+      src="/proses1.png"
+      alt="Form Proses Pengiriman dengan opsi Pickup"
+      className="max-h-[380px] w-auto mx-auto rounded-lg shadow-sm"
+    />
+    <span className="block text-xs text-gray-400 mt-2">
+      Tampilan form dengan opsi Pickup (terdapat Jadwal Pickup)
+    </span>
+  </div>
+  <div className="flex-1 text-center">
+    <img
+      src="/proses2.png"
+      alt="Form Proses Pengiriman dengan opsi Drop Off"
+      className="max-h-[380px] w-auto mx-auto rounded-lg shadow-sm"
+    />
+    <span className="block text-xs text-gray-400 mt-2">
+      Tampilan form dengan opsi Drop Off (tanpa Jadwal Pickup)
+    </span>
+  </div>
+</div>
 
-- Masukkan data paket berupa **Berat (gram)**, **Nilai Barang (Rp)**, **Panjang (cm)**, **Lebar (cm)**, dan **Tinggi (cm)**.
-- Centang **Gunakan Asuransi** jika ingin menggunakan asuransi pengiriman.
+**Data Paket**
+
+Data paket terisi otomatis dan terkunci (ditandai ikon gembok), sehingga tidak perlu diisi manual:
+
+- **Berat (gram)**
+- **Nilai Barang (Rp):** diambil otomatis dari subtotal pesanan.
+- **Panjang (cm)**, **Lebar (cm)**, dan **Tinggi (cm)**
+
+**Asuransi**
+
+Informasi asuransi ditampilkan pada form. Biaya asuransi mengikuti hasil *pricing* KiriminAja.
 
 <Callout type="warn" title="Penting">
-  Jika total **Nilai Barang (Rp)** melebihi **Rp 500.000**, **Gunakan Asuransi** wajib dipilih untuk memberikan perlindungan terhadap risiko kerusakan atau kehilangan barang selama pengiriman.
+  Jika total **Nilai Barang (Rp)** melebihi **Rp 500.000**, asuransi pengiriman wajib digunakan untuk memberikan perlindungan terhadap risiko kerusakan atau kehilangan barang selama pengiriman.
 </Callout>
 
-Setelah data terisi, klik tombol **Cek Harga Pengiriman**.
+Setelah form terisi, klik tombol **Cek Harga Pengiriman**.
 
-#### Layanan Ekspedisi
+**Layanan Ekspedisi**
 
 1. Sistem akan menampilkan pilihan layanan ekspedisi beserta estimasi waktu dan biaya pengiriman.
 2. Pilih layanan yang sesuai.
 3. Klik tombol **Proses Pengiriman** di pojok kanan bawah untuk melanjutkan proses pengiriman.
+
+Setelah pengaturan pengiriman selesai, tombol **Cetak Resi** akan muncul pada pesanan tersebut. Lihat bagian **Cetak Resi dan Tracking**.
+
+#### Dikirim Kurir Lain
+
+Gunakan metode ini jika pesanan dikirim menggunakan ekspedisi selain KiriminAja. Pada metode ini, **Opsi Penjemputan**, **Data Paket**, dan pengecekan harga tidak ditampilkan.
+
+1. Pilih ekspedisi yang digunakan pada kolom **Ekspedisi**.
+2. Masukkan nomor resi pengiriman pada kolom **AWB / Nomor Resi**.
+3. Klik tombol **Buat Pengiriman**.
+
+<div className="my-4 text-center">
+  <img
+    src="/proses3.png"
+    alt="Form Proses Pengiriman dengan metode Dikirim Kurir Lain"
+    className="max-h-[380px] w-auto mx-auto rounded-lg shadow-sm"
+  />
+  <span className="block text-xs text-gray-400 mt-2">
+    Tampilan form dengan metode Dikirim Kurir Lain
+  </span>
+</div>
+
+{/* TODO: konfirmasi status pesanan setelah Buat Pengiriman (langsung Dikirim?), tombol yang muncul setelahnya (Tracking / Cetak Resi?), dan apakah label "EXTERNAL" di kolom Pengiriman menandakan pesanan Kurir Lain */}
 
 ### Pesanan Ambil Sendiri
 
@@ -148,12 +209,12 @@ Bagian ini untuk pesanan berstatus **Diproses** dengan metode **Diambil Sendiri*
 
 ### Cetak Resi dan Tracking
 
-Setelah pengiriman diproses, kolom **Pengiriman** menampilkan metode pengiriman, status pengiriman, serta layanan ekspedisi yang dipakai. Tombol pada kolom **Aksi** menyesuaikan status pesanan:
+Setelah pengaturan pengiriman selesai, kolom **Pengiriman** menampilkan metode pengiriman, status pengiriman, serta layanan ekspedisi yang dipakai. Tombol pada kolom **Aksi** menyesuaikan kondisi pesanan:
 
-| Status Pengiriman | Tombol Aksi | Fungsi |
+| Kondisi Pesanan | Tombol Aksi | Fungsi |
 | :--- | :--- | :--- |
-| **Diproses** | **Cetak Resi** | Mencetak resi pengiriman pesanan. |
-| **Dikirim** | **Tracking** | Melacak status pengiriman paket. |
+| Pengaturan metode pengiriman sudah selesai (status **Diproses**) | **Cetak Resi** | Mencetak resi pengiriman pesanan. |
+| Pesanan dikirim kurir dengan status **Dikirim** | **Tracking** | Melacak status pengiriman paket. |
 
 ---
 
@@ -194,7 +255,7 @@ Pada kolom **Aksi**, Admin dapat meninjau **Alasan Pembatalan** lalu memilih unt
 | **Produk Dibeli** | Menampilkan nama produk, jumlah unit, dan harga setiap produk. |
 | **Pembayaran** | Menampilkan total pembayaran, status pembayaran (**Lunas** atau **Belum Bayar**), dan metode pembayaran. |
 | **Ditangani** | Menampilkan pihak yang menangani pesanan, yaitu **Pusat** atau nama mitra. |
-| **Pengiriman** | Menampilkan metode pengiriman dan status pengiriman, seperti **Menunggu**, **Diproses**, **Dikirim**, **Siap Diambil**, **Selesai**, atau **Dibatalkan**. Untuk pengiriman ekspedisi, ditampilkan juga layanan yang dipakai. |
+| **Pengiriman** | Menampilkan metode pengiriman dan status pengiriman, seperti **Menunggu**, **Diproses**, **Dikirim**, **Siap Diambil**, **Selesai**, atau **Dibatalkan**. Untuk pengiriman ekspedisi, ditampilkan juga layanan yang dipakai (misalnya **JNE · OKE**). |
 | **Waktu** | Menampilkan waktu sejak transaksi dibuat. |
 | **Aksi** | Menampilkan tombol untuk memproses pesanan, seperti **Terima**, **Tolak**, **→ Proses**, **→ Siap Diambil**, **Cetak Resi**, atau **Tracking**. |
 
