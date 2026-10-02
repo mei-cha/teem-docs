@@ -20,7 +20,7 @@ Navbar merupakan bilah navigasi utama di bagian atas aplikasi yang dapat diakses
 
 ---
 
-## Dashboard
+## Dashboard Utama
 
 <div className="my-4 text-center">
   <img 
@@ -35,7 +35,7 @@ Navbar merupakan bilah navigasi utama di bagian atas aplikasi yang dapat diakses
 
 Dashboard merupakan halaman utama yang menampilkan ringkasan aktivitas dan informasi penting secara *real-time*. Halaman ini menjadi tampilan pertama yang muncul setelah pengguna berhasil masuk ke dalam sistem **Teem.id**.
 
-Melalui dashboard, pengguna dapat memantau stok produk milik perusahaan, grafik statistik transaksi pesanan, tren penjualan antara pusat dan mitra, transaksi pesanan terbaru, serta daftar pengajuan mitra baru secara langsung dalam satu layar.
+Melalui dashboard, pengguna dapat memantau stok produk milik perusahaan, grafik statistik transaksi pesanan, peta persebaran jaringan mitra, transaksi pesanan terbaru, serta daftar pengajuan mitra baru secara langsung dalam satu layar.
 
 ---
 
@@ -58,10 +58,20 @@ Di bagian paling atas dashboard, terdapat barisan kartu indikator ringkasan pers
 
 ---
 
+### Widget Peta Penyebaran Mitra
+
+Peta interaktif (*Peta Penyebaran Mitra*) menyajikan visualisasi sebaran lokasi operasional seluruh jaringan kemitraan di berbagai daerah:
+
+* **Penanda Pin Wilayah:** Lokasi mitra ditandai dengan pin warna yang membedakan tingkat kemitraannya (misalnya: *Distributor*, *Agen*, dan *Sub Agen*).
+* **Fitur Zoom & Pan:** Dilengkapi tombol kontrol perbesaran (`+` dan `-`) serta kemampuan geser peta untuk memantau konsentrasi jaringan mitra di wilayah tertentu secara mendetail.
+
+---
+
 ### Fungsi Utama Dashboard
 
 * **Memantau Stok Barang:** Melihat ketersediaan sisa persediaan fisik produk milik perusahaan secara *real-time*.
 * **Memantau Tren Pesanan:** Menyajikan perbandingan grafik statistik pesanan dari internal Pusat dan Mitra secara *real-time*.
+* **Memetakan Jaringan Mitra:** Menampilkan sebaran lokasi geografis distributor, agen, dan sub-agen pada peta interaktif.
 * **Melacak Transaksi Terbaru:** Menampilkan daftar transaksi pesanan masuk terbaru beserta nominal dan waktu transaksinya.
 * **Memantau Pengajuan Mitra Baru:** Menyajikan daftar calon mitra yang mengajukan pendaftaran baru untuk segera diproses.
 * **Filter Periode Waktu:** Memudahkan analisis data statistik berdasarkan pilihan periode tahunan.
@@ -70,11 +80,11 @@ Di bagian paling atas dashboard, terdapat barisan kartu indikator ringkasan pers
 
 ### Fitur Umum pada Dashboard
 
-| Fitur / Tombol | Fungsi Utama |
+| Fitur / Widget | Fungsi Utama |
 | :--- | :--- |
 | **Kartu Stok Produk** | Menampilkan sisa jumlah persediaan barang milik perusahaan per item. |
-| **Pencarian** | Memudahkan pengguna mencari menu atau data secara cepat di dalam sistem. |
-| **Filter Periode** | Menyaring data grafik dan statistik pesanan berdasarkan periode yang dipilih. |
-| **Grafik Statistik Pesanan** | Menampilkan visualisasi garis perbandingan volume pesanan antara Pusat (Biru) dan Mitra (Merah). |
+| **Grafik Statistik Pesanan** | Visualisasi garis perbandingan volume pesanan antara Pusat (Biru) dan Mitra (Merah). |
+| **Peta Penyebaran Mitra** | Peta interaktif berbasis penanda warna untuk memantau sebaran lokasi Distributor, Agen, dan Sub Agen. |
 | **Pesanan Terbaru** | Menampilkan daftar ringkas pesanan masuk terbaru dan mengarahkan ke halaman detail pesanan. |
 | **Pengajuan Mitra Baru** | Menampilkan pengajuan pendaftaran mitra terbaru dan mengarahkan ke halaman persetujuan mitra. |
+| **Filter Periode** | Menyaring data grafik dan statistik pesanan berdasarkan periode yang dipilih. |
