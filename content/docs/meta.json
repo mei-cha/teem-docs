@@ -70,6 +70,8 @@
     "administrator/settings/points",
     "administrator/settings/content",
     "administrator/settings/orders",
+    "administrator/settings/support",
+
 
     "---DUKUNGAN---",
     "support/tickets",

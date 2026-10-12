@@ -1,0 +1,69 @@
+---
+title: Departemen
+icon: Building
+---
+
+Halaman **Pengaturan Departemen** digunakan oleh Administrator untuk mengelola daftar kategori/divisi penanganan tiket dukungan (*support ticket*) pada platform **Teem.id**.
+
+Fitur ini membantu mengelompokkan keluhan, kendala, atau pertanyaan pengguna ke departemen yang sesuai (seperti *Kemitraan*, *Pesanan & Pembayaran*, atau *Produk & Pengiriman*) agar penanganan tiket bantuan dapat disalurkan secara tepat sasaran.
+
+---
+
+## Cara Mengakses Halaman Departemen
+
+Bagi Administrator yang ingin menambah atau menyesuaikan daftar departemen bantuan, ikuti langkah navigasi berikut:
+
+1. Pada bilah navigasi kiri (*sidebar*), buka modul **Administrator > Pengaturan**.
+2. Pada menu navigasi pengaturan di bagian tengah, gulir ke bawah hingga kategori **SUPPORT**, lalu pilih sub-menu **Departemen**.
+3. Sistem akan menampilkan grid kartu **Pengaturan Departemen**.
+
+<div className="my-4 text-center">
+  <img 
+    src="/pengaturan-departemen-main.png" 
+    alt="Tampilan Halaman Pengaturan Departemen" 
+    className="max-h-[380px] w-auto mx-auto rounded-lg shadow-sm" 
+  />
+  <span className="block text-xs text-gray-400 mt-2">
+    Tampilan utama halaman Pengaturan Departemen
+  </span>
+</div>
+
+---
+
+## Pengelolaan Kartu Departemen
+
+Administrator dapat menambah, mengubah detail, mengatur status aktif, maupun menghapus departemen melalui antarmuka berikut:
+
+### 1. Menambah Departemen Baru
+* Klik tombol **+ Tambah Departemen** di pojok kanan atas halaman.
+* Kartu baru akan ditambahkan ke dalam grid untuk diisi **Nama Departemen** dan **Deskripsi** singkatnya.
+
+---
+
+### 2. Mengatur Parameter Kartu Departemen
+Setiap kartu departemen memiliki elemen kontrol sebagai berikut:
+
+* **Toggle Status (Aktif / Nonaktif):** Mengubah sakelar status untuk menentukan apakah departemen tersebut dapat dipilih oleh pengguna saat membuat tiket bantuan.
+* **Nama Departemen:** Kolom teks untuk menentukan sebutan/nama divisi (contoh: *Kemitraan*, *Saldo*, *Produk & Pengiriman*).
+* **Deskripsi:** Kolom area teks untuk memberikan penjelasan singkat mengenai cakupan kendala yang ditangani oleh departemen tersebut.
+* **Ikon Hapus (Tong Sampah):** Menghapus kartu departemen dari daftar.
+
+---
+
+## Menyimpan Perubahan Data
+
+1. Periksa kembali nama departemen, deskripsi, serta status aktif pada setiap kartu.
+2. Klik tombol **Simpan** di pojok kanan bawah halaman untuk menerapkan konfigurasi departemen ke sistem tiket dukungan.
+
+---
+
+## Ringkasan Fitur & Elemen UI
+
+| Elemen / Tombol | Jenis | Fungsi & Deskripsi |
+| :--- | :--- | :--- |
+| **+ Tambah Departemen** | Tombol | Menambahkan kartu departemen baru ke dalam daftar grid. |
+| **Toggle Status** | Sakelar | Mengaktifkan atau menonaktifkan ketersediaan departemen. |
+| **Nama Departemen** | Input Teks | Menentukan nama kategori/divisi penanganan kendala. |
+| **Deskripsi** | Textarea | Menjelaskan ruang lingkup kendala yang ditangani departemen. |
+| **Ikon Tong Sampah** | Aksi | Menghapus kartu departemen yang dipilih. |
+| **Tombol Simpan** | Eksekusi | Menyimpan seluruh struktur dan status departemen ke database. |
