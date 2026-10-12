@@ -69,6 +69,7 @@
     "administrator/settings/finance",
     "administrator/settings/points",
     "administrator/settings/content",
+    "administrator/settings/orders",
 
     "---DUKUNGAN---",
     "support/tickets",

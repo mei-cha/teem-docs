@@ -1,2 +1,8 @@
-title: AutoComplete Pesanan
-icon: CheckCircle
+{
+      "title": "AutoComplete Pesanan",
+      "icon": "FileCheck",
+      "pages":  [
+                    "autocomplete"
+                ]
+  }
+  
