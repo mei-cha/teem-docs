@@ -1,0 +1,63 @@
+---
+title: Laporan Ongkir
+icon: Receipt
+---
+
+Halaman **Laporan Ongkir** digunakan oleh Administrator untuk memantau ringkasan finansial biaya pengiriman, perbandingan tarif antara yang dibayarkan oleh pembeli dengan biaya aktual ekspedisi, biaya asuransi, serta menganalisis selisih (subsidi/keuntungan) ongkos kirim pada platform **Teem.id**.
+
+---
+
+## Cara Mengakses Halaman Laporan Ongkir
+
+Bagi Administrator yang baru pertama kali mengakses fitur ini, ikuti langkah navigasi berikut:
+
+1. Pada bilah navigasi kiri (*sidebar*), buka modul **Penjualan > Laporan Ongkir**.
+2. Sistem akan menampilkan halaman utama **Laporan Ongkir** beserta kartu indikator dan tabel rekapan transaksi.
+
+<div className="my-4 text-center">
+  <img 
+    src="/shipping-cost-report.png" 
+    alt="Tampilan Halaman Laporan Ongkir" 
+    className="max-h-[380px] w-auto mx-auto rounded-lg shadow-sm" 
+  />
+  <span className="block text-xs text-gray-400 mt-2">
+    Tampilan halaman Laporan Ongkir
+  </span>
+</div>
+
+---
+
+## Ringkasan Indikator Finansial (Stat Cards)
+
+Di bagian atas halaman, terdapat 3 kartu statistik yang menyajikan akumulasi biaya pengiriman secara *real-time*:
+
+* **Ongkir Pesanan:** Total biaya pengiriman yang ditagihkan dan dibayarkan oleh pembeli/mitra saat melakukan checkout pesanan.
+* **Ongkir Pengiriman:** Total nominal biaya pengiriman aktual yang dibayarkan oleh perusahaan ke pihak ekspedisi/kurir.
+* **Selisih:** Nilai komparasi antara *Ongkir Pesanan* dikurangi *Ongkir Pengiriman*. 
+  * Nilai positif (`+`) menandakan kelebihan bayar ongkir yang menjadi nilai tambah bagi perusahaan.
+  * Nilai negatif (`-`) menandakan adanya beban subsidi ongkir yang ditanggung perusahaan.
+
+---
+
+## Fitur Pencarian & Penyaringan Data
+
+Gunakan baris kontrol di pojok kanan atas tabel untuk menyaring rekapan transaksi ongkos kirim:
+
+* **Pencarian Cepat:** Masukkan nomor invoice (contoh: `INV-2026-00202`) pada kolom **Cari INV...** untuk memeriksa rincian transaksi tertentu secara presisi.
+* **Filter Tipe Pengiriman:** Gunakan dropdown **Semua Tipe** untuk menyaring transaksi berdasarkan metode pengiriman (misalnya *KiriminAja* atau *Subsidi*).
+* **Filter Periode:** Gunakan dropdown rentang waktu (misalnya *Tahun Ini*) untuk membatasi rekapan periode data.
+* **Tombol Export:** Mengunduh seluruh rekapan laporan ongkos kirim ke dalam berkas spreadsheet (Excel/CSV).
+
+---
+
+## Struktur Tabel Laporan Ongkir
+
+| Kolom | Fungsi & Keterangan |
+| :--- | :--- |
+| **Pesanan** | Nomor invoice transaksi pesanan terdaftar di sistem. |
+| **Tipe** | Jalur/metode pengisian ongkir (*KiriminAja* atau *Subsidi*). |
+| **Ongkir Pesanan** | Nominal ongkos kirim yang dibayarkan oleh pembeli. |
+| **Ongkir Kirim** | Nominal ongkos kirim aktual yang ditagihkan ekspedisi. |
+| **Asuransi** | Biaya asuransi pengiriman barang yang dikenakan pada transaksi. |
+| **Selisih** | Margin selisih biaya ongkir. Ditandai warna **Hijau (+)** jika surplus dan **Merah (-)** jika terdapat subsidi. |
+| **Tgl** | Tanggal dan stempel waktu (*timestamp*) transaksi diproses. |

@@ -5,6 +5,7 @@
                   "dashboard",
                   "orders",
                   "pending-orders",
-                  "delivery-notes"
+                  "delivery-notes",
+                  "shipping-cost-report"
               ]
 }

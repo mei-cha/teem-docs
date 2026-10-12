@@ -18,6 +18,7 @@
     "sales/orders",
     "sales/pending-orders",
     "sales/delivery-notes",
+    "sales/shipping-cost-report",
 
     "---PEMBELIAN---",
     "purchases/stock-purchase",

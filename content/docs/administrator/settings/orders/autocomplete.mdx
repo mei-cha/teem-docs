@@ -1,0 +1,62 @@
+---
+title: AutoComplete Pesanan
+icon: CheckCircle
+---
+
+Halaman **AutoComplete Pesanan** digunakan oleh Administrator untuk menentukan batas durasi waktu (dalam satuan jam) konfirmasi otomatis penyelesaian transaksi pesanan pada platform **Teem.id**.
+
+Fitur ini memastikan status pesanan yang telah dikirim atau siap diambil dapat berubah menjadi **Selesai** secara otomatis oleh sistem apabila pembeli tidak melakukan konfirmasi penerimaan barang secara manual dalam jangka waktu yang ditentukan.
+
+---
+
+## Cara Mengakses Halaman AutoComplete Pesanan
+
+Bagi Administrator yang ingin mengonfigurasi batas waktu konfirmasi otomatis pesanan, ikuti langkah navigasi berikut:
+
+1. Pada bilah navigasi kiri (*sidebar*), buka modul **Administrator > Pengaturan**.
+2. Pada menu navigasi pengaturan di bagian tengah, pilih sub-menu **AutoComplete Pesanan** di bawah kategori **PESANAN**.
+3. Sistem akan menampilkan form konfigurasi durasi otomatisasi transaksi pesanan.
+
+<div className="my-4 text-center">
+  <img 
+    src="/autocomplete-pesanan-main.png" 
+    alt="Tampilan Pengaturan AutoComplete Pesanan" 
+    className="max-h-[380px] w-auto mx-auto rounded-lg shadow-sm" 
+  />
+  <span className="block text-xs text-gray-400 mt-2">
+    Tampilan halaman pengaturan AutoComplete Pesanan
+  </span>
+</div>
+
+---
+
+## Konfigurasi Parameter AutoComplete
+
+Administrator dapat menentukan tenggat waktu penyelesaian transaksi secara terpisah berdasarkan metode pengiriman yang digunakan:
+
+### 1. Dikirim Kurir
+* **Fungsi:** Mengatur batas waktu konfirmasi otomatis untuk pesanan yang dikirimkan melalui jasa ekspedisi/kurir.
+* **Cara Kerja:** Sistem akan mengubah status transaksi secara otomatis menjadi **Selesai** setelah pesanan berstatus dikirim dan pembeli tidak menekan tombol konfirmasi penerimaan barang dalam rentang waktu jam yang ditentukan (misalnya `24` jam).
+
+---
+
+### 2. Diambil Sendiri
+* **Fungsi:** Mengatur batas waktu konfirmasi otomatis untuk pesanan dengan metode penyerahan langsung (*pickup* / diambil sendiri oleh pembeli di lokasi gudang/toko).
+* **Cara Kerja:** Sistem akan mengubah status transaksi secara otomatis menjadi **Selesai** setelah status pesanan berubah menjadi *Siap Diambil* dan pembeli tidak mengonfirmasi penerimaan dalam durasi jam yang ditentukan (misalnya `24` jam).
+
+---
+
+## Menyimpan Perubahan Data
+
+1. Masukkan nilai durasi angka bulat (dalam satuan jam) pada kolom **Dikirim Kurir** maupun **Diambil Sendiri**.
+2. Klik tombol **Simpan** berwarna merah di pojok kanan bawah kotak pengaturan untuk menerapkan batas waktu baru ke seluruh sistem transaksi.
+
+---
+
+## Ringkasan Fitur & Elemen Form
+
+| Elemen Form | Satuan | Fungsi & Deskripsi |
+| :--- | :--- | :--- |
+| **Dikirim Kurir** | Jam | Batas waktu konfirmasi otomatis pesanan setelah dikirim kurir. |
+| **Diambil Sendiri** | Jam | Batas waktu konfirmasi otomatis pesanan setelah siap diambil sendiri. |
+| **Tombol Simpan** | Eksekusi | Menyimpan parameter tenggat waktu penyelesaian pesanan ke sistem. |
