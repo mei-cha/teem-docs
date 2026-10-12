@@ -3,79 +3,79 @@ title: Import Stok Perusahaan
 icon: Boxes
 ---
 
-Halaman **Import Stok** digunakan oleh Administrator untuk mengunggah dan memperbarui data stok dalam jumlah banyak ke gudang perusahaan menggunakan berkas spreadsheet (Excel/CSV).
+Halaman **Import Stok Perusahaan** digunakan oleh Administrator untuk mengunggah dan memperbarui saldo persediaan barang (*stock cut-off*) dalam jumlah banyak sekaligus ke gudang perusahaan menggunakan berkas spreadsheet (Excel/CSV).
 
-Fitur ini mempermudah pencatatan stok secara sekaligus tanpa perlu memasukkan data produk satu per satu.
+Fitur ini mempermudah pencatatan persediaan secara kolektif tanpa perlu menginput data produk satu per satu secara manual.
+
+---
+
+## Cara Mengakses Halaman Import Stok
+
+Bagi Administrator yang baru pertama kali menggunakan fitur ini, ikuti langkah navigasi berikut untuk menuju ke halaman impor:
+
+1. Pada bilah navigasi kiri (*sidebar*), buka modul **Pembelian > Stok Perusahaan**.
+2. Di pojok kanan atas halaman **Stok Perusahaan**, klik tombol **Import Stok**.
+3. Sistem akan mengarahkan (*redirect*) Anda secara langsung ke halaman utama **Import Stok**.
+
+<div className="my-4 text-center">
+  <img 
+    src="/stockpt.png" 
+    alt="Halaman Stok Perusahaan" 
+    className="max-h-[380px] w-auto mx-auto rounded-lg shadow-sm" 
+  />
+  <span className="block text-xs text-gray-400 mt-2">
+    Halaman Stok Perusahaan
+  </span>
+</div>
+
+---
+
+## Panduan Penggunaan & Pengisian Berkas
+
+Setelah berada di halaman **Import Stok**, Anda dapat mengunduh berkas acuan (*template*), mengisi data persediaan, dan memvalidasi isi berkas sebelum disimpan ke sistem.
 
 <Callout type="warn" title="Prasyarat Sebelum Impor">
-  - **Produk dan Gudang:** Pastikan produk dan gudang sudah terdaftar di sistem sebelum melakukan impor.
-  - **Satuan Terkecil:** Jumlah stok yang diinput wajib menggunakan satuan terkecil produk.
+  1. Pastikan produk sudah terdaftar pada master data modul **Produk**.
+  2. Pastikan gudang tujuan sudah terdaftar pada modul **Master Data > Gudang**.
+  3. Jumlah stok wajib diinput menggunakan **satuan terkecil produk**.
 </Callout>
 
----
+<div className="my-4 text-center">
+  <img 
+    src="/import-stockpt.png" 
+    alt="Tampilan Halaman Utama Import Stok Perusahaan" 
+    className="max-h-[380px] w-auto mx-auto rounded-lg shadow-sm" 
+  />
+  <span className="block text-xs text-gray-400 mt-2">
+    Tampilan halaman Stok Perusahaan
+  </span>
+</div>
 
-## Alur Melakukan Import Stok
+### 1. Mengunduh & Mengisi Berkas Template
 
-Proses impor stok dilakukan melalui 4 tahap berikut.
-
-### Langkah 1: Membuka Halaman dan Mengunduh Template
-
-1. Buka modul **Pembelian > Stok Perusahaan**.
-2. Di pojok kanan atas halaman, klik tombol **Import Stok**.
-3. Klik tombol **Download Template**. Berkas spreadsheet akan otomatis terunduh ke perangkat.
-
----
-
-### Langkah 2: Mengisi Data Stok
-
-Buka berkas yang telah diunduh, lalu lengkapi data stok sesuai ketentuan berikut.
-
-#### Struktur Kolom Template
+Gunakan tombol **Download Template** pada bagian atas untuk mendapatkan format spreadsheet acuan resmi, lalu lengkapi kolom-kolomnya sesuai ketentuan berikut:
 
 | Header Kolom | Deskripsi Pengisian |
 | :--- | :--- |
-| **SKU Produk** | Kode unik produk (Wajib). |
-| **Nama Gudang** | Nama gudang tempat stok disimpan (Wajib). |
-| **Jumlah Stok** | Jumlah stok dalam satuan terkecil produk, berupa angka lebih dari 0 (Wajib). |
+| **SKU Produk** | Kode unik identifikasi produk yang terdaftar di sistem (*Wajib*). |
+| **Nama Gudang** | Nama gudang tempat persediaan barang disimpan (*Wajib*). |
+| **Jumlah Stok** | Kuantitas persediaan dalam **satuan terkecil produk** (angka bulat > 0, *Wajib*). |
 
 ---
 
-### Langkah 3: Mengunggah Berkas
+### 2. Mengunggah Berkas & Memeriksa Hasil Validasi
 
-1. Kembali ke halaman **Import Stok** di panel Administrator.
-2. Klik tombol **Upload** di sebelah tombol **Download Template**.
-3. Pilih berkas spreadsheet yang telah diisi.
-4. Tunggu hingga sistem selesai membaca dan memvalidasi data.
+Setelah berkas diisi, klik tombol **Upload** berwarna merah untuk memproses data. Sistem akan memverifikasi isi berkas dan menampilkan hasilnya pada tabel validasi:
 
----
-
-### Langkah 4: Memeriksa Hasil Validasi dan Menyelesaikan Impor
-
-Setelah berkas diunggah, periksa indikator validasi di atas tabel:
-
-- **Indikator Valid:** Menampilkan jumlah baris data yang lolos verifikasi dan siap dimasukkan ke gudang.
-- **Indikator Bermasalah:** Menampilkan jumlah baris data yang mengalami kendala.
-
-#### Meninjau Tabel Validasi
-
-| Kolom | Keterangan |
-| :--- | :--- |
-| **Baris** | Menunjukkan nomor baris data pada berkas Excel. |
-| **SKU** | Kode produk yang sedang diverifikasi. |
-| **Gudang** | Nama gudang tempat stok akan disimpan. |
-| **Jumlah Cut-off** | Jumlah stok produk yang diinput. |
-| **Status** | Menampilkan hasil validasi data atau alasan jika terjadi kesalahan. |
-
-#### Menyelesaikan Impor
-
-- Jika terdapat data bermasalah pada kolom **Status**, perbaiki data tersebut pada berkas Excel, lalu unggah kembali.
-- Jika seluruh data sudah valid, klik tombol **Import** di pojok kanan bawah untuk memasukkan data stok ke dalam sistem.
+- **Indikator Ringkasan:** Menampilkan jumlah baris data **Valid** (siap dimasukkan ke gudang) dan **Bermasalah** (perlu diperbaiki).
+- **Tabel Peninjauan:** Menampilkan rincian nomor baris (*Baris*), SKU, Gudang, Jumlah Cut-off, serta pesan detail pada kolom **Status** jika terdapat kesalahan.
+- **Eksekusi Akhir:** Jika seluruh data sudah valid, klik tombol **Import** di pojok kanan bawah untuk memasukkan data stok secara resmi ke dalam gudang perusahaan.
 
 ---
 
 ## Panduan Mengatasi Masalah Validasi
 
-Apabila sistem menampilkan pesan kesalahan pada tabel validasi, gunakan tabel berikut untuk mengetahui penyebab dan cara mengatasinya.
+Apabila sistem menampilkan pesan kesalahan pada tabel validasi, gunakan tabel acuan berikut untuk mengetahui penyebab dan cara solusinya:
 
 ### 1. Masalah SKU dan Produk
 
@@ -97,7 +97,7 @@ Apabila sistem menampilkan pesan kesalahan pada tabel validasi, gunakan tabel be
 | :--- | :--- | :--- |
 | Kombinasi SKU + Gudang duplikat di file ini (baris X, Y) | Produk yang sama untuk gudang yang sama ditulis lebih dari satu kali dalam berkas Excel. | Gabungkan jumlah stok menjadi satu baris dan hapus data duplikat. |
 | Jumlah Stok kosong | Kolom jumlah stok tidak diisi. | Isi jumlah stok produk. |
-| Jumlah Stok "[nilai]" tidak valid (harus angka > 0) | Jumlah stok berupa angka 0, angka negatif, teks, atau simbol yang tidak sesuai. | Masukkan jumlah stok dalam bentuk angka positif, misalnya 1200. |
+| Jumlah Stok "[nilai]" tidak valid (harus angka > 0) | Jumlah stok berupa angka 0, angka negatif, teks, atau simbol yang tidak sesuai. | Masukkan jumlah stok dalam bentuk angka positif (misalnya `1200`). |
 
 ---
 
@@ -105,13 +105,8 @@ Apabila sistem menampilkan pesan kesalahan pada tabel validasi, gunakan tabel be
 
 | Elemen | Jenis | Fungsi Utama |
 | :--- | :--- | :--- |
-| **Download Template** | Tombol | Mengunduh format berkas spreadsheet untuk pengisian stok. |
+| **Download Template** | Tombol | Mengunduh format berkas spreadsheet resmi untuk pengisian stok. |
 | **Upload** | Tombol | Mengunggah berkas Excel yang telah diisi. |
 | **Badge Valid dan Bermasalah** | Indikator | Menampilkan jumlah data yang valid dan bermasalah. |
 | **Kolom Status Tabel** | Informasi Status | Menampilkan hasil validasi atau alasan terjadinya kesalahan. |
 | **Tombol Import** | Eksekusi | Memasukkan data stok yang telah lolos validasi ke dalam sistem. |
-
----
-
-> **Tips**  
-> Pastikan penulisan SKU dan nama gudang pada berkas Excel sesuai dengan data yang sudah terdaftar di sistem agar proses validasi berjalan dengan lancar.

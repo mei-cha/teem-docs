@@ -13,47 +13,99 @@ Halaman **Import Stok Mitra** digunakan oleh Administrator untuk memasukkan sald
 
 ---
 
-## Alur Melakukan Import Stok Mitra (5 Tahap)
+## Cara Mengakses Halaman Import Stok Mitra
 
-Proses impor persediaan stok awal mitra wajib mengikuti alur 5 tahap urut berikut agar data tervalidasi dengan benar oleh sistem:
+Bagi Administrator yang baru pertama kali menggunakan fitur ini, Anda dapat mengakses halaman impor dengan langkah navigasi berikut:
 
-### Langkah 1: Mengunduh Format Berkas (Download Template)
-1. Akses menu **Kemitraan > Stok Mitra**, lalu klik tombol **Import Stok** (atau langsung buka halaman **Import Stok Mitra**).
-2. Pada kotak petunjuk instruksi, klik tombol **Download Template**.
-3. Berkas *template* spreadsheet acuan resmi akan otomatis terunduh ke komputer Anda.
+1. Pada bilah navigasi kiri (*sidebar*), buka modul **Kemitraan > Stok Mitra**.
+2. Di baris kontrol atas (di sebelah dropdown pengurutan), klik tombol **Import Stok**.
+3. Sistem akan mengarahkan (*redirect*) Anda secara langsung ke halaman **Import Stok Mitra**.
 
----
-
-### Langkah 2: Mengisi Kolom Data Spreadsheet
-Buka berkas spreadsheet yang telah diunduh, lalu lengkapi kolom-kolom data dengan ketentuan berikut:
-
-| Header Kolom | Deskripsi Pengisian |
-| :--- | :--- |
-| **Id Mitra** | Kode identifikasi unik akun mitra terdaftar (*Wajib*). |
-| **SKU** | Kode unik identifikasi produk yang terdaftar di sistem (*Wajib*). |
-| **Jumlah Stok** | Angka kuantitas persediaan barang yang diinput dalam **satuan terkecil produk** (*Wajib*). |
-
----
-
-### Langkah 3: Mengunggah Berkas (Upload)
-1. Kembali ke halaman **Import Stok Mitra** di panel Administrator.
-2. Klik tombol **Upload** berwarna merah di sebelah tombol *Download Template*.
-3. Pilih berkas spreadsheet yang sudah diisi data ID Mitra, SKU, dan kuantitas dari komputer Anda.
-4. Tunggu beberapa saat hingga sistem selesai memproses dan membaca isi berkas.
+<div className="my-4 text-center">
+  <img 
+    src="/partner-stock.png" 
+    alt="Halaman Stok Mitra" 
+    className="max-h-[380px] w-auto mx-auto rounded-lg shadow-sm" 
+  />
+  <span className="block text-xs text-gray-400 mt-2">
+    Posisi tombol Import Stok pada halaman Stok Mitra
+  </span>
+</div>
 
 ---
 
-### Langkah 4: Memeriksa Hasil Validasi Data
-Setelah berkas berhasil diunggah, sistem akan menampilkan tabel ringkasan hasil validasi:
-* Periksa status verifikasi untuk setiap baris data pada tabel.
-* Jika terdapat kesalahan (seperti ID Mitra atau SKU tidak ditemukan), perbaiki baris data yang bermasalah pada berkas spreadsheet Anda lalu unggah kembali.
+## Panduan Penggunaan & Pengisian Berkas
+
+Setelah berada di halaman **Import Stok Mitra**, Anda dapat mengunduh berkas acuan (*template*), mengisi data persediaan mitra, dan melakukan proses validasi sebelum data disimpankan ke sistem.
+
+<div className="my-4 text-center">
+  <img 
+    src="/import-partner-stock.png" 
+    alt="Tampilan Halaman Import Stok Mitra" 
+    className="max-h-[380px] w-auto mx-auto rounded-lg shadow-sm" 
+  />
+  <span className="block text-xs text-gray-400 mt-2">
+    Tampilan utama halaman Import Stok Mitra dengan petunjuk instruksi dan tombol Upload
+  </span>
+</div>
+
+### 1. Ketentuan Pengisian Berkas Template
+
+Gunakan tombol **Download Template** pada bagian atas untuk mendapatkan format spreadsheet acuan resmi, lalu lengkapi kolom-kolomnya sesuai ketentuan berikut:
+
+| Header Kolom | Posisi Kolom | Deskripsi & Ketentuan Pengisian |
+| :--- | :--- | :--- |
+| **Id Mitra** | Kolom A | Kode identifikasi unik akun mitra terdaftar (*Wajib*). Salin dari menu Daftar Mitra. |
+| **SKU** | Kolom B | Kode unik identifikasi produk yang terdaftar di sistem (*Wajib*). |
+| **Jumlah Stok** | Kolom C | Kuantitas persediaan barang dalam **satuan terkecil produk** (angka murni/polos > 0, *Wajib*). |
+
+<Callout type="info" title="Aturan Penting Pengisian Berkas">
+  - **Urutan Kolom Wajib Sama:** Kolom A = Id Mitra, Kolom B = SKU, Kolom C = Jumlah.
+  - **Sheet Pertama:** Sistem hanya membaca lembar kerja (*sheet*) pertama pada berkas.
+  - **Penulisan Angka Murni:** Tuliskan angka polos tanpa simbol mata uang, teks, atau tanda pemisah titik/koma (misal: tulis `1000`, bukan `1.000`).
+  - **Satuan Terkecil:** Selalu gunakan satuan eceran terkecil (contoh: 2 karton isi 10 slop ditulis `20`).
+</Callout>
 
 ---
 
-### Langkah 5: Eksekusi Import Stok Awal
-1. Pastikan seluruh baris data pada tabel hasil validasi sudah berstatus valid.
-2. Klik tombol **Import Stok Awal** di pojok kanan bawah untuk menyimpan data persediaan barang secara resmi ke database.
-3. Kuantitas stok awal mitra akan otomatis terbarui dan dapat dipantau langsung pada halaman **Stok Mitra**.
+### 2. Mengunggah Berkas & Memeriksa Hasil Validasi
+
+1. Klik tombol **Upload** berwarna merah di sebelah tombol *Download Template*.
+2. Pilih berkas Excel/CSV yang telah diisi.
+3. Sistem akan membaca berkas dan menampilkan baris data pada tabel validasi.
+4. **Pemeriksaan Status:** Baris bermasalah akan ditandai dengan warna merah. Baris data yang valid tetap dapat diimpor secara parsial tanpa terbatalkan oleh baris bermasalah lain.
+5. **Eksekusi Akhir:** Jika data sudah tervalidasi, klik tombol **Import Stok Awal** di pojok kanan bawah untuk menyimpan data ke database.
+
+---
+
+## Panduan Penanganan Error Validasi & Peringatan
+
+Gunakan tabel acuan di bawah ini untuk mengidentifikasi dan memeperbaiki pesan kesalahan validasi berkas:
+
+### 1. Masalah Format File
+
+| Pesan Error Sistem | Penyebab Utama | Solusi Penanganan |
+| :--- | :--- | :--- |
+| File kosong atau format tidak dikenali | Tidak ada baris data di dalam berkas. | Pastikan isi data dimulai pada baris ke-2 (baris 1 untuk header). |
+| Gagal membaca file | Format berkas bukan `.xlsx`, `.xls`, atau `.csv`. | Gunakan dan unggah berkas sesuai format template resmi. |
+
+### 2. Masalah Data Per Baris
+
+| Pesan Error Sistem | Penyebab Utama | Solusi Penanganan |
+| :--- | :--- | :--- |
+| Id Mitra kosong | Kolom A tidak diisi. | Lengkapi Id Mitra pada setiap baris data. |
+| Id Mitra "[kode]" tidak ditemukan | Id Mitra belum terdaftar atau terdapat *typo*. | Salin Id Mitra langsung dari menu **Kemitraan > Mitra**. |
+| SKU kosong | Kolom B tidak diisi. | Lengkapi SKU produk pada setiap baris data. |
+| SKU "[kode]" belum terdaftar di menu Produk | Kode SKU salah atau produk belum dibuat. | Daftarkan produk di menu **Produk** terlebih dahulu, atau periksa ejaan SKU. |
+| Kombinasi Id Mitra + SKU duplikat (baris X, Y) | Pasangan mitra dan produk sama ditulis lebih dari satu kali. | Gabungkan jumlah stok menjadi satu baris dan hapus baris duplikat. |
+| Jumlah Stok kosong | Kolom C tidak diisi. | Isi jumlah stok pada setiap baris data. |
+| Jumlah Stok "[nilai]" tidak valid | Nilai stok berupa angka 0, negatif, desimal, atau teks. | Masukkan angka bulat positif lebih dari 0 tanpa huruf/satuan. |
+
+### 3. Peringatan System (Warning Notification)
+
+| Status Peringatan | Arti & Dampak System | Tindakan Pengguna |
+| :--- | :--- | :--- |
+| **Sudah punya stok, akan ditimpa** | Baris data tetap **Valid**, namun saldo stok mitra untuk produk tersebut akan **diganti (*overwrite*)**, bukan ditambahkan (*accumulate*). | Periksa kembali apakah nilai stok yang diinput merupakan jumlah saldo akhir terbaru mitra. |
 
 ---
 
@@ -65,8 +117,3 @@ Setelah berkas berhasil diunggah, sistem akan menampilkan tabel ringkasan hasil 
 | **Upload** | Tombol | Mengunggah berkas spreadsheet stok mitra yang telah diisi. |
 | **Kotak Peringatan** | Informasi | Menampilkan aturan dasar impor persediaan stok awal mitra. |
 | **Tombol Import Stok Awal** | Eksekusi | Menyimpan data persediaan stok awal yang tervalidasi ke dalam sistem. |
-
----
-
-> **Tips**  
-> Selalu pastikan kuantitas persediaan diisi mengacu pada **satuan terkecil produk** (seperti unit eceran terdasar) untuk menghindari kekeliruan perhitungan stok saat mitra melakukan transaksi pemesanan.
