@@ -9,73 +9,44 @@ Sistem menggunakan navigasi hirarki berjenjang (*drill-down*): **Provinsi > Kota
 
 ---
 
-## Alur Navigasi Wilayah Berjenjang
+## Cara Mengakses Halaman Master Data Wilayah
 
-### Level 1: Tampilan Provinsi
-1. Masuk ke modul **Master Data > Wilayah**.
-2. Halaman pertama yang tampil adalah **Provinsi** (ditandai jejak navigasi *Semua Provinsi*).
-3. Tabel menampilkan daftar nama provinsi beserta koordinat lokasi (**Latitude** dan **Longitude**).
-4. **Masuk ke Level Kota/Kabupaten:** Klik pada salah satu **Nama Provinsi** yang memiliki tanda panah `>`.
+Bagi Administrator yang ingin mengelola struktur data wilayah geografis, ikuti langkah navigasi berikut:
 
----
-
-### Level 2: Tampilan Kota/Kabupaten
-1. Setelah provinsi dipilih, judul halaman berubah menjadi **Kota/Kabupaten**.
-2. Jejak navigasi (*breadcrumbs*) di bagian atas akan menampilkan hirarki dari level provinsi.
-3. Gunakan kolom **Cari kota/kabupaten...** jika ingin menemukan daerah tertentu.
-4. **Masuk ke Level Kecamatan:** Klik pada salah satu **Nama Kota/Kabupaten** yang memiliki tanda panah `>`.
+1. Pada bilah navigasi kiri (*sidebar*), buka modul **Master Data > Wilayah**.
+2. Sistem akan menampilkan daftar level teratas (**Provinsi**) dilengkapi jejak navigasi (*breadcrumbs*).
 
 ---
 
-### Level 3: Tampilan Kecamatan
-1. Judul halaman berubah menjadi **Kecamatan**.
-2. Jejak navigasi di bagian atas menampilkan hirarki dari provinsi hingga kabupaten terkait.
-3. Tabel menampilkan daftar kecamatan beserta data titik koordinatnya.
-4. **Masuk ke Level Desa/Kelurahan:** Klik pada salah satu **Nama Kecamatan** yang memiliki tanda panah `>`.
+## Panduan Navigasi Wilayah Berjenjang
+
+Klik pada nama entitas wilayah yang memiliki tanda panah `>` untuk masuk ke tingkatan di bawahnya:
+
+* **Level 1 (Provinsi):** Halaman awal yang menampilkan seluruh provinsi beserta koordinatnya (**Latitude** dan **Longitude**). Klik nama provinsi untuk masuk ke level Kota/Kabupaten.
+* **Level 2 (Kota/Kabupaten):** Menampilkan daftar kabupaten/kota di bawah provinsi terpilih. Klik nama kota/kabupaten untuk masuk ke level Kecamatan.
+* **Level 3 (Kecamatan):** Menampilkan daftar kecamatan di bawah kabupaten terpilih. Klik nama kecamatan untuk masuk ke level Desa/Kelurahan.
+* **Level 4 (Desa/Kelurahan):** Tingkatan akhir yang menyajikan rincian **Kode Pos**, **Latitude**, dan **Longitude**. Nama desa/kelurahan tidak lagi memiliki tanda panah `>` dan tidak dapat diklik masuk lebih dalam.
 
 ---
 
-### Level 4: Tampilan Desa/Kelurahan (Tingkat Akhir)
-1. Judul halaman berubah menjadi **Desa/Kelurahan** (merupakan tingkatan wilayah paling dasar).
-2. Jejak navigasi di bagian atas menampilkan jalur hirarki lengkap dari level teratas hingga kecamatan terkait.
-3. Pada level ini, tabel menampilkan kolom data tambahan berupa **Kode Pos**, **Latitude**, dan **Longitude**.
-4. Karena sudah merupakan hirarki paling dasar, nama desa/kelurahan tidak lagi memiliki tanda panah `>` dan tidak dapat diklik masuk lebih dalam lagi.
+## Pengelolaan & Navigasi Breadcrumbs
+
+### 1. Menambah, Mengedit, & Menghapus Data Wilayah
+
+Administrator dapat melakukan tindakan pengelolaan pada level hirarki mana pun yang sedang dibuka:
+
+* **Menambah Wilayah Baru:** Klik tombol **+ [Nama Level Wilayah]** berwarna merah di pojok kanan atas. Masukkan Nama Wilayah, Latitude, Longitude, serta Kode Pos (*khusus level Desa/Kelurahan*), lalu klik **Tambah**.
+* **Mengedit Wilayah:** Pada kolom **Aksi**, klik ikon **Pensil (Edit)** untuk memperbarui nama atau titik koordinat, lalu klik **Simpan**.
+* **Menghapus Wilayah:** Pada kolom **Aksi**, klik ikon **Tempat Sampah (Hapus)** berwarna merah dan konfirmasi untuk menghapus entitas daerah dari database.
 
 ---
 
-## Alur Menambah, Mengedit, dan Menghapus Wilayah
+### 2. Navigasi Kembali Menggunakan Breadcrumbs
 
-Administrator dapat menambah data wilayah baru, mengubah koordinat/nama, atau menghapus entitas daerah pada setiap level hirarki yang sedang dibuka:
+Gunakan baris jejak navigasi (*breadcrumbs*) di bawah judul halaman untuk berpindah tingkatan secara fleksibel:
 
-### 1. Menambah Wilayah Baru
-1. Buka level wilayah tempat data baru ingin ditambahkan.
-2. Klik tombol **+ [Nama Level Wilayah]** berwarna merah di pojok kanan atas.
-3. Pada jendela pop-up **Tambah Wilayah**:
-   * Masukkan **Nama Wilayah \***.
-   * Masukkan koordinat lokasi **Latitude** dan **Longitude**.
-   * *(Khusus level Desa/Kelurahan)* Masukkan angka **Kode Pos**.
-4. Klik tombol **Tambah**. Data baru akan otomatis terdaftar di bawah induk wilayah yang sedang dibuka.
-
-### 2. Mengedit Data Wilayah (Edit)
-1. Cari nama wilayah yang ingin diperbarui pada tabel.
-2. Pada kolom **Aksi** di baris wilayah tersebut, klik ikon **Pensil (Edit)**.
-3. Pada jendela pop-up **Edit Wilayah**:
-   * Sesuaikan pengisian **Nama Wilayah**, **Latitude**, **Longitude**, atau **Kode Pos**.
-4. Klik tombol **Simpan** untuk mengonfirmasi perubahan data.
-
-### 3. Menghapus Data Wilayah (Hapus)
-1. Cari baris wilayah yang ingin dihapus.
-2. Pada kolom **Aksi**, klik ikon **Tempat Sampah (Hapus)** berwarna merah.
-3. Pada dialog konfirmasi yang muncul, klik **Ya, Hapus** untuk menghapus data daerah tersebut dari database sistem.
-
----
-
-## Menggunakan Jejak Navigasi (Breadcrumbs) untuk Kembali
-
-Untuk kembali ke tingkatan wilayah sebelumnya tanpa perlu memuat ulang halaman:
-* Klik salah satu nama wilayah pada baris jejak navigasi di bawah judul halaman:
-  * Klik **Semua Provinsi** untuk melompat kembali ke daftar paling awal.
-  * Klik nama level wilayah tertentu pada *breadcrumbs* untuk kembali ke tingkatan menengah yang diinginkan.
+* Klik **Semua Provinsi** untuk melompat kembali ke tampilan awal paling atas.
+* Klik nama wilayah tertentu pada baris *breadcrumbs* untuk berpindah ke tingkatan menengah yang diinginkan.
 
 ---
 
@@ -87,9 +58,4 @@ Untuk kembali ke tingkatan wilayah sebelumnya tanpa perlu memuat ulang halaman:
 | **Kode Pos** | Desa/Kelurahan | Angka kode pos pengiriman. |
 | **Latitude** | Semua Level | Titik koordinat garis lintang peta. |
 | **Longitude** | Semua Level | Titik koordinat garis bujur peta. |
-| **Aksi** | Semua Level | Terdiri dari ikon **Pensil (Edit)** dan **Tempat Sampah (Hapus)**. |
-
----
-
-> **Tips**  
-> Berhati-hatilah saat menghapus data wilayah pada level atas, karena menghapus entitas induk dapat berdampak pada ketersediaan pilihan data wilayah turunan di bawahnya.
+| **Aksi** | Semua Level | Tombol pintas ikon **Pensil (Edit)** dan **Tempat Sampah (Hapus)**. |

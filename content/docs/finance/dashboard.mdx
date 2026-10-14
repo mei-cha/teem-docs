@@ -1,0 +1,68 @@
+---
+title: Dashboard Keuangan
+icon: LayoutDashboard
+---
+
+Halaman **Dashboard Keuangan** pada platform **Teem.id** memberikan ringkasan eksekutif mengenai kondisi finansial perusahaan, pergerakan saldo mitra, tren arus kas (*cash flow*), serta aktivitas transaksi mutasi keuangan secara *real-time*.
+
+Melalui halaman ini, Administrator dapat memantau akumulasi likuiditas bersih perusahaan, total dana mitra yang tersimpan, volume penarikan dana (*withdraw*), hingga pergerakan dana masuk dan keluar harian.
+
+---
+
+## Cara Mengakses Halaman Dashboard Keuangan
+
+Bagi Administrator yang ingin memantau kondisi finansial platform, ikuti langkah navigasi berikut:
+
+1. Pada bilah navigasi kiri (*sidebar*), buka modul **Keuangan > Dashboard**.
+2. Sistem akan menampilkan halaman **Dashboard Keuangan** beserta kartu indikator saldo, grafik arus kas, dan widget mutasi terkini.
+
+<div className="my-4 text-center">
+  <img 
+    src="/financial-dashboard.png" 
+    alt="Tampilan Dashboard Keuangan Teem.id" 
+    className="max-h-[380px] w-auto mx-auto rounded-lg shadow-sm" 
+  />
+  <span className="block text-xs text-gray-400 mt-2">
+    Tampilan Dashboard Keuangan platform Teem.id
+  </span>
+</div>
+
+---
+
+## Ringkasan Kartu Indikator Saldo
+
+Di bagian atas halaman, terdapat tiga kartu indikator utama yang menyajikan saldo dan akumulasi transaksi:
+
+* **Saldo Saya:** Menampilkan akumulasi total saldo bersih yang dimiliki oleh perusahaan (*cash on hand* / saldo operasional).
+* **Saldo Mitra:** Menampilkan jumlah total saldo aktif milik seluruh mitra yang tersimpan di dalam aplikasi/sistem.
+* **Total Penarikan:** Menampilkan akumulasi nilai nominal penarikan dana (*withdraw*) oleh mitra yang telah disetujui (*approved*) oleh Administrator.
+
+---
+
+## Analisis Arus Kas & Mutasi Global
+
+Dashboard Keuangan dilengkapi dengan dua widget visual untuk membantu analisis perputaran dana:
+
+### 1. Grafik Arus Kas Perusahaan
+Visualisasi diagram batang yang menggambarkan perbandingan arus dana harian:
+* **Batang Hijau (Masuk):** Akumulasi total pemasukan/dana masuk ke sistem (seperti pembayaran order atau top up saldo).
+* **Batang Merah (Keluar):** Akumulasi total pengeluaran/dana keluar dari sistem (seperti pencairan *withdraw* atau pengembalian dana/*refund*).
+* **Filter Periode:** Pengaturan bawaan (*default*) menampilkan data **Bulan Ini**. Gunakan dropdown pemilih periode di pojok kanan atas untuk mengubah rentang analisis.
+
+### 2. Widget Mutasi Global Terkini
+Daftar kronologis mutasi keuangan terbaru dari seluruh pengguna platform:
+* Menampilkan nama entitas/mitra, jenis transaksi (seperti `ORDER` atau `REFUND`), stempel waktu relatif (misal: *15 menit yang lalu*), serta nominal transaksi.
+* **Indikator Warna Teks:** Nominal berwarna **Hijau (+)** menunjukkan dana masuk, sedangkan nominal berwarna **Merah (-)** menunjukkan dana keluar/pengembalian.
+
+---
+
+## Struktur & Ringkasan Elemen UI
+
+| Komponen / Widget | Jenis | Fungsi Utama |
+| :--- | :--- | :--- |
+| **Saldo Saya** | Stat Card | Ringkasan saldo bersih operasional milik perusahaan. |
+| **Saldo Mitra** | Stat Card | Total saldo aktif milik seluruh mitra yang terdaftar. |
+| **Total Penarikan** | Stat Card | Akumulasi nilai penarikan dana mitra yang telah disetujui. |
+| **Arus Kas Perusahaan** | Grafik Batang | Visualisasi perbandingan arus dana masuk (hijau) dan keluar (merah). |
+| **Mutasi Global Terkini** | List Widget | Catatan riwayat transaksi keuangan terbaru secara *real-time*. |
+| **Filter Periode** | Dropdown | Penyesuaian rentang waktu data arus kas (bawaan: *Bulan Ini*). |

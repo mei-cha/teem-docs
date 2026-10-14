@@ -2,6 +2,7 @@
     "title":  "Keuangan",
     "icon":  "Wallet",
     "pages":  [
+                  "dashboard",
                   "opening-balance",
                   "my-balance",
                   "partner-balance",

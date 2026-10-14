@@ -3,11 +3,18 @@ title: Dashboard
 icon: LayoutDashboard
 ---
 
-Halaman **Dashboard Kemitraan** digunakan oleh Administrator untuk memantau kondisi jaringan kemitraan di platform **Teem.id**.
+Halaman **Dashboard Kemitraan** digunakan oleh Administrator untuk memantau kondisi dan kesehatan jaringan kemitraan di platform **Teem.id**.
 
-Dashboard menampilkan jumlah mitra, status keaktifan mitra, jumlah mitra berdasarkan level, serta status pengajuan kemitraan.
+Dashboard ini menyajikan akumulasi jumlah mitra, status keaktifan, komposisi mitra berdasarkan jenjang level, serta grafik distribusi status pengajuan kemitraan secara *real-time*.
 
-## Tampilan Utama Dashboard Kemitraan
+---
+
+## Cara Mengakses Halaman Dashboard Kemitraan
+
+Bagi Administrator yang ingin meninjau ringkasan performa kemitraan, ikuti langkah navigasi berikut:
+
+1. Pada bilah navigasi kiri (*sidebar*), buka modul **Kemitraan > Dashboard**.
+2. Sistem akan menampilkan halaman utama **Dashboard Kemitraan** beserta kartu indikator dan grafik analisisnya.
 
 <div className="my-4 text-center">
   <img 
@@ -20,58 +27,40 @@ Dashboard menampilkan jumlah mitra, status keaktifan mitra, jumlah mitra berdasa
   </span>
 </div>
 
-## Ringkasan Kartu Indikator
+---
 
-Di bagian atas halaman terdapat tiga kartu yang menampilkan informasi jumlah mitra:
+## Panduan Komponen & Fitur Dashboard
 
-### 1. Mitra
+Administrator dapat menganalisis data kemitraan melalui ringkasan kartu indikator serta visualisasi grafik interaktif.
 
-- **Keterangan:** Menampilkan jumlah seluruh mitra yang terdaftar di sistem.
-- **Fungsi:** Klik tanda panah `→` untuk melihat daftar seluruh mitra.
+### 1. Ringkasan Kartu Indikator (Stat Cards)
 
-### 2. Aktif
+Di bagian atas halaman, terdapat tiga kartu utama yang menyajikan statistik jumlah mitra:
 
-- **Keterangan:** Menampilkan jumlah mitra yang saat ini berstatus **aktif** dan dapat menerima penugasan atau melakukan transaksi.
-- **Fungsi:** Klik tanda panah `→` untuk melihat daftar mitra yang aktif.
-
-### 3. Nonaktif
-
-- **Keterangan:** Menampilkan jumlah mitra yang saat ini berstatus **nonaktif**.
-- **Fungsi:** Klik tanda panah `→` untuk melihat daftar mitra yang tidak aktif.
+* **Mitra:** Menampilkan akumulasi seluruh mitra yang terdaftar di sistem. Klik tanda panah `→` untuk beralih langsung ke daftar seluruh mitra.
+* **Aktif:** Menampilkan jumlah mitra yang berstatus **aktif** dan siap menerima penugasan atau bertransaksi. Klik tanda panah `→` untuk melihat daftar mitra aktif.
+* **Nonaktif:** Menampilkan jumlah mitra yang sedang berstatus **nonaktif**. Klik tanda panah `→` untuk melihat daftar mitra nonaktif.
 
 ---
 
-## Alur Meninjau Dashboard
+### 2. Grafik Mitra Aktif per Level
 
-### Langkah 1: Membuka Dashboard Kemitraan
-
-1. Buka modul **Kemitraan > Dashboard**.
-2. Periksa jumlah mitra pada kartu indikator di bagian atas halaman.
-
----
-
-### Langkah 2: Melihat Jumlah Mitra Aktif Berdasarkan Level
-
-1. Perhatikan grafik **Mitra Aktif per Level** di sebelah kiri.
-2. Grafik menampilkan jumlah mitra aktif berdasarkan level:
-   - **Sub Agen**
-   - **Distributor**
-   - **Agen**
-   - **Konsumen**
-3. Klik ikon **Perbesar** di pojok kanan atas grafik untuk melihat grafik dalam ukuran lebih besar.
+Grafik ini menampilkan komposisi penyebaran mitra aktif berdasarkan jenjang keanggotaannya:
+* **Level Kemitraan:** Membagikan jumlah mitra ke dalam level *Sub Agen*, *Distributor*, *Agen*, dan *Konsumen*.
+* **Fitur Perbesar:** Klik ikon **Perbesar** di pojok kanan atas grafik untuk menampilkan grafik dalam mode tampilan meluas.
 
 ---
 
-### Langkah 3: Melihat Status Pengajuan
+### 3. Grafik & Filter Status Pengajuan
 
-1. Perhatikan grafik **Status Pengajuan** di sebelah kanan.
-2. Gunakan pilihan periode di pojok kanan atas untuk menentukan rentang waktu data yang ingin ditampilkan.
-3. Periksa jumlah pengajuan berdasarkan status berikut:
-   - **Pending:** Pengajuan baru yang masih menunggu peninjauan Admin.
-   - **Diproses:** Pengajuan yang sedang diperiksa atau diverifikasi.
-   - **Disetujui:** Pengajuan yang telah diterima oleh Admin.
-   - **Ditolak:** Pengajuan yang ditolak oleh Admin.
-   - **Dibatalkan:** Pengajuan yang dibatalkan oleh calon mitra.
+Grafik ini memvisualisasikan volume pendaftaran atau pengajuan kemitraan berdasarkan tahapan verifikasi:
+* **Filter Periode:** Gunakan dropdown pemilih rentang waktu di pojok kanan atas grafik untuk menyesuaikan periode data yang ingin dianalisis.
+* **Kategori Status:**
+  * **Pending:** Pendaftaran baru yang menunggu antrean peninjauan.
+  * **Diproses:** Pengajuan yang sedang dalam tahap verifikasi berkas/dokumen.
+  * **Disetujui:** Pengajuan yang telah resmi diterima oleh Admin.
+  * **Ditolak:** Pengajuan yang tidak memenuhi syarat dan ditolak.
+  * **Dibatalkan:** Pengajuan yang dibatalkan atas permintaan calon mitra.
 
 ---
 
@@ -79,9 +68,9 @@ Di bagian atas halaman terdapat tiga kartu yang menampilkan informasi jumlah mit
 
 | Komponen | Fungsi dan Keterangan |
 | :--- | :--- |
-| **Kartu Mitra** | Menampilkan jumlah seluruh mitra yang terdaftar. |
-| **Kartu Aktif** | Menampilkan jumlah mitra yang berstatus aktif. |
-| **Kartu Nonaktif** | Menampilkan jumlah mitra yang berstatus nonaktif. |
-| **Grafik Mitra Aktif per Level** | Menampilkan jumlah mitra aktif berdasarkan level. |
-| **Grafik Status Pengajuan** | Menampilkan jumlah pengajuan berdasarkan status **Pending**, **Diproses**, **Disetujui**, **Ditolak**, dan **Dibatalkan**. |
-| **Filter Periode** | Menentukan rentang waktu data yang ditampilkan pada grafik status pengajuan. |
+| **Kartu Mitra** | Akumulasi seluruh mitra terdaftar (dilengkapi tautan navigasi `→`). |
+| **Kartu Aktif** | Jumlah mitra berstatus aktif dan siap operasional. |
+| **Kartu Nonaktif** | Jumlah mitra yang sedang di-nonaktifkan dari sistem. |
+| **Grafik Mitra Aktif per Level** | Visualisasi distribusi mitra aktif (Sub Agen, Distributor, Agen, Konsumen). |
+| **Grafik Status Pengajuan** | Visualisasi tren pengajuan (*Pending*, *Diproses*, *Disetujui*, *Ditolak*, *Dibatalkan*). |
+| **Filter Periode** | Penyesuaian rentang waktu analisis pada grafik status pengajuan. |

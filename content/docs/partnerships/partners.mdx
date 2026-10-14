@@ -5,30 +5,40 @@ icon: Users
 
 Halaman **Mitra** digunakan oleh Administrator untuk melihat dan mengelola seluruh data mitra yang terdaftar di platform **Teem.id**.
 
-Melalui halaman ini, Admin dapat mencari dan menyaring data mitra, melihat informasi wilayah, level, status akun, serta masa berlaku kontrak. Admin juga dapat mengimpor dan mengekspor data mitra.
-
-## Alur Mengelola Daftar Mitra
-
-### Langkah 1: Membuka Halaman dan Mencari Mitra
-
-1. Buka modul **Kemitraan > Mitra**.
-2. Gunakan kolom **Cari mitra...** di pojok kanan atas untuk mencari mitra berdasarkan nama, ID Mitra, atau alamat email.
+Melalui halaman ini, Administrator dapat mencari dan menyaring data mitra, meninjau informasi wilayah, level kemitraan, status toko, status akun, serta sisa durasi kontrak kerja sama. Selain itu, tersedia pula fitur untuk melakukan impor dan ekspor data rekapitulasi mitra.
 
 ---
 
-### Langkah 2: Menyaring dan Mengunduh Data Mitra
+## Cara Mengakses Halaman Mitra
 
-1. **Filter Data:** Klik tombol **Filter** untuk menyaring data berdasarkan kriteria tertentu, seperti level kemitraan atau wilayah.
-2. **Export Data:** Klik tombol **Export** untuk mengunduh daftar mitra yang ditampilkan dalam bentuk spreadsheet.
+Bagi Administrator yang ingin meninjau atau mengelola basis data mitra, ikuti langkah navigasi berikut:
+
+1. Pada bilah navigasi kiri (*sidebar*), buka modul **Kemitraan > Mitra**.
+2. Sistem akan menampilkan tabel daftar seluruh mitra terdaftar beserta indikator level, status toko, durasi kontrak, dan keaktifan akun.
 
 ---
 
-### Langkah 3: Mengimpor Data Mitra
+## Panduan Fitur & Pengelolaan Data Mitra
 
-Jika ingin menambahkan data mitra dalam jumlah banyak menggunakan berkas Excel:
+Administrator dapat memanfaatkan fitur pencarian cepat, penyaringan parameter wilayah/level, pengaturan visibilitas kolom, ekspor-impor data spreadsheet, serta peninjauan profil detail mitra.
 
-1. Klik tombol **Import Data Mitra** di sebelah tombol **Filter**.
-2. Sistem akan membuka halaman untuk mengunggah dan memvalidasi data mitra.
+### 1. Pencarian, Filter & Pengaturan Tampilan
+
+Gunakan baris kontrol di bagian atas tabel untuk mempermudah pemantauan data:
+
+* **Pencarian Cepat:** Gunakan kolom **Cari mitra...** di pojok kanan atas untuk menyaring data berdasarkan **Nama Mitra** atau **ID Mitra**.
+* **Filter Parameter:** Klik tombol **Filter** di pojok kiri atas untuk menyaring daftar mitra berdasarkan kriteria spesifik, seperti jenjang level kemitraan maupun hierarki wilayah operasional.
+* **Pengaturan Kolom (Sliders):** Klik ikon **Pengaturan Kolom** di pojok kanan atas untuk memilih kolom mana saja yang ingin ditampilkan atau disembunyikan pada antarmuka tabel.
+* **Export Data:** Klik tombol **Export** di pojok kanan atas untuk mengunduh rekapitulasi daftar mitra dalam format berkas spreadsheet (Excel/CSV).
+
+---
+
+### 2. Impor Data Mitra Baru
+
+Untuk memasukkan data mitra baru secara massal menggunakan berkas spreadsheet:
+
+1. Klik tombol **Import Data Mitra** yang terletak di sebelah tombol **Filter**.
+2. Sistem akan mengarahkan Anda ke halaman khusus **Import Data Mitra** untuk mengunggah dan memvalidasi berkas data.
 
 <Callout type="info" title="Panduan Lengkap Impor Data">
   Untuk melihat panduan pengisian spreadsheet, pengunggahan berkas, dan cara mengatasi kesalahan validasi, silakan buka halaman **[Panduan Import Data Mitra](/docs/initial-setup/import-partners)**.
@@ -36,22 +46,24 @@ Jika ingin menambahkan data mitra dalam jumlah banyak menggunakan berkas Excel:
 
 ---
 
-### Langkah 4: Melihat Detail Mitra
+### 3. Meninjau Detail Profil Mitra
 
-1. Cari mitra yang ingin diperiksa pada tabel.
-2. Pada kolom **Aksi**, klik ikon **Mata**.
-3. Sistem akan membuka halaman detail mitra yang berisi informasi identitas, alamat, kontrak, dan rekening bank.
+Untuk memeriksa informasi lengkap mengenai identitas, legalitas, atau rekening mitra:
+
+1. Cari baris nama mitra yang ingin diperiksa pada tabel.
+2. Pada kolom **Aksi**, klik ikon **Mata** (Detail).
+3. Sistem akan membuka halaman **Detail Mitra** yang menyajikan rincian identitas pribadi, alamat lengkap, dokumen kontrak, dan data rekening bank.
 
 ---
 
 ## Struktur Tabel Daftar Mitra
 
-| Kolom | Keterangan |
+| Kolom | Keterangan & Deskripsi Fungsi |
 | :--- | :--- |
-| **Id** | Menampilkan ID unik mitra. |
-| **Mitra** | Menampilkan nama mitra dan alamat email. |
-| **Level** | Menampilkan level mitra, seperti **Distributor**, **Agen**, **Sub Agen**, atau **Konsumen**. |
-| **Wilayah** | Menampilkan kota atau kabupaten tempat mitra berada. |
-| **Berakhir** | Menampilkan masa berlaku kontrak atau keterangan **Tanpa batas**. |
-| **Status** | Menampilkan status akun, yaitu **Aktif** atau **Nonaktif**. |
-| **Aksi** | Menampilkan ikon **Mata** untuk membuka detail mitra. |
+| **Mitra** | Menampilkan nama lengkap mitra beserta **ID Mitra** unik di baris bawahnya (contoh: `MTR-0100`). |
+| **Level** | Badge indikator level kemitraan (**Distributor**, **Agen**, **Sub Agen**, atau **Konsumen**). |
+| **Wilayah** | Menampilkan lokasi kota, kabupaten, atau kecamatan domisili operasional mitra. |
+| **Status Toko** | Badge indikator ketersediaan operasional toko mitra (**Online** atau kosong/offline). |
+| **Berakhir** | Badge indikator sisa durasi masa berlaku kontrak kerja sama (contoh: `23 bulan 27 hari` atau `Sudah berakhir`). |
+| **Status** | Badge indikator keaktifan akun mitra (**Aktif** atau **Nonaktif**). |
+| **Aksi** | Tombol pintas ikon **Mata** untuk membuka halaman rincian detail profil mitra. |

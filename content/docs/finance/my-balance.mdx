@@ -2,6 +2,20 @@
 title: Saldo Saya
 icon: Wallet
 ---
+
+Halaman **Saldo Saya** (Saldo Perusahaan) digunakan oleh Administrator Keuangan untuk memantau ringkasan saldo kas internal perusahaan pada platform **Teem.id**, serta melacak seluruh histori mutasi aliran dana masuk dan keluar secara *real-time*.
+
+Melalui halaman ini, Administrator dapat mengevaluasi likuiditas bersih kas operasional, meninjau alokasi dana tertunda (*pending*), serta mengunduh rekapitulasi riwayat mutasi keuangan.
+
+---
+
+## Cara Mengakses Halaman Saldo Saya
+
+Bagi Administrator Keuangan yang ingin meninjau kas internal perusahaan, ikuti langkah navigasi berikut:
+
+1. Pada bilah navigasi kiri (*sidebar*), buka modul **Keuangan > Saldo Saya**.
+2. Sistem akan menampilkan halaman **Saldo Perusahaan** beserta kartu indikator saldo dan tabel riwayat mutasi transaksi.
+
 <div className="my-4 text-center">
   <img 
     src="/saldosaya.png" 
@@ -13,41 +27,35 @@ icon: Wallet
   </span>
 </div>
 
-Halaman **Saldo Perusahaan** digunakan oleh Administrator Keuangan untuk memantau ringkasan saldo kas internal perusahaan pada platform **Teem.id**, serta melacak seluruh histori mutasi aliran dana masuk dan keluar secara *real-time*.
-
 ---
 
 ## Ringkasan Kartu Saldo Utama
 
-Di bagian atas halaman, terdapat dua kartu indikator keuangan perusahaan:
+Di bagian atas halaman, terdapat dua kartu indikator utama yang menggambarkan posisi dana perusahaan:
 
-### 1. Saldo Aktif
-* **Keterangan:** Menampilkan total akumulasi saldo kas perusahaan dari **pesanan yang telah selesai**.
-* **Fungsi:** Dana bersih yang sudah resmi menjadi hak perusahaan dan siap digunakan untuk operasional.
-
-### 2. Saldo Pending
-* **Keterangan:** Menampilkan nilai dana tertunda dari **pesanan yang belum selesai** (*in-progress orders*).
-* **Fungsi:** Dana cadangan yang masih ditahan sementara di sistem hingga proses pengiriman/pembelian diselesaikan oleh pelanggan.
+* **Saldo Aktif:** Menampilkan akumulasi total saldo kas perusahaan dari **pesanan yang telah selesai** (*completed orders*). Dana ini secara resmi menjadi hak operasional perusahaan dan siap digunakan.
+* **Saldo Pending:** Menampilkan akumulasi dana tertunda dari **pesanan yang masih berjalan** (*in-progress orders*). Dana ditahan sementara oleh sistem hingga transaksi pengiriman atau transaksi pembelian diselesaikan.
 
 ---
 
-## Alur Mengelola & Memantau Transaksi
+## Panduan Fitur & Pengelolaan Transaksi
 
-### Langkah 1: Membuka Halaman Saldo Perusahaan
-1. Masuk ke modul **Keuangan > Saldo Perusahaan**.
-2. Periksa nominal pada kartu **Saldo Aktif** dan **Saldo Pending** di bagian atas.
+Administrator dapat memanfaatkan fitur penyaringan data mutasi serta pengunduhan laporan rekapitulasi kas harian:
+
+### 1. Penyaringan Mutasi Data (Filter)
+
+Gunakan kontrol di atas tabel untuk menyaring riwayat transaksi sesuai kebutuhan audit:
+
+* **Filter Kategori (Tombol Filter):** Klik tombol **Filter** di pojok kanan atas tabel untuk menyaring riwayat berdasarkan kategori mutasi tertentu (seperti *ORDER* atau *REFUND*).
+* **Filter Periode:** Gunakan dropdown pemilih periode waktu untuk membatasi tampilan transaksi pada rentang tanggal tertentu.
 
 ---
 
-### Langkah 2: Menggunakan Fitur Penyaringan (Filter)
-1. **Filter Kategori (Tombol Filter):** Klik tombol **Filter** di pojok kanan atas tabel untuk menyaring riwayat berdasarkan jenis mutasi (seperti *ORDER* atau *REFUND*).
-2. **Filter Periode (Dropdown Periode):** Gunakan dropdown periode waktu.
+### 2. Ekspor Laporan Kas (Export)
 
----
-
-### Langkah 3: Mengunduh Laporan (Export)
-1. Klik tombol **Export** di pojok kanan atas tabel.
-2. Sistem akan mengunduh berkas rekapitulasi riwayat transaksi saldo perusahaan ke dalam perangkat komputer Anda untuk kebutuhan audit/pembukuan.
+1. Sesuaikan filter kategori dan rentang periode waktu yang ingin diunduh.
+2. Klik tombol **Export** di pojok kanan atas tabel.
+3. Sistem akan mengunduh rekapitulasi data riwayat mutasi saldo perusahaan dalam format berkas spreadsheet (Excel/CSV) untuk keperluan audit maupun pembukuan internal.
 
 ---
 
@@ -55,10 +63,10 @@ Di bagian atas halaman, terdapat dua kartu indikator keuangan perusahaan:
 
 | Kolom | Fungsi & Keterangan |
 | :--- | :--- |
-| **Tipe** | Indikator arah arus kas (Ikon **Panah Hijau Ke Bawah** untuk dana masuk, atau **Panah Merah Ke Atas** untuk dana keluar/refund). |
-| **Nominal** | Jumlah nilai rupiah mutasi transaksi (ditandai tanda `+` hijau untuk pemasukan, atau `-` merah untuk pengeluaran). |
-| **Jenis** | Kategori sifat transaksi (*PENDING* atau *ACTIVE*). |
-| **Dari** | Sumber transaksi keuangan. |
-| **Keterangan** | Informasi detail atau nomor referensi invoice terkait transaksi tersebut. |
-| **Tgl Transaksi** | Informasi stempel waktu kapan transaksi terjadi. |
-| **Status** | Badge indikator keabsahan status transaksi (*Success*). |
+| **Tipe** | Indikator visual arus kas (**Panah Hijau Ke Bawah** untuk dana masuk, atau **Panah Merah Ke Atas** untuk dana keluar/refund). |
+| **Nominal** | Nilai nominal transaksi (ditandai simbol `+` hijau untuk pemasukan, atau `-` merah untuk pengeluaran). |
+| **Jenis** | Kategori sifat status alokasi dana (**PENDING** atau **ACTIVE**). |
+| **Dari** | Informasi entitas atau akun sumber transaksi keuangan. |
+| **Keterangan** | Rincian narasi transaksi atau nomor referensi invoice terkait. |
+| **Tgl Transaksi** | Stempel waktu (*timestamp*) saat transaksi tercatat di sistem. |
+| **Status** | Badge indikator keabsahan status transaksi (**Success**). |

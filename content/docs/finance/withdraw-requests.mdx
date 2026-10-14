@@ -9,61 +9,72 @@ Setiap penarikan dana yang masuk wajib diverifikasi agar nominal transfer dan da
 
 ---
 
-## Alur Mengelola Persetujuan Withdraw
+## Cara Mengakses Halaman Persetujuan Withdraw
 
-### Langkah 1: Membuka Halaman & Pencarian Pengajuan
-1. Masuk ke modul **Keuangan > Persetujuan Withdraw**.
-2. **Pencarian Cepat:** Gunakan kolom input **Cari pengajuan...** di pojok kanan atas untuk menyaring permohonan berdasarkan nama pemohon atau ID mitra.
-3. Halaman terbagi menjadi dua area utama: tabel **Pengajuan Menunggu Persetujuan** (bagian atas) dan **Riwayat Pengajuan** (bagian bawah).
+Bagi Administrator Keuangan yang ingin meninjau atau memproses permohonan pencairan dana mitra, ikuti langkah navigasi berikut:
 
----
-
-### Langkah 2: Menyetujui Penarikan Saldo
-1. Periksa rincian permohonan pada tabel **Pengajuan Menunggu Persetujuan**:
-   * **Id & Level:** ID unik dan tingkatan kemitraan pemohon.
-   * **Nama Pemohon:** Nama pemilik akun penarik saldo.
-   * **Rekening Tujuan:** Nama bank/e-wallet, nomor rekening, dan nama pemilik rekening.
-   * **Nominal:** Jumlah dana rupiah yang ingin ditarik.
-   * **Tgl Pengajuan:** Waktu stempel saat mitra mengajukan penarikan.
-2. Jika seluruh data rekening dan nominal sudah sesuai, klik tombol **✓ Setujui** berwarna hijau pada kolom **Aksi**.
-3. Sistem akan memproses pencairan dana dan memindahkan baris pengajuan tersebut ke tabel **Riwayat Pengajuan** dengan status *Disetujui*.
+1. Pada bilah navigasi kiri (*sidebar*), buka modul **Keuangan > Pengajuan Withdraw** (atau **Keuangan > Persetujuan Withdraw**).
+2. Sistem akan menampilkan halaman utama yang terbagi menjadi dua bagian: **Pengajuan Menunggu Persetujuan** (bagian atas) dan **Riwayat Pengajuan** (bagian bawah).
 
 ---
 
-### Langkah 3: Menolak Penarikan Saldo
-1. Jika terdapat ketidaksesuaian data (seperti nomor rekening tidak valid atau nama pemohon berbeda), klik tombol **✕ Tolak** berwarna merah pada kolom **Aksi**.
-2. Pada modal pop-up **Tolak Withdraw**, periksa rincian nominal penarikan yang akan ditolak.
-3. Tuliskan alasan spesifik penolakan pada kolom teks yang disediakan.
-4. Klik tombol **Tolak** berwarna merah untuk mengonfirmasi penolakan. Saldo penarikan akan dikembalikan ke dompet akun mitra dan pengajuan masuk ke riwayat dengan status *Ditolak*.
+## Panduan Pengelolaan & Pemrosesan Penarikan Saldo
+
+Administrator dapat memverifikasi permohonan penarikan saldo yang sedang pending, menyetujui atau menolak pencairan, serta memantau riwayat transaksi historis.
+
+### 1. Peninjauan & Persetujuan Penarikan Dana
+
+Pada area **Pengajuan Menunggu Persetujuan**:
+
+* **Pencarian Cepat:** Gunakan kolom input **Cari pengajuan...** di pojok kanan atas untuk menyaring permohonan berdasarkan nama pemohon atau ID mitra.
+* **Pemeriksaan Parameter:** Periksa ID & Level mitra, Nama Pemohon, Rincian Rekening Tujuan (Bank, No. Rekening, Atas Nama), Nominal rupiah, dan Tanggal Pengajuan.
+* **Menyetujui Penarikan (Approve):**
+  1. Klik tombol **✓ Setujui** berwarna hijau pada kolom **Aksi**.
+  2. Sistem akan memproses pencairan dana dan memindahkan transaksi ke tabel **Riwayat Pengajuan** dengan status **Disetujui**.
 
 ---
 
-### Langkah 4: Memantau Riwayat Pengajuan
-Pada bagian bawah halaman, Administrator dapat memantau seluruh transaksi penarikan saldo yang pernah diproses:
-1. **Filter Status:** Gunakan dropdown **Semua Status** untuk menyaring riwayat berdasarkan status transaksi (*Disetujui* / *Ditolak*).
-2. **Filter Periode:** Gunakan dropdown periode untuk membatasi rentang waktu pencatatan.
-3. Periksa informasi **Diproses Oleh** (oleh Admin internal atau *Sistem (Otomatis)*) dan **Tgl Diproses** untuk kebutuhan audit internal.
+### 2. Penolakan Penarikan Dana (Reject)
+
+Apabila ditemukan ketidaksesuaian data (seperti nomor rekening tidak valid atau nama pemilik rekening tidak sesuai):
+
+1. Klik tombol **✕ Tolak** berwarna merah pada kolom **Aksi** di baris pengajuan terkait.
+2. Pada modal **Tolak Withdraw**, periksa rincian nominal penarikan yang ditolak.
+3. Masukkan alasan penolakan secara spesifik pada kolom catatan yang disediakan.
+4. Klik tombol **Tolak** berwarna merah untuk mengonfirmasi. Saldo penarikan akan dikembalikan (*refund*) secara otomatis ke dompet digital mitra, dan pengajuan dicatat pada riwayat dengan status **Ditolak**.
+
+---
+
+### 3. Pemantauan Riwayat Penarikan Saldo
+
+Pada bagian **Riwayat Pengajuan**, Administrator dapat memantau seluruh catatan historis penarikan saldo:
+
+* **Filter Status:** Gunakan dropdown **Semua Status** untuk menyaring riwayat berdasarkan status keputusan (**Disetujui** atau **Ditolak**).
+* **Filter Periode:** Gunakan dropdown periode waktu untuk membatasi rentang pencatatan transaksi.
+* **Pemeriksaan Audit:** Tinjau kolom **Diproses Oleh** (nama akun Admin atau *Sistem (Otomatis)*) serta **Tgl Diproses** untuk kebutuhan audit internal.
 
 ---
 
 ## Struktur Tabel Persetujuan & Riwayat
 
-### 1. Pengajuan Menunggu Persetujuan
+### 1. Tabel Pengajuan Menunggu Persetujuan
+
 | Kolom | Fungsi & Keterangan |
 | :--- | :--- |
 | **Id & Level** | ID unik akun mitra beserta jenjang tingkatan kemitraannya. |
 | **Nama Pemohon** | Nama lengkap mitra yang mengajukan pencairan dana. |
-| **Rekening Tujuan** | Nama bank, nomor rekening, dan nama pemilik rekening tujuan transfer. |
+| **Rekening Tujuan** | Nama bank/e-wallet, nomor rekening, dan nama pemilik rekening tujuan transfer. |
 | **Nominal** | Jumlah rupiah dana saldo yang diajukan untuk ditarik. |
-| **Tgl Pengajuan** | Informasi stempel waktu pengajuan penarikan dana dikirim mitra. |
-| **Aksi** | Terdiri dari tombol eksekusi **✓ Setujui** (Hijau) dan **✕ Tolak** (Merah). |
+| **Tgl Pengajuan** | Stempel waktu (*timestamp*) permohonan penarikan dana dikirim mitra. |
+| **Aksi** | Tombol eksekusi **✓ Setujui** (Hijau) dan **✕ Tolak** (Merah). |
 
-### 2. Riwayat Pengajuan
+### 2. Tabel Riwayat Pengajuan
+
 | Kolom | Fungsi & Keterangan |
 | :--- | :--- |
-| **Nama Pemohon** | Menampilkan hirarki informasi pemohon: **ID Withdraw** di baris paling atas (berwarna merah), **Nama Pemohon** di baris tengah, dan **ID Mitra** di baris paling bawah. |
+| **Nama Pemohon** | Menampilkan hirarki informasi: **ID Withdraw** (baris atas berwarna merah), **Nama Pemohon** (baris tengah), dan **ID Mitra** (baris bawah). |
 | **Rekening Tujuan** | Nama bank penyedia dan nomor rekening tujuan penarikan dana. |
 | **Nominal** | Jumlah total nominal pencairan dana. |
-| **Status** | Badge indikator penanganan (*Disetujui* / *Ditolak*). |
+| **Status** | Badge indikator penanganan (**Disetujui** atau **Ditolak**). |
 | **Diproses Oleh** | Nama akun Administrator atau *Sistem (Otomatis)* yang mengeksekusi permohonan. |
-| **Tgl Diproses** | Informasi stempel waktu kapan keputusan penarikan dana dieksekusi. |
+| **Tgl Diproses** | Stempel waktu (*timestamp*) eksekusi keputusan penarikan dana. |

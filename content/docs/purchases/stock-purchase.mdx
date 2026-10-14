@@ -5,17 +5,17 @@ icon: ShoppingBag
 
 Halaman **Pembelian Stok** digunakan oleh Administrator untuk mencatat penerimaan barang dari vendor ke gudang perusahaan di platform **Teem.id**.
 
-Melalui halaman ini, Admin dapat mencatat surat jalan, menambahkan produk yang diterima, menentukan lokasi penyimpanan, dan mencatat jumlah serta harga pembelian barang.
+Melalui halaman ini, Administrator dapat mencatat surat jalan vendor, menambahkan produk yang diterima, menentukan lokasi penyimpanan, serta mencatat kuantitas dan harga pembelian barang secara akurat.
 
 ---
 
-## Alur Pencatatan Pembelian Stok
+## Panduan Pengelolaan & Pencatatan Pembelian Stok
 
-### Langkah 1: Membuka Halaman dan Mencatat Stok Masuk
+Administrator dapat melihat riwayat penerimaan barang, mengonfigurasi filter periode data, mencatat stok masuk baru, hingga mengunduh laporan rekapitulasi.
 
-1. Buka modul **Pembelian > Pembelian Stok**.
-2. **Filter Periode:** Secara *default*, halaman ini menampilkan riwayat transaksi penerimaan barang untuk periode **Bulan Ini**. Gunakan dropdown pilihan tanggal di pojok kiri atas tabel jika ingin mengubah rentang waktu.
-3. Klik tombol **+ Tambah** di pojok kanan atas untuk membuka form **Catat Stok Masuk**.
+### 1. Memantau Riwayat & Filter Periode
+
+Secara default, halaman ini menampilkan riwayat transaksi penerimaan barang untuk periode **Bulan Ini**. 
 
 <div className="my-4 text-center">
   <img 
@@ -24,48 +24,38 @@ Melalui halaman ini, Admin dapat mencatat surat jalan, menambahkan produk yang d
     className="max-h-[380px] w-auto mx-auto rounded-lg shadow-sm" 
   />
   <span className="block text-xs text-gray-400 mt-2">
-    Tampilan Riwayat Pembelian Stok (Default: Bulan Ini)
+    Tampilan Riwayat Pembelian Stok
   </span>
 </div>
 
----
-
-### Langkah 2: Mengisi Informasi Surat Jalan
-
-Pada form **Catat Stok Masuk**, lengkapi data berikut:
-
-- **Vendor:** Pilih nama pemasok barang.
-- **Tanggal Surat Jalan:** Tentukan tanggal penerimaan barang.
-- **No. Surat Jalan:** Masukkan nomor surat jalan dari vendor.
+* **Penyesuaian Periode:** Gunakan pemilih tanggal di pojok kiri atas tabel untuk menyesuaikan rentang waktu data yang ditampilkan.
+* **Ekspor Laporan:** Klik tombol **Export** di pojok kanan atas tabel untuk mengunduh laporan pembelian stok dalam format berkas spreadsheet (Excel/CSV) sesuai periode yang dipilih.
 
 ---
 
-### Langkah 3: Menambahkan Produk
+### 2. Mencatat Stok Masuk Baru
 
-1. Pada bagian **Item Produk**, klik tombol **+ Tambah Item**.
-2. Pilih **Produk** yang diterima dari vendor.
-3. Pilih **Gudang / Palet** tempat barang akan disimpan.
-4. Pilih **Satuan** dan masukkan jumlah **Kuantitas (Qty)** barang.
-5. Masukkan **Harga Beli / Unit**.
-6. Jika terdapat lebih dari satu jenis produk, klik kembali **+ Tambah Item** untuk menambahkan produk lainnya.
+Untuk mencatat penerimaan barang baru dari vendor, klik tombol **+ Tambah** di pojok kanan atas halaman. Lengkapi form **Catat Stok Masuk** dengan rincian berikut:
 
-Sistem akan menyesuaikan jumlah barang ke satuan terkecil produk sebelum menambahkannya ke stok.
+* **Informasi Surat Jalan:**
+  * **Vendor:** Pilih nama pemasok barang yang terdaftar.
+  * **Tanggal Surat Jalan:** Tentukan tanggal resmi penerimaan barang.
+  * **No. Surat Jalan:** Masukkan nomor dokumen surat jalan dari pihak vendor.
+
+* **Detail Item Produk:**
+  * Klik tombol **+ Tambah Item** untuk menambahkan baris produk.
+  * **Produk & Lokasi:** Pilih produk yang diterima serta **Gudang / Palet** tujuan penyimpanan.
+  * **Kuantitas & Harga:** Tentukan **Satuan**, masukkan nilai **Kuantitas (Qty)**, dan isi **Harga Beli / Unit**.
+  * Jika terdapat lebih dari satu jenis produk dalam satu surat jalan, klik kembali tombol **+ Tambah Item**.
+
+* **Penyimpanan Transaksi:**
+  Setelah memeriksa kembali rincian produk dan harga, klik tombol **Simpan**. Sistem akan mengonversi jumlah barang ke satuan terkecil produk dan langsung memperbarui saldo persediaan di modul **Stok Perusahaan**.
 
 ---
 
-### Langkah 4: Menyimpan Transaksi
-
-1. Periksa kembali produk, jumlah, harga, dan lokasi penyimpanan.
-2. Klik tombol **Simpan**.
-3. Data penerimaan barang akan tercatat pada tabel riwayat dan jumlah stok akan diperbarui secara otomatis pada modul **Stok Perusahaan**.
-
----
-
-## Alur Ekspor Riwayat Pembelian
-
-1. Pada halaman **Pembelian Stok**, tentukan rentang waktu transaksi yang ingin diunduh.
-2. Klik tombol **Export** di pojok kanan atas tabel.
-3. Sistem akan mengunduh laporan pembelian stok dalam bentuk spreadsheet.
+<Callout type="warn" title="Penyimpanan Data Stok">
+  Pastikan Gudang, Satuan, dan jumlah Kuantitas (Qty) sudah sesuai sebelum menyimpan transaksi karena data penerimaan akan langsung memperbarui jumlah stok pada modul Stok Perusahaan.
+</Callout>
 
 ---
 
@@ -79,9 +69,3 @@ Sistem akan menyesuaikan jumlah barang ke satuan terkecil produk sebelum menamba
 | **Gudang** | Menampilkan lokasi gudang atau palet tempat barang disimpan. |
 | **Harga Beli / Unit** | Menampilkan harga pembelian setiap satuan barang. |
 | **Total** | Menampilkan total nilai pembelian berdasarkan barang yang diterima per item maupun per surat jalan. |
-
----
-
-<Callout type="warn" title="Penyimpanan Data Stok">
-  Pastikan Gudang, Satuan, dan jumlah Kuantitas (Qty) sudah sesuai sebelum menyimpan transaksi karena data penerimaan akan langsung memperbarui jumlah stok pada modul Stok Perusahaan.
-</Callout>

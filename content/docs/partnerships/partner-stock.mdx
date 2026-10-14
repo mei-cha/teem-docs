@@ -3,64 +3,66 @@ title: Stok Mitra
 icon: Boxes
 ---
 
-Halaman **Stok Mitra** digunakan oleh Administrator untuk memantau ketersediaan persediaan barang yang dimiliki oleh setiap mitra pada berbagai wilayah operasional **Teem.id**.
+Halaman **Stok Mitra** digunakan oleh Administrator untuk memantau ketersediaan persediaan barang yang dimiliki oleh setiap mitra di berbagai wilayah operasional **Teem.id**.
 
-Halaman ini menyediakan dua opsi tampilan utama, yaitu **Top 5 Produk** dan **Semua Produk**, serta dilengkapi fitur pencarian mitra, pengurutan akumulasi kuantitas stok, dan impor data stok mitra.
-
----
-
-## Alur Memantau Stok Mitra (Step-by-Step)
-
-### Langkah 1: Membuka Halaman & Menggunakan Pencarian
-1. Masuk ke modul **Kemitraan > Stok Mitra**.
-2. **Pencarian Cepat:** Ketikkan nama mitra pada kolom **Cari nama...** untuk menyaring data mitra tertentu secara spesifik.
+Halaman ini menyediakan dua opsi tampilan utama, yaitu **Top 5 Produk** dan **Semua Produk**, serta dilengkapi fitur pencarian mitra, pengurutan akumulasi kuantitas stok, hingga opsi impor dan ekspor data stok mitra.
 
 ---
 
-### Langkah 2: Mengatur Filter Wilayah & Level Mitra
-1. Klik tombol **Filter** di pojok kiri atas baris kontrol untuk membuka jendela modal **Filter Data**.
-2. Tentukan kriteria penyaringan yang diinginkan:
-   * **Level:** Pilih level kemitraan spesifik atau pilih *Semua Level*.
-   * **Provinsi:** Pilih wilayah provinsi operasional mitra.
-   * **Kab/Kota:** Pilih kabupaten atau kota (tersedia setelah provinsi dipilih).
-   * **Kecamatan:** Pilih wilayah kecamatan.
-   * **Desa/Kelurahan:** Pilih wilayah desa atau kelurahan.
-3. Klik tombol **Terapkan** untuk menyaring daftar mitra.
+## Cara Mengakses Halaman Stok Mitra
+
+Bagi Administrator yang ingin memantau atau mengelola persediaan barang mitra, ikuti langkah navigasi berikut:
+
+1. Pada bilah navigasi kiri (*sidebar*), buka modul **Kemitraan > Stok Mitra**.
+2. Sistem akan menampilkan halaman utama **Stok Mitra** beserta matriks ketersediaan produk mitra.
 
 ---
 
-### Langkah 3: Menentukan Pengurutan Data (Sort By)
-Gunakan dropdown opsi pengurutan di sebelah kolom pencarian untuk mengurutkan tampilan data:
-* **Default:** Menampilkan daftar mitra berdasarkan urutan bawaan sistem.
-* **Terbanyak:** Mengurutkan daftar mitra dari total kuantitas stok terbanyak ke tersedikit.
-* **Tersedikit:** Mengurutkan daftar mitra dari total kuantitas stok tersedikit ke terbanyak.
+## Panduan Pengelolaan & Pemantauan Stok Mitra
+
+Administrator dapat mengombinasikan berbagai instrumen penyaringan data, opsi pengurutan, mode tampilan matriks, hingga ekspor dan impor rekapitulasi stok.
+
+### 1. Filter Wilayah & Penyaringan Data
+
+Gunakan baris kontrol di bagian atas tabel untuk menyaring daftar mitra sesuai kebutuhan:
+
+* **Pencarian Cepat:** Ketikkan nama mitra pada kolom **Cari nama...** untuk mencari mitra spesifik secara langsung.
+* **Filter Parameter (Modal Filter):** Klik tombol **Filter** di pojok kiri atas untuk menyaring data berdasarkan:
+  * **Level:** Menampilkan mitra berdasarkan tingkatan level kemitraan.
+  * **Hirarki Wilayah:** Menyaring lokasi operasional mitra mulai dari *Provinsi*, *Kab/Kota*, *Kecamatan*, hingga *Desa/Kelurahan*.
+  * Klik tombol **Terapkan** untuk memperbarui daftar pada tabel.
+* **Pengurutan Data (Sort By):**
+  * **Default:** Menampilkan urutan standar sistem.
+  * **Terbanyak / Tersedikit:** Mengurutkan mitra dari akumulasi total kuantitas stok terbanyak atau tersedikit.
 
 ---
 
-### Langkah 4: Memilih Mode Tampilan Stok
+### 2. Memilih Mode Tampilan Stok
 
-<Callout type="info" title="Pengaturan Top 5 Produk">
-  Jika daftar 5 produk unggulan belum dikonfigurasi, klik tautan "Atur Top 5 Produk" yang berada di bawah baris filter untuk menuju ke halaman pengaturan.
-</Callout>
-
-Pilih salah satu tab kategori tampilan di atas tabel:
+Pilih salah satu tab mode tampilan di atas tabel untuk memvisualisasikan data:
 
 * **Top 5 Produk:**
-  Menampilkan matriks kolom perbandingan kuantitas stok untuk 5 produk unggulan yang telah ditentukan. Produk tetap ditampilkan pada kolom tabel meskipun jumlah stok mitra bernilai `0` atau belum memiliki persediaan (`-`).
+  Menampilkan matriks kolom perbandingan kuantitas stok untuk 5 produk unggulan yang telah dikonfigurasi. Produk tetap muncul pada kolom meskipun stok bernilai `0` atau belum memiliki persediaan (`-`).
 * **Semua Produk:**
-  Menampilkan daftar seluruh mitra beserta rincian wilayahnya. Klik ikon panah di sebelah nama mitra untuk membuka *dropdown* rincian item produk yang benar-benar memiliki saldo stok aktif pada mitra tersebut.
+  Menampilkan daftar seluruh mitra beserta rincian wilayahnya. Klik ikon panah di sebelah nama mitra untuk membuka *dropdown* rincian item produk yang memiliki saldo stok aktif pada mitra tersebut.
 
-Klik tombol **Tampilkan** berwarna merah untuk menerapkan seluruh pengaturan filter dan mode tampilan pada tabel.
+<Callout type="info" title="Pengaturan Top 5 Produk">
+  Jika daftar 5 produk unggulan belum dikonfigurasi, klik tautan "Atur Top 5 Produk" yang berada di bawah baris filter untuk mengarahkan Anda ke halaman pengaturan terkait.
+</Callout>
+
+Setelah menyesuaikan filter atau mode tampilan, klik tombol **Tampilkan** berwarna merah untuk memperbarui tampilan tabel.
 
 ---
 
-## Alur Impor & Ekspor Data Stok Mitra
+### 3. Impor & Ekspor Data Stok Mitra
 
-* **Import Data Stok:** Klik tombol **Import Stok** untuk beralih (*redirect*) ke halaman khusus **Import Stok Mitra** apabila ingin memperbarui atau memasukkan data persediaan mitra dalam jumlah banyak via berkas spreadsheet.
+* **Import Data Stok:** Klik tombol **Import Stok** untuk beralih (*redirect*) ke halaman khusus **Import Stok Mitra** apabila ingin memasukkan data persediaan mitra dalam jumlah banyak via berkas spreadsheet (Excel/CSV).
+
 <Callout type="info" title="Panduan Lengkap Impor Data">
   Untuk melihat panduan pengisian spreadsheet, pengunggahan berkas, dan cara mengatasi kesalahan validasi, silakan buka halaman **[Panduan Stock Data Mitra](/docs/initial-setup/partner-stock-import)**.
 </Callout>
-* **Export Data Stok:** Klik tombol **Export** di kanan atas tabel untuk mengunduh rekapitulasi data persediaan mitra yang sedang tampil ke dalam berkas spreadsheet.
+
+* **Export Data Stok:** Klik tombol **Export** di kanan atas tabel untuk mengunduh rekapitulasi data persediaan mitra yang tampil ke dalam berkas spreadsheet.
 
 ---
 
@@ -68,7 +70,7 @@ Klik tombol **Tampilkan** berwarna merah untuk menerapkan seluruh pengaturan fil
 
 | Tampilan | Produk yang Ditampilkan | Tujuan Utama |
 | :--- | :--- | :--- |
-| **Top 5 Produk** | 5 produk unggulan pilihan (tetap muncul meski bernilai 0 / `-`). | Membandingkan ketersediaan 5 produk fokus utama antar-mitra secara langsung. |
+| **Top 5 Produk** | 5 produk unggulan pilihan (tetap muncul meski bernilai `0` / `-`). | Membandingkan ketersediaan 5 produk fokus utama antar-mitra secara langsung. |
 | **Semua Produk** | Rincian item produk yang memiliki stok aktif pada mitra yang dipilih. | Memeriksa rincian katalog fisik produk yang benar-benar dimiliki oleh mitra. |
 
 ---
@@ -95,5 +97,6 @@ Klik tombol **Tampilkan** berwarna merah untuk menerapkan seluruh pengaturan fil
 
 ---
 
-> **Tips**  
-> Manfaatkan fitur pengurutan **Terbanyak** atau **Tersedikit** bersamaan dengan filter wilayah untuk mengetahui mitra yang membutuhkan penambahan stok (*restock*) secara cepat.
+<Callout type="info" title="Tips Pemantauan Restock">
+  Manfaatkan fitur pengurutan **Terbanyak** atau **Tersedikit** bersamaan dengan filter wilayah untuk mengetahui mitra yang membutuhkan penambahan stok (*restock*) secara cepat.
+</Callout>

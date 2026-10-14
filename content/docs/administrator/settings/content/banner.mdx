@@ -1,56 +1,64 @@
 ---
-title: Banner Beranda
+title: Banner
 icon: Image
 ---
 
-Halaman **Banner** digunakan oleh Administrator untuk mengelola gambar slide promosi (*carousel banner*) yang tampil pada halaman depan (*Home/Beranda*) website utama **Teem.id**.
+Halaman **Banner** digunakan oleh Administrator untuk mengelola gambar promosi visual pada platform **Teem.id**, baik untuk slide *carousel* pada halaman utama (*Home/Beranda*) website publik maupun banner *pop-up* yang muncul secara otomatis setelah mitra/pengguna melakukan *login*.
 
-Banner ini berfungsi sebagai media visual utama untuk menyampaikan informasi promo, produk baru, maupun pengumuman penting kepada para pengunjung dan mitra.
-
----
-
-## Alur Mengelola Banner Beranda
-
-Sebagai Administrator, Anda dapat mengunggah, memberi nama, mengurutkan, dan menghapus gambar banner melalui alur berikut:
-
-### Langkah 1: Membuka Menu Banner
-1. Masuk ke modul **Administrator > Pengaturan**.
-2. Pada bilah navigasi kiri di bawah kategori **KONTEN**, pilih sub-menu **Banner**.
-3. Halaman akan menampilkan kotak pengaturan **Banner Beranda (Home)** beserta daftar gambar yang sedang aktif saat ini.
+Media visual ini berfungsi untuk menyampaikan promosi khusus, peluncuran produk baru, hingga pengumuman penting secara strategis berdasarkan target level mitra.
 
 ---
 
-### Langkah 2: Mengunggah Gambar Banner Baru
-1. Cari kotak area kosong yang memiliki ikon gambar dan tombol **Upload Gambar**.
-2. Klik tombol **Upload Gambar** dan pilih berkas gambar promo dari perangkat komputer Anda (disarankan menggunakan rasio lanskap yang presisi agar tidak terpotong).
-3. Gambar yang baru diunggah akan otomatis menambahkan slot urutan baru di sebelah kanan.
+## Cara Mengakses Halaman Banner
+
+Bagi Administrator yang ingin mengonfigurasi atau memperbarui media banner, ikuti langkah navigasi berikut:
+
+1. Pada bilah navigasi kiri (*sidebar*), buka modul **Administrator > Pengaturan**.
+2. Pada kategori **KONTEN** di panel navigasi sebelah kiri, pilih sub-menu **Banner**.
+3. Sistem akan menampilkan dua area pengaturan utama: **Banner Beranda** dan **Banner Pop-up Setelah Login**.
 
 ---
 
-### Langkah 3: Menamai dan Menata Banner
-1. Pada setiap kartu banner yang terpasang, perhatikan label urutan di pojok kiri atas gambar.
-2. Tuliskan nama atau deskripsi ringkas banner pada kolom **Judul Banner** untuk mempermudah identifikasi berkas.
+## Panduan Pengelolaan Banner
+
+Administrator dapat mengonfigurasi dua jenis banner visual dengan fleksibilitas kustomisasi parameter yang berbeda.
+
+### 1. Banner Beranda (Home Carousel)
+
+Digunakan untuk mengatur gambar promosi putar (*carousel slide*) pada halaman utama website publik:
+
+* **Mengunggah Gambar Baru:** Klik kotak **Upload Gambar** pada slot kosong untuk memilih berkas dari perangkat Anda.
+* **Judul Banner:** Masukkan nama atau identitas promo pada kolom input **Judul Banner**.
+* **Badge Urutan:** Setiap kartu banner dilengkapi label indikator urutan (*Urutan #1*, *Urutan #2*, dsb.) untuk menentukan posisi penayangan slide.
+* **Menghapus Banner:** Klik tombol **Hapus** berwarna merah di bagian bawah kartu banner terpilih untuk mengosongkan slot.
+* **Konfirmasi:** Klik tombol **Simpan** berwarna merah di pojok kanan bawah blok **Banner Beranda** untuk menerbitkan perubahan.
 
 ---
 
-### Langkah 4: Menghapus Banner (Jika Diperlukan)
-1. Jika ada promo yang sudah berakhir atau gambar yang ingin diganti, klik tombol **Hapus (Ikon Tempat Sampah)** di bagian bawah kartu banner yang bersangkutan.
-2. Kartu banner tersebut akan terhapus dari daftar slot.
+### 2. Banner Pop-up Setelah Login
+
+Digunakan untuk mengatur banner promosi interaktif yang muncul secara otomatis saat mitra atau pengguna masuk ke aplikasi/sistem:
+
+* **Mengunggah Gambar Pop-up:** Klik tombol **Upload Gambar Pop-up** pada slot kosong (format rekomendasi: *Maks. 2MB*).
+* **Parameter Konfigurasi:**
+  * **Judul Pop-up:** Nama atau deskripsi ringkas judul iklan/banner.
+  * **Link saat diklik (opsional):** Tautan URL tujuan saat gambar banner diklik oleh pengguna (contoh: `https://e-commerce.ubig.web.id/shop` atau URL produk).
+  * **Sakelar Tampilkan pop-up:** Toggle sakelar interaktif untuk mengaktifkan atau mematikan penayangan *pop-up* secara instan.
+  * **Tampil untuk level mitra:** Dropdown penentu visibilitas audiens target (*Semua Level*, *Agen*, *Konsumen*, *Distributor*, dll.).
+  * **Urutan tampil:** Angka prioritas penayangan (semakin kecil angka, semakin awal banner ditampilkan).
+* **Menghapus & Menyimpan:** Klik tombol **Hapus** untuk menghapus kartu *pop-up*, atau klik tombol **Simpan** berwarna merah di pojok kanan bawah blok untuk mengonfirmasi pengaturan.
 
 ---
 
-### Langkah 5: Menyimpan Perubahan
-1. Klik tombol **Simpan** di pojok kanan bawah kotak pengaturan.
-2. Perubahan susunan, judul, maupun penambahan gambar baru akan langsung diterapkan secara *real-time* pada tampilan *carousel* Beranda website publik.
+## Ringkasan Struktur & Komponen UI
 
----
-
-## Ringkasan Fitur
-
-| Elemen | Fungsi & Keterangan |
-| :--- | :--- |
-| **Badge Urutan** | Menunjukkan posisi perputaran *slide* gambar banner pada halaman Beranda. |
-| **Judul Banner** | Kolom input teks untuk menamai berkas atau identitas promo banner. |
-| **Tombol Upload Gambar** | Opsi untuk memilih dan mengunggah berkas gambar promo baru dari komputer. |
-| **Tombol Hapus** | Menghapus gambar banner terpilih dari daftar putar slider Beranda. |
-| **Tombol Simpan** | Memperbarui dan menayangkan perubahan banner ke halaman publik. |
+| Komponen / Field | Tipe | Fungsi & Keterangan |
+| :--- | :--- | :--- |
+| **Judul Banner / Pop-up** | Input Teks | Penamaan berkas banner untuk identifikasi internal. |
+| **Link saat diklik** | Input URL | Tautan pengalihan opsi saat gambar pop-up diklik. |
+| **Tampilkan pop-up** | Sakelar Toggle | Mengaktifkan atau menyembunyikan penayangan pop-up secara langsung. |
+| **Tampil untuk level mitra** | Dropdown | Menentukan kualifikasi tingkatan mitra yang dapat melihat pop-up. |
+| **Urutan tampil** | Input Angka | Mengatur hirarki prioritas urutan penayangan banner. |
+| **Upload Gambar** | Opsi Unggah | Memilih dan mengunggah media visual baru dari perangkat. |
+| **Tombol Hapus** | Tombol Aksi | Menghapus slot banner dari konfigurasi sistem. |
+| **Tombol Simpan** | Eksekusi | Menerapkan dan menerbitkan seluruh pembaruan ke platform. |

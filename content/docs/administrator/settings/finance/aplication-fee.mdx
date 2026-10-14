@@ -2,31 +2,37 @@
 title: Biaya Aplikasi
 icon: SlidersHorizontal
 ---
-Halaman **Biaya Aplikasi** digunakan oleh Administrator untuk menetapkan biaya penanganan (*platform fee*) atau biaya layanan tambahan yang dibebankan kepada pembeli pada setiap kali melakukan transaksi *checkout* pesanan.
 
-Biaya ini akan ditambahkan secara otomatis ke total tagihan pesanan pembeli di halaman pembayaran.
+Halaman **Biaya Aplikasi** digunakan oleh Administrator untuk menetapkan biaya penanganan (*platform fee*) atau biaya layanan tambahan yang dibebankan kepada pembeli pada setiap transaksi *checkout* pesanan di platform **Teem.id**.
 
-## Alur Menentukan Biaya Aplikasi
+Biaya ini akan ditambahkan secara otomatis ke dalam akumulasi total rincian tagihan pesanan pembeli pada halaman pembayaran.
 
-Sebagai Administrator, Anda dapat mengonfigurasi atau mengubah nominal biaya aplikasi melalui langkah-langkah berikut:
+---
 
-### Langkah 1: Membuka Menu Biaya Aplikasi
-1. Masuk ke menu **Administrator > Pengaturan**.
-2. Pada bilah navigasi kiri di bawah kategori **KEUANGAN**, pilih sub-menu **Biaya Aplikasi**.
-3. Halaman akan menampilkan kotak pengaturan **Nominal biaya aplikasi per checkout**.
+## Cara Mengakses Halaman Biaya Aplikasi
 
-### Langkah 2: Mengisi Nominal Biaya
-1. Pada kolom input berawalan **Rp**, masukkan angka nominal biaya layanan yang ingin dibebankan per transaksi.
-2. Jika perusahaan tidak ingin mengenakan biaya tambahan sama sekali kepada pembeli, masukkan angka `0`.
+Bagi Administrator yang ingin mengatur atau mengonfigurasi besaran biaya transaksi layanan, ikuti langkah navigasi berikut:
 
-### Langkah 3: Menyimpan Perubahan
-1. Klik tombol **Simpan** di pojok kanan bawah kartu pengaturan.
-2. Perubahan nominal akan langsung berlaku untuk seluruh transaksi *checkout* transaksi pembeli berikutnya.
+1. Pada bilah navigasi kiri (*sidebar*), buka modul **Administrator > Pengaturan**.
+2. Pada panel navigasi sebelah kiri di bawah kategori **KEUANGAN**, pilih sub-menu **Biaya Aplikasi**.
+3. Sistem akan menampilkan kartu pengaturan **Nominal biaya aplikasi per checkout**.
 
-## Penjelasan Fitur
+---
 
-| Elemen | Fungsi & Keterangan |
-| :--- | :--- |
-| **Nominal Biaya per Checkout** | Kolom pengisian jumlah rupiah biaya layanan per transaksi pesanan. |
-| **Pengisian Angka 0** | Opsi gratis biaya penanganan jika tidak ada tambahan biaya layanan. |
-| **Tombol Simpan** | Menerapkan aturan biaya transaksi baru ke seluruh sistem secara *real-time*. |
+## Panduan Pengaturan Nominal Biaya Aplikasi
+
+Administrator dapat menentukan besaran biaya layanan per transaksi transaksi secara fleksibel:
+
+* **Pengisian Nominal Biaya:** Pada kolom input berawalan **Rp**, masukkan nominal angka biaya layanan yang ingin dibebankan pada setiap transaksi *checkout*.
+* **Opsi Bebas Biaya (Gratis):** Jika perusahaan tidak mengenakan biaya penanganan tambahan kepada pelanggan, masukkan angka `0`.
+* **Konfirmasi Perubahan:** Klik tombol **Simpan** berwarna merah di pojok kanan bawah kartu pengaturan. Perubahan nominal akan langsung berlaku secara *real-time* untuk seluruh transaksi *checkout* berikutnya.
+
+---
+
+## Ringkasan Struktur & Fungsi Elemen UI
+
+| Komponen / Field | Tipe | Fungsi & Keterangan |
+| :--- | :--- | :--- |
+| **Nominal Biaya per Checkout** | Input Angka | Kolom pengisian jumlah rupiah biaya layanan per transaksi pesanan. |
+| **Pengisian Angka 0** | Nilai Standar | Opsi pembebasan biaya penanganan (*free platform fee*). |
+| **Tombol Simpan** | Eksekusi | Menerapkan dan memperbarui aturan biaya layanan ke dalam sistem. |

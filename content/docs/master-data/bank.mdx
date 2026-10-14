@@ -7,65 +7,68 @@ Halaman **Master Data Bank** digunakan oleh Administrator untuk mengelola daftar
 
 ---
 
+## Cara Mengakses Halaman Master Data Bank
+
+Bagi Administrator yang ingin mengelola daftar bank terdaftar, ikuti langkah navigasi berikut:
+
+1. Pada bilah navigasi kiri (*sidebar*), buka modul **Master Data > Bank**.
+2. Sistem akan menampilkan halaman utama **Bank** beserta kartu indikator statistik dan tabel daftar bank.
+
+---
+
 ## Ringkasan Indikator Bank
 
-Di bagian atas halaman, terdapat 2 kartu informasi:
+Di bagian atas halaman, terdapat dua kartu statistik indikator utama:
+
 * **Total Bank:** Jumlah keseluruhan bank yang terdaftar di dalam sistem.
-* **Bank Aktif:** Jumlah bank yang saat ini dalam status aktif dan dapat dipilih oleh pengguna/mitra.
+* **Bank Aktif:** Jumlah bank yang berstatus aktif dan dapat dipilih oleh pengguna/mitra.
 
 ---
 
-## Alur Mengelola & Memfiltrasi Data Bank
+## Panduan Pengelolaan & Pemfiltrasi Data Bank
 
-### Langkah 1: Mencari & Memfilter Tampilan Data
-1. Buka modul **Master Data > Bank**.
-2. **Pencarian Cepat:** Gunakan kolom input **Cari bank / kode...** di sebelah kiri untuk mencari nama bank atau kode singkat.
-3. **Penyaringan Berdasarkan Status (Dropdown Semua Status):**  
-   Klik menu dropdown **Semua Status** untuk menyaring baris tabel yang tampil:
-   * **Semua Status:** Menampilkan seluruh bank baik yang aktif maupun nonaktif.
-   * **Aktif:** Hanya menampilkan bank yang sedang diizinkan untuk transaksi.
-   * **Nonaktif:** Hanya menampilkan bank yang sedang dimatikan dari pilihan sistem.
+Administrator dapat menyaring data bank, mengatur visibilitas kolom tabel, menambahkan bank baru, hingga memperbarui atau menghapus opsi bank.
+
+### 1. Pencarian & Penyaringan Data
+
+* **Pencarian Cepat:** Gunakan kolom input **Cari bank / kode...** di sebelah kiri untuk menemukan nama bank atau kode singkat secara spesifik.
+* **Filter Status:** Gunakan menu dropdown **Semua Status** untuk menyaring baris tabel berdasarkan status keaktifan (**Semua Status**, **Aktif**, atau **Nonaktif**).
 
 ---
 
-### Langkah 2: Mengatur Tampilan Kolom Tabel (Visibilitas Kolom)
-Di sebelah kiri tombol **+ Tambah**, terdapat ikon **Pengaturan Kolom (Ikon Sliders)**. Fitur ini berfungsi untuk menyembunyikan atau menampilkan kolom tertentu pada tabel:
-1. Klik ikon **Pengaturan Kolom**.
-2. Centang atau hapus centang pada opsi yang muncul:
-   * **Kode:** Menampilkan/menyembunyikan kolom kode bank pada tabel.
-   * **Status:** Menampilkan/menyembunyikan kolom label status pada tabel.
+### 2. Visibilitas Tampilan Kolom
+
+Klik ikon **Pengaturan Kolom (Sliders)** di sebelah kiri tombol **+ Tambah** untuk menyesuaikan tampilan kolom pada tabel:
+
+* Centang atau hapus centang pada opsi **Kode** dan **Status** untuk menampilkan atau menyembunyikan kolom tersebut dari tampilan antarmuka.
 
 ---
 
-### Langkah 3: Menambah Bank Baru
-1. Klik tombol **+ Tambah** berwarna merah di pojok kanan atas.
-2. Pada modal **Tambah Bank**:
-   * Masukkan **Kode \*** bank.
-   * Masukkan **Nama \*** bank.
-   * Aktifkan sakelar **Aktif** agar bank dapat langsung digunakan.
-3. Klik tombol **Tambah**.
+### 3. Menambahkan Bank Baru
+
+1. Klik tombol **+ Tambah** berwarna merah di pojok kanan atas halaman.
+2. Pada modal **Tambah Bank**, lengkapi parameter berikut:
+   * **Kode \***: Masukkan kode unik institusi perbankan.
+   * **Nama \***: Masukkan nama resmi institusi bank.
+   * **Aktif**: Nyalakan sakelar (*toggle*) agar opsi bank langsung dapat digunakan.
+3. Klik tombol **Tambah** untuk menyimpan data.
 
 ---
 
-### Langkah 4: Mengedit Data Bank
-1. Cari bank pada tabel, lalu klik ikon **Pensil (Edit)** pada kolom **Aksi**.
-2. Pada modal **Edit Bank**, ubah **Kode**, **Nama**, atau status **Aktif** sesuai kebutuhan.
-3. Klik tombol **Simpan**.
+### 4. Pembaruan, Kontrol Cepat, & Penghapusan Bank
 
----
+Pada kolom **Aksi** di tabel utama:
 
-### Langkah 5: Mengubah Status Cepat & Menghapus Bank
-Pada kolom **Aksi** di tabel, gunakan tombol pintas:
-* **Ikon Toggle (Sakelar Merah):** Mengubah status bank (*Aktif/Nonaktif*) secara langsung tanpa perlu membuka pop-up edit.
-* **Ikon Pensil:** Membuka jendela pengubahan data bank.
-* **Ikon Tempat Sampah:** Menghapus data bank dari sistem jika tidak lagi digunakan.
+* **Sakelar Toggle Status:** Klik ikon sakelar (*toggle*) untuk mengubah status operasional bank (**Aktif/Nonaktif**) secara langsung.
+* **Ikon Pensil (Edit):** Membuka modal penyuntingan untuk memperbarui Kode, Nama, atau Status bank, lalu klik **Simpan**.
+* **Ikon Tempat Sampah (Hapus):** Menghapus data bank dari sistem jika sudah tidak digunakan lagi.
 
 ---
 
 ## Tabel Fitur Penyaringan & Kolom
 
-| Fitur | Jenis | Fungsi Utama |
+| Fitur / Elemen | Jenis | Fungsi Utama |
 | :--- | :--- | :--- |
-| **Dropdown Status** | Filter | Memilih filter data berdasarkan status (*Semua Status*, *Aktif*, *Nonaktif*). |
-| **Ikon Sliders** | Pengaturan Kolom | Menyesuaikan tampilan kolom tabel (centang *Kode* atau *Status* untuk menampilkan/menyembunyikan). |
-| **Tombol Toggle (Aksi)** | Kontrol Cepat | Mengaktifkan atau mematikan status operasional bank secara instan. |
+| **Dropdown Status** | Filter | Memilih filter data berdasarkan status (**Semua Status**, **Aktif**, **Nonaktif**). |
+| **Ikon Sliders** | Pengaturan Kolom | Menyesuaikan tampilan kolom tabel (menampilkan/menyembunyikan **Kode** atau **Status**). |
+| **Tombol Toggle** | Kontrol Cepat | Mengaktifkan atau mematikan status operasional bank secara instan. |

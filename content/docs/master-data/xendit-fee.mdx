@@ -9,70 +9,57 @@ Konfigurasi ini digunakan sebagai acuan perhitungan kalkulasi biaya transaksi sa
 
 ---
 
-## Penjelasan Kartu Statistik (Stat Card)
+## Cara Mengakses Halaman Biaya Xendit
 
-Di bagian atas halaman, terdapat 2 **Stat Card** (kartu indikator ringkasan) untuk memantau variasi metode pembayaran:
+Bagi Administrator yang ingin mengonfigurasi tarif gerbang pembayaran elektronik, ikuti langkah navigasi berikut:
 
-### 1. Metode Pembayaran (Ikon Kartu Kredit)
-* **Angka Utama:** Menampilkan jumlah total saluran pembayaran yang terdaftar di dalam sistem.
-* **Keterangan:** *Daftar metode pembayaran*.
-* **Fungsi:** Membantu Admin melihat berapa banyak jenis metode transaksi elektronik yang didukung oleh sistem.
-
-### 2. Kategori (Ikon Tumpukan Layer)
-* **Angka Utama:** Menampilkan jumlah kelompok/kategori metode pembayaran yang aktif di sistem.
-* **Keterangan:** *Kategori metode pembayaran*.
-* **Fungsi:** Membantu Admin mengelompokkan saluran pembayaran berdasarkan tipenya.
+1. Pada bilah navigasi kiri (*sidebar*), buka modul **Master Data > Biaya Xendit**.
+2. Sistem akan menampilkan halaman **Biaya Layanan Xendit** beserta ringkasan statistik metode pembayaran dan tabel konfigurasinya.
 
 ---
 
-## Alur Mengelola & Memfiltrasi Biaya Xendit
+## Penjelasan Kartu Indikator Statistik
 
-### Langkah 1: Mencari & Memfilter Data Pembayaran
-1. Masuk ke modul **Master Data > Biaya Xendit**.
-2. **Pencarian Cepat:** Gunakan kolom input **Cari...** di sebelah kiri untuk mencari nama atau kode kanal pembayaran.
-3. **Filter Kategori (Dropdown Semua Kategori):**  
-   Pilih opsi pada dropdown ini jika ingin memfilter tabel berdasarkan jenis kategori tertentu.
-4. **Filter Status (Dropdown Semua Status):**  
-   Pilih opsi **Aktif** untuk melihat metode yang siap digunakan pembeli, atau **Nonaktif** untuk metode pembayaran yang sedang ditangguhkan.
+Di bagian atas halaman, terdapat dua kartu indikator statistik utama (*Stat Cards*):
+
+* **Metode Pembayaran:** Menampilkan jumlah total saluran pembayaran yang terdaftar di dalam sistem.
+* **Kategori:** Menampilkan jumlah kelompok/kategori metode pembayaran yang aktif.
 
 ---
 
-### Langkah 2: Mengatur Visibilitas Kolom Tabel
-Di sebelah kanan filter status, terdapat ikon **Pengaturan Kolom (Ikon Sliders)**:
-1. Klik ikon **Pengaturan Kolom**.
-2. Centang atau hapus centang pada opsi nama kolom untuk menampilkan atau menyembunyikan kolom informasi tertentu pada tabel agar tampilan layar lebih ringkas.
+## Panduan Pengelolaan & Konfigurasi Biaya Payment Gateway
+
+Administrator dapat menyaring saluran transaksi, mengatur visibilitas kolom, hingga memperbarui skema potongan biaya:
+
+### 1. Pencarian & Filtering Data
+
+* **Pencarian Cepat:** Gunakan kolom input **Cari...** di sebelah kiri untuk menemukan nama atau kode kanal pembayaran.
+* **Filter Kategori:** Pilih kategori pembayaran spesifik pada dropdown **Semua Kategori**.
+* **Filter Status:** Pilih opsi **Aktif** atau **Nonaktif** pada dropdown **Semua Status**.
+* **Visibilitas Kolom:** Klik ikon **Pengaturan Kolom (Sliders)** untuk menampilkan atau menyembunyikan kolom informasi spesifik pada tabel.
 
 ---
 
-### Langkah 3: Menambah Metode Pembayaran & Fee Baru
+### 2. Menambahkan Metode Pembayaran & Fee Baru
+
 1. Klik tombol **+ Tambah** berwarna merah di pojok kanan atas.
-2. Pada jendela modal pop-up **Tambah Fee Xendit**, lengkapi parameter:
-   * **Kode Metode Pembayaran \*:** Masukkan kode unik saluran transaksi Xendit.
-   * **Kategori \*:** Masukkan nama kelompok transaksi.
-   * **Nama Tampilan \*:** Masukkan sebutan nama metode pembayaran yang akan dibaca oleh pengguna.
-   * **Tipe Fee \*:** Klik dropdown dan pilih salah satu skema pemotongan biaya transaksi:
-     * **Persentase (%)**: Biaya dihitung berdasarkan persentase dari total nilai transaksi belanja.
-     * **Flat (Rp)**: Biaya ditetapkan dengan nominal angka rupiah pasti per transaksi.
-   * **Nilai Fee \* (% / Rp):** Masukkan persentase atau nominal rupiah potongan.
-   * **PPN (%) \*:** Masukkan persentase pajak transaksi.
-   * **Aktif (Sakelar Toggle):** Nyalakan sakelar ke warna merah agar opsi pembayaran ini langsung aktif di halaman *checkout*.
+2. Pada modal **Tambah Fee Xendit**, lengkapi parameter:
+   * **Kode Metode Pembayaran \***: Masukkan kode unik saluran transaksi Xendit.
+   * **Kategori \***: Masukkan nama kelompok transaksi.
+   * **Nama Tampilan \***: Masukkan sebutan nama metode pembayaran untuk tampilan pengguna.
+   * **Tipe Fee \***: Pilih skema potongan (**Persentase (%)** dari total belanja atau **Flat (Rp)** bernilai pasti).
+   * **Nilai Fee \***: Masukkan angka persentase atau nominal rupiah potongan.
+   * **PPN (%) \***: Masukkan persentase pajak transaksi.
+   * **Aktif**: Nyalakan sakelar (*toggle*) agar opsi pembayaran langsung aktif di halaman *checkout*.
 3. Klik tombol **Tambah** untuk menyimpan data.
 
 ---
 
-### Langkah 4: Mengedit Data Biaya Xendit (Edit)
-1. Cari baris metode pembayaran yang ingin diperbarui pada tabel.
-2. Pada kolom **Aksi**, klik ikon **Pensil (Edit)**.
-3. Pada modal **Edit Fee Xendit**, sesuaikan opsi **Tipe Fee** (*Persentase (%)* atau *Flat (Rp)*), **Nilai Fee**, tarif **PPN**, atau **Nama Tampilan** sesuai perbaruan tarif resmi dari Xendit.
-4. Klik tombol **Simpan**.
+### 3. Pembaruan & Kontrol Cepat
 
----
-
-### Langkah 5: Mengubah Status Cepat & Menghapus Metode
-Pada kolom **Aksi**, gunakan 3 tombol kontrol pintas:
-* **Ikon Toggle (Sakelar Merah):** Mengubah status metode pembayaran (*Aktif/Nonaktif*) secara langsung tanpa membuka menu edit.
-* **Ikon Pensil:** Membuka jendela pop-up pengubahan rincian fee.
-* **Ikon Tempat Sampah:** Menghapus metode pembayaran dari sistem jika saluran transaksi tersebut sudah tidak didukung lagi.
+* **Ikon Pensil (Edit):** Membuka modal penyuntingan untuk menyesuaikan Tipe Fee, Nilai Fee, tarif PPN, atau Nama Tampilan, lalu klik **Simpan**.
+* **Ikon Toggle Status:** Mengubah status metode pembayaran (**Aktif/Nonaktif**) secara langsung.
+* **Ikon Tempat Sampah (Hapus):** Menghapus metode pembayaran dari sistem jika saluran transaksi tersebut sudah tidak didukung.
 
 ---
 
@@ -80,5 +67,5 @@ Pada kolom **Aksi**, gunakan 3 tombol kontrol pintas:
 
 | Opsi Tipe Fee | Cara Kerja Perhitungan |
 | :--- | :--- |
-| **Persentase (%)** | Potongan dihitung dari persentase total nominal *checkout*. |
-| **Flat (Rp)** | Potongan tetap tanpa terpengaruh total nominal belanja. |
+| **Persentase (%)** | Potongan dihitung dari persentase total nominal transaksi *checkout*. |
+| **Flat (Rp)** | Potongan bernilai tetap tanpa terpengaruh total nominal belanja. |

@@ -9,7 +9,7 @@ Halaman **Laporan Ongkir** digunakan oleh Administrator untuk memantau ringkasan
 
 ## Cara Mengakses Halaman Laporan Ongkir
 
-Bagi Administrator yang baru pertama kali mengakses fitur ini, ikuti langkah navigasi berikut:
+Bagi Administrator yang ingin meninjau atau menganalisis rekapan ongkos kirim, ikuti langkah navigasi berikut:
 
 1. Pada bilah navigasi kiri (*sidebar*), buka modul **Penjualan > Laporan Ongkir**.
 2. Sistem akan menampilkan halaman utama **Laporan Ongkir** beserta kartu indikator dan tabel rekapan transaksi.
@@ -41,11 +41,12 @@ Di bagian atas halaman, terdapat 3 kartu statistik yang menyajikan akumulasi bia
 
 ## Fitur Pencarian & Penyaringan Data
 
-Gunakan baris kontrol di pojok kanan atas tabel untuk menyaring rekapan transaksi ongkos kirim:
+Gunakan baris kontrol di bagian atas tabel untuk menyaring rekapan transaksi ongkos kirim:
 
-* **Pencarian Cepat:** Masukkan nomor invoice (contoh: `INV-2026-00202`) pada kolom **Cari INV...** untuk memeriksa rincian transaksi tertentu secara presisi.
+* **Pencarian Cepat:** Masukkan nomor invoice (contoh: `INV-2026-00218`) pada kolom **Cari INV...** untuk memeriksa rincian transaksi tertentu secara presisi.
 * **Filter Tipe Pengiriman:** Gunakan dropdown **Semua Tipe** untuk menyaring transaksi berdasarkan metode pengiriman (misalnya *KiriminAja* atau *Subsidi*).
-* **Filter Periode:** Gunakan dropdown rentang waktu (misalnya *Tahun Ini*) untuk membatasi rekapan periode data.
+* **Filter Status Pesanan:** Gunakan dropdown **Semua Status** untuk menyaring daftar transaksi berdasarkan status alur pengiriman pesanan (misalnya *Diproses*, *Pesanan Sampai*, atau *Selesai*).
+* **Filter Periode:** Gunakan dropdown rentang waktu (misalnya **Tahun Ini**) untuk membatasi rekapan periode data.
 * **Tombol Export:** Mengunduh seluruh rekapan laporan ongkos kirim ke dalam berkas spreadsheet (Excel/CSV).
 
 ---
@@ -59,5 +60,6 @@ Gunakan baris kontrol di pojok kanan atas tabel untuk menyaring rekapan transaks
 | **Ongkir Pesanan** | Nominal ongkos kirim yang dibayarkan oleh pembeli. |
 | **Ongkir Kirim** | Nominal ongkos kirim aktual yang ditagihkan ekspedisi. |
 | **Asuransi** | Biaya asuransi pengiriman barang yang dikenakan pada transaksi. |
-| **Selisih** | Margin selisih biaya ongkir. Ditandai warna **Hijau (+)** jika surplus dan **Merah (-)** jika terdapat subsidi. |
+| **Selisih** | Margin selisih biaya ongkir. Ditandai warna **Hijau (+)** jika surplus dan **Merah (-)** jika terdapat beban/subsidi. |
+| **Status** | Badge indikator alur pengiriman pesanan (*Diproses*, *Pesanan Sampai*, *Selesai*). |
 | **Tgl** | Tanggal dan stempel waktu (*timestamp*) transaksi diproses. |

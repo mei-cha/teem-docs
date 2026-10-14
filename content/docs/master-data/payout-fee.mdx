@@ -3,69 +3,61 @@ title: Biaya Payout
 icon: Banknote
 ---
 
-Halaman **Biaya Layanan Payout Xendit** digunakan oleh Administrator untuk mengonfigurasi potongan biaya pencairan dana (*payout/disbursement fee*) beserta Pajak Pertambahan Nilai (PPN) dari penyedia gerbang pembayaran (Xendit) ketika sistem mentransfer dana *withdraw* ke rekening pribadi mitra.
+Halaman **Biaya Layanan Payout Xendit** digunakan oleh Administrator untuk mengonfigurasi potongan biaya pencairan dana (*payout/disbursement fee*) beserta Pajak Pertambahan Nilai (PPN) dari penyedia gerbang pembayaran (Xendit) ketika sistem mentransfer dana *withdraw* ke rekening pribadi mitra pada platform **Teem.id**.
 
-Biaya ini akan menjadi acuan pemotongan otomatis pada saat proses penarikan saldo mitra berhasil dieksekusi.
-
----
-
-## Penjelasan Kartu Statistik (Stat Card)
-
-Di bagian atas halaman, terdapat 3 **Stat Card** (kartu indikator ringkasan) untuk memantau status saluran pencairan dana:
-
-### 1. Total Fee (Ikon Kartu Kredit)
-* **Angka Utama:** Menampilkan total akumulasi saluran pencairan (*channel disbursement*) yang terdaftar di dalam sistem.
-* **Fungsi:** Membantu Admin melihat berapa banyak aturan biaya pencairan yang terkonfigurasi.
-
-### 2. Aktif (Ikon Centang Hijau)
-* **Angka Utama:** Menampilkan jumlah saluran pencairan dana yang sedang berstatus aktif.
-* **Fungsi:** Membantu Admin memastikan aturan biaya pencairan dana mana saja yang sedang memotong transaksi pencairan mitra.
-
-### 3. Nonaktif (Ikon Silang Merah)
-* **Angka Utama:** Menampilkan jumlah saluran pencairan yang sedang dimatikan/ditangguhkan.
-* **Fungsi:** Membantu Admin memantau aturan biaya pencairan yang sedang tidak diberlakukan.
+Biaya ini menjadi acuan pemotongan otomatis pada saat proses penarikan saldo mitra berhasil dieksekusi.
 
 ---
 
-## Alur Mengelola Biaya Payout Xendit
+## Cara Mengakses Halaman Biaya Payout
 
-### Langkah 1: Mencari & Memfilter Data Payout
-1. Masuk ke modul **Master Data > Biaya Payout**.
-2. **Pencarian Cepat:** Gunakan kolom input **Cari...** di sebelah kiri untuk mencari nama saluran pencairan.
-3. **Filter Status (Dropdown Semua Status):**  
-   Klik menu dropdown ini untuk menyaring tabel berdasarkan status:
-   * **Semua Status:** Menampilkan seluruh saluran pencairan baik aktif maupun nonaktif.
-   * **Aktif:** Hanya menampilkan saluran pencairan yang siap digunakan.
-   * **Nonaktif:** Hanya menampilkan saluran pencairan yang sedang dimatikan.
+Bagi Administrator yang ingin mengonfigurasi skema pemotongan biaya pencairan dana, ikuti langkah navigasi berikut:
+
+1. Pada bilah navigasi kiri (*sidebar*), buka modul **Master Data > Biaya Payout**.
+2. Sistem akan menampilkan halaman **Biaya Layanan Payout Xendit** beserta statistik saluran pencairan dan tabel konfigurasinya.
 
 ---
 
-### Langkah 2: Menambah Fee Payout Baru
+## Ringkasan Indikator Saluran Pencairan
+
+Di bagian atas halaman, terdapat tiga kartu indikator statistik utama (*Stat Cards*):
+
+* **Total Fee:** Menampilkan akumulasi total saluran pencairan dana (*channel disbursement*) yang terdaftar di dalam sistem.
+* **Aktif:** Menampilkan jumlah saluran pencairan dana yang sedang berstatus aktif dan memberlakukan pemotongan biaya.
+* **Nonaktif:** Menampilkan jumlah saluran pencairan dana yang sedang ditangguhkan/dimatikan.
+
+---
+
+## Panduan Pengelolaan Fee Payout
+
+Administrator dapat mencari saluran pencairan, menambahkan skema biaya baru, memperbarui tarif, hingga mengatur status keaktifan.
+
+### 1. Pencarian & Penyaringan Data
+
+* **Pencarian Cepat:** Gunakan kolom input **Cari...** di sebelah kiri untuk mencari nama saluran pencairan.
+* **Filter Status:** Gunakan menu dropdown **Semua Status** untuk memfilter saluran pencairan berdasarkan status (**Semua Status**, **Aktif**, atau **Nonaktif**).
+
+---
+
+### 2. Menambahkan Fee Payout Baru
+
 1. Klik tombol **+ Tambah** berwarna merah di pojok kanan atas.
-2. Pada modal pop-up **Tambah Fee Payout Xendit**, lengkapi parameter:
-   * **Kode Channel \*:** Masukkan kode pengenal saluran pencairan.
-   * **Nama Tampilan \*:** Masukkan nama saluran pencairan yang mudah dipahami.
-   * **Tipe Fee \*:** Pilih skema potongan pada dropdown.
-   * **Nilai Fee \* (Rp):** Masukkan nominal rupiah biaya pencairan per transaksi.
-   * **PPN (%) \*:** Masukkan persentase pajak transaksi.
-   * **Aktif (Sakelar Toggle):** Nyalakan sakelar ke warna merah agar aturan pencairan dana ini langsung berlaku.
+2. Pada modal **Tambah Fee Payout Xendit**, lengkapi parameter:
+   * **Kode Channel \***: Masukkan kode pengenal saluran pencairan.
+   * **Nama Tampilan \***: Masukkan nama saluran pencairan yang mudah dipahami.
+   * **Tipe Fee \***: Pilih skema potongan pada dropdown.
+   * **Nilai Fee \* (Rp)**: Masukkan nominal rupiah biaya pencairan per transaksi.
+   * **PPN (%) \***: Masukkan persentase pajak transaksi.
+   * **Aktif**: Nyalakan sakelar (*toggle*) agar aturan biaya langsung berlaku.
 3. Klik tombol **Tambah** untuk menyimpan data.
 
 ---
 
-### Langkah 3: Mengedit Data Fee Payout (Edit)
-1. Cari baris saluran pencairan yang ingin diperbarui pada tabel.
-2. Pada kolom **Aksi**, klik ikon **Pensil (Edit)**.
-3. Pada modal **Edit Fee Payout Xendit**, sesuaikan nominal **Nilai Fee (Rp)**, **PPN (%)**, atau **Nama Tampilan** sesuai perbaruan biaya resmi Xendit.
-4. Klik tombol **Simpan**.
+### 3. Pembaruan & Kontrol Cepat
 
----
-
-### Langkah 4: Mengubah Status Cepat & Menghapus Fee Payout
-Pada kolom **Aksi**, gunakan 3 tombol kontrol pintas:
-* **Ikon Toggle (Sakelar Merah):** Mengubah status aturan pencairan (*Aktif/Nonaktif*) secara langsung tanpa membuka pop-up edit.
-* **Ikon Pensil:** Membuka jendela pop-up untuk mengubah data fee pencairan.
-* **Ikon Tempat Sampah:** Menghapus aturan biaya pencairan dari sistem jika sudah tidak digunakan.
+* **Ikon Pensil (Edit):** Membuka modal penyuntingan untuk penyesuaian nominal **Nilai Fee (Rp)**, **PPN (%)**, atau **Nama Tampilan**, lalu klik **Simpan**.
+* **Ikon Toggle Status:** Mengubah status aturan pencairan (**Aktif/Nonaktif**) secara langsung tanpa membuka modal edit.
+* **Ikon Tempat Sampah (Hapus):** Menghapus aturan biaya pencairan dari sistem jika sudah tidak digunakan.
 
 ---
 
@@ -76,5 +68,5 @@ Pada kolom **Aksi**, gunakan 3 tombol kontrol pintas:
 | **Nama Channel** | Nama tampilan dan kode unik saluran pencairan. |
 | **Fee Payout** | Nominal rupiah potongan biaya transfer per transaksi beserta tipenya. |
 | **PPN** | Persentase beban Pajak Pertambahan Nilai. |
-| **Status** | Label indikator operasional (*Aktif* / *Nonaktif*). |
-| **Aksi** | Terdiri dari tombol pintas **Toggle Status**, **Pensil (Edit)**, dan **Tempat Sampah (Hapus)**. |
+| **Status** | Badge indikator operasional (**Aktif** / **Nonaktif**). |
+| **Aksi** | Tombol pintas **Toggle Status**, **Pensil (Edit)**, dan **Tempat Sampah (Hapus)**. |

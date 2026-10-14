@@ -34,6 +34,7 @@
     "partnerships/rejection-categories",
 
     "---KEUANGAN---",
+    "finance/dashboard",
     "finance/opening-balance",
     "finance/my-balance",
     "finance/partner-balance",

@@ -9,56 +9,46 @@ Pengaturan kupon mencakup fleksibilitas penentuan persentase/nominal diskon, cak
 
 ---
 
-## Alur Mengelola Kupon
+## Cara Mengakses Halaman Kupon
 
-### Langkah 1: Akses Menu & Pencarian Kupon 
-1. Buka modul **Promosi > Kupon**.
-2. **Pencarian Cepat:** Gunakan kolom input **Cari nama atau kode kupon...** di pojok kanan atas tabel untuk menyaring voucher berdasarkan nama promo atau kode kupon.
-3. Tabel akan menyaring dan menampilkan baris promo yang sesuai secara *real-time*.
+Bagi Administrator yang ingin mengelola atau mengonfigurasi voucher promosi, ikuti langkah navigasi berikut:
 
----
-
-### Langkah 2: Membuat Promo/Kupon Baru
-1. Klik tombol **+ Tambah** berwarna merah di pojok kanan atas.
-2. Halaman akan beralih ke formulir **Tambah Promo / Kupon**. Lengkapi bagian-bagian berikut:
-
-#### A. Informasi Umum
-* **Nama \*:** Masukkan sebutan nama program promosi.
-* **Code \*:** Masukkan kode voucher unik yang akan diketik pengguna saat *checkout*.
-* **Status:** Pilih status awal voucher pada dropdown (*Aktif* / *Nonaktif*).
-
-#### B. Pengaturan Diskon
-* **Diskon Untuk:** Pilih cakupan produk yang berhak mendapat potongan pada dropdown.
-* **Tipe:** Pilih skema potongan (*Persentase (%)* atau *Nominal Rupiah*).
-* **Nilai Diskon \*:** Masukkan angka besaran potongan.
-
-#### C. Pembatasan Tambahan :
-* **Zona (Wilayah):** Centang jika promo hanya berlaku khusus untuk area geografis/wilayah tertentu.
-* **Limitasi:**
-  * *Maksimal User*: Batas kuota berapa kali voucher ini dapat digunakan.
-  * *Pembayaran*: Memilih saluran metode pembayaran tertentu.
-  * *Pengguna Baru*: Centang jika promo khusus pengguna yang pertama kali bertransaksi.
-* **Rentang Tanggal:** Centang untuk menentukan tanggal mulai dan batas waktu berakhirnya kupon.
-* **Min Order:** Centang untuk menetapkan batas minimal total nilai transaksi belanja.
-* **Maks Diskon:** Centang untuk menentukan batas maksimal nominal potongan (khusus tipe persentase).
-* **Min Pembelian:** Centang untuk menetapkan syarat minimal jumlah unit kuantitas barang yang dibeli.
-
-3. Klik tombol **Tambah** berwarna merah di pojok kiri atas untuk menyimpan kupon.
+1. Pada bilah navigasi kiri (*sidebar*), buka modul **Kupon & Poin > Kupon** (atau **Promosi > Kupon**).
+2. Sistem akan menampilkan tabel daftar seluruh voucher promosi terdaftar.
 
 ---
 
-### Langkah 3: Mengedit Data Kupon
-1. Cari baris kupon yang ingin diubah pada tabel utama.
-2. Pada kolom **Aksi**, klik ikon **Pensil**.
-3. Sesuaikan parameter kupon pada formulir edit, lalu klik **Simpan**.
+## Panduan Pengelolaan & Pembuatan Kupon
+
+Administrator dapat mencari voucher aktif, membuat program promosi baru, hingga memperbarui atau menghapus kupon promo.
+
+### 1. Pencarian & Penyaringan Kupon
+
+Gunakan kolom input **Cari nama atau kode kupon...** di pojok kanan atas tabel untuk menyaring voucher berdasarkan nama promo atau kode kupon secara *real-time*.
 
 ---
 
-### Langkah 4: Mengubah Status & Menghapus Kupon
-Pada kolom **Aksi**, gunakan tombol kontrol cepat berikut:
-* **Ikon Toggle (Sakelar Red/Green):** Mengaktifkan atau menonaktifkan masa berlaku kupon secara instan tanpa perlu membuka halaman edit.
-* **Ikon Pensil:** Membuka formulir untuk memperbarui ketentuan voucher.
-* **Ikon Tempat Sampah:** Menghapus kupon dari sistem.
+### 2. Membuat Promo / Kupon Baru
+
+Klik tombol **+ Tambah** berwarna merah di pojok kanan atas untuk membuka formulir **Tambah Promo / Kupon**:
+
+* **Informasi Umum:** Isi Nama Program Promosi, Kode Voucher unik (yang diketik pengguna saat *checkout*), serta Status keaktifan awal.
+* **Pengaturan Diskon:** Tentukan cakupan produk penerima potongan pada dropdown **Diskon Untuk**, pilih **Tipe** (*Persentase (%)* atau *Nominal Rupiah*), dan masukkan besaran **Nilai Diskon**.
+* **Pembatasan Tambahan:**
+  * **Zona (Wilayah):** Batasi keberlakuan promo khusus area geografis tertentu.
+  * **Limitasi:** Tentukan *Maksimal User* (kuota), metode *Pembayaran* spesifik, atau centang *Pengguna Baru*.
+  * **Kriteria Tambahan:** Atur *Rentang Tanggal* aktif, *Min Order* (nominal belanja), *Maks Diskon* (khusus tipe persentase), dan *Min Pembelian* (kuantitas unit barang).
+* Klik tombol **Tambah** berwarna merah untuk menyimpan kupon.
+
+---
+
+### 3. Pembaruan, Sakelar Toggle & Penghapusan Kupon
+
+Pada kolom **Aksi** di tabel utama:
+
+* **Sakelar Toggle (Aktif/Nonaktif):** Mengubah status masa berlaku kupon secara instan tanpa perlu membuka menu edit.
+* **Ikon Pensil (Edit):** Membuka formulir penyuntingan untuk memperbarui ketentuan voucher, lalu klik **Simpan**.
+* **Ikon Tempat Sampah (Hapus):** Menghapus data kupon dari sistem secara permanen.
 
 ---
 
@@ -70,6 +60,6 @@ Pada kolom **Aksi**, gunakan tombol kontrol cepat berikut:
 | **Kode** | Badge kode unik voucher yang diinput pengguna saat transaksi. |
 | **Diskon** | Besaran nilai potongan harga. |
 | **Masa Berlaku** | Periode aktif kupon. |
-| **Penggunaan** | Menampilkan jumlah akumulasi berapa kali voucher telah berhasil dipakai belanja. |
-| **Status** | Label indikator keaktifan kupon (*Aktif* / *Nonaktif*). |
-| **Aksi** | Terdiri dari tombol pintas **Toggle Status**, **Pensil (Edit)**, dan **Tempat Sampah (Hapus)**. |
+| **Penggunaan** | Akumulasi berapa kali voucher telah berhasil digunakan dalam transaksi. |
+| **Status** | Badge indikator keaktifan kupon (**Aktif** / **Nonaktif**). |
+| **Aksi** | Tombol pintas **Toggle Status**, **Pensil (Edit)**, dan **Tempat Sampah (Hapus)**. |

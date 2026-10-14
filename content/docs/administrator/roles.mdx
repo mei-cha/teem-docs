@@ -3,35 +3,51 @@ title: Role
 icon: UserCog
 ---
 
-Halaman **Role** digunakan oleh Administrator untuk mengelola peran atau jabatan pengguna di dalam sistem **Teem.id**. Pengaturan ini menentukan sebutan peran dan hubungan relasi antara akun pengguna dengan hak aksesnya.
+Halaman **Role** digunakan oleh Administrator untuk mengelola hak akses, peranan, serta jabatan pengguna di dalam platform **Teem.id**.
+
+Pengaturan ini menentukan sebutan peran dan pemetaan relasi antara akun pengguna dengan kewenangan atau visibilitas fitur yang dimiliki.
 
 ---
 
-## Ringkasan Informasi Role
+## Cara Mengakses Halaman Role
 
-* **Role:** Menampilkan total jumlah peran yang telah dibuat di sistem.
-* **User Role:** Menampilkan jumlah total relasi pemetaan antara pengguna dengan peran yang terpasang.
+Bagi Administrator yang ingin mengelola atau mengonfigurasi hak akses pengguna, ikuti langkah navigasi berikut:
 
----
-
-## Alur Mengelola dan Menambah Role Baru
-
-### Langkah 1: Akses Menu & Navigasi
-1. Buka modul **Administrator > Role**.
-2. Terdapat dua tab utama: **Role** (mengelola daftar nama peran) dan **User Role** (mengelola pemetaan peran ke akun pengguna).
+1. Pada bilah navigasi kiri (*sidebar*), buka modul **Administrator > Role**.
+2. Sistem akan menampilkan halaman utama **Role** yang terdiri dari dua tab navigasi utama: **Role** dan **User Role**.
 
 ---
 
-### Langkah 2: Menambah Role Baru
-1. Klik tombol **+ Tambah** berwarna merah di pojok kanan atas.
-2. Pada modal yang muncul, isi **Deskripsi** (nama sebutan peran) dan kode **Role**.
-3. Klik tombol **Simpan**.
+## Ringkasan Indikator Role
+
+Di bagian atas halaman, terdapat dua kartu statistik indikator utama:
+
+* **Role:** Menampilkan jumlah total variasi peran/jabatan yang telah dibuat dan terdaftar di dalam sistem.
+* **User Role:** Menampilkan akumulasi total relasi pemetaan hak akses yang telah dipasangkan ke akun pengguna.
 
 ---
 
-### Langkah 3: Mengatur Status Role
-1. Pada tabel daftar role, perhatikan kolom **Status**.
-2. Geser sakelar (*toggle*) ke mode aktif/nonaktif untuk mengontrol apakah peran tersebut dapat digunakan atau ditangguhkan sementara.
+## Panduan Pengelolaan & Pembuatan Role
+
+Administrator dapat beralih antar-tab untuk mengelola nama peran maupun pemetaan hak akses ke masing-masing pengguna.
+
+### 1. Menambahkan Role Baru
+
+1. Pada tab **Role**, klik tombol **+ Tambah** berwarna merah di pojok kanan atas halaman.
+2. Pada modal **Tambah Role**, lengkapi parameter berikut:
+   * **Deskripsi:** Masukkan nama tampilan resmi peran (contoh: *Administrator*, *Finance Staf*, *CS Support*).
+   * **Role:** Masukkan kode unik identifikasi peran di dalam sistem (contoh: `ADMIN`, `FINANCE`, `SUPPORT`).
+3. Klik tombol **Simpan** untuk mendaftarkan peran baru.
+
+---
+
+### 2. Mengatur Status Keaktifan & Penyuntingan Role
+
+Pada tabel utama tab **Role**:
+
+* **Sakelar Status Toggle:** Geser sakelar (*toggle switch*) pada kolom **Status** untuk mengaktifkan atau mematikan fungsi peran secara instan. Peran yang dinonaktifkan tidak dapat dipasangkan ke pengguna baru.
+* **Ikon Pensil (Edit):** Membuka modal penyuntingan untuk memperbarui nama deskripsi atau kode peran.
+* **Ikon Tempat Sampah (Hapus):** Menghapus data peran secara permanen dari sistem (pastikan peran tidak sedang digunakan oleh pengguna aktif).
 
 ---
 
@@ -39,7 +55,7 @@ Halaman **Role** digunakan oleh Administrator untuk mengelola peran atau jabatan
 
 | Kolom | Deskripsi Fungsi |
 | :--- | :--- |
-| **Deskripsi** | Nama tampilan resmi dari peran yang dibuat. |
-| **Role** | Kode identifikasi unik peran di dalam sistem. |
-| **Status** | Sakelar *toggle* untuk mengaktifkan atau mematikan fungsi peran. |
-| **Aksi** | Terdiri dari ikon **Pensil (Edit)** untuk mengubah data peran dan ikon **Tempat Sampah (Hapus)** untuk menghapus peran. |
+| **Deskripsi** | Nama tampilan resmi dari peran/jabatan yang dibuat. |
+| **Role** | Kode unik identifikasi peran di dalam sistem backend. |
+| **Status** | Sakelar *toggle switch* untuk mengaktifkan atau mematikan fungsi keabsahan peran. |
+| **Aksi** | Tombol pintas ikon **Pensil (Edit)** dan **Tempat Sampah (Hapus)**. |

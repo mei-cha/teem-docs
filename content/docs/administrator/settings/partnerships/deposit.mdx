@@ -3,48 +3,52 @@ title: Deposit & Pembelian Awal
 icon: Wallet
 ---
 
-Halaman **Deposit & Pembelian Awal** digunakan untuk menentukan syarat minimal pembelanjaan produk pertama serta besaran jaminan (*deposit*) yang wajib dipenuhi oleh calon mitra saat pertama kali bergabung.
+Halaman **Deposit & Pembelian Awal** digunakan untuk menentukan syarat minimal pembelanjaan produk pertama serta besaran jaminan (*deposit*) yang wajib dipenuhi oleh calon mitra saat pertama kali bergabung pada platform **Teem.id**.
 
-Pengaturan ini sangat penting agar setiap tingkatan mitra (seperti Distributor, Agen, atau Sub Agen) memiliki komitmen komersial dan jumlah pengadaan stok awal yang sesuai dengan levelnya.
+Pengaturan ini memastikan setiap tingkatan mitra (seperti *Distributor*, *Agen*, atau *Sub Agen*) memiliki komitmen komersial dan jumlah pengadaan stok awal yang sesuai dengan levelnya.
 
-## Alur Konfigurasi Syarat Mitra
+---
 
-Sebagai Administrator, Anda perlu mengatur syarat ini untuk masing-masing level mitra yang ada:
+## Cara Mengakses Halaman Deposit & Pembelian Awal
 
-### Langkah 1: Memilih Level Mitra
-1. Masuk ke menu **Administrator > Pengaturan**.
-2. Pada navigasi sebelah kiri di bawah kategori **Kemitraan**, klik sub-menu **Deposit & Pembelian Awal**.
-3. Di halaman utama, Anda akan melihat kartu tingkatan mitra yang tersedia.
-4. Klik tombol **Atur Deposit** pada kartu level mitra yang ingin Anda konfigurasi.
+Bagi Administrator yang ingin mengatur syarat kualifikasi pendaftaran mitra, ikuti langkah navigasi berikut:
 
-### Langkah 2: Mengatur Produk Pembelian Awal
-Pada pop-up modal yang muncul, tentukan produk apa saja yang **wajib dibeli** oleh mitra saat pertama kali mendaftar:
-1. Klik tombol **+ Tambah** untuk memasukkan paket produk wajib.
-2. Pada baris **Produk**, pilih nama produk dari daftar yang tersedia.
-3. Masukkan jumlah kuantitas barang pada kolom **Jumlah**.
-4. Pilih unit kemasan pada kolom **Satuan**.
-5. Sistem akan menghitung otomatis perkalian harga level dengan jumlah barang.
-6. Ulangi langkah di atas jika ada produk tambahan (Produk 2, Produk 3, dst.). Anda juga dapat menghapus daftar produk dengan mengklik ikon **Hapus (Tempat Sampah)**.
+1. Pada bilah navigasi kiri (*sidebar*), buka modul **Administrator > Pengaturan**.
+2. Pada panel navigasi sebelah kiri di bawah kategori **KEMITRAAN**, pilih sub-menu **Deposit & Pembelian Awal**.
+3. Sistem akan menampilkan kartu daftar tingkatan mitra yang tersedia.
 
-### Langkah 3: Menentukan Ketentuan Deposit
-Atur persentase atau nominal jaminan deposit yang harus dibayarkan mitra di luar paket pembelian produk:
-1. Pada bagian **Tipe Deposit**, pilih salah satu metode perhitungan:
-   * **Persen (%)**: Deposit dihitung berdasarkan persentase dari total pembelian awal.
-   * **Nominal (Rp)**: Deposit ditetapkan dengan angka rupiah pasti.
-2. Masukkan angka pada kolom **Persen Deposit** atau **Nominal Deposit**.
-1. Periksa kembali kotak rincian di bagian bawah pop-up:
-   * **Subtotal Pembelian Awal:** Total akumulasi nominal produk yang wajib dibeli.
-   * **Deposit:** Nominal rupiah jaminan yang dihitung dari persentase atau angka pasti.
-   * **Total Tagihan Pendaftaran:** Nilai total yang harus dibayar oleh calon mitra saat mendaftar.
-2. Jika seluruh data sudah sesuai, klik tombol **Simpan**.
+---
 
+## Panduan Konfigurasi Syarat Mitra
+
+Administrator dapat menetapkan paket produk wajib belanja awal serta persentase atau nominal jaminan deposit untuk masing-masing level mitra:
+
+### 1. Memilih & Mengatur Paket Pembelian Awal
+
+1. Klik tombol **Atur Deposit** pada kartu level mitra yang ingin dikonfigurasi.
+2. Pada modal yang muncul, tentukan paket produk wajib belanja:
+   * Klik tombol **+ Tambah** untuk memasukkan item produk.
+   * Pilih nama **Produk**, masukkan kuantitas pada kolom **Jumlah**, dan tentukan **Satuan** kemasan.
+   * Sistem akan mengalkulasi total harga secara otomatis berdasarkan matriks harga level mitra.
+   * Gunakan ikon **Tempat Sampah (Hapus)** jika ingin menghapus item dari paket.
+
+---
+
+### 2. Menentukan Ketentuan Deposit & Konfirmasi
+
+1. Pada bagian **Tipe Deposit**, pilih metode perhitungan:
+   * **Persen (%)**: Deposit dihitung berdasarkan persentase dari total nilai pembelian awal.
+   * **Nominal (Rp)**: Deposit ditetapkan dalam nominal rupiah pasti.
+2. Masukkan nilai pada kolom **Persen Deposit** atau **Nominal Deposit**.
+3. Tinjau kotak rincian kalkulasi (*Subtotal Pembelian Awal*, *Deposit*, dan *Total Tagihan Pendaftaran*).
+4. Klik tombol **Simpan** untuk mengonfirmasi pengaturan.
+
+---
 
 ## Ringkasan Kartu Syarat Mitra
 
-Setelah konfigurasi disimpan, status pada halaman utama akan diperbarui:
-
 | Ringkasan Informasi | Keterangan |
 | :--- | :--- |
-| **Status Level** | Label *Tersedia* menandakan level mitra siap menerima pendaftaran. |
+| **Status Level** | Label *Tersedia* menandakan level mitra aktif dan siap menerima pendaftaran. |
 | **Pembelian Awal** | Menampilkan total variasi item produk wajib. |
 | **Deposit** | Menampilkan besaran persentase atau nominal rupiah deposit yang dipersyaratkan. |

@@ -1,8 +1,0 @@
-﻿{
-  "title": "Pembelian",
-  "icon":"ShoppingBag",
-  "pages": [
-    "pembelian-stok",
-    "stok-perusahaan"
-  ]
-}

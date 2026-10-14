@@ -9,37 +9,35 @@ Data gudang ini menjadi acuan lokasi fisik alokasi persediaan barang pada modul 
 
 ---
 
-## Alur Mengelola Data Gudang 
+## Cara Mengakses Halaman Master Data Gudang
 
-### Langkah 1: Akses Menu & Pencarian Gudang (Search)
-1. Buka navigasi utama di sebelah kiri, pilih modul **Master Data > Gudang**.
-2. **Pencarian Cepat:** Gunakan kolom input **Cari...** di pojok kanan atas tabel untuk mencari gudang berdasarkan nama gudang atau alamat lokasi.
-3. Tabel akan menyaring dan menampilkan baris gudang yang sesuai secara *real-time*.
+Bagi Administrator yang ingin mengelola lokasi atau palet penyimpanan gudang, ikuti langkah navigasi berikut:
 
----
-
-### Langkah 2: Menambah Gudang Baru
-1. Klik tombol **+ Tambah** berwarna merah di pojok kanan atas.
-2. Pada modal pop-up **Tambah Gudang**, lengkapi formulir:
-   * **Nama Gudang:** Masukkan nama penanda gudang atau lokasi palet penyimpanan.
-   * **Alamat:** Tuliskan alamat lengkap atau area lokasi fisik gudang berada.
-3. Klik tombol **Tambah** untuk menyimpan data gudang baru ke dalam sistem.
+1. Pada bilah navigasi kiri (*sidebar*), buka modul **Master Data > Gudang**.
+2. Sistem akan menampilkan tabel daftar lokasi gudang dan palet persediaan terdaftar.
 
 ---
 
-### Langkah 3: Mengedit Data Gudang (Edit)
-1. Cari baris nama gudang yang ingin diperbarui pada tabel.
-2. Pada kolom **Aksi**, klik ikon **Pensil (Edit)**.
-3. Jendela modal **Edit Gudang** akan muncul. Sesuaikan pengisian **Nama Gudang** atau **Alamat** sesuai perbaruan lokasi gudang terkini.
-4. Klik tombol **Simpan** untuk mengonfirmasi perubahan data.
+## Panduan Pengelolaan Data Gudang
+
+Administrator dapat menyaring data lokasi, mendaftarkan gudang baru, memperbarui alamat, hingga menghapus entitas gudang.
+
+### 1. Pencarian & Registrasi Gudang Baru
+
+* **Pencarian Cepat:** Gunakan kolom input **Cari...** di pojok kanan atas tabel untuk menyaring gudang berdasarkan nama atau alamat lokasi.
+* **Menambahkan Gudang Baru:**
+  1. Klik tombol **+ Tambah** berwarna merah di pojok kanan atas.
+  2. Pada modal **Tambah Gudang**, isi **Nama Gudang** (atau penanda palet) dan **Alamat** lokasi fisik gudang.
+  3. Klik tombol **Tambah** untuk mengonfirmasi registrasi.
 
 ---
 
-### Langkah 4: Menghapus Data Gudang (Hapus)
-1. Cari baris gudang yang ingin dihapus dari daftar.
-2. Pada kolom **Aksi**, klik ikon **Tempat Sampah (Hapus)** berwarna merah.
-3. Pada dialog konfirmasi yang muncul, klik **Ya, Hapus** untuk menghapus entitas gudang tersebut.  
-   *(Catatan: Hapus data gudang sebaiknya dilakukan jika gudang tersebut tidak lagi menampung stok barang aktif).*
+### 2. Penyuntingan & Penghapusan Gudang
+
+Pada kolom **Aksi** di tabel utama:
+
+* **Ikon Pensil (Edit):** Membuka modal penyuntingan untuk memperbarui Nama Gudang atau Alamat lokasi, lalu klik **Simpan**.
+* **Ikon Tempat Sampah (Hapus):** Menghapus entitas gudang dari sistem. Disarankan menghapus gudang hanya jika sudah tidak menampung stok barang aktif.
 
 ---
 
@@ -48,6 +46,6 @@ Data gudang ini menjadi acuan lokasi fisik alokasi persediaan barang pada modul 
 | Kolom | Fungsi & Keterangan |
 | :--- | :--- |
 | **Nama** | Nama penanda identitas gudang atau palet persediaan. |
-| **Item Produk** | Menampilkan jumlah variasi jenis produk yang tersimpan di gudang tersebut. |
+| **Item Produk** | Menampilkan jumlah akumulasi variasi jenis produk yang tersimpan di gudang tersebut. |
 | **Alamat** | Informasi area lokasi tempat gudang berada. |
-| **Aksi** | Terdiri dari 2 tombol kontrol: **Pensil (Edit)** untuk membuka modal edit data gudang dan **Tempat Sampah (Hapus)** untuk menghapus gudang dari sistem. |
+| **Aksi** | Tombol pintas ikon **Pensil (Edit)** dan **Tempat Sampah (Hapus)**. |

@@ -9,70 +9,63 @@ Data peringkat ini berguna untuk analisis loyalitas pengguna, evaluasi performa 
 
 ---
 
-## Perbedaan Opsi Tampilan Poin
+## Cara Mengakses Halaman Leaderboard Poin
 
-Di pojok kiri atas tabel, terdapat dua tombol beralih (*tab toggle*) mode perhitungan poin:
+Bagi Administrator yang ingin meninjau peringkat loyalitas poin pengguna, ikuti langkah navigasi berikut:
 
-### 1. Saldo Poin Saat Ini
-* **Definisi:** Menampilkan sisa poin bersih yang **masih dimiliki dan belum ditukarkan** (*redeem*) oleh pengguna saat ini.
-* **Sifat Nilai:** Bervariasi dan dapat berkurang apabila pengguna menukarkan poinnya dengan *reward* atau voucher belanja.
-* **Kegunaan Admin:** Memantau ketersediaan saldo poin aktif pengguna yang siap dipakai transaksi/penukaran imbalan.
-
-### 2. Total Poin (Lifetime)
-* **Definisi:** Menampilkan **akumulasi seluruh poin** yang pernah didapatkan pengguna sepanjang riwayat akunnya terbuat di sistem.
-* **Sifat Nilai:** Akumulatif dan tidak pernah berkurang, meskipun poin tersebut sudah pernah ditukarkan (*redeemed*).
-* **Kegunaan Admin:** Menjadi acuan murni peringkat loyalitas pengguna dari awal bergabung hingga saat ini.
+1. Pada bilah navigasi kiri (*sidebar*), buka modul **Kupon & Poin > Leaderboard Poin** (atau **Poin > Leaderboard Poin**).
+2. Sistem akan menampilkan tabel daftar peringkat perolehan poin pengguna.
 
 ---
 
-## Alur Mengoperasikan Leaderboard Poin
+## Perbedaan Opsi Tampilan Mode Poin
 
-### Langkah 1: Membuka Halaman Leaderboard
-1. Buka modul **Poin > Leaderboard Poin**.
-2. Halaman secara *default* akan menampilkan daftar peringkat pengguna berdasarkan **Saldo Poin Saat Ini**.
+Di pojok kiri atas tabel, terdapat dua tombol beralih (*tab toggle*) mode kalkulasi poin:
 
----
-
-### Langkah 2: Mengubah Mode Peringkat (Toggle Tab)
-1. Klik tab **Saldo Poin Saat Ini** jika ingin melihat peringkat pengguna berdasarkan sisa poin aktif.
-2. Klik tab **Total Poin (Lifetime)** jika ingin melihat peringkat pengguna berdasarkan total poin historis terbanyak.
-3. Urutan peringkat pada tabel akan otomatis dimuat ulang sesuai opsi yang dipilih.
+* **Saldo Poin Saat Ini:** Menampilkan sisa poin bersih yang **masih dimiliki dan belum ditukarkan** (*redeem*) oleh pengguna saat ini. Nilai bersifat dinamis dan dapat berkurang jika pengguna menukarkan poin.
+* **Total Poin (Lifetime):** Menampilkan **akumulasi seluruh poin** yang pernah didapatkan pengguna sepanjang riwayat akunnya terbuat di sistem. Nilai bersifat akumulatif murni dan tidak berkurang meskipun poin telah ditukarkan.
 
 ---
 
-### Langkah 3: Pencarian Pengguna (Search)
-1. Gunakan kolom input **Cari nama mitra / pengguna...** di pojok kanan atas tabel.
-2. Ketikkan nama pengguna atau mitra yang ingin.
-3. Tabel akan menyaring dan menampilkan urutan peringkat pengguna tersebut secara instan.
+## Panduan Pengoperasian Leaderboard & Drill-Down Riwayat
+
+Administrator dapat menyaring peringkat pengguna dan meninjau riwayat mutasi poin secara terperinci:
+
+### 1. Pencarian & Navigasi Mode Peringkat
+
+* **Beralih Mode:** Klik tab **Saldo Poin Saat Ini** atau **Total Poin (Lifetime)** untuk menyesuaikan acuan pengurutan tabel.
+* **Pencarian Cepat:** Gunakan kolom input **Cari nama mitra / pengguna...** di pojok kanan atas tabel untuk menemukan posisi akun spesifik.
 
 ---
 
-### Langkah 4: Meninjau Riwayat Transaksi Poin (Drill-Down)
-1. Pada tabel leaderboard, klik pada **Nama Pengguna** yang ingin Anda periksa riwayat poinnya.
-2. Sistem akan membuka halaman **Riwayat Transaksi Poin** pengguna tersebut.
-3. Di bagian header profil, Admin dapat melihat ringkasan **Level Mitra** dan sisa **Saldo Poin Saat Ini**.
-4. Periksa mutasi arus poin pada tabel riwayat transaksi:
-   * **Masuk (+):** Poin bertambah (ditandai *badge* hijau) dari transaksi pembelanjaan.
-   * **Keluar (-):** Poin berkurang (ditandai *badge* merah) akibat penggunaan potongan harga saat *checkout*.
-5. Setiap baris transaksi dilengkapi dengan saldo setelah mutasi (**Saldo Sesudah**), kode nomor referensi (**Ref**), serta stempel **Waktu** terjadinya transaksi.
+### 2. Meninjau Detail Riwayat Transaksi Poin (Drill-Down)
+
+1. Klik pada **Nama Pengguna** pada tabel leaderboard untuk beralih ke halaman **Riwayat Transaksi Poin**.
+2. Pada bagian *header* profil, tinjau informasi **Level Mitra** dan sisa **Saldo Poin Saat Ini**.
+3. Pada tabel riwayat mutasi, periksa penambahan atau pengurangan poin:
+   * **Masuk (+):** Poin bertambah (badge hijau) dari transaksi pembelanjaan.
+   * **Keluar (-):** Poin berkurang (badge merah) akibat penggunaan potongan harga saat *checkout*.
+4. Setiap baris transaksi menyajikan sisa saldo setelah mutasi (**Saldo Sesudah**), kode nomor referensi (**Ref**), serta stempel **Waktu** transaksi.
 
 ---
 
 ## Struktur Tabel Leaderboard & Riwayat
 
 ### 1. Tabel Utama Leaderboard
+
 | Kolom | Fungsi & Keterangan |
 | :--- | :--- |
 | **Peringkat** | Urutan posisi peringkat pengguna (dimulai dari peringkat 1). |
 | **Nama** | Nama lengkap akun pengguna/mitra (dapat diklik untuk melihat riwayat transaksi poin). |
-| **Level** | Label jenjang keanggotaan akun. |
-| **Saldo Poin / Total Poin** | Jumlah poin pengguna (menyesuaikan dengan mode tab yang aktif). |
+| **Level** | Badge indikator jenjang keanggotaan akun. |
+| **Saldo Poin / Total Poin** | Jumlah akumulasi poin pengguna (menyesuaikan dengan mode tab yang aktif). |
 
 ### 2. Tabel Detail Riwayat Transaksi Poin
+
 | Kolom | Fungsi & Keterangan |
 | :--- | :--- |
-| **Tipe** | Indikator jenis mutasi poin (*Masuk (+)* atau *Keluar (-)*). |
+| **Tipe** | Indikator jenis mutasi poin (**Masuk (+)** atau **Keluar (-)**). |
 | **Poin** | Nominal penambahan atau pengurangan jumlah poin. |
-| **Saldo Sesudah** | Sisa kalkulasi saldo poin pengguna setelah transaksi tersebut terjadi. |
+| **Saldo Sesudah** | Sisa kalkulasi saldo poin pengguna setelah transaksi terjadi. |
 | **Keterangan / Ref** | Catatan alasan mutasi poin beserta nomor ID invoice/referensinya. |
-| **Waktu** | Informasi stempel waktu kapan transaksi poin terjadi. |
+| **Waktu** | Informasi stempel waktu kapan transaksi poin tercatat. |

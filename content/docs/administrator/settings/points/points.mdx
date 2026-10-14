@@ -2,38 +2,43 @@
 title: Pengaturan Poin
 icon: Coins
 ---
+
 Halaman **Pengaturan Poin** digunakan oleh Administrator untuk mengonfigurasi skema program *loyalty point*, mulai dari batas masa aktif poin hingga konversi nilai tukar poin menjadi potongan harga (*diskon*) saat transaksi belanja.
 
+---
 
-## Alur Konfigurasi Pengaturan Poin
+## Cara Mengakses Halaman Pengaturan Poin
 
-Sebagai Administrator, Anda dapat menentukan aturan penggunaan poin melalui langkah-langkah berikut:
+Bagi Administrator yang ingin mengonfigurasi aturan program poin *loyalty*, ikuti langkah navigasi berikut:
 
-### Langkah 1: Membuka Menu Pengaturan Poin
-1. Masuk ke menu **Administrator > Pengaturan**.
-2. Pada bilah navigasi kiri di bawah kategori **POIN**, pilih sub-menu **Pengaturan Poin**.
-3. Halaman akan menampilkan dua blok konfigurasi utama: **Masa Kadaluarsa** dan **Nilai Tukar**.
+1. Pada bilah navigasi kiri (*sidebar*), buka modul **Administrator > Pengaturan**.
+2. Pada panel navigasi sebelah kiri di bawah kategori **POIN**, pilih sub-menu **Pengaturan Poin**.
+3. Sistem akan menampilkan dua blok konfigurasi utama: **Masa Kadaluarsa** dan **Nilai Tukar**.
 
-### Langkah 2: Mengatur Masa Kadaluarsa Poin
-Pada blok **Masa Kadaluarsa**:
-1. Tentukan batas waktu aktif poin pada kolom **Masa Aktif Poin (Bulan)**.
-2. Jika perusahaan menginginkan poin dapat digunakan kapan saja tanpa batas waktu hangus, isi angka `0` (poin berlaku selamanya).
+---
 
+## Panduan Konfigurasi Skema Poin
 
-### Langkah 3: Mengatur Nilai Tukar & Maksimal Potongan Belanja
+Administrator dapat menentukan batas masa aktif serta rasio konversi potongan belanja:
+
+### 1. Masa Kadaluarsa Poin
+
+Pada blok **Masa Kadaluarsa**, tentukan batas waktu aktif poin pada kolom **Masa Aktif Poin (Bulan)**.
+* **Poin Tanpa Hangus:** Masukkan angka `0` jika perusahaan menginginkan poin berlaku selamanya tanpa batas kadaluarsa.
+
+---
+
+### 2. Nilai Tukar & Maksimal Potongan Belanja
+
 Pada blok **Nilai Tukar**:
-1. **Nilai 1 Poin (Rupiah):** Masukkan kesetaraan 1 poin dalam rupiah pada kolom **Rp**.
-2. **Maksimal Potongan Belanja (%):** Masukkan persentase batas maksimal penggunaan poin untuk memotong total tagihan belanja pada kolom **%**.
 
-#### Simulasi Perhitungan Otomatis
-Sistem menyediakan kotak penjelas **Simulasi Pembayaran** di bawah kolom input untuk membantu Anda memahami penerapannya:
-> *Contoh:* Dengan total transaksi **Rp 100.000** dan batas **50%**, pembeli dapat menggunakan maksimal **50.000 Poin** (Setara Potongan Rp 50.000).
+* **Nilai 1 Poin (Rupiah):** Masukkan nilai kesetaraan 1 poin dalam rupiah pada kolom **Rp**.
+* **Maksimal Potongan Belanja (%):** Masukkan persentase batas maksimal kuota penggunaan poin untuk memotong total tagihan belanja pada kolom **%**.
+* **Simulasi Pembayaran:** Tinjau kotak petunjuk otomatis di bawah kolom input untuk memahami contoh kalkulasi penerapan diskon poin pada nilai transaksi.
 
+Setelah mengonfigurasi seluruh parameter, klik tombol **Simpan** di pojok kanan bawah halaman untuk menerbitkan aturan poin secara *real-time*.
 
-### Langkah 4: Menyimpan Perubahan
-1. Klik tombol **Simpan** di pojok kanan bawah halaman.
-2. Aturan masa berlaku dan konversi tukar poin yang baru akan langsung diterapkan di seluruh transaksi pembeli/mitra.
-
+---
 
 ## Ringkasan Parameter Poin
 
