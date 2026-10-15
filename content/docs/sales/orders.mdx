@@ -129,23 +129,35 @@ Pilih salah satu opsi penjemputan paket:
 
 Jika memilih **Pickup**, tentukan jadwal penjemputan pada pilihan **Jadwal Pickup**. Pilihan ini tidak tersedia jika menggunakan opsi **Drop Off**.
 
-<div className="flex flex-col sm:flex-row gap-4 my-4">
+<div className="flex flex-col sm:flex-row gap-4 my-6">
   <div className="flex-1 text-center">
-    <img
-      src="/proses1.png"
-      alt="Form Proses Pengiriman dengan opsi Pickup"
-      className="max-h-[380px] w-auto mx-auto rounded-lg shadow-sm"
-    />
+    <input type="checkbox" id="zoom-proses1" className="peer hidden" />
+    <label
+      htmlFor="zoom-proses1"
+      className="inline-block cursor-zoom-in peer-checked:fixed peer-checked:inset-0 peer-checked:z-50 peer-checked:flex peer-checked:items-center peer-checked:justify-center peer-checked:bg-black/80 peer-checked:p-4 peer-checked:cursor-zoom-out peer-checked:[&>img]:max-h-[90vh] peer-checked:[&>img]:max-w-full peer-checked:[&>img]:w-auto peer-checked:[&>img]:shadow-2xl"
+    >
+      <img
+        src="/proses1.png"
+        alt="Form Proses Pengiriman dengan opsi Pickup"
+        className="max-w-full h-auto mx-auto rounded-lg border border-gray-200 shadow-sm"
+      />
+    </label>
     <span className="block text-xs text-gray-400 mt-2">
       Tampilan form dengan opsi Pickup (terdapat Jadwal Pickup)
     </span>
   </div>
   <div className="flex-1 text-center">
-    <img
-      src="/proses2.png"
-      alt="Form Proses Pengiriman dengan opsi Drop Off"
-      className="max-h-[380px] w-auto mx-auto rounded-lg shadow-sm"
-    />
+    <input type="checkbox" id="zoom-proses2" className="peer hidden" />
+    <label
+      htmlFor="zoom-proses2"
+      className="inline-block cursor-zoom-in peer-checked:fixed peer-checked:inset-0 peer-checked:z-50 peer-checked:flex peer-checked:items-center peer-checked:justify-center peer-checked:bg-black/80 peer-checked:p-4 peer-checked:cursor-zoom-out peer-checked:[&>img]:max-h-[90vh] peer-checked:[&>img]:max-w-full peer-checked:[&>img]:w-auto peer-checked:[&>img]:shadow-2xl"
+    >
+      <img
+        src="/proses2.png"
+        alt="Form Proses Pengiriman dengan opsi Drop Off"
+        className="max-w-full h-auto mx-auto rounded-lg border border-gray-200 shadow-sm"
+      />
+    </label>
     <span className="block text-xs text-gray-400 mt-2">
       Tampilan form dengan opsi Drop Off (tanpa Jadwal Pickup)
     </span>
@@ -186,18 +198,23 @@ Gunakan metode ini jika pesanan dikirim menggunakan ekspedisi selain KiriminAja.
 2. Masukkan nomor resi pengiriman pada kolom **AWB / Nomor Resi**.
 3. Klik tombol **Buat Pengiriman**.
 
-<div className="my-4 text-center">
-  <img
-    src="/proses3.png"
-    alt="Form Proses Pengiriman dengan metode Dikirim Kurir Lain"
-    className="max-h-[380px] w-auto mx-auto rounded-lg shadow-sm"
-  />
+<div className="my-6 text-center">
+  <input type="checkbox" id="zoom-proses3" className="peer hidden" />
+  <label
+    htmlFor="zoom-proses3"
+    className="inline-block cursor-zoom-in peer-checked:fixed peer-checked:inset-0 peer-checked:z-50 peer-checked:flex peer-checked:items-center peer-checked:justify-center peer-checked:bg-black/80 peer-checked:p-4 peer-checked:cursor-zoom-out peer-checked:[&>img]:max-h-[90vh] peer-checked:[&>img]:max-w-full peer-checked:[&>img]:w-auto peer-checked:[&>img]:shadow-2xl"
+  >
+    <img
+      src="/proses3.png"
+      alt="Form Proses Pengiriman dengan metode Dikirim Kurir Lain"
+      className="max-w-full h-auto mx-auto rounded-lg border border-gray-200 shadow-sm"
+    />
+  </label>
   <span className="block text-xs text-gray-400 mt-2">
     Tampilan form dengan metode Dikirim Kurir Lain
   </span>
 </div>
 
-{/* TODO: konfirmasi status pesanan setelah Buat Pengiriman (langsung Dikirim?), tombol yang muncul setelahnya (Tracking / Cetak Resi?), dan apakah label "EXTERNAL" di kolom Pengiriman menandakan pesanan Kurir Lain */}
 
 ### Pesanan Ambil Sendiri
 

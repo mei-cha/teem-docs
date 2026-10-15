@@ -1,144 +1,54 @@
 ﻿---
-title: Set Target
+title: Realisasi Target
 icon: Target
 ---
 
-Halaman **Set Target** digunakan oleh Administrator untuk menetapkan target penjualan tahunan bagi setiap mitra pada platform **Teem.id**.
+Halaman **Realisasi Target** digunakan oleh Administrator untuk memantau perbandingan antara target nominal penjualan yang ditetapkan dengan capaian realisasi omzet milik setiap mitra pada platform **Teem.id**.
 
-Administrator dapat mengalokasikan target penjualan secara kolektif berdasarkan wilayah operasional maupun menentukan besaran target secara khusus (*custom*) untuk mitra tertentu.
-
----
-
-## Cara Mengakses Halaman Set Target
-
-Bagi Administrator yang ingin mengatur atau mengelola target penjualan mitra, ikuti langkah navigasi berikut:
-
-1. Pada bilah navigasi kiri (*sidebar*), buka modul **Kemitraan > Set Target**.
-2. Sistem akan menampilkan tabel daftar target penjualan mitra sesuai dengan periode tahun yang dipilih.
+Melalui modul ini, Administrator dapat mengevaluasi margin selisih pencapaian serta memantau persentase performa mitra berdasarkan periode dan wilayah operasional tertentu.
 
 ---
 
-## Panduan Pengelolaan & Penetapan Target Mitra
+## Cara Mengakses Halaman Target vs Realisasi Penjualan
 
-Administrator dapat membuat template acuan wilayah, mengalokasikan target secara massal, hingga menyesuaikan nominal target mitra secara spesifik.
+Bagi Administrator yang ingin mengevaluasi pencapaian omzet mitra, ikuti langkah navigasi berikut:
 
-### 1. Pencarian & Pemilihan Periode Tahun
-
-Pada baris kontrol utama halaman **Target Mitra**:
-* **Filter Tahun:** Pilih **Tahun** (contoh: `2026`) pada pemilih periode di pojok kiri atas untuk menyaring atau menampilkan daftar target pada tahun berjalan.
-* **Pencarian Cepat:** Gunakan kolom **Cari...** di pojok kanan atas untuk menemukan data target berdasarkan **Nama Mitra** atau **ID Mitra**.
+1. Pada bilah navigasi kiri (*sidebar*), buka modul **Kemitraan > Realisasi Target**
+2. Sistem akan menampilkan tabel daftar mitra beserta target, realisasi omzet berjalan, dan selisih pencapaiannya.
 
 ---
 
-### 2. Pengaturan Template Target Wilayah
+## Panduan Fitur & Filter Lanjutan
 
-Sebelum menerapkan penetapan target berbasis wilayah, Administrator dapat mengonfigurasi template target standar terlebih dahulu sebagai acuan nominal.
+Administrator dapat menyaring pencapaian mitra menggunakan kombinasi filter periode, jenjang level, hingga hirarki wilayah.
 
-<div className="my-4 text-center">
-  <img 
-    src="/tamplatetarget.png" 
-    alt="Kelola Template Target" 
-    className="max-h-[380px] w-auto mx-auto rounded-lg shadow-sm" 
-  />
-  <span className="block text-xs text-gray-400 mt-2">
-    Modal Kelola Template Target
-  </span>
-</div>
+### 1. Pencarian Cepat & Ekspor Data
 
-1. Klik tombol **+ Set Target** di pojok kanan atas halaman.
-2. Pada modal yang muncul, pilih tombol **Template Target**.
-3. Tentukan parameter acuan:
-   * **Tahun** target.
-   * **Provinsi** dan **Kota / Kabupaten**.
-   * **Target Distributor**, **Target Agen**, dan **Target Sub Agen**.
-4. Klik **Simpan** untuk menyimpan konfigurasi template.
-
-<Callout type="warn" title="Ketentuan Prasyarat Template">
-  Template Target harus diatur terlebih dahulu jika Administrator ingin menggunakan mode **Massal Per Wilayah** atau memilih opsi **Ikuti Template Standar** pada penetapan target per mitra spesifik.
-</Callout>
+* **Pencarian Cepat:** Gunakan kolom input **Cari mitra...** di pojok kanan atas tabel untuk menemukan mitra spesifik berdasarkan nama atau ID Mitra.
+* **Export Data:** Klik tombol **Export** di sebelah tombol Filter untuk mengunduh rekapitulasi data perbandingan target ke dalam berkas spreadsheet (Excel/CSV).
 
 ---
 
-### 3. Opsi Penetapan Target Mitra
+### 2. Filter Lanjutan (Modal Filter Data)
 
-Setelah template acuan tersedia, penetapan target dapat dieksekusi melalui dua metode pilihan:
+Klik tombol **Filter** di pojok kanan atas tabel untuk membuka modal **Filter Data**:
 
-#### Opsi A: Massal Per Wilayah
-
-<div className="my-4 text-center">
-  <img 
-    src="/settarget1.png" 
-    alt="Modal Set Target Massal Per Wilayah" 
-    className="max-h-[380px] w-auto mx-auto rounded-lg shadow-sm" 
-  />
-  <span className="block text-xs text-gray-400 mt-2">
-    Modal Set Target - Massal Per Wilayah
-  </span>
-</div>
-
-Opsi ini digunakan untuk menetapkan target secara kolektif kepada seluruh mitra di wilayah tertentu sekaligus:
-
-1. Tentukan **Provinsi** dan **Kota / Kabupaten**.
-2. (Opsional) Pilih **Level Kemitraan** untuk membatasi alokasi target hanya pada jenjang level spesifik.
-3. Sistem secara otomatis menampilkan pratinjau daftar mitra terkait beserta kalkulasi nominal target sesuai template.
-4. Periksa pratinjau data, lalu klik tombol **Terapkan ke [N] Mitra Terkait** untuk mengonfirmasi.
+* **Periode & Tahun:** Tentukan rentang waktu pemantauan (*Tahunan*, *Bulanan*, dll.) beserta acuan **Tahun** transaksi.
+* **Level Kemitraan:** Saring data berdasarkan tingkatan mitra spesifik (*Semua Level*, *Distributor*, *Agen*, *Sub Agen*).
+* **Wilayah (Hirarki Geografis):**
+  * **Provinsi:** Saring mitra berdasarkan cakupan provinsi operasional.
+  * **Kab/Kota:** Batasi tampilan berdasarkan kabupaten atau kota.
+  * **Kecamatan:** Batasi tampilan hingga tingkat kecamatan.
+* **Eksekusi:** Klik tombol **Terapkan** berwarna merah untuk memuat ulang data, atau klik **Reset Filter** untuk mengembalikan setelan bawaan.
 
 ---
 
-#### Opsi B: Per Mitra Spesifik
+## Struktur Tabel Target vs Realisasi Penjualan
 
-<div className="my-4 text-center">
-  <img 
-    src="/settarget2.png" 
-    alt="Modal Set Target Per Mitra Spesifik" 
-    className="max-h-[380px] w-auto mx-auto rounded-lg shadow-sm" 
-  />
-  <span className="block text-xs text-gray-400 mt-2">
-    Modal Set Target - Per Mitra Spesifik
-  </span>
-</div>
-
-Opsi ini digunakan untuk mengonfigurasi besaran target bagi satu akun mitra secara khusus:
-
-1. Pilih akun mitra pada menu dropdown **Cari / Pilih Mitra**.
-2. Tentukan metode nominal target:
-   * **Ikuti Template Standar:** Menggunakan besaran nominal acuan berdasarkan wilayah dan level mitra.
-   * **Custom Manual:** Memasukkan nominal target secara fleksibel/manual pada kolom **Nominal Target (Tahunan)**.
-3. Klik tombol **Simpan Target** untuk menyimpan penetapan.
-
----
-
-### 4. Perubahan & Penghapusan Data Target
-
-Pada kolom **Aksi** di tabel utama halaman **Target Mitra**:
-* Klik ikon **Pensil (Edit)** untuk memperbarui besaran nominal target mitra.
-* Klik ikon **Tempat Sampah (Hapus)** untuk membatalkan/menghapus alokasi target mitra dari sistem.
-
----
-
-## Struktur Tabel & Form Set Target
-
-### 1. Struktur Tabel Utama Target Mitra
-
-| Kolom | Fungsi dan Keterangan |
+| Kolom | Keterangan & Deskripsi Fungsi |
 | :--- | :--- |
-| **Nama** | Nama lengkap mitra beserta ID unik mitra terdaftar. |
-| **Kota / Kabupaten** | Wilayah operasional atau domisili mitra. |
-| **Level** | Badge indikator tingkatan level kemitraan (*Sub Agen*, *Agen*, *Distributor*). |
-| **Tahun** | Kolom penunjuk periode tahun berlakunya alokasi target (misal: `2026`). |
-| **Target Tahunan** | Nominal akumulasi target penjualan yang ditetapkan untuk mitra. |
-| **Dibuat** | Tanggal dan bulan penetapan target dibuat di sistem. |
-| **Aksi** | Tombol ikon untuk menyunting (*Pensil*) atau menghapus (*Tempat Sampah*) target. |
-
-### 2. Ringkasan Elemen Form
-
-| Elemen Form | Tipe | Fungsi & Keterangan |
-| :--- | :--- | :--- |
-| **Tahun** | Dropdown | Menentukan periode tahun berlakunya alokasi target. |
-| **Massal Per Wilayah** | Opsi Tab | Moda alokasi target kolektif berbasis wilayah operasional. |
-| **Per Mitra Spesifik** | Opsi Tab | Moda alokasi target individu untuk mitra tertentu. |
-| **Template Target** | Tombol | Membuka modal pengaturan nominal standar wilayah. |
-| **Ikuti Template Standar** | Radio | Menggunakan besaran nominal acuan dari template wilayah. |
-| **Custom Manual** | Radio | Memasukkan nominal target secara manual. |
-| **Pratinjau** | Tabel Ringkas | Menampilkan daftar mitra penerima target sebelum dikonfirmasi. |
-| **Simpan Target / Terapkan** | Eksekusi | Menyimpan penetapan target ke dalam database sistem. |
+| **Nama & Id** | Menampilkan nama lengkap mitra beserta **ID Mitra** unik di baris bawahnya (contoh: `MTR-0067`). |
+| **Level** | Badge indikator level kemitraan (**Distributor**, **Agen**, atau **Sub Agen**). |
+| **Target** | Nominal rupiah target penjualan yang ditetapkan untuk mitra pada periode terkait. |
+| **Realisasi** | Nilai rupiah omzet transaksi aktual yang dicapai mitra, dilengkapi persentase pencapaian (*misal: 26.9%*). |
+| **Selisih** | Margin selisih antara realisasi dikurangi target. Ditandai warna **Merah (-)** beserta persentase kekurangannya jika target belum terpenuhi. |

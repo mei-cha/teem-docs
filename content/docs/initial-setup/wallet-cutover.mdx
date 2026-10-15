@@ -16,12 +16,18 @@ Bagi Administrator yang baru pertama kali menggunakan fitur ini, Anda dapat lang
 1. Pada bilah navigasi kiri (*sidebar*), buka modul **Keuangan > Saldo Awal**.
 2. Sistem akan langsung menampilkan halaman utama **Import Saldo Awal**.
 
-<div className="my-4 text-center">
-  <img 
-    src="/cutover.png" 
-    alt="Tampilan Halaman Import Saldo Awal" 
-    className="max-h-[380px] w-auto mx-auto rounded-lg shadow-sm" 
-  />
+<div className="my-6 text-center">
+  <input type="checkbox" id="zoom-cutover" className="peer hidden" />
+  <label
+    htmlFor="zoom-cutover"
+    className="inline-block cursor-zoom-in peer-checked:fixed peer-checked:inset-0 peer-checked:z-50 peer-checked:flex peer-checked:items-center peer-checked:justify-center peer-checked:bg-black/80 peer-checked:p-4 peer-checked:cursor-zoom-out peer-checked:[&>img]:max-h-[90vh] peer-checked:[&>img]:max-w-full peer-checked:[&>img]:w-auto peer-checked:[&>img]:shadow-2xl"
+  >
+    <img
+      src="/cutover.png"
+      alt="Tampilan Halaman Import Saldo Awal"
+      className="max-w-full h-auto mx-auto rounded-lg border border-gray-200 shadow-sm"
+    />
+  </label>
   <span className="block text-xs text-gray-400 mt-2">
     Tampilan utama halaman Import Saldo Awal yang diakses melalui menu Keuangan > Saldo Awal
   </span>
@@ -31,7 +37,7 @@ Bagi Administrator yang baru pertama kali menggunakan fitur ini, Anda dapat lang
 
 ## Panduan Penggunaan & Pengisian Berkas
 
-Setelah berada di halaman **Import Saldo Awal**, Anda dapat mengunduh berkas acuan (*template*), mengisi data saldo akun, dan melakukan proses validasi sebelum data disimpankan ke sistem.
+Setelah berada di halaman **Import Saldo Awal**, Anda dapat mengunduh berkas acuan (*template*), mengisi data saldo akun, dan melakukan proses validasi sebelum data disimpan ke sistem.
 
 <Callout type="warn" title="Prasyarat Sebelum Impor">
   - **Akun Harus Terdaftar:** Pastikan email pengguna atau mitra sudah terdaftar di sistem sebelum melakukan impor.

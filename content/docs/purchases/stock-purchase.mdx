@@ -17,12 +17,18 @@ Administrator dapat melihat riwayat penerimaan barang, mengonfigurasi filter per
 
 Secara default, halaman ini menampilkan riwayat transaksi penerimaan barang untuk periode **Bulan Ini**. 
 
-<div className="my-4 text-center">
-  <img 
-    src="/buy-stock.png" 
-    alt="Tampilan Riwayat Pembelian Stok" 
-    className="max-h-[380px] w-auto mx-auto rounded-lg shadow-sm" 
-  />
+<div className="my-6 text-center">
+  <input type="checkbox" id="zoom-buy-stock" className="peer hidden" />
+  <label
+    htmlFor="zoom-buy-stock"
+    className="inline-block cursor-zoom-in peer-checked:fixed peer-checked:inset-0 peer-checked:z-50 peer-checked:flex peer-checked:items-center peer-checked:justify-center peer-checked:bg-black/80 peer-checked:p-4 peer-checked:cursor-zoom-out peer-checked:[&>img]:max-h-[90vh] peer-checked:[&>img]:max-w-full peer-checked:[&>img]:w-auto peer-checked:[&>img]:shadow-2xl"
+  >
+    <img
+      src="/buy-stock.png"
+      alt="Tampilan Riwayat Pembelian Stok"
+      className="max-w-full h-auto mx-auto rounded-lg border border-gray-200 shadow-sm"
+    />
+  </label>
   <span className="block text-xs text-gray-400 mt-2">
     Tampilan Riwayat Pembelian Stok
   </span>

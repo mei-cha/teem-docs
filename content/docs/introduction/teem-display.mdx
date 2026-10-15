@@ -3,88 +3,70 @@ title: Tampilan Teem
 icon: Monitor
 ---
 
-Halaman ini menjelaskan berbagai jenis tampilan utama yang tersedia pada website **Teem.id**. Setiap tampilan dirancang untuk memudahkan pengguna dalam mengelola data, memantau aktivitas, serta menjalankan operasional bisnis secara efisien.
-
----
-
 ## Navbar
 
-Navbar merupakan bilah navigasi utama di bagian atas aplikasi yang dapat diakses dari seluruh halaman sistem **Teem.id**. Fitur ini dirancang untuk memberikan kemudahan akses cepat ke fungsi-fungsi penting tanpa mengganggu alur kerja pengguna.
+Bilah navigasi utama di bagian atas aplikasi untuk akses cepat ke fitur global:
 
-### Fitur Utama Navbar
-
-* **Pencarian Cepat:** Fitur pencarian global untuk menemukan menu, data, atau transaksi dengan cepat di seluruh sistem.
-* **Notifikasi Sistem:** Menampilkan pemberitahuan dan aktivitas penting secara *real-time*.
-* **Pengatur Tema:** Mengubah mode tampilan antarmuka antara *Light Mode* dan *Dark Mode*.
-* **Menu Profil Pengguna:** Menampilkan informasi nama akun, email, serta peran pengguna aktif, dilengkapi tombol **Logout**.
+- **Pencarian Cepat:** Pencarian menu, data, atau transaksi di seluruh sistem.
+- **Notifikasi:** Pemberitahuan aktivitas dan pembaruan sistem secara real-time.
+- **Pengatur Tema:** Mode tampilan antarmuka (Light Mode / Dark Mode).
+- **Profil Pengguna:** Informasi akun aktif, peran sistem, dan tombol keluar (Logout).
 
 ---
 
 ## Dashboard Utama
 
-<div className="my-4 text-center">
-  <img 
-    src="/main-dashboard.png" 
-    alt="Tampilan Main Dashboard Teem.id" 
-    className="max-h-[380px] w-auto mx-auto rounded-lg shadow-sm" 
-  />
-  <span className="block text-xs text-gray-400 mt-2">
-    Tampilan Main Dashboard Teem.id
-  </span>
+<div className="my-6 text-center">
+  <input type="checkbox" id="zoom-main-dashboard" className="peer hidden" />
+  <label
+    htmlFor="zoom-main-dashboard"
+    className="inline-block cursor-zoom-in peer-checked:fixed peer-checked:inset-0 peer-checked:z-50 peer-checked:flex peer-checked:items-center peer-checked:justify-center peer-checked:bg-black/80 peer-checked:p-4 peer-checked:cursor-zoom-out peer-checked:[&>img]:max-h-[90vh] peer-checked:[&>img]:max-w-full peer-checked:[&>img]:w-auto peer-checked:[&>img]:shadow-2xl"
+  >
+    <img
+      src="/main-dashboard.png"
+      alt="Tampilan Main Dashboard Teem.id"
+      className="max-w-full h-auto mx-auto rounded-lg border border-gray-200 shadow-sm"
+    />
+  </label>
 </div>
 
-Dashboard merupakan halaman utama yang menampilkan ringkasan aktivitas dan informasi penting secara *real-time*. Halaman ini menjadi tampilan pertama yang muncul setelah pengguna berhasil masuk ke dalam sistem **Teem.id**.
-
-Melalui dashboard, pengguna dapat memantau stok produk milik perusahaan, grafik statistik transaksi pesanan, peta persebaran jaringan mitra, transaksi pesanan terbaru, serta daftar pengajuan mitra baru secara langsung dalam satu layar.
+Dashboard menampilkan ringkasan aktivitas dan metrik utama operasional bisnis secara langsung saat pengguna berhasil masuk ke sistem.
 
 ---
 
-### Kartu Indikator Stok Perusahaan (Stat Cards)
+### Indikator Stok Perusahaan (Stat Cards)
 
-Di bagian paling atas dashboard, terdapat barisan kartu indikator ringkasan persediaan barang (*Stat Cards*) untuk memantau ketersediaan stok fisik perusahaan secara instan:
-
-* **Jumlah Stok Produk:** Menampilkan total kuantitas persediaan yang tersedia di gudang perusahaan untuk setiap jenis item produk.
-* **Satuan Dasar:** Jumlah persediaan pada Stat Card ditampilkan dalam satuan terkecil (Slop). Hal ini bertujuan untuk menjaga presisi dan akurasi data agar tidak terjadi pembulatan pecahan desimal jika terdapat sisa/lebihan stok yang tidak genap dalam kemasan besar (seperti Karton atau Bal).
-* **Aksi Navigasi Pintas:** Apabila kartu stok diklik, sistem akan langsung mengarahkan (*redirect*) pengguna ke modul **Stok Perusahaan** untuk melihat rincian alokasi gudang produk tersebut.
+- **Total Stok:** Menampilkan jumlah persediaan produk di gudang perusahaan.
+- **Satuan Dasar:** Menggunakan satuan terkecil (Slop) untuk menjaga presisi data tanpa pembulatan desimal.
+- **Navigasi Cepat:** Klik pada kartu stok untuk langsung menuju detail modul Stok Perusahaan.
 
 ---
 
-### Mekanisme Grafik Statistik Pesanan
+### Grafik Statistik Pesanan
 
-* **Sumber Data:** Data yang ditarik ke dalam grafik statistik pesanan hanya bersumber dari transaksi pesanan yang berstatus **Lunas** dan **Selesai**.
-* **Grafik Biru (Pusat):** Mewakili pergerakan volume transaksi pesanan internal Pusat.
-* **Grafik Merah (Mitra):** Mewakili pergerakan volume transaksi pesanan dari jaringan Mitra.
-* **Aksi Interaktif (Redirect):** Apabila titik data pada grafik diklik, sistem akan langsung mengarahkan (*redirect*) pengguna ke halaman daftar pesanan (Pusat atau Mitra) dengan otomatis menampilkan daftar pesanan yang berstatus **Lunas** dan **Selesai**.
-
----
-
-### Widget Peta Penyebaran Mitra
-
- *Peta Penyebaran Mitra* menyajikan visualisasi sebaran lokasi operasional seluruh jaringan kemitraan di berbagai daerah:
-
-* **Penanda Pin Wilayah:** Lokasi mitra ditandai dengan pin warna yang membedakan tingkat kemitraannya.
-* **Fitur Zoom & Pan:** Dilengkapi tombol kontrol perbesaran (`+` dan `-`) serta kemampuan geser peta untuk memantau konsentrasi jaringan mitra di wilayah tertentu secara mendetail.
+- **Sumber Data:** Hanya menarik transaksi yang berstatus Lunas dan Selesai.
+- **Grafik Biru:** Pergerakan transaksi pesanan internal Pusat.
+- **Grafik Merah:** Pergerakan transaksi pesanan jaringan Mitra.
+- **Navigasi Cepat:** Klik titik data pada grafik untuk membuka daftar pesanan berfilter status Lunas/Selesai.
 
 ---
 
-### Fungsi Utama Dashboard
+### Peta Penyebaran Mitra
 
-* **Memantau Stok Barang:** Melihat ketersediaan sisa persediaan fisik produk milik perusahaan secara *real-time*.
-* **Memantau Tren Pesanan:** Menyajikan perbandingan grafik statistik pesanan dari internal Pusat dan Mitra secara *real-time*.
-* **Memetakan Jaringan Mitra:** Menampilkan sebaran lokasi geografis distributor, agen, dan sub-agen pada peta interaktif.
-* **Melacak Transaksi Terbaru:** Menampilkan daftar transaksi pesanan masuk terbaru beserta nominal dan waktu transaksinya.
-* **Memantau Pengajuan Mitra Baru:** Menyajikan daftar calon mitra yang mengajukan pendaftaran baru untuk segera diproses.
-* **Filter Periode Waktu:** Memudahkan analisis data statistik berdasarkan pilihan periode tahunan.
+Visualisasi lokasi operasional jaringan mitra di berbagai wilayah:
+
+- **Penanda Pin:** Membedakan tingkatan kemitraan berdasarkan warna penanda.
+- **Kontrol Peta:** Dilengkapi fitur perbesaran (zoom) dan geser (pan).
 
 ---
 
-### Fitur Umum pada Dashboard
+### Fungsi & Fitur Dashboard
 
 | Fitur / Widget | Fungsi Utama |
 | :--- | :--- |
-| **Kartu Stok Produk** | Menampilkan sisa jumlah persediaan barang milik perusahaan per item. |
-| **Grafik Statistik Pesanan** | Visualisasi garis perbandingan volume pesanan antara Pusat (Biru) dan Mitra (Merah). |
-| **Peta Penyebaran Mitra** | Peta interaktif berbasis penanda warna untuk memantau sebaran lokasi Distributor, Agen, dan Sub Agen. |
-| **Pesanan Terbaru** | Menampilkan daftar ringkas pesanan masuk terbaru dan mengarahkan ke halaman detail pesanan. |
-| **Pengajuan Mitra Baru** | Menampilkan pengajuan pendaftaran mitra terbaru dan mengarahkan ke halaman persetujuan mitra. |
-| **Filter Periode** | Menyaring data grafik dan statistik pesanan berdasarkan periode yang dipilih. |
+| **Kartu Stok Produk** | Ringkasan persediaan barang milik perusahaan per item. |
+| **Grafik Statistik Pesanan** | Perbandingan volume pesanan Pusat (Biru) dan Mitra (Merah). |
+| **Peta Penyebaran Mitra** | Sebaran lokasi Distributor, Agen, dan Sub-Agen. |
+| **Pesanan Terbaru** | Daftar ringkas transaksi terbaru beserta tautan detail. |
+| **Pengajuan Mitra Baru** | Daftar pendaftaran mitra baru yang membutuhkan verifikasi. |
+| **Filter Periode** | Penyaringan data statistik berdasarkan periode tahunan. |

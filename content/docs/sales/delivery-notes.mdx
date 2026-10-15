@@ -16,12 +16,18 @@ Bagi Administrator yang baru pertama kali menggunakan fitur ini, Anda dapat menj
 1. Pada bilah navigasi kiri (*sidebar*), buka modul **Penjualan > Surat Jalan**.
 2. Sistem akan menampilkan daftar seluruh surat jalan yang telah diterbitkan beserta status penerbitannya.
 
-<div className="my-4 text-center">
-  <img 
-    src="/surat-jalan-main.png" 
-    alt="Tampilan Utama Halaman Surat Jalan" 
-    className="max-h-[380px] w-auto mx-auto rounded-lg shadow-sm" 
-  />
+<div className="my-6 text-center">
+  <input type="checkbox" id="zoom-surat-jalan-main" className="peer hidden" />
+  <label
+    htmlFor="zoom-surat-jalan-main"
+    className="inline-block cursor-zoom-in peer-checked:fixed peer-checked:inset-0 peer-checked:z-50 peer-checked:flex peer-checked:items-center peer-checked:justify-center peer-checked:bg-black/80 peer-checked:p-4 peer-checked:cursor-zoom-out peer-checked:[&>img]:max-h-[90vh] peer-checked:[&>img]:max-w-full peer-checked:[&>img]:w-auto peer-checked:[&>img]:shadow-2xl"
+  >
+    <img
+      src="/surat-jalan-main.png"
+      alt="Tampilan Utama Halaman Surat Jalan"
+      className="max-w-full h-auto mx-auto rounded-lg border border-gray-200 shadow-sm"
+    />
+  </label>
   <span className="block text-xs text-gray-400 mt-2">
     Tampilan utama halaman Surat Jalan
   </span>
@@ -69,7 +75,7 @@ Gunakan kolom **Cari Surat Jalan...** di pojok kanan atas tabel untuk menyaring 
 
 ---
 
-## Structure Ringkasan Elemen Form & Tabel
+## Ringkasan Elemen Form & Tabel
 
 ### 1. Form Buat Surat Jalan
 
@@ -89,4 +95,4 @@ Gunakan kolom **Cari Surat Jalan...** di pojok kanan atas tabel untuk menyaring 
 | **Pesanan** | Tautan nomor invoice transaksi terkait. |
 | **Distributor** | Nama mitra atau entitas penerima barang. |
 | **Status** | Indikator progres (**Diproses**, **Siap Diambil**, atau **Selesai**). |
-| **Aksi** | Tombol **Cetak** untuk menampilkan pratinjau cetak cetakan dokumen. |
+| **Aksi** | Tombol **Cetak** untuk menampilkan pratinjau cetak dokumen. |
