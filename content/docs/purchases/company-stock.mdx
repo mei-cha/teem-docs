@@ -3,43 +3,52 @@ title: Stok Perusahaan
 icon: Package
 ---
 
-Halaman **Stok Perusahaan** digunakan oleh Administrator untuk memantau seluruh persediaan barang perusahaan yang tersimpan di berbagai gudang atau palet operasional di platform **Teem.id**.
-
-Melalui halaman ini, Administrator dapat memantau saldo stok setiap produk berdasarkan lokasi penyimpanan, termasuk rincian kuantitas dalam satuan terbesar maupun konversi ke satuan terkecil.
+Halaman Stok Perusahaan digunakan untuk memantau persediaan barang perusahaan di setiap gudang atau palet, termasuk kuantitas dalam satuan terbesar dan konversinya ke satuan terkecil.
 
 ---
 
-## Cara Mengakses Halaman Stok Perusahaan
+## Cara Mengakses
 
-Bagi Administrator yang ingin meninjau atau mengelola persediaan barang perusahaan, ikuti langkah navigasi berikut:
+1. Buka menu Pembelian > Stok Perusahaan.
+2. Daftar produk beserta total stok akan tampil.
 
-1. Pada bilah navigasi kiri (*sidebar*), buka modul **Pembelian > Stok Perusahaan**.
-2. Sistem akan menampilkan daftar seluruh produk beserta akumulasi total stok yang tersedia di gudang.
+<div className="my-6 text-center">
+  <input type="checkbox" id="zoom-company-stock" className="peer hidden" />
+  <label
+    htmlFor="zoom-company-stock"
+    className="inline-block cursor-zoom-in peer-checked:fixed peer-checked:inset-0 peer-checked:z-50 peer-checked:flex peer-checked:items-center peer-checked:justify-center peer-checked:bg-black/80 peer-checked:p-4 peer-checked:cursor-zoom-out peer-checked:[&>img]:max-h-[90vh] peer-checked:[&>img]:max-w-full peer-checked:[&>img]:w-auto peer-checked:[&>img]:shadow-2xl"
+  >
+    <img
+      src="/stockpt.png"
+      alt="Tampilan Halaman Stok Perusahaan"
+      className="max-w-full h-auto mx-auto rounded-lg border border-gray-200 shadow-sm"
+    />
+  </label>
+  <span className="block text-xs text-gray-400 mt-2">
+    Tampilan Halaman Stok Perusahaan
+  </span>
+</div>
 
 ---
 
 ## Panduan Fitur & Pemantauan Stok
 
-Administrator dapat memanfaatkan fitur pencarian, peninjauan rincian stok per lokasi gudang, hingga akses cepat ke modul impor persediaan awal.
-
 ### 1. Pencarian & Peninjauan Rincian Stok
 
-* **Pencarian Cepat:** Gunakan kolom **Cari produk...** di pojok kanan atas tabel untuk menyaring produk berdasarkan nama produk atau kode SKU.
-* **Rincian Per Gudang:** Klik **ikon panah** di sebelah kiri nama produk untuk membuka ekspansi rincian lokasi gudang/palet.
-  * **Angka Utama:** Menampilkan akumulasi jumlah stok dalam satuan terbesar beserta sisa eceran dalam satuan terkecil.
-  * **Angka dalam Kurung:** Menampilkan konversi total saldo stok murni dalam **satuan terkecil produk**.
-
----
+* Pencarian Cepat: Gunakan kolom Cari produk... di pojok kanan atas tabel untuk menyaring produk berdasarkan nama atau kode SKU.
+* Rincian Per Gudang: Klik ikon panah di sebelah kiri nama produk untuk melihat rincian per gudang/palet.
+  * Angka Utama: Stok dalam satuan terbesar beserta sisa eceran dalam satuan terkecil.
+  * Angka dalam Kurung: Total stok dalam satuan terkecil.
 
 ### 2. Impor Stok Awal
 
-Untuk memasukkan atau menyelaraskan saldo persediaan (*stock cut-off*) di berbagai gudang sekaligus menggunakan berkas spreadsheet (Excel/CSV):
+Untuk memperbarui saldo persediaan (*stock cut-off*) banyak gudang sekaligus lewat spreadsheet:
 
-1. Klik tombol **Import Stok** di pojok kanan atas halaman.
-2. Sistem akan mengarahkan Anda ke halaman **Import Stok Perusahaan**.
+1. Klik tombol Import Stok di pojok kanan atas halaman.
+2. Anda diarahkan ke halaman Import Stok Perusahaan.
 
 <Callout type="info" title="Panduan Lengkap Impor Stok">
-  Untuk melihat panduan pengisian berkas spreadsheet, format SKU, dan cara mengatasi kesalahan validasi, silakan buka halaman **[Panduan Import Stok Perusahaan](/docs/initial-setup/import-stock)**.
+  Panduan pengisian dan penanganan kesalahan: [Panduan Import Stok Perusahaan](/docs/initial-setup/import-stock).
 </Callout>
 
 ---
@@ -48,8 +57,8 @@ Untuk memasukkan atau menyelaraskan saldo persediaan (*stock cut-off*) di berbag
 
 | Elemen / Kolom | Keterangan |
 | :--- | :--- |
-| **Nama Produk** | Menampilkan nama produk terdaftar yang memiliki saldo persediaan. |
-| **Total** | Menampilkan jumlah seluruh akumulasi stok produk dari seluruh gudang. |
-| **Rincian Per Gudang** | Menampilkan rincian saldo produk pada setiap lokasi gudang atau palet. |
-| **Cari produk...** | Kolom pencarian cepat berdasarkan nama produk atau kode SKU. |
-| **Tombol Import Stok** | Tautan pintas menuju ke halaman pengunggahan dan validasi stok awal. |
+| **Nama Produk** | Nama produk terdaftar yang memiliki saldo persediaan. |
+| **Total** | Jumlah stok produk dari seluruh gudang. |
+| **Rincian Per Gudang** | Saldo produk pada setiap lokasi gudang atau palet. |
+| **Cari produk...** | Kolom pencarian berdasarkan nama produk atau kode SKU. |
+| **Tombol Import Stok** | Pintasan ke halaman pengunggahan dan validasi stok awal. |

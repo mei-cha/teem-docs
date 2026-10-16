@@ -3,43 +3,54 @@ title: Harga Jual
 icon: Tag
 ---
 
-Halaman **Harga Jual Produk** digunakan oleh Administrator untuk mengonfigurasi skema harga jual barang berdasarkan jenjang tingkatan (*level*) pengguna serta variasi satuan kemasan produk yang tersedia pada platform **Teem.id**.
+Halaman Harga Jual Produk digunakan untuk mengatur harga jual berdasarkan level pengguna dan satuan kemasan produk.
 
-Pengaturan ini memastikan setiap tingkatan mitra mendapatkan penetapan harga jual yang presisi dan otomatis sesuai dengan kualifikasi akun masing-masing saat melakukan pemesanan.
+Dengan pengaturan ini, setiap level mitra otomatis mendapat harga sesuai levelnya saat memesan.
 
 <Callout type="warn" title="Prasyarat Konfigurasi">
-  Pastikan data produk, jenjang level mitra, dan opsi satuan kemasan sudah dikonfigurasi terlebih dahulu pada menu master data sebelum menentukan nominal harga jual.
+  Pastikan data produk, level mitra, dan satuan kemasan sudah dikonfigurasi sebelum mengisi harga jual.
 </Callout>
 
 ---
 
-## Cara Mengakses Halaman Harga Jual
+## Cara Mengakses
 
-Bagi Administrator yang ingin mengonfigurasi skema harga jual produk, ikuti langkah navigasi berikut:
+1. Buka menu Produk > Harga Jual.
+2. Halaman terbagi dua panel: Daftar Produk (kiri) dan Matriks Harga (kanan).
 
-1. Pada bilah navigasi kiri (*sidebar*), buka modul **Produk > Harga Jual**.
-2. Sistem akan menampilkan antarmuka dua panel (Daftar Produk di sebelah kiri dan Matriks Harga di sebelah kanan).
+<div className="my-6 text-center">
+  <input type="checkbox" id="zoom-selling-price" className="peer hidden" />
+  <label
+    htmlFor="zoom-selling-price"
+    className="inline-block cursor-zoom-in peer-checked:fixed peer-checked:inset-0 peer-checked:z-50 peer-checked:flex peer-checked:items-center peer-checked:justify-center peer-checked:bg-black/80 peer-checked:p-4 peer-checked:cursor-zoom-out peer-checked:[&>img]:max-h-[90vh] peer-checked:[&>img]:max-w-full peer-checked:[&>img]:w-auto peer-checked:[&>img]:shadow-2xl"
+  >
+    <img
+      src="/products-selling-price.png"
+      alt="Tampilan Halaman Harga Jual"
+      className="max-w-full h-auto mx-auto rounded-lg border border-gray-200 shadow-sm"
+    />
+  </label>
+  <span className="block text-xs text-gray-400 mt-2">
+    Tampilan Halaman Harga Jual
+  </span>
+</div>
 
 ---
 
 ## Panduan Pengaturan Matriks Harga Jual
 
-Administrator dapat memilih produk pada panel navigasi dan mengonfigurasi nominal harga secara fleksibel.
-
 ### 1. Pencarian & Pemilihan Produk
 
-1. Gunakan kolom **Cari produk...** pada panel sebelah kiri untuk menyaring nama produk atau kode SKU.
-2. Klik pada kartu **Nama Produk** yang ingin diatur harganya.
-3. Panel sebelah kanan akan memuat formulir matriks harga untuk produk tersebut.
-
----
+1. Gunakan kolom Cari produk... pada panel kiri untuk mencari nama produk atau kode SKU.
+2. Klik kartu produk yang ingin diatur harganya.
+3. Panel kanan akan memuat matriks harga produk tersebut.
 
 ### 2. Pengisian Matriks Harga Berjenjang
 
-1. Periksa rincian **Nama Produk**, **SKU**, dan label **Satuan** pada bagian atas panel detail.
-2. Pada tabel matriks harga, perhatikan pembagian **Level** mitra pada baris dan jenis **Satuan Kemasan** pada kolom.
-3. Masukkan nominal angka harga jual pada masing-masing kotak input sesuai kombinasi level dan satuan kemasan.
-4. Setelah memastikan seluruh nominal terisi dengan benar, klik tombol **Simpan** berwarna merah di pojok kanan bawah.
+1. Periksa Nama Produk, SKU, dan label Satuan di bagian atas panel detail.
+2. Pada tabel matriks, Level mitra berada di baris dan Satuan Kemasan di kolom.
+3. Isi nominal harga jual pada setiap kotak sesuai kombinasi level dan satuan.
+4. Klik tombol Simpan berwarna merah di pojok kanan bawah.
 
 ---
 
@@ -47,8 +58,8 @@ Administrator dapat memilih produk pada panel navigasi dan mengonfigurasi nomina
 
 | Elemen Matriks | Keterangan & Deskripsi Fungsi |
 | :--- | :--- |
-| **Daftar Produk (Sisi Kiri)** | Navigasi untuk memilih barang yang akan dikonfigurasi harganya, dilengkapi kolom pencarian SKU/nama. |
-| **Baris Level** | Tingkatan keanggotaan/level mitra pengguna. |
-| **Kolom Satuan** | Variasi unit pengemasan barang dari satuan dasar hingga satuan berukuran lebih besar. |
-| **Field Input Harga** | Kotak teks untuk memasukkan nominal angka harga jual sesuai kombinasi level dan satuan. |
-| **Tombol Simpan** | Eksekusi untuk memperbarui dan menerapkan skema harga ke dalam database sistem. |
+| **Daftar Produk (Sisi Kiri)** | Memilih barang yang akan diatur harganya, dilengkapi pencarian SKU/nama. |
+| **Baris Level** | Tingkatan keanggotaan/level mitra. |
+| **Kolom Satuan** | Variasi kemasan barang dari satuan dasar hingga satuan terbesar. |
+| **Field Input Harga** | Kotak isian nominal harga jual per kombinasi level dan satuan. |
+| **Tombol Simpan** | Menyimpan skema harga ke sistem. |

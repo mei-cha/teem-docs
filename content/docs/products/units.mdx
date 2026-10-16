@@ -3,42 +3,53 @@ title: Satuan
 icon: Scale
 ---
 
-Halaman **Satuan Produk** digunakan oleh Administrator untuk mengelola daftar unit pengukuran/kemasan produk (seperti *Slop*, *Karton*, *Ball*, *Pcs*, *Dus*) pada platform **Teem.id**.
+Halaman Satuan Produk digunakan untuk mengelola daftar satuan pengukuran/kemasan produk (misalnya *Slop*, *Karton*, *Ball*, *Pcs*, *Dus*).
 
-Satuan yang dikonfigurasi di halaman ini akan menjadi pilihan standar saat Administrator atau tim operasional gudang mengatur skema kemasan dan kuantitas pada katalog produk serta pencatatan stok.
+Satuan ini menjadi pilihan standar saat mengatur kemasan dan kuantitas produk serta pencatatan stok.
 
 ---
 
-## Cara Mengakses Halaman Satuan Produk
+## Cara Mengakses
 
-Bagi Administrator yang ingin mengelola daftar unit kemasan barang, ikuti langkah navigasi berikut:
+1. Buka menu Master Data > Satuan Produk (atau Produk > Satuan).
+2. Tabel satuan beserta statusnya akan tampil.
 
-1. Pada bilah navigasi kiri (*sidebar*), buka modul **Master Data > Satuan Produk** (atau **Produk > Satuan**).
-2. Sistem akan menampilkan tabel daftar unit pengemasan barang beserta indikator status keaktifannya.
+<div className="my-6 text-center">
+  <input type="checkbox" id="zoom-units" className="peer hidden" />
+  <label
+    htmlFor="zoom-units"
+    className="inline-block cursor-zoom-in peer-checked:fixed peer-checked:inset-0 peer-checked:z-50 peer-checked:flex peer-checked:items-center peer-checked:justify-center peer-checked:bg-black/80 peer-checked:p-4 peer-checked:cursor-zoom-out peer-checked:[&>img]:max-h-[90vh] peer-checked:[&>img]:max-w-full peer-checked:[&>img]:w-auto peer-checked:[&>img]:shadow-2xl"
+  >
+    <img
+      src="/products-units.png"
+      alt="Tampilan Halaman Satuan Produk"
+      className="max-w-full h-auto mx-auto rounded-lg border border-gray-200 shadow-sm"
+    />
+  </label>
+  <span className="block text-xs text-gray-400 mt-2">
+    Tampilan Halaman Satuan Produk
+  </span>
+</div>
 
 ---
 
 ## Panduan Pengelolaan Satuan Produk
 
-Administrator dapat menambahkan satuan kemasan baru, menyunting nama unit, hingga mengubah status keaktifan pilihan secara cepat.
-
 ### 1. Menambahkan Satuan Baru
 
-1. Klik tombol **+ Tambah** berwarna merah di pojok kanan atas halaman.
-2. Pada modal **Tambah Satuan**, lengkapi parameter berikut:
-   * **Nama Satuan**: Tuliskan sebutan unit pengemasan produk (contoh: *Slop*, *Karton*, *Ball*, *Pcs*, *Dus*).
-   * **Aktif**: Nyalakan sakelar (*toggle*) agar satuan ini dapat langsung dipilih saat mengatur produk.
-3. Klik tombol **Tambah** berwarna merah untuk menyimpan data.
-
----
+1. Klik tombol + Tambah berwarna merah di pojok kanan atas halaman.
+2. Pada modal Tambah Satuan, lengkapi:
+   * Nama Satuan: Sebutan unit pengemasan produk (contoh: *Slop*, *Karton*, *Ball*, *Pcs*, *Dus*).
+   * Aktif: Aktifkan sakelar agar satuan langsung dapat dipilih saat mengatur produk.
+3. Klik tombol Tambah berwarna merah untuk menyimpan.
 
 ### 2. Penyuntingan & Kontrol Status Cepat
 
-Pada kolom **Aksi** di tabel utama, gunakan tombol pintas berikut:
+Pada kolom Aksi di tabel utama:
 
-* **Sakelar Toggle Status**: Mengubah status unit (**Aktif/Nonaktif**) secara langsung. Satuan yang dinonaktifkan tidak akan muncul dalam pilihan opsi pembuatan produk baru.
-* **Ikon Pensil (Edit)**: Membuka modal penyuntingan untuk memperbarui penulisan nama satuan, lalu klik **Simpan**.
-* **Ikon Tempat Sampah (Hapus)**: Menghapus unit satuan dari sistem jika sudah tidak digunakan dalam katalog.
+* Toggle Status: Mengubah status satuan (Aktif/Nonaktif) langsung dari tabel. Satuan nonaktif tidak muncul di pilihan pembuatan produk baru.
+* Ikon Pensil (Edit): Membuka modal untuk memperbarui nama satuan, lalu klik Simpan.
+* Ikon Tempat Sampah (Hapus): Menghapus satuan yang sudah tidak digunakan dalam katalog.
 
 ---
 
@@ -46,6 +57,6 @@ Pada kolom **Aksi** di tabel utama, gunakan tombol pintas berikut:
 
 | Kolom | Fungsi & Keterangan |
 | :--- | :--- |
-| **Nama** | Sebutan nama unit pengemasan/pengukuran produk (disertai ikon pin merah, contoh: *Slop*, *Karton*, *Ball*). |
-| **Status** | Badge indikator keaktifan opsi unit (**Aktif** / **Nonaktif**). |
-| **Aksi** | Terdiri dari tombol pintas **Toggle Status**, **Pensil (Edit)**, dan **Tempat Sampah (Hapus)**. |
+| **Nama** | Nama unit pengemasan/pengukuran (disertai ikon pin merah, contoh: *Slop*, *Karton*, *Ball*). |
+| **Status** | Status keaktifan satuan (Aktif / Nonaktif). |
+| **Aksi** | Toggle Status, Pensil (Edit), dan Tempat Sampah (Hapus). |
