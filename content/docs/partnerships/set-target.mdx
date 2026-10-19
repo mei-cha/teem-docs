@@ -3,36 +3,70 @@ title: Set Target
 icon: Target
 ---
 
-Halaman **Set Target** digunakan oleh Administrator untuk menetapkan target penjualan tahunan bagi setiap mitra pada platform **Teem.id**.
+Halaman Set Target digunakan untuk menetapkan target penjualan tahunan setiap mitra.
 
-Administrator dapat mengalokasikan target penjualan secara kolektif berdasarkan wilayah operasional maupun menentukan besaran target secara khusus (*custom*) untuk mitra tertentu.
+Target dapat dialokasikan secara kolektif per wilayah atau diatur khusus (*custom*) untuk mitra tertentu.
 
 ---
 
-## Cara Mengakses Halaman Set Target
+## Cara Mengakses
 
-Bagi Administrator yang ingin mengatur atau mengelola target penjualan mitra, ikuti langkah navigasi berikut:
-
-1. Pada bilah navigasi kiri (*sidebar*), buka modul **Kemitraan > Set Target**.
-2. Sistem akan menampilkan tabel daftar target penjualan mitra sesuai dengan periode tahun yang dipilih.
+1. Buka menu Kemitraan > Set Target.
+2. Tabel target penjualan mitra pada tahun terpilih akan tampil.
 
 ---
 
 ## Panduan Pengelolaan & Penetapan Target Mitra
 
-Administrator dapat membuat template acuan wilayah, mengalokasikan target secara massal, hingga menyesuaikan nominal target mitra secara spesifik.
-
 ### 1. Pencarian & Pemilihan Periode Tahun
 
-Pada baris kontrol utama halaman **Target Mitra**:
-* **Filter Tahun:** Pilih **Tahun** (contoh: `2026`) pada pemilih periode di pojok kiri atas untuk menyaring atau menampilkan daftar target pada tahun berjalan.
-* **Pencarian Cepat:** Gunakan kolom **Cari...** di pojok kanan atas untuk menemukan data target berdasarkan **Nama Mitra** atau **ID Mitra**.
+Di bagian atas halaman Target Mitra:
 
----
+* Filter Tahun: Pilih tahun (contoh: `2026`) di pojok kiri atas.
+* Pencarian: Kolom Cari... di pojok kanan atas, berdasarkan Nama Mitra atau ID Mitra.
 
-### 2. Pengaturan Template Target Wilayah
+### 2. Massal Per Wilayah
 
-Sebelum menerapkan penetapan target berbasis wilayah, Administrator dapat mengonfigurasi template target standar terlebih dahulu sebagai acuan nominal.
+Menetapkan target ke seluruh mitra di wilayah tertentu sekaligus. Klik + Set Target di pojok kanan atas halaman, lalu pilih tab Massal Per Wilayah.
+
+<div className="my-6 text-center">
+  <input type="checkbox" id="zoom-set-target-wilayah" className="peer hidden" />
+  <label
+    htmlFor="zoom-set-target-wilayah"
+    className="inline-block cursor-zoom-in peer-checked:fixed peer-checked:inset-0 peer-checked:z-50 peer-checked:flex peer-checked:items-center peer-checked:justify-center peer-checked:bg-black/80 peer-checked:p-4 peer-checked:cursor-zoom-out peer-checked:[&>img]:max-h-[90vh] peer-checked:[&>img]:max-w-full peer-checked:[&>img]:w-auto peer-checked:[&>img]:shadow-2xl"
+  >
+    <img
+      src="/15.webp"
+      alt="Halaman set Target"
+      className="max-w-full h-auto mx-auto rounded-lg border border-gray-200 shadow-sm"
+    />
+  </label>
+  <span className="block text-xs text-gray-400 mt-2">
+    Tampilan Halaman Set Target
+  </span>
+  <label
+    htmlFor="zoom-set-target-wilayah"
+    className="inline-block cursor-zoom-in peer-checked:fixed peer-checked:inset-0 peer-checked:z-50 peer-checked:flex peer-checked:items-center peer-checked:justify-center peer-checked:bg-black/80 peer-checked:p-4 peer-checked:cursor-zoom-out peer-checked:[&>img]:max-h-[90vh] peer-checked:[&>img]:max-w-full peer-checked:[&>img]:w-auto peer-checked:[&>img]:shadow-2xl"
+  >
+    <img
+      src="/15(1).webp"
+      alt="Modal Set Target Massal Per Wilayah"
+      className="max-w-[490px] h-auto mx-auto rounded-lg border border-gray-200 shadow-sm"
+    />
+  </label>
+  <span className="block text-xs text-gray-400 mt-2">
+    Modal Set Target - Massal Per Wilayah
+  </span>
+</div>
+
+1. Tentukan Provinsi dan Kota / Kabupaten.
+2. (Opsional) Pilih Level Kemitraan untuk membatasi target pada level tertentu.
+3. Sistem menampilkan pratinjau mitra beserta nominal target sesuai template.
+4. Periksa pratinjau, lalu klik Terapkan ke [N] Mitra Terkait untuk konfirmasi.
+
+<Callout type="warn" title="Atur Template Target Terlebih Dahulu">
+  Mode ini memakai Template Target sebagai acuan nominal (opsi Ikuti Template Standar pada Per Mitra Spesifik juga memakainya). Jika belum diatur, klik + Template Target, pilih Template Target, isi Tahun, Provinsi, Kota / Kabupaten, serta Target Distributor, Agen, dan Sub Agen, lalu klik Simpan.
+</Callout>
 
 <div className="my-6 text-center">
   <input type="checkbox" id="zoom-template-target" className="peer hidden" />
@@ -41,7 +75,7 @@ Sebelum menerapkan penetapan target berbasis wilayah, Administrator dapat mengon
     className="inline-block cursor-zoom-in peer-checked:fixed peer-checked:inset-0 peer-checked:z-50 peer-checked:flex peer-checked:items-center peer-checked:justify-center peer-checked:bg-black/80 peer-checked:p-4 peer-checked:cursor-zoom-out peer-checked:[&>img]:max-h-[90vh] peer-checked:[&>img]:max-w-full peer-checked:[&>img]:w-auto peer-checked:[&>img]:shadow-2xl"
   >
     <img
-      src="/tamplatetarget.png"
+      src="/15(2).webp"
       alt="Kelola Template Target"
       className="max-w-full h-auto mx-auto rounded-lg border border-gray-200 shadow-sm"
     />
@@ -51,62 +85,18 @@ Sebelum menerapkan penetapan target berbasis wilayah, Administrator dapat mengon
   </span>
 </div>
 
-1. Klik tombol **+ Set Target** di pojok kanan atas halaman.
-2. Pada modal yang muncul, pilih tombol **Template Target**.
-3. Tentukan parameter acuan:
-   * **Tahun** target.
-   * **Provinsi** dan **Kota / Kabupaten**.
-   * **Target Distributor**, **Target Agen**, dan **Target Sub Agen**.
-4. Klik **Simpan** untuk menyimpan konfigurasi template.
+### 3. Per Mitra Spesifik
 
-<Callout type="warn" title="Ketentuan Prasyarat Template">
-  Template Target harus diatur terlebih dahulu jika Administrator ingin menggunakan mode **Massal Per Wilayah** atau memilih opsi **Ikuti Template Standar** pada penetapan target per mitra spesifik.
-</Callout>
-
----
-
-### 3. Opsi Penetapan Target Mitra
-
-Setelah template acuan tersedia, penetapan target dapat dieksekusi melalui dua metode pilihan:
-
-#### Opsi A: Massal Per Wilayah
+Menetapkan target untuk satu mitra. Klik + Set Target, lalu pilih tab Per Mitra Spesifik.
 
 <div className="my-6 text-center">
-  <input type="checkbox" id="zoom-set-target-1" className="peer hidden" />
+  <input type="checkbox" id="zoom-set-target-mitra" className="peer hidden" />
   <label
-    htmlFor="zoom-set-target-1"
+    htmlFor="zoom-set-target-mitra"
     className="inline-block cursor-zoom-in peer-checked:fixed peer-checked:inset-0 peer-checked:z-50 peer-checked:flex peer-checked:items-center peer-checked:justify-center peer-checked:bg-black/80 peer-checked:p-4 peer-checked:cursor-zoom-out peer-checked:[&>img]:max-h-[90vh] peer-checked:[&>img]:max-w-full peer-checked:[&>img]:w-auto peer-checked:[&>img]:shadow-2xl"
   >
     <img
-      src="/settarget1.png"
-      alt="Modal Set Target Massal Per Wilayah"
-      className="max-w-full h-auto mx-auto rounded-lg border border-gray-200 shadow-sm"
-    />
-  </label>
-  <span className="block text-xs text-gray-400 mt-2">
-    Modal Set Target - Massal Per Wilayah
-  </span>
-</div>
-
-Opsi ini digunakan untuk menetapkan target secara kolektif kepada seluruh mitra di wilayah tertentu sekaligus:
-
-1. Tentukan **Provinsi** dan **Kota / Kabupaten**.
-2. (Opsional) Pilih **Level Kemitraan** untuk membatasi alokasi target hanya pada jenjang level spesifik.
-3. Sistem secara otomatis menampilkan pratinjau daftar mitra terkait beserta kalkulasi nominal target sesuai template.
-4. Periksa pratinjau data, lalu klik tombol **Terapkan ke [N] Mitra Terkait** untuk mengonfirmasi.
-
----
-
-#### Opsi B: Per Mitra Spesifik
-
-<div className="my-6 text-center">
-  <input type="checkbox" id="zoom-set-target-2" className="peer hidden" />
-  <label
-    htmlFor="zoom-set-target-2"
-    className="inline-block cursor-zoom-in peer-checked:fixed peer-checked:inset-0 peer-checked:z-50 peer-checked:flex peer-checked:items-center peer-checked:justify-center peer-checked:bg-black/80 peer-checked:p-4 peer-checked:cursor-zoom-out peer-checked:[&>img]:max-h-[90vh] peer-checked:[&>img]:max-w-full peer-checked:[&>img]:w-auto peer-checked:[&>img]:shadow-2xl"
-  >
-    <img
-      src="/settarget2.png"
+      src="/15(3).webp"
       alt="Modal Set Target Per Mitra Spesifik"
       className="max-w-full h-auto mx-auto rounded-lg border border-gray-200 shadow-sm"
     />
@@ -116,47 +106,29 @@ Opsi ini digunakan untuk menetapkan target secara kolektif kepada seluruh mitra 
   </span>
 </div>
 
-Opsi ini digunakan untuk mengonfigurasi besaran target bagi satu akun mitra secara khusus:
-
-1. Pilih akun mitra pada menu dropdown **Cari / Pilih Mitra**.
+1. Pilih mitra pada dropdown Cari / Pilih Mitra.
 2. Tentukan metode nominal target:
-   * **Ikuti Template Standar:** Menggunakan besaran nominal acuan berdasarkan wilayah dan level mitra.
-   * **Custom Manual:** Memasukkan nominal target secara fleksibel/manual pada kolom **Nominal Target (Tahunan)**.
-3. Klik tombol **Simpan Target** untuk menyimpan penetapan.
-
----
+   * Ikuti Template Standar: Nominal mengikuti template wilayah dan level mitra.
+   * Custom Manual: Isi sendiri pada kolom Nominal Target (Tahunan).
+3. Klik Simpan Target untuk menyimpan.
 
 ### 4. Perubahan & Penghapusan Data Target
 
-Pada kolom **Aksi** di tabel utama halaman **Target Mitra**:
-* Klik ikon **Pensil (Edit)** untuk memperbarui besaran nominal target mitra.
-* Klik ikon **Tempat Sampah (Hapus)** untuk membatalkan/menghapus alokasi target mitra dari sistem.
+Pada kolom Aksi di tabel utama halaman Target Mitra:
+
+* Klik ikon Pensil (Edit) untuk memperbarui nominal target mitra.
+* Klik ikon Tempat Sampah (Hapus) untuk menghapus alokasi target mitra.
 
 ---
 
-## Struktur Tabel & Form Set Target
-
-### 1. Struktur Tabel Utama Target Mitra
+## Struktur Tabel Target Mitra
 
 | Kolom | Fungsi dan Keterangan |
 | :--- | :--- |
-| **Nama** | Nama lengkap mitra beserta ID unik mitra terdaftar. |
+| **Nama** | Nama lengkap mitra beserta ID unik mitra. |
 | **Kota / Kabupaten** | Wilayah operasional atau domisili mitra. |
-| **Level** | Badge indikator tingkatan level kemitraan (*Sub Agen*, *Agen*, *Distributor*). |
-| **Tahun** | Kolom penunjuk periode tahun berlakunya alokasi target (misal: `2026`). |
-| **Target Tahunan** | Nominal akumulasi target penjualan yang ditetapkan untuk mitra. |
-| **Dibuat** | Tanggal dan bulan penetapan target dibuat di sistem. |
-| **Aksi** | Tombol ikon untuk menyunting (*Pensil*) atau menghapus (*Tempat Sampah*) target. |
-
-### 2. Ringkasan Elemen Form
-
-| Elemen Form | Tipe | Fungsi & Keterangan |
-| :--- | :--- | :--- |
-| **Tahun** | Dropdown | Menentukan periode tahun berlakunya alokasi target. |
-| **Massal Per Wilayah** | Opsi Tab | Moda alokasi target kolektif berbasis wilayah operasional. |
-| **Per Mitra Spesifik** | Opsi Tab | Moda alokasi target individu untuk mitra tertentu. |
-| **Template Target** | Tombol | Membuka modal pengaturan nominal standar wilayah. |
-| **Ikuti Template Standar** | Radio | Menggunakan besaran nominal acuan dari template wilayah. |
-| **Custom Manual** | Radio | Memasukkan nominal target secara manual. |
-| **Pratinjau** | Tabel Ringkas | Menampilkan daftar mitra penerima target sebelum dikonfirmasi. |
-| **Simpan Target / Terapkan** | Eksekusi | Menyimpan penetapan target ke dalam database sistem. |
+| **Level** | Level kemitraan (*Sub Agen*, *Agen*, *Distributor*). |
+| **Tahun** | Tahun berlakunya target (misal: `2026`). |
+| **Target Tahunan** | Nominal target penjualan yang ditetapkan untuk mitra. |
+| **Dibuat** | Tanggal dan bulan target dibuat di sistem. |
+| **Aksi** | Ikon Pensil (edit) dan Tempat Sampah (hapus). |

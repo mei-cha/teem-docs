@@ -17,6 +17,40 @@ Buka modul **Penjualan > Pesanan**. Di pojok kiri atas halaman terdapat dua tab:
 | :--- | :--- |
 | **Pesanan Saya** | Menampilkan pesanan yang ditangani langsung oleh Admin Pusat. Pada tab ini juga terdapat tombol khusus **Pembatalan Pesanan**. |
 | **Pesanan Mitra** | Menampilkan pesanan yang ditangani oleh mitra seperti distributor atau agen. Tab ini bersifat *read-only*: Admin hanya dapat melihat pesanan dan mencetak invoice. |
+<div className="flex flex-col sm:flex-row gap-4 my-6">
+  <div className="flex-1 text-center">
+    <input type="checkbox" id="zoom-pesanan-saya" className="peer hidden" />
+    <label
+      htmlFor="zoom-pesanan-saya"
+      className="inline-block cursor-zoom-in peer-checked:fixed peer-checked:inset-0 peer-checked:z-50 peer-checked:flex peer-checked:items-center peer-checked:justify-center peer-checked:bg-black/80 peer-checked:p-4 peer-checked:cursor-zoom-out peer-checked:[&>img]:max-h-[90vh] peer-checked:[&>img]:max-w-full peer-checked:[&>img]:w-auto peer-checked:[&>img]:shadow-2xl"
+    >
+      <img
+        src="/3.webp"
+        alt="Tampilan tab Pesanan Saya"
+        className="max-w-full h-auto mx-auto rounded-lg border border-gray-200 shadow-sm"
+      />
+    </label>
+    <span className="block text-xs text-gray-400 mt-2">
+      Tampilan tab Pesanan Saya
+    </span>
+  </div>
+  <div className="flex-1 text-center">
+    <input type="checkbox" id="zoom-pesanan-mitra" className="peer hidden" />
+    <label
+      htmlFor="zoom-pesanan-mitra"
+      className="inline-block cursor-zoom-in peer-checked:fixed peer-checked:inset-0 peer-checked:z-50 peer-checked:flex peer-checked:items-center peer-checked:justify-center peer-checked:bg-black/80 peer-checked:p-4 peer-checked:cursor-zoom-out peer-checked:[&>img]:max-h-[90vh] peer-checked:[&>img]:max-w-full peer-checked:[&>img]:w-auto peer-checked:[&>img]:shadow-2xl"
+    >
+      <img
+        src="/4.webp"
+        alt="Tampilan tab Pesanan Mitra"
+        className="max-w-full h-auto mx-auto rounded-lg border border-gray-200 shadow-sm"
+      />
+    </label>
+    <span className="block text-xs text-gray-400 mt-2">
+      Tampilan tab Pesanan Mitra
+    </span>
+  </div>
+</div>
 
 <Callout type="warn" title="Penting">
   Admin hanya dapat menangani (menerima, menolak, mencatat pembayaran, dan memproses pengiriman) pesanan pada tab **Pesanan Saya**, yaitu pesanan yang ditangani pusat. Pesanan pada tab **Pesanan Mitra** hanya dapat dilihat dan dicetak invoice-nya melalui tombol **Cetak Invoice**.
@@ -137,7 +171,7 @@ Jika memilih **Pickup**, tentukan jadwal penjemputan pada pilihan **Jadwal Picku
       className="inline-block cursor-zoom-in peer-checked:fixed peer-checked:inset-0 peer-checked:z-50 peer-checked:flex peer-checked:items-center peer-checked:justify-center peer-checked:bg-black/80 peer-checked:p-4 peer-checked:cursor-zoom-out peer-checked:[&>img]:max-h-[90vh] peer-checked:[&>img]:max-w-full peer-checked:[&>img]:w-auto peer-checked:[&>img]:shadow-2xl"
     >
       <img
-        src="/proses1.png"
+        src="/3(1).webp"
         alt="Form Proses Pengiriman dengan opsi Pickup"
         className="max-w-full h-auto mx-auto rounded-lg border border-gray-200 shadow-sm"
       />
@@ -153,7 +187,7 @@ Jika memilih **Pickup**, tentukan jadwal penjemputan pada pilihan **Jadwal Picku
       className="inline-block cursor-zoom-in peer-checked:fixed peer-checked:inset-0 peer-checked:z-50 peer-checked:flex peer-checked:items-center peer-checked:justify-center peer-checked:bg-black/80 peer-checked:p-4 peer-checked:cursor-zoom-out peer-checked:[&>img]:max-h-[90vh] peer-checked:[&>img]:max-w-full peer-checked:[&>img]:w-auto peer-checked:[&>img]:shadow-2xl"
     >
       <img
-        src="/proses2.png"
+        src="/3(2).webp"
         alt="Form Proses Pengiriman dengan opsi Drop Off"
         className="max-w-full h-auto mx-auto rounded-lg border border-gray-200 shadow-sm"
       />
@@ -205,7 +239,7 @@ Gunakan metode ini jika pesanan dikirim menggunakan ekspedisi selain KiriminAja.
     className="inline-block cursor-zoom-in peer-checked:fixed peer-checked:inset-0 peer-checked:z-50 peer-checked:flex peer-checked:items-center peer-checked:justify-center peer-checked:bg-black/80 peer-checked:p-4 peer-checked:cursor-zoom-out peer-checked:[&>img]:max-h-[90vh] peer-checked:[&>img]:max-w-full peer-checked:[&>img]:w-auto peer-checked:[&>img]:shadow-2xl"
   >
     <img
-      src="/proses3.png"
+      src="/3(3).webp"
       alt="Form Proses Pengiriman dengan metode Dikirim Kurir Lain"
       className="max-w-full h-auto mx-auto rounded-lg border border-gray-200 shadow-sm"
     />
