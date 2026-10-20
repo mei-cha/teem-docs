@@ -1,0 +1,82 @@
+---
+title: Dashboard Produk
+icon: LayoutDashboard
+---
+
+Halaman **Dashboard Produk** menyajikan ringkasan visual mengenai status inventaris barang, performa penjualan produk terlaris, ketersediaan stok aktif, hingga sebaran alokasi persediaan barang di setiap palet gudang pada platform **Teem.id**.
+
+Modul ini membantu Administrator dalam memantau kesehatan stok produk secara *real-time* dan mengantisipasi kelangkaan persediaan barang di pasar.
+
+---
+
+## Cara Mengakses Halaman Dashboard Produk
+
+Bagi Administrator yang ingin memantau ikhtisar inventaris dan stok barang, ikuti langkah navigasi berikut:
+
+1. Pada bilah navigasi kiri (*sidebar*), buka modul **Produk > Dashboard**.
+2. Sistem akan menampilkan halaman utama **Dashboard Produk** yang berisi kartu indikator statistik, daftar produk terlaris, peringatan stok habis, serta grafik distribusi stok per gudang.
+
+<div className="my-6 text-center">
+  <input type="checkbox" id="zoom-dashboard-produk" className="peer hidden" />
+  <label
+    htmlFor="zoom-dashboard-produk"
+    className="inline-block cursor-zoom-in peer-checked:fixed peer-checked:inset-0 peer-checked:z-50 peer-checked:flex peer-checked:items-center peer-checked:justify-center peer-checked:bg-black/80 peer-checked:p-4 peer-checked:cursor-zoom-out peer-checked:[&>img]:max-h-[90vh] peer-checked:[&>img]:max-w-full peer-checked:[&>img]:w-auto peer-checked:[&>img]:shadow-2xl"
+  >
+    <img
+      src="/23.webp"
+      alt="Tampilan Halaman Dashboard Produk"
+      className="max-w-full h-auto mx-auto rounded-lg border border-gray-200 shadow-sm"
+    />
+  </label>
+  <span className="block text-xs text-gray-400 mt-2">
+    Tampilan Halaman Dashboard Produk
+  </span>
+</div>
+
+---
+
+## Ringkasan Indikator Inventaris (Stat Cards)
+
+Di bagian atas halaman, terdapat 4 kartu statistik utama untuk memantau status katalog produk:
+
+* **Total Produk:** Menampilkan akumulasi jumlah keseluruhan variasi produk yang terdaftar di dalam sistem.
+* **Produk Aktif:** Menampilkan jumlah produk berstatus aktif yang saat ini tampil di katalog dan dapat dipesan oleh mitra/konsumen.
+* **Produk Nonaktif:** Menampilkan jumlah produk yang disembunyikan dari katalog toko.
+* **Stok Habis:** Menampilkan jumlah variasi produk aktif yang persediaannya telah habis (bernilai `0`).
+
+---
+
+## Ringkasan Performa & Stok Gudang
+
+Halaman dashboard dilengkapi tiga blok informasi utama untuk analisis persediaan:
+
+### 1. Produk Terlaris
+
+Blok ini menampilkan daftar peringkat produk dengan volume penjualan tertinggi.
+* **Filter Periode:** Administrator dapat memilih rentang waktu pemantauan pada dropdown (misalnya *Bulan Ini*) untuk melihat produk paling diminati pada periode tersebut.
+* **Informasi Penjualan:** Menampilkan nama produk beserta akumulasi total unit/satuan yang berhasil terjual (contoh: *1.768 Slop terjual*).
+
+---
+
+### 2. Peringatan Stok Habis
+
+Blok ini berfungsi sebagai area peringatan (*alert zone*) otomatis untuk menampilkan daftar barang aktif yang stoknya sudah habis.
+* **Notifikasi Real-time:** Jika seluruh produk aktif masih memiliki persediaan, blok akan menampilkan keterangan *Semua produk aktif masih memiliki stok.*
+* **Tautan Pintas:** Klik tautan **Semua →** di pojok kanan atas blok untuk langsung menuju halaman pengelolaan stok produk.
+
+---
+
+### 3. Stok per Gudang (Grafik Distribusi)
+
+Blok ini menyajikan visualisasi grafik batang (*bar chart*) horizontal mengenai nilai nominal persediaan produk yang tersebar di setiap titik palet atau lokasi penyimpanan gudang (seperti *Palet A*, *Palet B*, *Palet C*).
+
+---
+
+## Struktur Fitur Dashboard Produk
+
+| Elemen Dashboard | Tipe Komponen | Deskripsi Fungsi |
+| :--- | :--- | :--- |
+| **Stat Cards** | Ringkasan Indikator | Menampilkan metrik utama (*Total Produk*, *Produk Aktif*, *Produk Nonaktif*, *Stok Habis*). |
+| **Produk Terlaris** | Pemantau Performa | Menampilkan daftar urutan produk terlaris lengkap dengan filter periode waktu. |
+| **Peringatan Stok Habis** | Notifikasi Operasional | Peringatan instan produk aktif yang memerlukan pengadaan stok ulang (*restock*). |
+| **Stok per Gudang** | Grafik Visualisasi | Menampilkan sebaran estimasi nilai rupiah stok persediaan barang di tiap area palet gudang. |

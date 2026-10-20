@@ -2,6 +2,7 @@
     "title":  "Produk",
     "icon":  "Package",
     "pages":  [
+                  "dashboard",
                   "categories",
                   "product",
                   "selling-price",

@@ -42,6 +42,7 @@
     "finance/partner-bank",
 
     "---PRODUK---",
+    "products/dashboard",
     "products/categories",
     "products/product",
     "products/selling-price",
@@ -56,6 +57,7 @@
     "master-data/regions",
     "master-data/vendors",
     "master-data/warehouse",
+    "master-data/delivery-service",
     "master-data/xendit-fee",
     "master-data/payout-fee",
 
