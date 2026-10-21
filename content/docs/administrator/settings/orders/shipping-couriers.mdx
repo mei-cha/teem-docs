@@ -1,21 +1,23 @@
 ---
-title: Ekspedisi 
+title: Ekspedisi Pengiriman
 icon: Truck
 ---
 
-Halaman **Ekspedisi Pengiriman** digunakan oleh Administrator untuk memilih dan mengaktifkan daftar penyedia jasa kurir logistik yang akan ditunjukkan kepada pembeli atau mitra saat melakukan kalkulasi ongkos kirim pada checkout transaksi di **Teem.id**.
+Halaman **Ekspedisi Pengiriman** digunakan oleh Administrator untuk memilih penyedia jasa kurir logistik yang akan ditampilkan kepada pembeli atau mitra saat menghitung ongkos kirim pada *checkout* transaksi di **Teem.id**.
 
-Secara bawaan sistem, jika Administrator tidak mencentang opsi ekspedisi mana pun, seluruh layanan ekspedisi yang terintegrasi akan ditampilkan secara otomatis.
+Secara bawaan, jika Administrator tidak mencentang ekspedisi mana pun, seluruh ekspedisi yang tersedia dari penyedia layanan pengiriman untuk rute tersebut akan ditampilkan secara otomatis.
+
+<Callout type="info" title="Cakupan Pengaturan">
+  Pengaturan ini berlaku **global** untuk semua pembeli dan mitra. Pengaturan tidak dapat dibedakan per mitra, level, atau wilayah. Perubahan berlaku pada perhitungan ongkir berikutnya, tanpa perlu menunggu atau memuat ulang sistem.
+</Callout>
 
 ---
 
 ## Cara Mengakses Halaman Ekspedisi Pengiriman
 
-Bagi Administrator yang ingin memilih dan mengatur opsi ekspedisi pengiriman aktif, ikuti langkah navigasi berikut:
-
 1. Pada bilah navigasi kiri (*sidebar*), buka modul **Administrator > Pengaturan**.
-2. Pada panel navigasi sebelah kiri di bawah kategori **PESANAN**, pilih sub-menu **Ekspedisi Pengiriman**.
-3. Sistem akan menampilkan daftar kotak pilihan (*checkbox*) penyedia jasa ekspedisi terintegrasi.
+2. Pada panel navigasi di bawah kategori **PESANAN**, pilih sub-menu **Ekspedisi Pengiriman**.
+3. Sistem akan menampilkan daftar pilihan (*checkbox*) ekspedisi yang tersedia.
 
 <div className="my-6 text-center">
   <input type="checkbox" id="zoom-ekspedisi-pengiriman" className="peer hidden" />
@@ -24,7 +26,7 @@ Bagi Administrator yang ingin memilih dan mengatur opsi ekspedisi pengiriman akt
     className="inline-block cursor-zoom-in peer-checked:fixed peer-checked:inset-0 peer-checked:z-50 peer-checked:flex peer-checked:items-center peer-checked:justify-center peer-checked:bg-black/80 peer-checked:p-4 peer-checked:cursor-zoom-out peer-checked:[&>img]:max-h-[90vh] peer-checked:[&>img]:max-w-full peer-checked:[&>img]:w-auto peer-checked:[&>img]:shadow-2xl"
   >
     <img
-      src="/shipping-courier.webp"
+      src="/expedisi.webp"
       alt="Tampilan Halaman Ekspedisi Pengiriman"
       className="max-w-full h-auto mx-auto rounded-lg border border-gray-200 shadow-sm"
     />
@@ -36,17 +38,61 @@ Bagi Administrator yang ingin memilih dan mengatur opsi ekspedisi pengiriman akt
 
 ---
 
+## Daftar Ekspedisi yang Tersedia
+
+Daftar ekspedisi pada halaman ini **diambil otomatis dari penyedia layanan pengiriman**, bukan daftar tetap. Beberapa hal yang perlu diketahui:
+
+- Hanya ekspedisi bertipe **Express** yang ditampilkan.
+- Daftar disimpan sementara (*cache*) sekitar 5 menit. Ekspedisi baru atau yang dihentikan penyedia dapat membutuhkan beberapa menit untuk muncul atau hilang dari halaman.
+- Nama-nama ekspedisi pada panduan ini (misalnya *JNE Express*, *J&T Express*, *Tiki*) hanyalah contoh. Daftar yang Anda lihat dapat berbeda.
+- Jika daftar gagal dimuat, halaman menampilkan pesan **"Daftar ekspedisi tidak tersedia."**
+
+<Callout type="warning" title="Jangan Simpan Saat Daftar Tidak Tersedia">
+  Jika daftar ekspedisi gagal dimuat, **jangan klik Simpan**. Menyimpan dalam kondisi ini akan mengosongkan pilihan dan mengembalikan sistem ke mode "semua ekspedisi". Muat ulang halaman terlebih dahulu hingga daftar tampil.
+</Callout>
+
+---
+
 ## Panduan Konfigurasi Ekspedisi Pengiriman
 
-Administrator dapat memilih kurir logistik yang ingin diaktifkan saat proses perhitungan ongkos kirim:
+1. Centang (*check*) kotak ekspedisi yang ingin ditampilkan saat perhitungan ongkos kirim.
+2. Tinjau indikator di pojok kiri bawah:
+   - Jika ada ekspedisi dipilih, indikator menampilkan jumlahnya, misalnya **"7 ekspedisi dipilih"**.
+   - Jika tidak ada yang dicentang, indikator menampilkan **"Semua ekspedisi"**.
+3. Klik tombol **Simpan** berwarna merah di pojok kanan bawah.
+4. Tunggu notifikasi hasil penyimpanan:
+   - Berhasil: **"Pengaturan ekspedisi berhasil disimpan."**
+   - Gagal: notifikasi berisi alasan kegagalan, misalnya kode ekspedisi tidak dikenal.
 
-1. Centang (*check*) pada kotak nama ekspedisi yang ingin diaktifkan (misalnya *JNE Express*, *J&T Express*, *Tiki*, *AnterAja*, *ID Express*, *J&T Cargo*, *SAP Express*).
-2. Tinjau total jumlah kurir yang dipilih pada indikator di pojok kiri bawah (contoh: *7 ekspedisi dipilih*).
-3. Klik tombol **Simpan** berwarna merah di pojok kanan bawah untuk menyimpan konfigurasi.
+### Mengembalikan ke Pengaturan Awal (Semua Ekspedisi)
 
-<Callout type="info" title="Logika Tampilan Kurir">
-  Jika tidak ada ekspedisi yang dicentang secara spesifik, sistem secara otomatis akan menampilkan seluruh pilihan kurir pengiriman yang tersedia pada saat pembeli/mitra menghitung ongkos kirim.
+Hapus centang pada seluruh ekspedisi, lalu klik **Simpan**. Sistem akan kembali menampilkan semua ekspedisi yang tersedia. Cara ini juga berarti Anda tidak dapat menonaktifkan seluruh ekspedisi sekaligus.
+
+---
+
+## Logika Tampilan Kurir
+
+| Kondisi | Yang Ditampilkan Saat Hitung Ongkir |
+| :--- | :--- |
+| Satu atau lebih ekspedisi dicentang | Hanya tarif dari ekspedisi yang dipilih |
+| Tidak ada ekspedisi dicentang | Semua ekspedisi yang tersedia untuk rute tersebut |
+
+Pengaturan ini menentukan pilihan ekspedisi yang dilihat **pembeli dan mitra saat checkout**. Ekspedisi yang tampil adalah ekspedisi yang dicentang **dan** melayani rute pengiriman tujuan.
+
+<Callout type="warning" title="Ongkir Tidak Muncul?">
+  Jika ekspedisi yang Anda pilih tidak melayani rute tujuan pembeli, ongkir bisa tidak tampil dan sistem **tidak** otomatis beralih ke ekspedisi lain. Untuk mengatasinya:
+
+  - Pilih beberapa ekspedisi dengan jangkauan luas, atau
+  - Kosongkan semua centang agar seluruh ekspedisi ditampilkan.
+
+  Pastikan juga **Alamat Asal Pengiriman** di *Pengaturan > Profil Perusahaan* sudah lengkap, serta berat dan dimensi produk sudah diisi pada halaman Produk. Data yang belum lengkap juga dapat menyebabkan ongkir gagal dihitung.
 </Callout>
+
+---
+
+## Pencatatan Perubahan
+
+Setiap penyimpanan pengaturan ekspedisi dicatat pada **Log Aktivitas** dengan aksi `SHIPPING_COURIER_SETTINGS_UPDATED`. Catatan memuat pengguna yang melakukan perubahan dan daftar ekspedisi yang dipilih, sehingga dapat dipakai untuk audit.
 
 ---
 
@@ -54,6 +100,6 @@ Administrator dapat memilih kurir logistik yang ingin diaktifkan saat proses per
 
 | Elemen Pengaturan | Fungsi & Keterangan |
 | :--- | :--- |
-| **Daftar Checkbox Ekspedisi** | Opsi pilihan untuk mengaktifkan atau menonaktifkan ekspedisi spesifik di antarmuka checkout (*SPX*, *Ninja*, *Paxel*, *Sicepat*, *Sentral Cargo*, dll.). |
-| **Indikator Jumlah Pilihan** | Menampilkan total ekspedisi yang sedang aktif terpilih secara *real-time*. |
-| **Tombol Simpan** | Menerapkan dan menyimpan daftar opsi ekspedisi pengiriman ke dalam sistem kalkulasi ongkir. |
+| **Daftar Checkbox Ekspedisi** | Memilih ekspedisi yang ditampilkan di checkout. Daftar diambil otomatis dari penyedia layanan pengiriman dan hanya memuat tipe Express. |
+| **Indikator Jumlah Pilihan** | Menampilkan jumlah ekspedisi terpilih, atau "Semua ekspedisi" jika tidak ada yang dicentang. |
+| **Tombol Simpan** | Menyimpan pilihan dan langsung menerapkannya pada perhitungan ongkir berikutnya. |
