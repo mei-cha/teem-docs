@@ -2,7 +2,8 @@
       "title": "Pesanan",
       "icon": "FileCheck",
       "pages":  [
-                    "autocomplete"
+                    "autocomplete",
+                    "autocancel"
                 ]
   }
   

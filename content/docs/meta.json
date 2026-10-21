@@ -69,10 +69,10 @@
     "administrator/settings/company-profile",
     "administrator/settings/appearance",
     "administrator/settings/partnerships",
+    "administrator/settings/orders",
     "administrator/settings/finance",
     "administrator/settings/points",
     "administrator/settings/content",
-    "administrator/settings/orders",
     "administrator/settings/support",
 
 

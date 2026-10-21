@@ -65,8 +65,12 @@ Untuk memeriksa kelengkapan berkas dan memperbarui alur verifikasi, klik langsun
 
 Panel **Tahapan Verifikasi** digunakan untuk memperbarui progres status kemitraan secara bertahap:
 
-* **Pembaruan Tahap Verifikasi:**
+* **Pembaruan Tahap Verifikasi & Notifikasi Email Otomatis:**
   Pilih alur pada dropdown **Ubah ke tahap** (misalnya *Belum Diverifikasi*, *Proses Verifikasi*, *TTD MoU Terverifikasi*, *Pembelian Awal*, hingga *Pengajuan Mitra Aktif*). Anda dapat menyertakan **Catatan untuk mitra** serta mengaktifkan opsi **Tandai perlu revisi dari mitra** apabila dokumen memerlukan perbaikan.
+  
+  <Callout type="info" title="Notifikasi Email Otomatis">
+    Setiap kali Administrator memperbarui progres tahapan verifikasi, sistem secara otomatis mengirimkan pemberitahuan status terbaru beserta catatan revisi/instruksi verifikasi melalui email resmi kepada calon mitra.
+  </Callout>
 
 * **Otomatisasi Tahap Pembelian Awal:**
   Saat status dialihkan ke tahap **Pembelian Awal** (setelah *TTD MoU Terverifikasi*), sistem secara otomatis memicu pemuatan (*trigger function*) transaksi pesanan (*order*) baru bagi calon mitra. Pesanan memuat daftar produk sesuai paket Pembelian Awal dengan status pembayaran **Pending** (calon mitra menyelesaikan pembayaran via *payment gateway* di aplikasinya).
@@ -109,4 +113,4 @@ Panel **Tahapan Verifikasi** digunakan untuk memperbarui progres status kemitraa
 | **Tab Dokumen** | Berkas verifikasi Foto Selfie, KTP, dan Selfie KTP. |
 | **Tab MoU** | Berkas perjanjian kerja sama format PDF. |
 | **Tab Invoice** | Rincian paket produk pendaftaran dan status tagihan. |
-| **Tahapan Verifikasi** | Panel interaktif untuk mengelola verifikasi, catatan revisi, pencetus otomatis order *Pembelian Awal*, serta batasan order selama status *processing*. |
+| **Tahapan Verifikasi** | Panel interaktif untuk mengelola verifikasi, catatan revisi, otomatisasi pesan email pemberitahuan ke mitra, pencetus otomatis order *Pembelian Awal*, serta batasan order selama status *processing*. |

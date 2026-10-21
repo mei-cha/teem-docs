@@ -4,6 +4,7 @@
     "pages":  [
                   "level",
                   "deposit",
+                  "restock",
                   "document",
                   "contract-duration",
                   "top-5"
