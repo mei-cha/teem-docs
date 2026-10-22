@@ -88,13 +88,13 @@ Klik tombol **Export** untuk mengunduh rekapitulasi data pesanan hasil filter ke
 
 Klik **nomor invoice** pada kolom **Pelanggan** untuk membuka halaman detail pesanan tersebut.
 
-Tombol **Cetak Invoice** selalu tersedia di pojok kanan atas halaman detail, apa pun status pesanannya. Pada pesanan mitra, **Cetak Invoice** adalah satu-satunya tindakan yang tersedia. Untuk pesanan yang ditangani pusat, tombol lain muncul menyesuaikan kondisi pesanan (lihat bagian **Menerima atau Menolak Pesanan Baru** dan **Mencatat Pembayaran Manual**).
+Tombol **Cetak Invoice** selalu tersedia di pojok kanan atas halaman detail, apa pun status pesanannya. Pada pesanan mitra, **Cetak Invoice** adalah satu-satunya tindakan yang tersedia. Untuk pesanan yang ditangani pusat, tombol lain muncul di bagian header pesanan menyesuaikan kondisi pembayaran dan status pesanan, seperti dijelaskan pada bagian **Dua Kondisi Pesanan di Halaman Detail**.
 
 Halaman detail menampilkan informasi berikut:
 
 | Bagian | Isi |
 | :--- | :--- |
-| **Header Pesanan** | Nomor invoice, waktu pemesanan, dan status pesanan. |
+| **Header Pesanan** | Nomor invoice, waktu pemesanan, status pesanan, dan tombol tindakan untuk Admin. |
 | **Informasi Pelanggan & Pengiriman** | Nama pelanggan beserta level akunnya, pihak yang menangani pesanan (**Ditangani Oleh**), metode pengiriman, dan alamat tujuan. |
 | **Daftar Produk** | Produk yang dipesan beserta jumlah, harga, dan subtotal. |
 | **Ringkasan Pembayaran** | Subtotal produk, ongkos kirim, biaya layanan, diskon kupon, total, serta metode dan status pembayaran. |
@@ -122,9 +122,11 @@ Setelah pesanan diterima, pesanan langsung lanjut ke tahap berikutnya. Tombol pa
 | **Dikirim Kurir** | **→ Proses** | Membuka form untuk menentukan ekspedisi. Lihat bagian **Pengiriman melalui Ekspedisi**. |
 | **Diambil Sendiri** | **→ Siap Diambil** | Lihat bagian **Pesanan Ambil Sendiri**. |
 
+Pada halaman detail pesanan, tombol yang sama muncul di header dengan nama **Proses**.
+
 ### Mencatat Pembayaran Manual
 
-Untuk pesanan berstatus **Menunggu** dan **Belum Bayar** yang pembayarannya tidak melalui *payment gateway* Teem.id, halaman detail pesanan menampilkan tombol hijau **Proses Bayar**. Tombol ini digunakan Admin untuk mencatat bahwa pesanan sudah dilunasi di luar sistem pembayaran.
+Untuk pesanan berstatus **Menunggu** dan belum lunas yang pembayarannya tidak melalui *payment gateway* Teem.id, halaman detail pesanan menampilkan tombol hijau **Proses Bayar**. Tombol ini digunakan Admin untuk mencatat bahwa pesanan sudah dilunasi di luar sistem pembayaran.
 
 Tombol **Proses Bayar** hanya tersedia untuk pesanan yang ditangani pusat (tab **Pesanan Saya**).
 

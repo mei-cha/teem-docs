@@ -11,9 +11,9 @@ Melalui halaman ini, Administrator dapat memverifikasi identitas pemohon, legali
 
 ## Cara Mengakses Halaman Pengajuan
 
-Bagi Administrator yang ingin meninjau pengajuan mitra masuk, Anda dapat menjangkau halaman melalui navigasi berikut:
+Bagi Administrator yang ingin meninjau pengajuan mitra masuk, ikuti langkah berikut:
 
-1. Pada bilah navigasi kiri (*sidebar*), buka modul **Kemitraan > Pengajuan**.
+1. Pada bilah navigasi kiri, buka modul **Kemitraan > Pengajuan**.
 2. Sistem akan menampilkan daftar seluruh permohonan kemitraan yang membutuhkan verifikasi atau tindakan persetujuan.
 
 <div className="my-6 text-center">
@@ -37,56 +37,56 @@ Bagi Administrator yang ingin meninjau pengajuan mitra masuk, Anda dapat menjang
 
 ## Panduan Pengelolaan & Pencarian Pengajuan
 
-Administrator dapat memanfaatkan berbagai instrumen penyaringan data di bagian atas tabel untuk mempercepat proses pencarian pengajuan:
+Gunakan kolom pencarian dan filter di bagian atas tabel untuk menemukan pengajuan dengan cepat:
 
-* **Pencarian Cepat:** Masukkan nama pemohon atau alamat email pada kolom **Cari...** di pojok kanan atas tabel.
-* **Filter Komprehensif:** 
-  * **Status & Level:** Menyaring daftar berdasarkan status pengajuan dan tingkatan level kemitraan yang diajukan.
-  * **Wilayah:** Membatasi data berdasarkan hirarki provinsi, kota/kabupaten, kecamatan, hingga desa.
-  * **Tgl Pengajuan:** Menentukan rentang periode waktu masuknya pengajuan.
-  * **Pengaturan Kolom:** Mengatur visibilitas kolom yang ingin ditampilkan pada tabel utama.
+* **Pencarian Cepat:** Ketik nama pemohon atau alamat email pada kolom **Cari...** di pojok kanan atas tabel.
+* **Filter:**
+  * **Status & Level:** Menyaring daftar berdasarkan status pengajuan dan level kemitraan yang diajukan.
+  * **Wilayah:** Membatasi data berdasarkan provinsi, kota/kabupaten, kecamatan, hingga desa.
+  * **Tgl Pengajuan:** Menentukan rentang waktu masuknya pengajuan.
+  * **Pengaturan Kolom:** Mengatur kolom apa saja yang ingin ditampilkan pada tabel.
 
 ---
 
 ## Pemrosesan & Verifikasi Detail Pengajuan
 
-Untuk memeriksa kelengkapan berkas dan memperbarui alur verifikasi, klik langsung baris pemohon yang ingin ditinjau untuk membuka halaman **Detail Pengajuan**.
+Untuk memeriksa kelengkapan berkas dan memperbarui tahapan verifikasi, klik baris pemohon yang ingin ditinjau untuk membuka halaman **Detail Pengajuan**.
 
-### 1. Verifikasi Data Pemohon & Dokumen Legalitas
+### 1. Verifikasi Data Pemohon & Dokumen
 
-* **Profil & Rekening Bank:** Periksa kesesuaian Nama, Nomor HP, Jenis Kelamin, Rekening Bank (Nama Bank, No. Rekening, Nama Pemilik), NIK, NPWP, serta rincian Alamat Pemohon.
-* **Tab Dokumen:** Menampilkan berkas fisik pendukung mencakup *Foto Selfie*, *Foto KTP*, dan *Foto Selfie dengan KTP*.
-* **Tab MoU:** Menampilkan lembar perjanjian kerja sama resmi (dapat dibuka di tab baru untuk peninjauan mendalam atau diunduh).
-* **Tab Invoice:** Menampilkan rincian paket produk pendaftaran beserta total nominal pembayaran.
+* **Profil & Rekening Bank:** Periksa kesesuaian nama, nomor HP, jenis kelamin, NIK, NPWP, dan alamat pemohon, serta rekening bank beserta nama bank, nomor rekening, dan nama pemiliknya.
+* **Tab Dokumen:** Menampilkan berkas pendukung berupa *Foto Selfie*, *Foto KTP*, dan *Foto Selfie dengan KTP*.
+* **Tab MoU:** Menampilkan lembar perjanjian kerja sama resmi. Berkas dapat dibuka di tab baru atau diunduh.
+* **Tab Invoice:** Menampilkan rincian paket produk pendaftaran dan total pembayaran.
 
 ---
 
-### 2. Pengelolaan Tahapan Verifikasi & Logika Sistem
+### 2. Pengelolaan Tahapan Verifikasi
 
 Panel **Tahapan Verifikasi** digunakan untuk memperbarui progres status kemitraan secara bertahap:
 
-* **Pembaruan Tahap Verifikasi & Notifikasi Email Otomatis:**
-  Pilih alur pada dropdown **Ubah ke tahap** (misalnya *Belum Diverifikasi*, *Proses Verifikasi*, *TTD MoU Terverifikasi*, *Pembelian Awal*, hingga *Pengajuan Mitra Aktif*). Anda dapat menyertakan **Catatan untuk mitra** serta mengaktifkan opsi **Tandai perlu revisi dari mitra** apabila dokumen memerlukan perbaikan.
-  
+* **Mengubah Tahap Verifikasi:**
+  Pilih tahap pada dropdown **Ubah ke tahap**, misalnya *Belum Diverifikasi*, *Proses Verifikasi*, *TTD MoU Terverifikasi*, *Pembelian Awal*, hingga *Pengajuan Mitra Aktif*. Anda dapat menambahkan **Catatan untuk mitra**, dan mengaktifkan opsi **Tandai perlu revisi dari mitra** jika dokumen perlu diperbaiki.
+
   <Callout type="info" title="Notifikasi Email Otomatis">
-    Setiap kali Administrator memperbarui progres tahapan verifikasi, sistem secara otomatis mengirimkan pemberitahuan status terbaru beserta catatan revisi/instruksi verifikasi melalui email resmi kepada calon mitra.
+    Setiap kali tahap verifikasi diperbarui, sistem otomatis mengirim email berisi status terbaru beserta catatan revisi atau instruksi kepada calon mitra.
   </Callout>
 
-* **Otomatisasi Tahap Pembelian Awal:**
-  Saat status dialihkan ke tahap **Pembelian Awal** (setelah *TTD MoU Terverifikasi*), sistem secara otomatis memicu pemuatan (*trigger function*) transaksi pesanan (*order*) baru bagi calon mitra. Pesanan memuat daftar produk sesuai paket Pembelian Awal dengan status pembayaran **Pending** (calon mitra menyelesaikan pembayaran via *payment gateway* di aplikasinya).
+* **Tahap Pembelian Awal:**
+  Saat status diubah ke **Pembelian Awal**, setelah tahap *TTD MoU Terverifikasi*, sistem otomatis membuat pesanan baru untuk calon mitra. Pesanan berisi produk sesuai paket Pembelian Awal dengan status pembayaran **Pending**. Calon mitra kemudian menyelesaikan pembayaran melalui aplikasinya.
 
-* **Ketentuan Deposit Terpisah:**
-  Nominal deposit tidak digabungkan ke dalam invoice pesanan produk, melainkan diproses terpisah melalui mekanisme *top up* agar transparan dan tetap tercatat sebagai saldo mitra yang dapat ditarik (*withdrawable*).
+* **Deposit Dibayar Terpisah:**
+  Deposit tidak digabung ke dalam invoice pesanan produk. Deposit diproses terpisah lewat *top up* agar transparan dan tercatat sebagai saldo mitra yang dapat ditarik.
 
-* **Aturan Pembatasan Transaksi (Order Restriction):**
-  * **Status Pengajuan Sedang Diproses (*Processing*):** Calon mitra **dibatasi dan tidak dapat membuat transaksi pesanan lain** di luar transaksi Pembelian Awal yang ditentukan hingga pengajuan disetujui.
-  * **Status Pengajuan Pending / Ditolak:** Pengguna **tetap dapat melakukan transaksi pembelian reguler** seperti biasa di platform.
+* **Pembatasan Transaksi Calon Mitra:**
+  * **Status Sedang Diproses:** Calon mitra **tidak dapat membuat pesanan lain** selain pesanan Pembelian Awal sampai pengajuan disetujui.
+  * **Status Pending atau Ditolak:** Pengguna **tetap dapat berbelanja** seperti biasa di platform.
 
-* **Penolakan Pengajuan (Tolak):**
-  Selama status pengajuan **belum mencapai tahap Pengajuan Mitra Aktif**, Administrator dapat membatalkan atau menolak permohonan secara langsung melalui tombol **Tolak** di pojok kanan bawah.
+* **Menolak Pengajuan:**
+  Selama status belum mencapai **Pengajuan Mitra Aktif**, Administrator dapat menolak permohonan lewat tombol **Tolak** di pojok kanan bawah.
 
-<Callout type="info" title="Penting: Sistem Pembelian Awal">
-  Pembelian awal otomatis dibuat tanpa komponen deposit. Deposit dipisahkan sebagai saldo top up mitra agar transparan dan dapat ditarik kembali sesuai ketentuan hak kemitraan.
+<Callout type="info" title="Penting: Pembelian Awal">
+  Pesanan Pembelian Awal dibuat otomatis tanpa komponen deposit. Deposit dipisahkan sebagai saldo top up mitra agar transparan dan dapat ditarik kembali sesuai ketentuan hak kemitraan.
 </Callout>
 
 ---
@@ -97,20 +97,20 @@ Panel **Tahapan Verifikasi** digunakan untuk memperbarui progres status kemitraa
 
 | Kolom | Keterangan |
 | :--- | :--- |
-| **Pemohon** | Nama dan alamat email pemohon (klik baris untuk membuka detail pengajuan). |
+| **Pemohon** | Nama dan email pemohon. Klik baris untuk membuka detail pengajuan. |
 | **Level** | Level saat ini dan level kemitraan yang diajukan. |
-| **Wilayah** | Lokasi wilayah domisili pemohon. |
-| **Status** | Badge indikator status pengajuan saat ini. |
-| **Tgl Pengajuan** | Stempel waktu (*timestamp*) pembuatan pengajuan. |
+| **Wilayah** | Lokasi domisili pemohon. |
+| **Status** | Label status pengajuan saat ini. |
+| **Tgl Pengajuan** | Tanggal dan waktu pengajuan dibuat. |
 
 ### 2. Komponen Halaman Detail Pengajuan
 
 | Komponen | Informasi & Fungsi Utama |
 | :--- | :--- |
 | **Profil Pemohon** | Informasi akun, kontak, jenis kelamin, status, dan alamat lengkap. |
-| **Data Bank dan Mitra** | Detail rekening penerima, NIK, dan NPWP. |
-| **Level dan Alamat** | Level asal, level tujuan, dan hirarki wilayah domisili. |
-| **Tab Dokumen** | Berkas verifikasi Foto Selfie, KTP, dan Selfie KTP. |
+| **Data Bank dan Mitra** | Rekening penerima, NIK, dan NPWP. |
+| **Level dan Alamat** | Level asal, level tujuan, dan wilayah domisili. |
+| **Tab Dokumen** | Foto Selfie, KTP, dan Selfie dengan KTP. |
 | **Tab MoU** | Berkas perjanjian kerja sama format PDF. |
 | **Tab Invoice** | Rincian paket produk pendaftaran dan status tagihan. |
-| **Tahapan Verifikasi** | Panel interaktif untuk mengelola verifikasi, catatan revisi, otomatisasi pesan email pemberitahuan ke mitra, pencetus otomatis order *Pembelian Awal*, serta batasan order selama status *processing*. |
+| **Tahapan Verifikasi** | Panel untuk mengubah tahap verifikasi, menulis catatan revisi, mengirim email pemberitahuan ke mitra, membuat pesanan Pembelian Awal secara otomatis, dan membatasi pesanan selama status sedang diproses. |
