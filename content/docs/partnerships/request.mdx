@@ -5,7 +5,7 @@ icon: UserPlus
 
 Halaman **Pengajuan Kemitraan** digunakan oleh Administrator untuk meninjau dan memproses pendaftaran akun baru maupun permohonan kenaikan level kemitraan pada platform **Teem.id**.
 
-Melalui halaman ini, Administrator dapat memverifikasi identitas pemohon, legalitas dokumen, lokasi wilayah, rekening bank, hingga memantau tahapan verifikasi kerja sama secara komprehensif.
+Melalui halaman ini, Administrator dapat memverifikasi identitas pemohon, legalitas dokumen, lokasi wilayah, pemetaan titik lokasi Google Maps, jaringan downline, rekening bank, hingga memantau tahapan verifikasi kerja sama secara komprehensif.
 
 ---
 
@@ -52,16 +52,29 @@ Gunakan kolom pencarian dan filter di bagian atas tabel untuk menemukan pengajua
 
 Untuk memeriksa kelengkapan berkas dan memperbarui tahapan verifikasi, klik baris pemohon yang ingin ditinjau untuk membuka halaman **Detail Pengajuan**.
 
-### 1. Verifikasi Data Pemohon & Dokumen
+### 1. Verifikasi Data Pemohon, Wilayah & Tab Informasi
 
-* **Profil & Rekening Bank:** Periksa kesesuaian nama, nomor HP, jenis kelamin, NIK, NPWP, dan alamat pemohon, serta rekening bank beserta nama bank, nomor rekening, dan nama pemiliknya.
-* **Tab Dokumen:** Menampilkan berkas pendukung berupa *Foto Selfie*, *Foto KTP*, dan *Foto Selfie dengan KTP*.
-* **Tab MoU:** Menampilkan lembar perjanjian kerja sama resmi. Berkas dapat dibuka di tab baru atau diunduh.
-* **Tab Invoice:** Menampilkan rincian paket produk pendaftaran dan total pembayaran.
+* **Profil Pemohon:** Periksa Nama Lengkap, Foto Profil, Status Tahapan (seperti *Pembelian Awal*), Nomor HP/WhatsApp, Jenis Kelamin, serta Kelurahan/Kecamatan asal.
+* **Data Rekening & Legalitas:** Memuat informasi Nama Bank (misal *Bank Mandiri*), Nomor Rekening (dilengkapi ikon mata untuk sensor data), Atas Nama Pemilik Rekening, NIK, dan NPWP.
+* **Level & Wilayah Diajukan:** 
+  * Menampilkan perbandingan **Level Saat Ini** (misal *Konsumen*) menuju **Level Diajukan** (misal *Sub Agen*).
+  * Menampilkan **Nama Downline** apabila pengajuan terkait dengan struktur pendaftaran jaringan.
+  * Menampilkan **Wilayah Diajukan** yang dilengkapi tombol pintas **Lihat di Google Maps ↗** untuk membuka lokasi presisi pemohon di tab baru, serta informasi **Detail Alamat** lengkap.
 
 ---
 
-### 2. Pengelolaan Tahapan Verifikasi
+### 2. Navigasi Tab Dokumen & Informasi Terlampir
+
+Di bagian bawah detail pengajuan, terdapat 4 tab utama yang menyajikan berkas dan rincian evaluasi:
+
+* **Tab Dokumen:** Menampilkan berkas fisik pendukung berupa *Foto KTP*, *Foto Selfie*, dan *Foto Selfie dengan KTP*.
+* **Tab MoU:** Menampilkan lembar dokumen perjanjian kerja sama resmi (PDF) yang dapat dibuka di tab baru atau diunduh.
+* **Tab Invoice:** Menampilkan rincian **Invoice Pendaftaran** (termasuk rincian produk, SKU, kuantitas/QTY, subtotal harga, deposit, dan *Grand Total* tagihan).
+* **Tab Mitra Aktif:** Menampilkan daftar mitra lain yang telah aktif di cakupan wilayah geografis tersebut (apabila belum ada, sistem akan menampilkan keterangan *"Belum ada mitra aktif di wilayah ini."*).
+
+---
+
+### 3. Pengelolaan Tahapan Verifikasi & Logika Sistem
 
 Panel **Tahapan Verifikasi** digunakan untuk memperbarui progres status kemitraan secara bertahap:
 
@@ -107,10 +120,11 @@ Panel **Tahapan Verifikasi** digunakan untuk memperbarui progres status kemitraa
 
 | Komponen | Informasi & Fungsi Utama |
 | :--- | :--- |
-| **Profil Pemohon** | Informasi akun, kontak, jenis kelamin, status, dan alamat lengkap. |
-| **Data Bank dan Mitra** | Rekening penerima, NIK, dan NPWP. |
-| **Level dan Alamat** | Level asal, level tujuan, dan wilayah domisili. |
-| **Tab Dokumen** | Foto Selfie, KTP, dan Selfie dengan KTP. |
-| **Tab MoU** | Berkas perjanjian kerja sama format PDF. |
-| **Tab Invoice** | Rincian paket produk pendaftaran dan status tagihan. |
+| **Profil Pemohon** | Informasi akun, kontak, jenis kelamin, status tahapan, dan alamat ringkas. |
+| **Data Bank dan Mitra** | Detail rekening penerima (nama bank, nomor rekening, atas nama), NIK, dan NPWP. |
+| **Level dan Alamat** | Level asal, level tujuan, nama downline, wilayah diajukan, detail alamat, dan tombol pintas **Lihat di Google Maps**. |
+| **Tab Dokumen** | Berkas fisik verifikasi Foto KTP, Selfie, dan Selfie KTP. |
+| **Tab MoU** | Berkas lampiran perjanjian kerja sama format PDF. |
+| **Tab Invoice** | Rincian lembar invoice pendaftaran (item produk, SKU, QTY, Subtotal, dan Grand Total). |
+| **Tab Mitra Aktif** | Daftar inventarisasi mitra lain yang sudah aktif di wilayah geografis yang sama. |
 | **Tahapan Verifikasi** | Panel untuk mengubah tahap verifikasi, menulis catatan revisi, mengirim email pemberitahuan ke mitra, membuat pesanan Pembelian Awal secara otomatis, dan membatasi pesanan selama status sedang diproses. |
