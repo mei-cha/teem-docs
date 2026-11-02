@@ -3,7 +3,7 @@ title: Leaderboard Poin
 icon: Trophy
 ---
 
-Halaman **Leaderboard Poin** digunakan oleh Administrator untuk memantau peringkat mitra atau konsumen berdasarkan perolehan poin imbalan (*reward points*) pada platform **Teem.id**, serta menelusuri rincian mutasi riwayat transaksi poin milik setiap pengguna.
+Halaman **Leaderboard Poin** digunakan oleh Administrator untuk memantau peringkat mitra atau konsumen berdasarkan perolehan poin imbalan (*reward points*) pada platform **Teem.id**, menelusuri rincian mutasi riwayat transaksi poin milik setiap pengguna, serta **menambahkan poin secara manual** kepada satu atau banyak penerima.
 
 Data peringkat ini berguna untuk analisis loyalitas pengguna, evaluasi performa mitra, serta acuan pemberian apresiasi/reward periode tertentu.
 
@@ -13,7 +13,7 @@ Data peringkat ini berguna untuk analisis loyalitas pengguna, evaluasi performa 
 
 Bagi Administrator yang ingin meninjau peringkat loyalitas poin pengguna, ikuti langkah navigasi berikut:
 
-1. Pada bilah navigasi kiri (*sidebar*), buka modul **Kupon & Poin > Leaderboard Poin** (atau **Poin > Leaderboard Poin**).
+1. Pada bilah navigasi kiri (*sidebar*), buka modul **Kupon & Poin > Leaderboard Poin**.
 2. Sistem akan menampilkan tabel daftar peringkat perolehan poin pengguna.
 
 <div className="my-6 text-center">
@@ -46,12 +46,13 @@ Di pojok kiri atas tabel, terdapat dua tombol beralih (*tab toggle*) mode kalkul
 
 ## Panduan Pengoperasian Leaderboard & Drill-Down Riwayat
 
-Administrator dapat menyaring peringkat pengguna dan meninjau riwayat mutasi poin secara terperinci:
+Administrator dapat menyaring peringkat pengguna, meninjau riwayat mutasi poin secara terperinci, dan menambahkan poin manual:
 
 ### 1. Pencarian & Navigasi Mode Peringkat
 
 * **Beralih Mode:** Klik tab **Saldo Poin Saat Ini** atau **Total Poin (Lifetime)** untuk menyesuaikan acuan pengurutan tabel.
 * **Pencarian Cepat:** Gunakan kolom input **Cari nama mitra / pengguna...** di pojok kanan atas tabel untuk menemukan posisi akun spesifik.
+* **Tambah Poin:** Klik tombol **Tambah Poin** (merah) di samping kolom pencarian untuk membuka halaman **Tambah Poin Manual**.
 
 ---
 
@@ -60,9 +61,53 @@ Administrator dapat menyaring peringkat pengguna dan meninjau riwayat mutasi poi
 1. Klik pada **Nama Pengguna** pada tabel leaderboard untuk beralih ke halaman **Riwayat Transaksi Poin**.
 2. Pada bagian *header* profil, tinjau informasi **Level Mitra** dan sisa **Saldo Poin Saat Ini**.
 3. Pada tabel riwayat mutasi, periksa penambahan atau pengurangan poin:
-   * **Masuk (+):** Poin bertambah (badge hijau) dari transaksi pembelanjaan.
+   * **Masuk (+):** Poin bertambah (badge hijau), misalnya dari transaksi pembelanjaan atau penambahan poin manual oleh Administrator.
    * **Keluar (-):** Poin berkurang (badge merah) akibat penggunaan potongan harga saat *checkout*.
 4. Setiap baris transaksi menyajikan sisa saldo setelah mutasi (**Saldo Sesudah**), kode nomor referensi (**Ref**), serta stempel **Waktu** transaksi.
+
+---
+
+### 3. Menambah Poin Secara Manual
+
+Fitur ini digunakan untuk memberikan poin langsung kepada pengguna di luar transaksi pembelanjaan, misalnya bonus pencapaian target, kompensasi, atau apresiasi khusus.
+
+Klik tombol **Tambah Poin** di pojok kanan atas halaman Leaderboard Poin. Sistem akan membuka halaman **Tambah Poin Manual**.
+
+<div className="my-6 text-center">
+  <input type="checkbox" id="zoom-tambah-poin" className="peer hidden" />
+  <label
+    htmlFor="zoom-tambah-poin"
+    className="inline-block cursor-zoom-in peer-checked:fixed peer-checked:inset-0 peer-checked:z-50 peer-checked:flex peer-checked:items-center peer-checked:justify-center peer-checked:bg-black/80 peer-checked:p-4 peer-checked:cursor-zoom-out peer-checked:[&>img]:max-h-[90vh] peer-checked:[&>img]:max-w-full peer-checked:[&>img]:w-auto peer-checked:[&>img]:shadow-2xl"
+  >
+    <img
+      src="/29(1).webp"
+      alt="Tampilan Halaman Tambah Poin Manual"
+      className="max-w-full h-auto mx-auto rounded-lg border border-gray-200 shadow-sm"
+    />
+  </label>
+  <span className="block text-xs text-gray-400 mt-2">
+    Tampilan Halaman Tambah Poin Manual
+  </span>
+</div>
+
+**Langkah-langkah:**
+
+1. **Isi Tanggal:** Tanggal pencatatan poin. Secara bawaan terisi tanggal hari ini dan dapat diubah melalui ikon kalender.
+2. **Isi Keterangan:** Catatan alasan pemberian poin (contoh: *Bonus target bulan Oktober 2026*). Keterangan ini tercatat pada riwayat transaksi poin penerima.
+3. **Pilih Penerima** pada panel kiri:
+   * Gunakan kolom **Cari nama / email / level...** untuk menemukan akun tertentu.
+   * Centang akun yang ingin diberi poin. Setiap baris menampilkan nama, email, level (misal: konsumen), dan saldo poin saat ini.
+   * Centang **Pilih semua** untuk memilih seluruh akun yang tersedia (jumlah ditampilkan di samping label, misal: *110*).
+   * Jumlah akun terpilih tampil di pojok kanan atas panel (misal: *1 dipilih*).
+4. **Tentukan Poin per Penerima** pada panel kanan:
+   * Akun yang dipilih otomatis muncul di daftar **Poin per Penerima**. Isi jumlah poin pada kolom di sebelah nama masing-masing penerima.
+   * Untuk memberi jumlah yang sama kepada semua penerima, isi kolom **Poin sama untuk semua**, lalu klik **Terapkan**.
+   * Klik ikon **X** di samping kolom poin untuk mengeluarkan satu penerima dari daftar, atau klik **Hapus semua** untuk mengosongkan seluruh pilihan.
+5. Periksa kembali tanggal, keterangan, dan nominal poin setiap penerima, lalu simpan untuk memproses penambahan poin.
+
+<Callout type="warn" title="Periksa Sebelum Menyimpan">
+  Pastikan jumlah poin pada setiap penerima sudah terisi dan tidak bernilai 0. Poin yang telah ditambahkan akan langsung tercatat sebagai mutasi **Masuk (+)** pada riwayat transaksi poin penerima dan memengaruhi peringkat di leaderboard.
+</Callout>
 
 ---
 
@@ -74,7 +119,7 @@ Administrator dapat menyaring peringkat pengguna dan meninjau riwayat mutasi poi
 | :--- | :--- |
 | **Peringkat** | Urutan posisi peringkat pengguna (dimulai dari peringkat 1). |
 | **Nama** | Nama lengkap akun pengguna/mitra (dapat diklik untuk melihat riwayat transaksi poin). |
-| **Level** | Badge indikator jenjang keanggotaan akun. |
+| **Level** | Badge indikator jenjang keanggotaan akun (distributor, agen, konsumen). |
 | **Saldo Poin / Total Poin** | Jumlah akumulasi poin pengguna (menyesuaikan dengan mode tab yang aktif). |
 
 ### 2. Tabel Detail Riwayat Transaksi Poin
@@ -84,5 +129,16 @@ Administrator dapat menyaring peringkat pengguna dan meninjau riwayat mutasi poi
 | **Tipe** | Indikator jenis mutasi poin (**Masuk (+)** atau **Keluar (-)**). |
 | **Poin** | Nominal penambahan atau pengurangan jumlah poin. |
 | **Saldo Sesudah** | Sisa kalkulasi saldo poin pengguna setelah transaksi terjadi. |
-| **Keterangan / Ref** | Catatan alasan mutasi poin beserta nomor ID invoice/referensinya. |
+| **Keterangan / Ref** | Catatan alasan mutasi poin beserta nomor ID invoice/referensinya. Untuk poin manual, berisi keterangan yang diisi Administrator. |
 | **Waktu** | Informasi stempel waktu kapan transaksi poin tercatat. |
+
+### 3. Elemen Halaman Tambah Poin Manual
+
+| Elemen | Fungsi & Keterangan |
+| :--- | :--- |
+| **Tanggal** | Tanggal pencatatan penambahan poin (default: hari ini). |
+| **Keterangan** | Catatan alasan pemberian poin. |
+| **Pilih Penerima** | Daftar akun yang dapat dipilih, dilengkapi pencarian (nama / email / level), opsi Pilih semua, dan penghitung jumlah terpilih. |
+| **Poin sama untuk semua + Terapkan** | Mengisi jumlah poin yang sama ke seluruh penerima terpilih sekaligus. |
+| **Poin per Penerima** | Daftar penerima terpilih beserta kolom nominal poin masing-masing dan ikon X untuk menghapus. |
+| **Hapus semua** | Mengosongkan seluruh penerima terpilih. |
