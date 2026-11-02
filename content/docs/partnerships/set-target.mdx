@@ -3,7 +3,7 @@ title: Set Target
 icon: Target
 ---
 
-Halaman Set Target digunakan untuk menetapkan target penjualan tahunan setiap mitra.
+Halaman Set Target digunakan untuk menetapkan target penjualan tahunan setiap mitra, baik dalam bentuk **nominal (Rp)** maupun **satuan terkecil** (total kuantitas seluruh produk).
 
 Target dapat dialokasikan secara kolektif per wilayah atau diatur khusus (*custom*) untuk mitra tertentu.
 
@@ -24,6 +24,10 @@ Di bagian atas halaman Target Mitra:
 
 * Filter Tahun: Pilih tahun (contoh: `2026`) di pojok kiri atas.
 * Pencarian: Kolom Cari... di pojok kanan atas, berdasarkan Nama Mitra atau ID Mitra.
+
+<Callout type="info" title="Tahun Mengikuti Halaman Utama">
+  Tahun pada modal Set Target dan Template Target selalu mengikuti tahun yang dipilih pada filter Tahun di halaman utama.
+</Callout>
 
 ### 1. Set Target Massal Per Wilayah
 
@@ -51,7 +55,7 @@ Menetapkan target ke seluruh mitra di wilayah tertentu sekaligus. Klik + Set Tar
     <img
       src="/15(1).webp"
       alt="Modal Set Target Massal Per Wilayah"
-      className="max-w-full-auto mx-auto rounded-lg border border-gray-200 shadow-sm"
+      className="max-w-full h-auto mx-auto rounded-lg border border-gray-200 shadow-sm"
     />
   </label>
   <span className="block text-xs text-gray-400 mt-2">
@@ -61,12 +65,16 @@ Menetapkan target ke seluruh mitra di wilayah tertentu sekaligus. Klik + Set Tar
 
 1. Tentukan Provinsi dan Kota / Kabupaten.
 2. (Opsional) Pilih Level Kemitraan untuk membatasi target pada level tertentu.
-3. Sistem menampilkan pratinjau mitra beserta nominal target sesuai template.
+3. Sistem menampilkan pratinjau mitra beserta nominal target dan satuan terkecil sesuai template.
 4. Periksa pratinjau, lalu klik Terapkan ke [N] Mitra Terkait untuk konfirmasi.
 
 <Callout type="warn" title="Atur Template Target Terlebih Dahulu">
-  Mode ini memakai Template Target sebagai acuan nominal (opsi Ikuti Template Standar pada Per Mitra Spesifik juga memakainya). Jika belum diatur, klik + Template Target, pilih Template Target, isi Tahun, Provinsi, Kota / Kabupaten, serta Target Distributor, Agen, dan Sub Agen, lalu klik Simpan.
+  Mode ini memakai Template Target sebagai acuan nominal dan satuan terkecil (opsi Ikuti Template Standar pada Per Mitra Spesifik juga memakainya). Jika belum diatur, klik tombol Template Target di pojok kanan atas modal Set Target, lalu ikuti langkah pada bagian **Mengatur Template Target** di bawah.
 </Callout>
+
+#### Mengatur Template Target
+
+Template Target menentukan target standar untuk setiap level kemitraan pada satu kota / kabupaten.
 
 <div className="my-6 text-center">
   <input type="checkbox" id="zoom-template-target" className="peer hidden" />
@@ -84,6 +92,16 @@ Menetapkan target ke seluruh mitra di wilayah tertentu sekaligus. Klik + Set Tar
     Modal Kelola Template Target
   </span>
 </div>
+
+1. Pada modal Set Target, klik tombol Template Target di pojok kanan atas. Modal Kelola Template Target akan tampil.
+2. Pastikan Tahun sudah sesuai (mengikuti tahun di halaman utama).
+3. (Opsional) Pilih Provinsi (Filter) untuk mempersempit daftar kota / kabupaten.
+4. Pilih Kota / Kabupaten (wajib). Sebelum kota dipilih, sistem menampilkan peringatan dan nominal target belum dapat diatur.
+5. Pada bagian Target per Level Kemitraan, isi target untuk setiap level (Distributor, Agen, dan Sub Agen):
+   * Nominal (Tahunan): target penjualan dalam Rupiah.
+   * Satuan Terkecil (semua produk) (Tahunan): total kuantitas seluruh produk dalam satuan terkecil.
+6. (Opsional) Klik Rincian per bulan pada masing-masing kolom untuk melihat atau mengatur pembagian target per bulan.
+7. Klik Simpan untuk menyimpan template, atau Batal untuk menutup tanpa menyimpan.
 
 ### 2. Set Target Per Mitra Spesifik
 
@@ -106,13 +124,19 @@ Menetapkan target untuk satu mitra. Klik + Set Target, lalu pilih tab Per Mitra 
   </span>
 </div>
 
-1. Pilih mitra pada dropdown Cari / Pilih Mitra.
-2. Tentukan metode nominal target:
-   * Ikuti Template Standar: Nominal mengikuti template wilayah dan level mitra.
-   * Custom Manual: Isi sendiri pada kolom Nominal Target (Tahunan).
-3. Klik Simpan Target untuk menyimpan.
+1. Pilih mitra pada dropdown Cari / Pilih Mitra. Dropdown hanya menampilkan mitra yang belum punya target pada tahun terpilih.
+2. Tentukan Sumber Target (Nominal & Satuan Terkecil):
+   * Ikuti Template Standar: Nominal dan satuan terkecil mengikuti template wilayah dan level mitra.
+   * Custom Manual: Isi sendiri pada kolom Nominal Target (Tahunan) dan Target Satuan Terkecil (Tahunan).
+3. (Opsional) Klik Rincian per bulan untuk melihat atau mengatur pembagian target per bulan.
+4. Periksa panel Hasil Preview Otomatis Sistem di sebelah kanan, yang menampilkan Nama Mitra, Level, Target Tahunan, dan Satuan Terkecil.
+5. Klik Simpan Target untuk menyimpan.
 
-### 4. Perubahan & Penghapusan Data Target
+<Callout type="warn" title="Nominal Target Masih Rp 0">
+  Jika muncul pesan bahwa nominal target masih Rp 0, atur template kota yang valid melalui tombol Template Target, atau pilih Custom Manual untuk mengisi nominal secara langsung.
+</Callout>
+
+### 3. Perubahan & Penghapusan Data Target
 
 Pada kolom Aksi di tabel utama halaman Target Mitra:
 

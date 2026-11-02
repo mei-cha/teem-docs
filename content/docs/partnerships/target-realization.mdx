@@ -3,18 +3,18 @@ title: Realisasi Target
 icon: Target
 ---
 
-Halaman **Realisasi Target** digunakan oleh Administrator untuk memantau perbandingan antara target nominal penjualan yang ditetapkan dengan capaian realisasi omzet milik setiap mitra pada platform **Teem.id**.
+Halaman **Realisasi Target** (Target vs Realisasi Penjualan) digunakan oleh Administrator untuk memantau perbandingan antara target penjualan yang ditetapkan dengan capaian realisasi aktual milik setiap mitra pada platform **Teem.id**.
 
-Melalui modul ini, Administrator dapat mengevaluasi margin selisih pencapaian serta memantau persentase performa mitra berdasarkan periode dan wilayah operasional tertentu.
+Pencapaian dievaluasi secara komprehensif berdasarkan dua indikator utama: **Nominal Nilai Rupiah (Rp)** dan **Kuantitas Satuan Terkecil (Unit)**.
 
 ---
 
-## Cara Mengakses Halaman Target vs Realisasi Penjualan
+## Cara Mengakses Halaman Realisasi Target
 
-Bagi Administrator yang ingin mengevaluasi pencapaian omzet mitra, ikuti langkah navigasi berikut:
+Bagi Administrator yang ingin mengevaluasi pencapaian omzet dan kuantitas penjualan mitra, ikuti langkah navigasi berikut:
 
-1. Pada bilah navigasi kiri (*sidebar*), buka modul **Kemitraan > Realisasi Target**
-2. Sistem akan menampilkan tabel daftar mitra beserta target, realisasi omzet berjalan, dan selisih pencapaiannya.
+1. Pada bilah navigasi kiri (*sidebar*), buka modul **Kemitraan > Realisasi Target**.
+2. Sistem akan menampilkan tabel **Target vs Realisasi Penjualan** berisi daftar mitra beserta target, realisasi berjalan, dan selisihnya.
 
 <div className="my-6 text-center">
   <input type="checkbox" id="zoom-partners" className="peer hidden" />
@@ -64,8 +64,8 @@ Klik tombol **Filter** di pojok kanan atas tabel untuk membuka modal **Filter Da
 
 | Kolom | Keterangan & Deskripsi Fungsi |
 | :--- | :--- |
-| **Nama & Id** | Menampilkan nama lengkap mitra beserta **ID Mitra** unik di baris bawahnya (contoh: `MTR-0067`). |
+| **Nama & Id** | Nama lengkap mitra beserta **ID Mitra** unik di baris bawahnya (contoh: `MTR-0067`). |
 | **Level** | Badge indikator level kemitraan (**Distributor**, **Agen**, atau **Sub Agen**). |
-| **Target** | Nominal rupiah target penjualan yang ditetapkan untuk mitra pada periode terkait. |
-| **Realisasi** | Nilai rupiah omzet transaksi aktual yang dicapai mitra, dilengkapi persentase pencapaian (*misal: 26.9%*). |
-| **Selisih** | Margin selisih antara realisasi dikurangi target. Ditandai warna **Merah (-)** beserta persentase kekurangannya jika target belum terpenuhi. |
+| **Target** | Target penjualan tahunan yang terdiri dari dua kriteria: **Nominal Rupiah (Rp)** dan **Kuantitas Satuan Terkecil (unit)**. |
+| **Realisasi** | Pencapaian transaksi aktual mitra yang menampilkan **Nilai Rupiah (Rp)** & **Kuantitas Terjual (unit)** lengkap dengan persentase persentase pencapaiannya. |
+| **Selisih** | Margin selisih pencapaian (Realisasi - Target) dalam **Nominal (Rp)** dan **Kuantitas (unit)**. Ditandai warna **Hijau (+)** jika surplus atau **Merah (-)** jika minus. |
