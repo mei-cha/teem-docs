@@ -3,7 +3,7 @@ title: Kupon
 icon: Ticket
 ---
 
-Halaman **Kupon** digunakan oleh Administrator untuk mengonfigurasi voucher potongan harga promosi bagi pelanggan atau mitra pada platform **Teem.id**.
+Halaman **Kupon** digunakan oleh Administrator untuk mengonfigurasi voucher potongan harga promosi bagi pelanggan atau mitra pada platform **Teem.id**, serta menelusuri riwayat penggunaan setiap voucher melalui halaman detail **Lacak Penggunaan Kupon**.
 
 Pengaturan kupon mencakup fleksibilitas penentuan persentase/nominal diskon, cakupan wilayah, batasan penggunaan pengguna, masa berlaku, hingga kriteria batas minimal pembelian.
 
@@ -13,7 +13,7 @@ Pengaturan kupon mencakup fleksibilitas penentuan persentase/nominal diskon, cak
 
 Bagi Administrator yang ingin mengelola atau mengonfigurasi voucher promosi, ikuti langkah navigasi berikut:
 
-1. Pada bilah navigasi kiri (*sidebar*), buka modul **Kupon & Poin > Kupon** (atau **Promosi > Kupon**).
+1. Pada bilah navigasi kiri (*sidebar*), buka modul **Kupon & Poin > Kupon**.
 2. Sistem akan menampilkan tabel daftar seluruh voucher promosi terdaftar.
 
 <div className="my-6 text-center">
@@ -37,7 +37,7 @@ Bagi Administrator yang ingin mengelola atau mengonfigurasi voucher promosi, iku
 
 ## Panduan Pengelolaan & Pembuatan Kupon
 
-Administrator dapat mencari voucher aktif, membuat program promosi baru, hingga memperbarui atau menghapus kupon promo.
+Administrator dapat mencari voucher aktif, membuat program promosi baru, memperbarui atau menghapus kupon promo, serta meninjau detail penggunaan setiap voucher.
 
 ### 1. Pencarian & Penyaringan Kupon
 
@@ -49,6 +49,23 @@ Gunakan kolom input **Cari nama atau kode kupon...** di pojok kanan atas tabel u
 
 Klik tombol **+ Tambah** berwarna merah di pojok kanan atas untuk membuka formulir **Tambah Promo / Kupon**:
 
+<div className="my-6 text-center">
+  <input type="checkbox" id="zoom-lacak-kupon" className="peer hidden" />
+  <label
+    htmlFor="zoom-tambah-kupon"
+    className="inline-block cursor-zoom-in peer-checked:fixed peer-checked:inset-0 peer-checked:z-50 peer-checked:flex peer-checked:items-center peer-checked:justify-center peer-checked:bg-black/80 peer-checked:p-4 peer-checked:cursor-zoom-out peer-checked:[&>img]:max-h-[90vh] peer-checked:[&>img]:max-w-full peer-checked:[&>img]:w-auto peer-checked:[&>img]:shadow-2xl"
+  >
+    <img
+      src="/tambah-kupon.webp"
+      alt="Tampilan Halaman Lacak Penggunaan Kupon"
+      className="max-w-full h-auto mx-auto rounded-lg border border-gray-200 shadow-sm"
+    />
+  </label>
+  <span className="block text-xs text-gray-400 mt-2">
+    Tampilan Halaman Lacak Penggunaan Kupon
+  </span>
+</div>
+
 * **Informasi Umum:** Isi Nama Program Promosi, Kode Voucher unik (yang diketik pengguna saat *checkout*), serta Status keaktifan awal.
 * **Pengaturan Diskon:** Tentukan cakupan produk penerima potongan pada dropdown **Diskon Untuk**, pilih **Tipe** (*Persentase (%)* atau *Nominal Rupiah*), dan masukkan besaran **Nilai Diskon**.
 * **Pembatasan Tambahan:**
@@ -59,7 +76,41 @@ Klik tombol **+ Tambah** berwarna merah di pojok kanan atas untuk membuka formul
 
 ---
 
-### 3. Pembaruan, Sakelar Toggle & Penghapusan Kupon
+### 3. Meninjau Detail Penggunaan Kupon (Lacak Penggunaan Kupon)
+
+Untuk mengetahui siapa saja yang sudah memakai sebuah voucher, Administrator dapat membuka halaman detail kupon:
+
+1. Pada tabel daftar kupon, klik **Nama Kupon** yang ingin ditinjau.
+2. Sistem akan membuka halaman **Lacak Penggunaan Kupon**. Di bawah judul halaman, tertera identitas voucher yang sedang dilihat, yaitu **nama kupon** beserta **badge kode kupon** (contoh: *KUPONTES* dengan kode *KPNTS*).
+
+<div className="my-6 text-center">
+  <input type="checkbox" id="zoom-lacak-kupon" className="peer hidden" />
+  <label
+    htmlFor="zoom-lacak-kupon"
+    className="inline-block cursor-zoom-in peer-checked:fixed peer-checked:inset-0 peer-checked:z-50 peer-checked:flex peer-checked:items-center peer-checked:justify-center peer-checked:bg-black/80 peer-checked:p-4 peer-checked:cursor-zoom-out peer-checked:[&>img]:max-h-[90vh] peer-checked:[&>img]:max-w-full peer-checked:[&>img]:w-auto peer-checked:[&>img]:shadow-2xl"
+  >
+    <img
+      src="/detail-kupon.webp"
+      alt="Tampilan Halaman Lacak Penggunaan Kupon"
+      className="max-w-full h-auto mx-auto rounded-lg border border-gray-200 shadow-sm"
+    />
+  </label>
+  <span className="block text-xs text-gray-400 mt-2">
+    Tampilan Halaman Lacak Penggunaan Kupon
+  </span>
+</div>
+
+3. Tinjau tabel riwayat penggunaan yang memuat daftar pengguna, nomor invoice transaksi, dan waktu pemakaian kupon.
+4. Gunakan kolom **Cari nama pengguna / invoice...** untuk menemukan penggunaan tertentu berdasarkan nama pengguna atau nomor invoice.
+
+
+<Callout type="info" title="Manfaat Halaman Lacak Penggunaan">
+  Halaman ini membantu Administrator memverifikasi pemakaian kupon, memantau kuota penggunaan, serta menelusuri transaksi terkait melalui nomor invoice.
+</Callout>
+
+---
+
+### 4. Pembaruan, Sakelar Toggle & Penghapusan Kupon
 
 Pada kolom **Aksi** di tabel utama:
 
@@ -71,12 +122,23 @@ Pada kolom **Aksi** di tabel utama:
 
 ## Struktur Tabel Data Kupon
 
+### 1. Tabel Utama Daftar Kupon
+
 | Kolom | Fungsi & Keterangan |
 | :--- | :--- |
-| **Nama Kupon** | Sebutan nama program promosi. |
+| **Nama Kupon** | Sebutan nama program promosi. Dapat diklik untuk membuka halaman **Lacak Penggunaan Kupon**. |
 | **Kode** | Badge kode unik voucher yang diinput pengguna saat transaksi. |
 | **Diskon** | Besaran nilai potongan harga. |
 | **Masa Berlaku** | Periode aktif kupon. |
 | **Penggunaan** | Akumulasi berapa kali voucher telah berhasil digunakan dalam transaksi. |
 | **Status** | Badge indikator keaktifan kupon (**Aktif** / **Nonaktif**). |
 | **Aksi** | Tombol pintas **Toggle Status**, **Pensil (Edit)**, dan **Tempat Sampah (Hapus)**. |
+
+### 2. Tabel Riwayat Penggunaan Kupon
+
+| Kolom | Fungsi & Keterangan |
+| :--- | :--- |
+| **No** | Nomor urut baris riwayat penggunaan. |
+| **Nama** | Nama pengguna yang memakai kupon. |
+| **No. Invoice** | Badge nomor invoice transaksi tempat kupon digunakan. |
+| **Waktu** | Waktu pemakaian kupon, ditampilkan dalam format relatif (contoh: *sekitar 2 bulan yang lalu*). |
