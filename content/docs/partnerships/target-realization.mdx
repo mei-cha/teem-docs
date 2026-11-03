@@ -3,7 +3,7 @@ title: Realisasi Target
 icon: Target
 ---
 
-Halaman **Realisasi Target** (Target vs Realisasi Penjualan) digunakan oleh Administrator untuk memantau perbandingan antara target penjualan yang ditetapkan dengan capaian realisasi aktual milik setiap mitra pada platform **Teem.id**.
+Halaman **Realisasi Target** (Target vs Realisasi Penjualan) digunakan oleh Administrator untuk memantau perbandingan antara target penjualan yang ditetapkan dengan capaian realisasi aktual milik setiap mitra pada platform **Teem.id**, sekaligus memberikan **poin bonus** kepada mitra berprestasi langsung dari tabel realisasi.
 
 Pencapaian dievaluasi secara komprehensif berdasarkan dua indikator utama: **Nominal Nilai Rupiah (Rp)** dan **Kuantitas Satuan Terkecil (Unit)**.
 
@@ -37,7 +37,7 @@ Bagi Administrator yang ingin mengevaluasi pencapaian omzet dan kuantitas penjua
 
 ## Panduan Fitur & Filter Lanjutan
 
-Administrator dapat menyaring pencapaian mitra menggunakan kombinasi filter periode, jenjang level, hingga hirarki wilayah.
+Administrator dapat menyaring pencapaian mitra menggunakan kombinasi filter periode, jenjang level, hingga hirarki wilayah, serta memilih mitra untuk diberi poin bonus.
 
 ### 1. Pencarian Cepat & Ekspor Data
 
@@ -50,7 +50,7 @@ Administrator dapat menyaring pencapaian mitra menggunakan kombinasi filter peri
 
 Klik tombol **Filter** di pojok kanan atas halaman untuk membuka modal **Filter Data**:
 
-* **Periode & Tahun:** Tentukan rentang waktu pemantauan (*Tahunan*, *Bulanan*, dll.) beserta acuan **Tahun** transaksi.
+* **Periode & Tahun:** Tentukan rentang waktu pemantauan (*Tahunan*, *Bulanan*, dll.) beserta acuan **Tahun** transaksi. Nilai Target, Realisasi, dan Selisih pada tabel menyesuaikan periode yang dipilih (contoh: target tahunan atau target bulan September 2026).
 * **Level Kemitraan:** Saring data berdasarkan tingkatan mitra spesifik (*Semua Level*, *Distributor*, *Agen*, *Sub Agen*).
 * **Wilayah (Hirarki Geografis):**
   * **Provinsi:** Saring mitra berdasarkan cakupan provinsi operasional.
@@ -66,8 +66,67 @@ Setiap baris mewakili satu mitra. Pencapaian dibaca dari dua sisi secara terpisa
 
 * **Sisi Nominal (Rp):** kolom **Target** (baris atas), **Realisasi (Rp)**, dan **Selisih (Rp)**.
 * **Sisi Kuantitas (Unit):** target unit (baris bawah kolom **Target**), **Realisasi (Unit)**, dan **Selisih (Unit)**.
-* Di bawah angka **Realisasi** dan **Selisih** terdapat **persentase** pencapaian terhadap target. Persentase dapat melebihi 100% jika realisasi melampaui target (contoh: *341.5%*).
+* Di bawah angka **Realisasi** dan **Selisih** terdapat **persentase** pencapaian terhadap target. Persentase dapat melebihi 100% jika realisasi melampaui target (contoh: *2627.3%*).
 * Angka dan persentase diberi warna (hijau, oranye, merah) sebagai penanda tingkat pencapaian agar mitra yang perlu perhatian lebih mudah dikenali.
+
+---
+
+### 4. Memberi Poin Bonus dari Realisasi Target
+
+Administrator dapat langsung memberikan poin kepada mitra berdasarkan capaian realisasinya tanpa perlu menghitung dan memasukkan poin satu per satu.
+
+<div className="my-6 text-center">
+  <input type="checkbox" id="zoom-pilih-mitra-poin" className="peer hidden" />
+  <label
+    htmlFor="zoom-pilih-mitra-poin"
+    className="inline-block cursor-zoom-in peer-checked:fixed peer-checked:inset-0 peer-checked:z-50 peer-checked:flex peer-checked:items-center peer-checked:justify-center peer-checked:bg-black/80 peer-checked:p-4 peer-checked:cursor-zoom-out peer-checked:[&>img]:max-h-[90vh] peer-checked:[&>img]:max-w-full peer-checked:[&>img]:w-auto peer-checked:[&>img]:shadow-2xl"
+  >
+    <img
+      src="/realisasi-centang.webp"
+      alt="Memilih mitra dan tombol + Poin pada halaman Realisasi Target"
+      className="max-w-full h-auto mx-auto rounded-lg border border-gray-200 shadow-sm"
+    />
+  </label>
+  <span className="block text-xs text-gray-400 mt-2">
+    Memilih Mitra dan Tombol + Poin
+  </span>
+</div>
+
+1. **Atur periode** melalui tombol **Filter** (contoh: *Bulanan*, September 2026). Periode inilah yang menjadi acuan perhitungan poin.
+2. **Centang mitra** penerima pada kotak centang di sisi kiri setiap baris. Untuk memilih seluruh mitra pada tabel, centang kotak di header kolom **Mitra**.
+3. Tombol merah **+ Poin (N)** akan muncul di sebelah tombol **Export**, dengan **N** menunjukkan jumlah mitra yang dipilih (contoh: *+ Poin (2)*).
+4. Klik **+ Poin (N)**. Sistem akan mengarahkan Administrator ke halaman **Tambah Poin Manual** dengan data yang sudah terisi otomatis.
+
+<div className="my-6 text-center">
+  <input type="checkbox" id="zoom-tambah-poin-otomatis" className="peer hidden" />
+  <label
+    htmlFor="zoom-tambah-poin-otomatis"
+    className="inline-block cursor-zoom-in peer-checked:fixed peer-checked:inset-0 peer-checked:z-50 peer-checked:flex peer-checked:items-center peer-checked:justify-center peer-checked:bg-black/80 peer-checked:p-4 peer-checked:cursor-zoom-out peer-checked:[&>img]:max-h-[90vh] peer-checked:[&>img]:max-w-full peer-checked:[&>img]:w-auto peer-checked:[&>img]:shadow-2xl"
+  >
+    <img
+      src="/redirect-tambahpoin.webp"
+      alt="Halaman Tambah Poin Manual terisi otomatis dari Realisasi Target"
+      className="max-w-full h-auto mx-auto rounded-lg border border-gray-200 shadow-sm"
+    />
+  </label>
+  <span className="block text-xs text-gray-400 mt-2">
+    Halaman Tambah Poin Manual (Terisi Otomatis)
+  </span>
+</div>
+
+**Isian otomatis pada halaman Tambah Poin Manual:**
+
+* **Banner informasi:** Menjelaskan sumber data, contoh: *Terisi otomatis dari Target vs Realisasi (Sep 2026)*. Bulan dan tahun pada banner mengikuti periode yang difilter di halaman Realisasi Target.
+* **Tanggal:** Terisi tanggal hari ini.
+* **Keterangan:** Terisi otomatis mengikuti periode, contoh: *Bonus pencapaian target Sep 2026*.
+* **Pilih Penerima:** Mitra yang dicentang sebelumnya sudah terpilih (contoh: *2 dipilih*).
+* **Poin per Penerima:** Poin setiap mitra dihitung otomatis dengan rumus:
+
+  **Poin = Realisasi (Unit) + 5% dari Realisasi (Unit)**
+
+<Callout type="info" title="Poin Masih Dapat Diubah">
+  Poin hasil perhitungan otomatis masih bisa diubah sebelum disimpan. Administrator dapat mengedit nominal poin tiap penerima, menghapus penerima dengan ikon **X**, atau menambah penerima lain. Setelah sesuai, klik **Tambah Poin** untuk menyimpan. Langkah lengkap pada halaman ini dijelaskan di dokumentasi **Leaderboard Poin**.
+</Callout>
 
 ---
 
@@ -75,9 +134,10 @@ Setiap baris mewakili satu mitra. Pencapaian dibaca dari dua sisi secara terpisa
 
 | Kolom | Keterangan & Deskripsi Fungsi |
 | :--- | :--- |
+| **Kotak Centang** | Memilih satu atau beberapa mitra untuk diberi poin. Kotak di header memilih seluruh mitra pada tabel. |
 | **Mitra** | Nama lengkap mitra, dengan badge **ID Mitra** unik (contoh: `MTR-0067`) dan badge **Level** kemitraan (**Distributor**, **Agen**, atau **Sub Agen**) di baris bawahnya. |
-| **Target** | Target penjualan mitra: **Nominal Rupiah (Rp)** pada baris atas dan **Kuantitas Satuan Terkecil (unit)** pada baris bawah. |
+| **Target** | Target penjualan mitra pada periode terpilih: **Nominal Rupiah (Rp)** pada baris atas dan **Kuantitas Satuan Terkecil (unit)** pada baris bawah. |
 | **Realisasi (Rp)** | Pencapaian transaksi aktual mitra dalam **Nilai Rupiah**, beserta persentase pencapaian terhadap target nominal. |
 | **Selisih (Rp)** | Selisih nominal antara realisasi dan target (Realisasi - Target), beserta persentasenya. Bernilai **+** jika surplus dan **-** jika masih kurang dari target. |
-| **Realisasi (Unit)** | Pencapaian **Kuantitas Terjual (unit)** aktual mitra, beserta persentase pencapaian terhadap target unit. |
+| **Realisasi (Unit)** | Pencapaian **Kuantitas Terjual (unit)** aktual mitra, beserta persentase pencapaian terhadap target unit. Nilai ini menjadi dasar perhitungan poin bonus. |
 | **Selisih (Unit)** | Selisih kuantitas antara realisasi dan target (Realisasi - Target), beserta persentasenya. Bernilai **+** jika surplus dan **-** jika masih kurang dari target. |
