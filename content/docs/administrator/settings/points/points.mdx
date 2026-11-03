@@ -3,7 +3,7 @@ title: Pengaturan Poin
 icon: Coins
 ---
 
-Halaman **Pengaturan Poin** digunakan oleh Administrator untuk mengonfigurasi skema program *loyalty point*, mulai dari batas masa aktif poin hingga konversi nilai tukar poin menjadi potongan harga (*diskon*) saat transaksi belanja.
+Halaman **Pengaturan Poin** digunakan oleh Administrator untuk mengonfigurasi skema program *loyalty point*, mulai dari batas masa aktif poin, besaran bonus poin atas pencapaian target, hingga konversi nilai tukar poin menjadi potongan harga (*diskon*) saat transaksi belanja.
 
 ---
 
@@ -13,7 +13,7 @@ Bagi Administrator yang ingin mengonfigurasi aturan program poin *loyalty*, ikut
 
 1. Pada bilah navigasi kiri (*sidebar*), buka modul **Administrator > Pengaturan**.
 2. Pada panel navigasi sebelah kiri di bawah kategori **POIN**, pilih sub-menu **Pengaturan Poin**.
-3. Sistem akan menampilkan dua blok konfigurasi utama: **Masa Kadaluarsa** dan **Nilai Tukar**.
+3. Sistem akan menampilkan tiga blok konfigurasi utama: **Masa Kadaluarsa**, **Bonus Pencapaian Target**, dan **Nilai Tukar**.
 
 <div className="my-6 text-center">
   <input type="checkbox" id="zoom-pengaturan-poin" className="peer hidden" />
@@ -36,22 +36,43 @@ Bagi Administrator yang ingin mengonfigurasi aturan program poin *loyalty*, ikut
 
 ## Panduan Konfigurasi Skema Poin
 
-Administrator dapat menentukan batas masa aktif serta rasio konversi potongan belanja:
+Administrator dapat menentukan batas masa aktif, persentase bonus pencapaian target, serta rasio konversi potongan belanja. Seluruh kolom yang bertanda bintang (*) wajib diisi.
 
 ### 1. Masa Kadaluarsa Poin
 
-Pada blok **Masa Kadaluarsa**, tentukan batas waktu aktif poin pada kolom **Masa Aktif Poin (Bulan)**.
+Pada blok **Masa Kadaluarsa**, tentukan batas waktu aktif poin pada kolom **Masa Aktif Poin (Bulan)** (contoh: `12` bulan).
 * **Poin Tanpa Hangus:** Masukkan angka `0` jika perusahaan menginginkan poin berlaku selamanya tanpa batas kadaluarsa.
 
 ---
 
-### 2. Nilai Tukar & Maksimal Potongan Belanja
+### 2. Bonus Pencapaian Target
+
+Pada blok **Bonus Pencapaian Target**, tentukan persentase tambahan poin yang diberikan kepada mitra yang mencapai target penjualan pada kolom **Persentase Bonus (%)** (contoh: `5`).
+
+Persentase ini menjadi acuan perhitungan poin otomatis saat Administrator memberi poin dari halaman **Realisasi Target**, dengan rumus:
+
+**Poin bonus = Realisasi (Unit) + persentase bonus dari Realisasi (Unit)**
+
+* **Contoh:** Dengan persentase bonus `5`, mitra dengan Realisasi 20 unit mendapat 20 + (5% × 20) = **21 poin**.
+* **Tanpa Bonus Tambahan:** Masukkan angka `0` jika poin yang diberikan hanya sebesar Realisasi (Unit) tanpa tambahan bonus.
+
+<Callout type="info" title="Terhubung dengan Realisasi Target">
+  Perubahan persentase bonus akan memengaruhi hasil perhitungan otomatis pada halaman **Tambah Poin Manual** yang dibuka melalui tombol **+ Poin** di halaman Realisasi Target. Poin hasil perhitungan masih dapat diubah Administrator sebelum disimpan.
+</Callout>
+
+---
+
+### 3. Nilai Tukar & Maksimal Potongan Belanja
 
 Pada blok **Nilai Tukar**:
 
-* **Nilai 1 Poin (Rupiah):** Masukkan nilai kesetaraan 1 poin dalam rupiah pada kolom **Rp**.
-* **Maksimal Potongan Belanja (%):** Masukkan persentase batas maksimal kuota penggunaan poin untuk memotong total tagihan belanja pada kolom **%**.
-* **Simulasi Pembayaran:** Tinjau kotak petunjuk otomatis di bawah kolom input untuk memahami contoh kalkulasi penerapan diskon poin pada nilai transaksi.
+* **Nilai 1 Poin (Rupiah):** Masukkan nilai kesetaraan 1 poin dalam rupiah pada kolom **Rp** (contoh: `1`).
+* **Maksimal Potongan Belanja (%):** Masukkan persentase batas maksimal kuota penggunaan poin untuk memotong total tagihan belanja pada kolom **%** (contoh: `50`).
+* **Simulasi Pembayaran:** Tinjau kotak petunjuk otomatis di bawah kolom input untuk memahami contoh kalkulasi penerapan diskon poin pada nilai transaksi. Contoh: dengan total transaksi Rp 100.000 dan batas 50%, pembeli dapat menggunakan maksimal 50.000 poin (setara potongan Rp 50.000).
+
+---
+
+### 4. Menyimpan Pengaturan
 
 Setelah mengonfigurasi seluruh parameter, klik tombol **Simpan** di pojok kanan bawah halaman untuk menerbitkan aturan poin secara *real-time*.
 
@@ -62,5 +83,6 @@ Setelah mengonfigurasi seluruh parameter, klik tombol **Simpan** di pojok kanan 
 | Parameter | Fungsi & Dampak |
 | :--- | :--- |
 | **Masa Aktif Poin** | Menentukan durasi akumulasi poin sebelum kadaluarsa (isi `0` untuk tanpa batas waktu). |
+| **Persentase Bonus** | Persentase tambahan poin dari Realisasi (Unit) pada perhitungan poin bonus pencapaian target (isi `0` jika tanpa bonus tambahan). |
 | **Nilai 1 Poin** | Nilai konversi rupiah per 1 poin saat digunakan untuk belanja. |
 | **Maksimal Potongan** | Persentase kuota maksimal diskon poin dari total nilai pesanan *checkout*. |
