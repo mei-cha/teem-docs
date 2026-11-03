@@ -14,7 +14,7 @@ Pencapaian dievaluasi secara komprehensif berdasarkan dua indikator utama: **Nom
 Bagi Administrator yang ingin mengevaluasi pencapaian omzet dan kuantitas penjualan mitra, ikuti langkah navigasi berikut:
 
 1. Pada bilah navigasi kiri (*sidebar*), buka modul **Kemitraan > Realisasi Target**.
-2. Sistem akan menampilkan tabel **Target vs Realisasi Penjualan** berisi daftar mitra beserta target, realisasi berjalan, dan selisihnya.
+2. Sistem akan menampilkan tabel **Target vs Realisasi Penjualan** berisi daftar mitra beserta target, realisasi berjalan, dan selisihnya, yang dipisahkan untuk nominal (Rp) dan kuantitas (unit).
 
 <div className="my-6 text-center">
   <input type="checkbox" id="zoom-partners" className="peer hidden" />
@@ -42,13 +42,13 @@ Administrator dapat menyaring pencapaian mitra menggunakan kombinasi filter peri
 ### 1. Pencarian Cepat & Ekspor Data
 
 * **Pencarian Cepat:** Gunakan kolom input **Cari mitra...** di pojok kanan atas tabel untuk menemukan mitra spesifik berdasarkan nama atau ID Mitra.
-* **Export Data:** Klik tombol **Export** di sebelah tombol Filter untuk mengunduh rekapitulasi data perbandingan target ke dalam berkas spreadsheet (Excel/CSV).
+* **Export Data:** Klik tombol **Export** di sebelah kiri tombol Filter untuk mengunduh rekapitulasi data perbandingan target ke dalam berkas spreadsheet (Excel/CSV).
 
 ---
 
 ### 2. Filter Lanjutan (Modal Filter Data)
 
-Klik tombol **Filter** di pojok kanan atas tabel untuk membuka modal **Filter Data**:
+Klik tombol **Filter** di pojok kanan atas halaman untuk membuka modal **Filter Data**:
 
 * **Periode & Tahun:** Tentukan rentang waktu pemantauan (*Tahunan*, *Bulanan*, dll.) beserta acuan **Tahun** transaksi.
 * **Level Kemitraan:** Saring data berdasarkan tingkatan mitra spesifik (*Semua Level*, *Distributor*, *Agen*, *Sub Agen*).
@@ -60,12 +60,24 @@ Klik tombol **Filter** di pojok kanan atas tabel untuk membuka modal **Filter Da
 
 ---
 
+### 3. Membaca Tabel Target vs Realisasi
+
+Setiap baris mewakili satu mitra. Pencapaian dibaca dari dua sisi secara terpisah:
+
+* **Sisi Nominal (Rp):** kolom **Target** (baris atas), **Realisasi (Rp)**, dan **Selisih (Rp)**.
+* **Sisi Kuantitas (Unit):** target unit (baris bawah kolom **Target**), **Realisasi (Unit)**, dan **Selisih (Unit)**.
+* Di bawah angka **Realisasi** dan **Selisih** terdapat **persentase** pencapaian terhadap target. Persentase dapat melebihi 100% jika realisasi melampaui target (contoh: *341.5%*).
+* Angka dan persentase diberi warna (hijau, oranye, merah) sebagai penanda tingkat pencapaian agar mitra yang perlu perhatian lebih mudah dikenali.
+
+---
+
 ## Struktur Tabel Target vs Realisasi Penjualan
 
 | Kolom | Keterangan & Deskripsi Fungsi |
 | :--- | :--- |
-| **Nama & Id** | Nama lengkap mitra beserta **ID Mitra** unik di baris bawahnya (contoh: `MTR-0067`). |
-| **Level** | Badge indikator level kemitraan (**Distributor**, **Agen**, atau **Sub Agen**). |
-| **Target** | Target penjualan tahunan yang terdiri dari dua kriteria: **Nominal Rupiah (Rp)** dan **Kuantitas Satuan Terkecil (unit)**. |
-| **Realisasi** | Pencapaian transaksi aktual mitra yang menampilkan **Nilai Rupiah (Rp)** & **Kuantitas Terjual (unit)** lengkap dengan persentase persentase pencapaiannya. |
-| **Selisih** | Margin selisih pencapaian (Realisasi - Target) dalam **Nominal (Rp)** dan **Kuantitas (unit)**. Ditandai warna **Hijau (+)** jika surplus atau **Merah (-)** jika minus. |
+| **Mitra** | Nama lengkap mitra, dengan badge **ID Mitra** unik (contoh: `MTR-0067`) dan badge **Level** kemitraan (**Distributor**, **Agen**, atau **Sub Agen**) di baris bawahnya. |
+| **Target** | Target penjualan mitra: **Nominal Rupiah (Rp)** pada baris atas dan **Kuantitas Satuan Terkecil (unit)** pada baris bawah. |
+| **Realisasi (Rp)** | Pencapaian transaksi aktual mitra dalam **Nilai Rupiah**, beserta persentase pencapaian terhadap target nominal. |
+| **Selisih (Rp)** | Selisih nominal antara realisasi dan target (Realisasi - Target), beserta persentasenya. Bernilai **+** jika surplus dan **-** jika masih kurang dari target. |
+| **Realisasi (Unit)** | Pencapaian **Kuantitas Terjual (unit)** aktual mitra, beserta persentase pencapaian terhadap target unit. |
+| **Selisih (Unit)** | Selisih kuantitas antara realisasi dan target (Realisasi - Target), beserta persentasenya. Bernilai **+** jika surplus dan **-** jika masih kurang dari target. |
