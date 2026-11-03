@@ -92,7 +92,7 @@ Administrator dapat langsung memberikan poin kepada mitra berdasarkan capaian re
   </span>
 </div>
 
-1. **Atur periode** melalui tombol **Filter** (contoh: *Bulanan*, September 2026). Periode inilah yang menjadi acuan perhitungan poin.
+1. **Atur periode** melalui tombol **Filter** (contoh: *Bulanan*, September 2026). Periode inilah yang menentukan realisasi yang dipakai untuk menghitung poin (lihat tabel di bawah).
 2. **Centang mitra** penerima pada kotak centang di sisi kiri setiap baris. Untuk memilih seluruh mitra pada tabel, centang kotak di header kolom **Mitra**.
 3. Tombol merah **+ Poin (N)** akan muncul di sebelah tombol **Export**, dengan **N** menunjukkan jumlah mitra yang dipilih (contoh: *+ Poin (2)*).
 4. Klik **+ Poin (N)**. Sistem akan mengarahkan Administrator ke halaman **Tambah Poin Manual** dengan data yang sudah terisi otomatis.
@@ -114,6 +114,13 @@ Administrator dapat langsung memberikan poin kepada mitra berdasarkan capaian re
   </span>
 </div>
 
+<Callout type="warn" title="Realisasi yang Diambil Mengikuti Filter Periode">
+  * Jika mitra dipilih saat filter berada dalam kondisi **Tahunan**, sistem mengambil **realisasi tahunan** mitra tersebut.
+  * Jika mitra dipilih saat filter berada dalam kondisi **Bulanan**, sistem mengambil **realisasi pada bulan yang dipilih** .
+
+  Karena itu, pastikan periode pada **Filter** sudah benar sebelum mencentang mitra dan mengklik **+ Poin**.
+</Callout>
+
 **Isian otomatis pada halaman Tambah Poin Manual:**
 
 * **Banner informasi:** Menjelaskan sumber data, contoh: *Terisi otomatis dari Target vs Realisasi (Sep 2026)*. Bulan dan tahun pada banner mengikuti periode yang difilter di halaman Realisasi Target.
@@ -122,10 +129,17 @@ Administrator dapat langsung memberikan poin kepada mitra berdasarkan capaian re
 * **Pilih Penerima:** Mitra yang dicentang sebelumnya sudah terpilih (contoh: *2 dipilih*).
 * **Poin per Penerima:** Poin setiap mitra dihitung otomatis dengan rumus:
 
-  **Poin = Realisasi (Unit) + 5% dari Realisasi (Unit)**
+  **Poin = Realisasi (Unit) + persentase bonus dari Realisasi (Unit)**
+
+  Persentase bonus dapat diubah oleh Administrator pada halaman **Pengaturan Poin** (blok **Bonus Pencapaian Target**). Contoh dengan persentase bonus 5%: mitra dengan Realisasi 49 unit mendapat 51 poin, dan mitra dengan Realisasi 20 unit mendapat 21 poin.
+* **Total:** Bagian bawah halaman menampilkan ringkasan, contoh: *Total: 72 poin untuk 2 penerima*.
+
+<Callout type="info" title="Persentase Bonus Dapat Diatur">
+  Persentase bonus pada rumus di atas tidak tetap. Ubah nilainya pada **Pengaturan Poin > Bonus Pencapaian Target > Persentase Bonus (%)**. Isi `0` jika poin yang diberikan hanya sebesar Realisasi (Unit) tanpa bonus tambahan.
+</Callout>
 
 <Callout type="info" title="Poin Masih Dapat Diubah">
-  Poin hasil perhitungan otomatis masih bisa diubah sebelum disimpan. Administrator dapat mengedit nominal poin tiap penerima, menghapus penerima dengan ikon **X**, atau menambah penerima lain. Setelah sesuai, klik **Tambah Poin** untuk menyimpan. Langkah lengkap pada halaman ini dijelaskan di dokumentasi **Leaderboard Poin**.
+  Poin hasil perhitungan otomatis masih bisa diubah sebelum disimpan. Administrator dapat mengedit nominal poin tiap penerima, menghapus penerima dengan ikon **X**, atau menambah penerima lain. Setelah sesuai, klik **Tambah Poin** untuk menyimpan..
 </Callout>
 
 ---
