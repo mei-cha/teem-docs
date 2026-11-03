@@ -5,7 +5,7 @@ icon: ShoppingBag
 
 Halaman **Pembelian Stok** digunakan oleh Administrator untuk mencatat penerimaan barang dari vendor ke gudang perusahaan di platform **Teem.id**.
 
-Melalui halaman ini, Administrator dapat mencatat surat jalan vendor, menambahkan produk yang diterima, menentukan lokasi penyimpanan, serta mencatat kuantitas dan harga pembelian barang secara akurat.
+Melalui halaman ini, Administrator dapat mencatat Surat Pengantar Barang (**SPB**) vendor, menambahkan produk yang diterima, menentukan lokasi penyimpanan, serta mencatat kuantitas dan harga pembelian barang secara akurat.
 
 ---
 
@@ -15,7 +15,7 @@ Administrator dapat melihat riwayat penerimaan barang, mengonfigurasi filter per
 
 ### 1. Memantau Riwayat & Filter Periode
 
-Secara default, halaman ini menampilkan riwayat transaksi penerimaan barang untuk periode **Bulan Ini**. 
+Secara default, halaman ini menampilkan riwayat transaksi penerimaan barang untuk periode **Bulan Ini**.
 
 <div className="my-6 text-center">
   <input type="checkbox" id="zoom-buy-stock" className="peer hidden" />
@@ -34,28 +34,49 @@ Secara default, halaman ini menampilkan riwayat transaksi penerimaan barang untu
   </span>
 </div>
 
-* **Penyesuaian Periode:** Gunakan pemilih tanggal di pojok kiri atas tabel untuk menyesuaikan rentang waktu data yang ditampilkan.
+* **Penyesuaian Periode:** Gunakan tombol pemilih periode di pojok kiri atas tabel (contoh: *Bulan Lalu*) untuk menyesuaikan rentang waktu data yang ditampilkan.
+* **Jumlah Transaksi:** Di sebelah kiri tombol Export, sistem menampilkan jumlah transaksi pada periode terpilih (contoh: *3 transaksi*).
 * **Ekspor Laporan:** Klik tombol **Export** di pojok kanan atas tabel untuk mengunduh laporan pembelian stok dalam format berkas spreadsheet (Excel/CSV) sesuai periode yang dipilih.
 
 ---
 
 ### 2. Mencatat Stok Masuk Baru
 
-Untuk mencatat penerimaan barang baru dari vendor, klik tombol **+ Tambah** di pojok kanan atas halaman. Lengkapi form **Catat Stok Masuk** dengan rincian berikut:
+Untuk mencatat penerimaan barang baru dari vendor, klik tombol **+ Tambah** di pojok kanan atas halaman. Modal **Catat Stok Masuk** akan tampil.
 
-* **Informasi Surat Jalan:**
-  * **Vendor:** Pilih nama pemasok barang yang terdaftar.
-  * **Tanggal Surat Jalan:** Tentukan tanggal resmi penerimaan barang.
-  * **No. Surat Jalan:** Masukkan nomor dokumen surat jalan dari pihak vendor.
+<div className="my-6 text-center">
+  <input type="checkbox" id="zoom-catat-stok-masuk" className="peer hidden" />
+  <label
+    htmlFor="zoom-catat-stok-masuk"
+    className="inline-block cursor-zoom-in peer-checked:fixed peer-checked:inset-0 peer-checked:z-50 peer-checked:flex peer-checked:items-center peer-checked:justify-center peer-checked:bg-black/80 peer-checked:p-4 peer-checked:cursor-zoom-out peer-checked:[&>img]:max-h-[90vh] peer-checked:[&>img]:max-w-full peer-checked:[&>img]:w-auto peer-checked:[&>img]:shadow-2xl"
+  >
+    <img
+      src="/catat-stok-masuk.webp"
+      alt="Modal Catat Stok Masuk"
+      className="max-w-full h-auto mx-auto rounded-lg border border-gray-200 shadow-sm"
+    />
+  </label>
+  <span className="block text-xs text-gray-400 mt-2">
+    Modal Catat Stok Masuk
+  </span>
+</div>
 
-* **Detail Item Produk:**
+Kuantitas (Qty) yang kamu input akan dikonversi otomatis ke satuan dasar produk sebelum disimpan ke stok. Lengkapi form dengan rincian berikut:
+
+* **Informasi SPB:**
+  * **Vendor:** Pilih nama pemasok barang yang terdaftar pada dropdown **Pilih vendor**.
+  * **Tanggal SPB:** Tentukan tanggal resmi penerimaan barang. Secara bawaan terisi tanggal hari ini dan dapat diubah melalui ikon kalender.
+  * **SPB:** Masukkan nomor dokumen SPB dari pihak vendor.
+
+* **Item Produk:**
+  * Sebelum ada item yang ditambahkan, area ini menampilkan pesan *Belum ada item ditambahkan*.
   * Klik tombol **+ Tambah Item** untuk menambahkan baris produk.
   * **Produk & Lokasi:** Pilih produk yang diterima serta **Gudang / Palet** tujuan penyimpanan.
   * **Kuantitas & Harga:** Tentukan **Satuan**, masukkan nilai **Kuantitas (Qty)**, dan isi **Harga Beli / Unit**.
-  * Jika terdapat lebih dari satu jenis produk dalam satu surat jalan, klik kembali tombol **+ Tambah Item**.
+  * Jika terdapat lebih dari satu jenis produk dalam satu SPB, klik kembali tombol **+ Tambah Item**.
 
 * **Penyimpanan Transaksi:**
-  Setelah memeriksa kembali rincian produk dan harga, klik tombol **Simpan**. Sistem akan mengonversi jumlah barang ke satuan terkecil produk dan langsung memperbarui saldo persediaan di modul **Stok Perusahaan**.
+  Setelah memeriksa kembali rincian produk dan harga, klik tombol **Simpan**. Sistem akan mengonversi jumlah barang ke satuan terkecil produk dan langsung memperbarui saldo persediaan di modul **Stok Perusahaan**. Klik **Batal** untuk menutup modal tanpa menyimpan.
 
 ---
 
@@ -70,8 +91,8 @@ Untuk mencatat penerimaan barang baru dari vendor, klik tombol **+ Tambah** di p
 | Kolom | Keterangan |
 | :--- | :--- |
 | **Tgl Masuk** | Menampilkan tanggal barang diterima di gudang. |
-| **No. Surat Jalan** | Menampilkan nomor surat jalan dari vendor. |
-| **Nama Produk / Item** | Menampilkan nama produk, jumlah, dan satuan barang yang diterima. |
+| **SPB** | Menampilkan nomor SPB dari vendor. |
+| **Nama Produk / Item** | Menampilkan nama produk, jumlah, dan satuan barang yang diterima (contoh: *10 Karton*). |
 | **Gudang** | Menampilkan lokasi gudang atau palet tempat barang disimpan. |
 | **Harga Beli / Unit** | Menampilkan harga pembelian setiap satuan barang. |
-| **Total** | Menampilkan total nilai pembelian berdasarkan barang yang diterima per item maupun per surat jalan. |
+| **Total** | Menampilkan total nilai pembelian per item, dan total keseluruhan per SPB pada baris **Total:** di bawahnya. |
