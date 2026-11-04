@@ -160,10 +160,10 @@ Pesanan berstatus **Diproses** dapat ditangani dengan dua cara, tergantung metod
 
 Pilih salah satu opsi penjemputan paket:
 
-- **Pickup:** Paket akan diambil oleh kurir ekspedisi dari lokasi asal atau gudang perusahaan.
-- **Drop Off:** Paket diantar oleh tim perusahaan ke gerai ekspedisi.
+- **Pickup:** Kurir mengambil paket dari lokasi asal (origin) atau gudang perusahaan.
+- **Drop Off:** Paket diantar sendiri oleh tim perusahaan ke gerai ekspedisi.
 
-Jika memilih **Pickup**, tentukan jadwal penjemputan pada pilihan **Jadwal Pickup**. Pilihan ini tidak tersedia jika menggunakan opsi **Drop Off**.
+Jika memilih **Pickup**, tentukan jadwal penjemputan pada pilihan **Jadwal Pickup** (*Pilih jadwal pickup*). Pilihan ini tidak tersedia jika menggunakan opsi **Drop Off**.
 
 <div className="flex flex-col sm:flex-row gap-4 my-6">
   <div className="flex-1 text-center">
@@ -202,19 +202,17 @@ Jika memilih **Pickup**, tentukan jadwal penjemputan pada pilihan **Jadwal Picku
 
 **Data Paket**
 
-Data paket terisi otomatis dan terkunci (ditandai ikon gembok), sehingga tidak perlu diisi manual:
+Data paket yang ditampilkan pada form:
 
-- **Berat (gram)**
-- **Nilai Barang (Rp):** diambil otomatis dari subtotal pesanan.
-- **Panjang (cm)**, **Lebar (cm)**, dan **Tinggi (cm)**
+- **Berat (gram):** terisi otomatis dari data pesanan.
+- **Nilai Barang (Rp):** terisi otomatis dari subtotal pesanan (keterangan *Default dari subtotal pesanan* tampil di bawah kolom).
 
 **Asuransi**
 
-Informasi asuransi ditampilkan pada form. Biaya asuransi mengikuti hasil *pricing* KiriminAja.
+Asuransi pengiriman bersifat **wajib** untuk setiap pengiriman melalui KiriminAja, **tanpa batas minimal nilai barang**. Kolom asuransi terkunci (ditandai ikon gembok) sehingga tidak dapat diubah, dan biaya asuransi mengikuti hasil *pricing* KiriminAja. Tampilannya menyesuaikan opsi penjemputan:
 
-<Callout type="warn" title="Penting">
-  Jika total **Nilai Barang (Rp)** melebihi **Rp 500.000**, asuransi pengiriman wajib digunakan untuk memberikan perlindungan terhadap risiko kerusakan atau kehilangan barang selama pengiriman.
-</Callout>
+- **Pickup:** Kolom **Asuransi** berada di samping **Jadwal Pickup** dan menampilkan *Pakai Asuransi*.
+- **Drop Off:** Ditampilkan kotak keterangan **Wajib Asuransi** di bawah **Data Paket**.
 
 Setelah form terisi, klik tombol **Cek Harga Pengiriman**.
 
@@ -228,7 +226,7 @@ Setelah pengaturan pengiriman selesai, tombol **Cetak Resi** akan muncul pada pe
 
 #### Dikirim Kurir Lain
 
-Gunakan metode ini jika pesanan dikirim menggunakan ekspedisi selain KiriminAja. Pada metode ini, **Opsi Penjemputan**, **Data Paket**, dan pengecekan harga tidak ditampilkan.
+Gunakan metode ini jika pesanan dikirim menggunakan ekspedisi selain KiriminAja. Pada metode ini, **Opsi Penjemputan**, **Data Paket**, **Asuransi**, dan pengecekan harga tidak ditampilkan.
 
 1. Pilih ekspedisi yang digunakan pada kolom **Ekspedisi**.
 2. Masukkan nomor resi pengiriman pada kolom **AWB / Nomor Resi**.
