@@ -14,12 +14,11 @@ const geistMono = Geist_Mono({
   subsets: ['latin'],
 });
 
-// Konfigurasi favicon dan title
 export const metadata: Metadata = {
   title: 'Dokumentasi Teem.id',
   description: 'Dokumentasi Panel Administrator Teem.id',
   icons: {
-    icon: '/image.png', // Menggunakan file image.png yang ada di folder app kamu
+    icon: '/image.png',
   },
 };
 
@@ -30,10 +29,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="id" suppressHydrationWarning>
-      <body className={`${geist.variable} ${geistMono.variable}`}>
-        <RootProvider>
-          {children}
-        </RootProvider>
+      <body
+        className={`${geist.variable} ${geistMono.variable} flex min-h-screen flex-col font-sans`}
+      >
+        <RootProvider>{children}</RootProvider>
       </body>
     </html>
   );

@@ -11,8 +11,14 @@
   --font-mono: var(--font-geist-mono);
 }
 
+/* PERUBAHAN: sebelumnya 1400px. 100vw membuat sidebar menempel ke kiri. */
 :root {
-  --fd-layout-width: 1400px;
+  --fd-layout-width: 100vw;
+}
+
+/* PERUBAHAN: jaga-jaga kalau nilainya ditimpa di elemen layout */
+#nd-docs-layout {
+  --fd-layout-width: 100vw !important;
 }
 
 /* ========================================
@@ -89,17 +95,18 @@ html > body[data-scroll-locked] {
 #nd-subnav {
   font-family: var(--font-geist), sans-serif;
 }
+
 /* ================================
    SIDEBAR BACKGROUND
    ================================ */
 
-   aside {
-    background-color: #f7f7f7 !important;
-    border-right: 1px solid #e5e5e5;
-  }
-  
-  /* Dark mode */
-  .dark aside {
-    background-color: #171717 !important;
-    border-right-color: #2a2a2a;
-  }
+aside {
+  background-color: #f7f7f7 !important;
+  border-right: 1px solid #e5e5e5;
+}
+
+/* Dark mode */
+.dark aside {
+  background-color: #171717 !important;
+  border-right-color: #2a2a2a;
+}
