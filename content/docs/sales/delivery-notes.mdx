@@ -1,25 +1,23 @@
 ﻿---
 title: Surat Jalan
-icon: Truck
+icon: FileText
 ---
 
-Halaman **Surat Jalan** digunakan oleh Administrator untuk mengelola dokumen resmi pengiriman barang dari gudang perusahaan kepada distributor atau mitra penerima pada platform **Teem.id**.
+Halaman **Surat Jalan** digunakan oleh Administrator untuk melihat, mencari, dan mencetak dokumen surat jalan yang terbit dari pesanan pelanggan pada platform **Teem.id**.
 
-Dokumen ini berfungsi sebagai bukti fisik penyerahan barang (*proof of delivery*) serta acuan pendukung dalam proses pengambilan maupun pengiriman logistik.
+Setiap surat jalan terhubung dengan satu nomor invoice pesanan (**No INV**) sehingga memudahkan penelusuran antara dokumen pengiriman dan transaksi asalnya.
 
 ---
 
 ## Cara Mengakses Halaman Surat Jalan
 
-Bagi Administrator yang baru pertama kali menggunakan fitur ini, Anda dapat menjangkau halaman melalui langkah navigasi berikut:
-
 1. Pada bilah navigasi kiri (*sidebar*), buka modul **Penjualan > Surat Jalan**.
-2. Sistem akan menampilkan daftar seluruh surat jalan yang telah diterbitkan beserta status penerbitannya.
+2. Sistem akan menampilkan tabel daftar seluruh surat jalan beserta status dan tombol cetak.
 
 <div className="my-6 text-center">
-  <input type="checkbox" id="zoom-surat-jalan-main" className="peer hidden" />
+  <input type="checkbox" id="zoom-surat-jalan" className="peer hidden" />
   <label
-    htmlFor="zoom-surat-jalan-main"
+    htmlFor="zoom-surat-jalan"
     className="inline-block cursor-zoom-in peer-checked:fixed peer-checked:inset-0 peer-checked:z-50 peer-checked:flex peer-checked:items-center peer-checked:justify-center peer-checked:bg-black/80 peer-checked:p-4 peer-checked:cursor-zoom-out peer-checked:[&>img]:max-h-[90vh] peer-checked:[&>img]:max-w-full peer-checked:[&>img]:w-auto peer-checked:[&>img]:shadow-2xl"
   >
     <img
@@ -29,70 +27,44 @@ Bagi Administrator yang baru pertama kali menggunakan fitur ini, Anda dapat menj
     />
   </label>
   <span className="block text-xs text-gray-400 mt-2">
-    Tampilan utama halaman Surat Jalan
+    Tampilan Halaman Surat Jalan
   </span>
 </div>
 
 ---
 
-## Panduan Pengelolaan & Penerbitan Surat Jalan
+## Panduan Pengelolaan Surat Jalan
 
-Administrator dapat membuat dokumen baru, memantau pergerakan status logistik, hingga mencetak fisik surat jalan secara mandiri.
+### 1. Pencarian, Filter & Ekspor Data
 
-### 1. Pencarian Data & Filter Cepat
+Di bagian atas tabel terdapat beberapa kontrol untuk menemukan dan mengunduh data:
 
-Gunakan kolom **Cari Surat Jalan...** di pojok kanan atas tabel untuk menyaring data dokumen berdasarkan:
-* Nomor Surat Jalan
-* Nomor Invoice Pesanan
-* Nama Mitra / Distributor Penerima
+* **Filter:** Klik tombol **Filter** (ikon kalender) untuk menyaring surat jalan berdasarkan periode.
+* **Semua Status:** Pilih status pada dropdown untuk menampilkan surat jalan dengan status tertentu, seperti **Diproses**, **Siap Diambil**, atau **Selesai**.
+* **Export:** Klik tombol **Export** untuk mengunduh rekapitulasi data surat jalan ke dalam berkas spreadsheet.
+* **Cari Surat Jalan...:** Gunakan kolom input di sebelah kanan untuk mencari surat jalan tertentu.
 
 ---
 
 ### 2. Membuat Surat Jalan Baru
 
-1. Klik tombol **+ Surat Jalan** di pojok kanan atas halaman.
-2. Pada modal form **Buat Surat Jalan**, lengkapi parameter berikut:
-   * **No. Surat Jalan:** Dibuat secara otomatis oleh sistem (*auto-generated*).
-   * **Tanggal:** Tentukan tanggal resmi penerbitan dokumen.
-   * **Pesanan:** Pilih nomor invoice pesanan mitra/distributor terkait.
-3. Klik tombol **Buat Surat Jalan** untuk menyimpan dokumen.
+Klik tombol merah **+ Surat Jalan** di pojok kanan atas halaman untuk membuat surat jalan baru.
 
 ---
 
-### 3. Pemantauan Status & Pencetakan Dokumen
+### 3. Mencetak Surat Jalan
 
-* **Indikator Status Pengiriman:**
-  * **Diproses:** Surat jalan berhasil dibuat dan barang dalam tahap penyiapan di gudang.
-  * **Siap Diambil:** Barang telah selesai disiapkan dan siap diambil armada/kurir.
-  * **Selesai:** Barang telah diterima oleh pihak penerima dan pengiriman dinyatakan tuntas.
-
-* **Pencetakan Fisik Dokumen:**
-  Pada kolom **Aksi**, klik tombol **Cetak** untuk membuka pratinjau lembar surat jalan beserta rincian unit barang dan area pengesahan (tanda tangan & stempel).
-
-<Callout type="warn" title="Pengaturan Tanda Tangan & Stempel Resmi">
-  Jika berkas tanda tangan digital dan stempel perusahaan belum muncul pada cetakan dokumen, lakukan konfigurasi terlebih dahulu melalui modul **Administrator > Pengaturan** pada kategori **Umum > Profil Perusahaan**.
-</Callout>
+Pada kolom **Aksi**, klik tombol **Cetak** di baris surat jalan yang diinginkan untuk mencetak dokumen surat jalan tersebut.
 
 ---
 
-## Ringkasan Elemen Form & Tabel
+## Struktur Tabel Surat Jalan
 
-### 1. Form Buat Surat Jalan
-
-| Elemen Form | Tipe | Fungsi & Keterangan |
-| :--- | :--- | :--- |
-| **No. Surat Jalan** | Auto Teks | Kode unik identifikasi dokumen dari sistem. |
-| **Tanggal** | Datepicker | Tanggal resmi penerbitan surat jalan. |
-| **Pesanan** | Dropdown | Opsi nomor invoice transaksi terkait. |
-| **Tombol Buat Surat Jalan** | Eksekusi | Menyimpan dan menerbitkan dokumen surat jalan. |
-
-### 2. Tabel Surat Jalan
-
-| Kolom | Fungsi dan Keterangan |
+| Kolom | Fungsi & Keterangan |
 | :--- | :--- |
-| **No. Surat Jalan** | Kode nomor dokumen pengiriman. |
-| **Tanggal** | Tanggal penerbitan dokumen. |
-| **Pesanan** | Tautan nomor invoice transaksi terkait. |
-| **Distributor** | Nama mitra atau entitas penerima barang. |
-| **Status** | Indikator progres (**Diproses**, **Siap Diambil**, atau **Selesai**). |
-| **Aksi** | Tombol **Cetak** untuk menampilkan pratinjau cetak dokumen. |
+| **No. Surat Jalan** | Nomor unik dokumen surat jalan (contoh: `006/SJ/XI/2026`). |
+| **Tanggal** | Tanggal surat jalan diterbitkan. |
+| **No INV** | Nomor invoice pesanan yang terkait dengan surat jalan tersebut. |
+| **Pelanggan** | Nama pelanggan atau mitra penerima pesanan. |
+| **Status** | Badge status surat jalan: **Diproses**, **Siap Diambil**, atau **Selesai**. |
+| **Aksi** | Tombol **Cetak** untuk mencetak surat jalan. |
