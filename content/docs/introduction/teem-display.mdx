@@ -28,6 +28,9 @@ Bilah navigasi utama di bagian atas aplikasi untuk akses cepat ke fitur global:
       className="max-w-full h-auto mx-auto rounded-lg border border-gray-200 shadow-sm"
     />
   </label>
+  <span className="block text-xs text-gray-400 mt-2">
+    Tampilan Halaman Dashboard Utama
+  </span>
 </div>
 
 Dashboard menampilkan ringkasan aktivitas dan metrik utama operasional bisnis secara langsung saat pengguna berhasil masuk ke sistem.
@@ -36,9 +39,15 @@ Dashboard menampilkan ringkasan aktivitas dan metrik utama operasional bisnis se
 
 ### Indikator Stok Perusahaan (Stat Cards)
 
+- **Sumber Produk:** Kartu stok di bagian atas dashboard menampilkan produk yang termasuk dalam daftar **Top 5 Produk**. Daftar ini diatur oleh Administrator pada modul **Pengaturan** (**Top 5 Produk**).
+- **Hanya Produk Aktif:** Produk yang berstatus **nonaktif** tidak ditampilkan pada kartu stok, meskipun termasuk dalam daftar Top 5 Produk.
 - **Total Stok:** Menampilkan jumlah persediaan produk di gudang perusahaan.
 - **Satuan Dasar:** Menggunakan satuan terkecil (Slop) untuk menjaga presisi data tanpa pembulatan desimal.
 - **Navigasi Cepat:** Klik pada kartu stok untuk langsung menuju detail modul Stok Perusahaan.
+
+<Callout type="info" title="Mengubah Produk yang Tampil pada Kartu Stok">
+  Untuk mengganti produk yang tampil pada kartu stok di dashboard, ubah daftar pada **Pengaturan > Top 5 Produk**. Pastikan produk yang dipilih berstatus **aktif** agar dapat tampil. Jika ada produk dalam daftar yang nonaktif, jumlah kartu yang tampil bisa kurang dari lima.
+</Callout>
 
 ---
 
@@ -64,7 +73,7 @@ Visualisasi lokasi operasional jaringan mitra di berbagai wilayah:
 
 | Fitur / Widget | Fungsi Utama |
 | :--- | :--- |
-| **Kartu Stok Produk** | Ringkasan persediaan barang milik perusahaan per item. |
+| **Kartu Stok Produk** | Ringkasan persediaan produk aktif yang termasuk dalam daftar Top 5 Produk (diatur di modul Pengaturan). |
 | **Grafik Statistik Pesanan** | Perbandingan volume pesanan Pusat (Biru) dan Mitra (Merah). |
 | **Peta Penyebaran Mitra** | Sebaran lokasi Distributor, Agen, dan Sub-Agen. |
 | **Pesanan Terbaru** | Daftar ringkas transaksi terbaru beserta tautan detail. |

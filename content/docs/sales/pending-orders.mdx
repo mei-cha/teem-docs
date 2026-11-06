@@ -3,7 +3,7 @@ title: Pesanan Pending
 icon: Clock3
 ---
 
-Halaman **Pesanan Pending** digunakan oleh Administrator untuk memantau daftar transaksi yang belum ditugaskan, sekaligus mengalokasikan penanganan pesanan kepada mitra secara fleksibel melalui fitur **Penugasan Pesanan** di platform **Teem.id**.
+Halaman **Pesanan Pending** digunakan oleh Administrator untuk memantau daftar transaksi yang belum ditugaskan, sekaligus mengalokasikan penanganan pesanan kepada mitra secara fleksibel melalui fitur **Penugasan Pesanan**, atau menolak pesanan yang tidak dapat dipenuhi melalui fitur **Tolak Pesanan**, di platform **Teem.id**.
 
 Melalui halaman ini, Administrator dapat mengarahkan pesanan ke mitra yang paling sesuai berdasarkan tingkatan keanggotaan (level), status keaktifan toko/mitra, maupun ketersediaan stok barang tanpa dibatasi wilayah domisili.
 
@@ -37,7 +37,7 @@ Bagi Administrator yang baru pertama kali mengakses fitur ini, Anda dapat menjan
 
 ## Panduan Fitur & Pengelolaan Pesanan
 
-Administrator dapat memanfaatkan berbagai opsi penyaringan data, penugasan mitra, hingga ekspor rekapitulasi sesuai kebutuhan operasional harian.
+Administrator dapat memanfaatkan berbagai opsi penyaringan data, penugasan mitra, penolakan pesanan, hingga ekspor rekapitulasi sesuai kebutuhan operasional harian.
 
 ### 1. Penyaringan & Rekapitulasi Data
 
@@ -63,9 +63,30 @@ Tersedia beberapa instrumen pendukung pada baris kontrol halaman untuk mempermud
 Untuk mengalokasikan transaksi kepada mitra penanggung jawab, gunakan tombol aksi pada tabel:
 
 1. Klik tombol **Penugasan** pada kolom **Aksi** di baris pesanan yang dipilih.
-2. Form **Penugasan Pesanan** akan muncul menampilkan rincian ringkas (Invoice, Pelanggan, Level, dan Riwayat Penawaran).
-3. Pada dropdown **Pilih Mitra**, tentukan mitra yang akan menangani pemrosesan pesanan tersebut.
-4. Klik tombol **Penugasan** di pojok kanan bawah modal untuk mengonfirmasi penyerahan pesanan.
+2. Form **Penugasan Pesanan** akan muncul menampilkan rincian ringkas pesanan:
+   * **Invoice:** Nomor invoice pesanan.
+   * **Pelanggan:** Nama pembuat pesanan.
+   * **Level:** Jenjang keanggotaan pelanggan (contoh: *Konsumen*).
+   * **Riwayat:** Jumlah mitra yang pernah ditawari pesanan ini (contoh: *0 mitra pernah ditawari*).
+3. Pada dropdown **Pilih Mitra** (*Pilih mitra aktif*), tentukan mitra yang akan menangani pemrosesan pesanan tersebut.
+4. Klik tombol **Penugasan** di pojok kanan bawah modal untuk mengonfirmasi penyerahan pesanan, atau **Batal** untuk menutup modal tanpa menugaskan.
+
+<div className="my-6 text-center">
+  <input type="checkbox" id="zoom-penugasan-pesanan" className="peer hidden" />
+  <label
+    htmlFor="zoom-penugasan-pesanan"
+    className="inline-block cursor-zoom-in peer-checked:fixed peer-checked:inset-0 peer-checked:z-50 peer-checked:flex peer-checked:items-center peer-checked:justify-center peer-checked:bg-black/80 peer-checked:p-4 peer-checked:cursor-zoom-out peer-checked:[&>img]:max-h-[90vh] peer-checked:[&>img]:max-w-full peer-checked:[&>img]:shadow-2xl"
+  >
+    <img
+      src="/penugasan.webp"
+      alt="Form Penugasan Pesanan"
+      className="max-w-full h-auto mx-auto rounded-lg border border-gray-200 shadow-sm"
+    />
+  </label>
+  <span className="block text-xs text-gray-400 mt-2">
+    Tampilan form Penugasan Pesanan
+  </span>
+</div>
 
 <Callout type="info" title="Kriteria Kemunculan Mitra pada Penugasan">
   Sistem melakukan penyaringan (*filtering*) mitra secara otomatis. Mitra hanya akan muncul pada pilihan penugasan jika memenuhi seluruh kriteria berikut:
@@ -74,6 +95,39 @@ Untuk mengalokasikan transaksi kepada mitra penanggung jawab, gunakan tombol aks
   3. **Toko Online:** Status toko mitra sedang dalam keadaan online untuk menerima pesanan baru.
   4. **Tidak Dibatasi Wilayah:** Penugasan dapat dilakukan secara lintas daerah.
   5. **Riwayat Penawaran (Penolakan):** Mitra yang pernah ditugaskan dan **menolak** pesanan tersebut tidak akan ditampilkan kembali pada daftar pilihan.
+</Callout>
+
+---
+
+### 3. Menolak Pesanan
+
+Jika pesanan tidak dapat dipenuhi, misalnya karena stok barang habis atau toko tutup sementara, Administrator dapat menolak pesanan tersebut:
+
+1. Klik tombol **Tolak** pada kolom **Aksi** di baris pesanan yang dipilih.
+2. Modal **Tolak Pesanan Ini?** akan muncul. Modal ini menginformasikan bahwa pesanan akan dibatalkan dan alasan penolakan akan disampaikan kepada pelanggan.
+3. Periksa kembali **Invoice** dan **Total Nilai** pesanan pada bagian ringkasan.
+4. Isi kolom **Alasan Penolakan** dengan keterangan yang jelas (contoh: *Stok barang habis, toko tutup sementara*).
+5. Klik tombol merah **Tolak Pesanan** untuk mengonfirmasi, atau **Batal** untuk menutup modal tanpa menolak.
+
+<div className="my-6 text-center">
+  <input type="checkbox" id="zoom-tolak-pesanan" className="peer hidden" />
+  <label
+    htmlFor="zoom-tolak-pesanan"
+    className="inline-block cursor-zoom-in peer-checked:fixed peer-checked:inset-0 peer-checked:z-50 peer-checked:flex peer-checked:items-center peer-checked:justify-center peer-checked:bg-black/80 peer-checked:p-4 peer-checked:cursor-zoom-out peer-checked:[&>img]:max-h-[90vh] peer-checked:[&>img]:max-w-full peer-checked:[&>img]:shadow-2xl"
+  >
+    <img
+      src="/tolak-p-pending.webp"
+      alt="Modal Tolak Pesanan dengan kolom Alasan Penolakan"
+      className="max-w-full h-auto mx-auto rounded-lg border border-gray-200 shadow-sm"
+    />
+  </label>
+  <span className="block text-xs text-gray-400 mt-2">
+    Tampilan modal Tolak Pesanan (kolom Alasan Penolakan)
+  </span>
+</div>
+
+<Callout type="warn" title="Alasan Penolakan Dilihat Pelanggan">
+  Pesanan yang ditolak akan **dibatalkan**, dan **Alasan Penolakan** yang Anda tulis akan disampaikan langsung kepada pelanggan. Gunakan bahasa yang jelas dan sopan.
 </Callout>
 
 ---
@@ -88,4 +142,4 @@ Untuk mengalokasikan transaksi kepada mitra penanggung jawab, gunakan tombol aks
 | **Ditangani** | Menampilkan status pengelola transaksi (**Pusat** atau nama mitra yang ditunjuk). |
 | **Pengiriman** | Menampilkan metode pengiriman beserta status pengirimannya. |
 | **Waktu** | Menampilkan durasi relatif sejak transaksi dibuat. |
-| **Aksi** | Tombol **Penugasan** untuk mengalokasikan pesanan kepada mitra. |
+| **Aksi** | Tombol **Penugasan** untuk mengalokasikan pesanan kepada mitra, dan tombol **Tolak** untuk menolak pesanan. |

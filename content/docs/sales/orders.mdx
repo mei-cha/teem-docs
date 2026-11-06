@@ -202,17 +202,29 @@ Jika memilih **Pickup**, tentukan jadwal penjemputan pada pilihan **Jadwal Picku
 
 **Data Paket**
 
-Data paket yang ditampilkan pada form:
+Data paket terisi otomatis dari data pesanan, tetapi **dapat diubah** oleh Admin. **Berat** dan **Nilai Barang** dipakai untuk pengecekan harga pengiriman.
 
-- **Berat (gram):** terisi otomatis dari data pesanan.
-- **Nilai Barang (Rp):** terisi otomatis dari subtotal pesanan (keterangan *Default dari subtotal pesanan* tampil di bawah kolom).
+- **Berat (gram):** default diambil dari data pesanan.
+- **Nilai Barang (Rp):** default diambil dari subtotal pesanan (keterangan *Default dari subtotal pesanan* tampil di bawah kolom).
+
+**Dimensi Paket (wajib)**
+
+Isi ukuran paket pada kolom berikut. Seluruh kolom **wajib diisi** (nilai awal `0`):
+
+- **Panjang (cm)**
+- **Lebar (cm)**
+- **Tinggi (cm)**
+
+<Callout type="info" title="Fungsi Dimensi Paket">
+  Dimensi hanya dikirim ke KiriminAja saat membuat order pengiriman dan **tidak dipakai untuk pengecekan harga pengiriman**. Meskipun tidak memengaruhi hasil **Cek Harga Pengiriman**, kolom dimensi tetap wajib diisi.
+</Callout>
 
 **Asuransi**
 
-Asuransi pengiriman bersifat **wajib** untuk setiap pengiriman melalui KiriminAja, **tanpa batas minimal nilai barang**. Kolom asuransi terkunci (ditandai ikon gembok) sehingga tidak dapat diubah, dan biaya asuransi mengikuti hasil *pricing* KiriminAja. Tampilannya menyesuaikan opsi penjemputan:
+Asuransi pengiriman bersifat **wajib** untuk setiap pengiriman melalui KiriminAja, **tanpa batas minimal nilai barang**. Kolom asuransi terkunci (ditandai ikon gembok) sehingga tidak dapat diubah, dan biaya asuransi mengikuti hasil *pricing* KiriminAja. Posisinya menyesuaikan opsi penjemputan:
 
 - **Pickup:** Kolom **Asuransi** berada di samping **Jadwal Pickup** dan menampilkan *Pakai Asuransi*.
-- **Drop Off:** Ditampilkan kotak keterangan **Wajib Asuransi** di bawah **Data Paket**.
+- **Drop Off:** Ditampilkan kotak keterangan **Wajib Asuransi** di bagian bawah form, setelah **Dimensi Paket**.
 
 Setelah form terisi, klik tombol **Cek Harga Pengiriman**.
 
@@ -222,11 +234,30 @@ Setelah form terisi, klik tombol **Cek Harga Pengiriman**.
 2. Pilih layanan yang sesuai.
 3. Klik tombol **Proses Pengiriman** di pojok kanan bawah untuk melanjutkan proses pengiriman.
 
+**Kurir dan Layanan yang Tampil**
+
+Tidak semua layanan KiriminAja ditampilkan pada hasil **Cek Harga Pengiriman**. Sistem hanya menampilkan layanan yang sesuai dengan aturan berikut:
+
+| Aturan | Penjelasan |
+| :--- | :--- |
+| **Hanya kurir yang diizinkan** | Hanya kurir yang termasuk dalam daftar kurir yang diizinkan perusahaan yang ditampilkan. Jika daftar ini kosong atau tidak dapat dimuat, **semua kurir** dari KiriminAja akan ditampilkan. |
+| **Pilihan pelanggan tetap tampil** | Layanan yang dipilih pelanggan saat *checkout* (kurir dan tipe layanan yang sama persis) tetap muncul, **meskipun kurirnya tidak ada dalam daftar yang diizinkan**. Hal ini agar pesanan yang sudah dibuat tetap dapat diproses. Layanan lain dari kurir tersebut tetap tidak ditampilkan. |
+| **Sesuai opsi penjemputan** | Hanya layanan yang cocok dengan **Opsi Penjemputan** yang Anda pilih yang ditampilkan: layanan **Pickup** jika memilih Pickup, atau layanan **Drop Off** jika memilih Drop Off. Keduanya tidak tampil bersamaan. |
+| **Data layanan harus lengkap** | Layanan dengan data tidak lengkap atau tidak valid, seperti kode atau tipe layanan kosong, atau biaya yang bukan angka maupun bernilai negatif, tidak ditampilkan. |
+
+<Callout type="info" title="Kurir yang Diharapkan Tidak Muncul?">
+  Periksa hal berikut:
+
+  1. **Opsi Penjemputan:** Pastikan Pickup atau Drop Off yang dipilih sesuai, karena layanan hanya tampil untuk salah satunya.
+  2. **Daftar kurir yang diizinkan:** Pastikan kurir tersebut sudah termasuk dalam daftar kurir yang diizinkan perusahaan.
+  3. **Ketersediaan layanan:** Layanan dengan data tidak valid dari KiriminAja tidak akan ditampilkan.
+</Callout>
+
 Setelah pengaturan pengiriman selesai, tombol **Cetak Resi** akan muncul pada pesanan tersebut. Lihat bagian **Cetak Resi dan Tracking**.
 
 #### Dikirim Kurir Lain
 
-Gunakan metode ini jika pesanan dikirim menggunakan ekspedisi selain KiriminAja. Pada metode ini, **Opsi Penjemputan**, **Data Paket**, **Asuransi**, dan pengecekan harga tidak ditampilkan.
+Gunakan metode ini jika pesanan dikirim menggunakan ekspedisi selain KiriminAja. Pada metode ini, **Opsi Penjemputan**, **Data Paket**, **Dimensi Paket**, **Asuransi**, dan pengecekan harga tidak ditampilkan.
 
 1. Pilih ekspedisi yang digunakan pada kolom **Ekspedisi**.
 2. Masukkan nomor resi pengiriman pada kolom **AWB / Nomor Resi**.
@@ -266,6 +297,43 @@ Setelah pengaturan pengiriman selesai, kolom **Pengiriman** menampilkan metode p
 | :--- | :--- | :--- |
 | Pengaturan metode pengiriman sudah selesai (status **Diproses**) | **Cetak Resi** | Mencetak resi pengiriman pesanan. |
 | Pesanan dikirim kurir dengan status **Dikirim** | **Tracking** | Melacak status pengiriman paket. |
+| Pesanan dikirim kurir dengan status **Dikirim** | **Selesai** (hijau) | Menandai pesanan telah selesai. Lihat bagian **Menyelesaikan Pesanan**. |
+
+### Menyelesaikan Pesanan
+
+Pesanan berstatus **Dikirim** menampilkan tombol hijau **Selesai** pada kolom **Aksi**, di bawah tombol **Tracking**. Tombol ini tersedia bagi dua pihak:
+
+| Pihak | Keterangan |
+| :--- | :--- |
+| **Penjual** | **Pusat** maupun **mitra** yang menangani pesanan. |
+| **Pembeli** | Pelanggan yang membuat pesanan tersebut. |
+
+<div className="my-6 text-center">
+  <input type="checkbox" id="zoom-pesanan-dikirim" className="peer hidden" />
+  <label
+    htmlFor="zoom-pesanan-dikirim"
+    className="inline-block cursor-zoom-in peer-checked:fixed peer-checked:inset-0 peer-checked:z-50 peer-checked:flex peer-checked:items-center peer-checked:justify-center peer-checked:bg-black/80 peer-checked:p-4 peer-checked:cursor-zoom-out peer-checked:[&>img]:max-h-[90vh] peer-checked:[&>img]:max-w-full peer-checked:[&>img]:w-auto peer-checked:[&>img]:shadow-2xl"
+  >
+    <img
+      src="/shipped-status-order.webp"
+      alt="Tombol Tracking dan Selesai pada pesanan berstatus Dikirim"
+      className="max-w-full h-auto mx-auto rounded-lg border border-gray-200 shadow-sm"
+    />
+  </label>
+  <span className="block text-xs text-gray-400 mt-2">
+    Tombol Tracking dan Selesai pada Pesanan Berstatus Dikirim
+  </span>
+</div>
+
+1. Pada tab **Pesanan Saya**, saring pesanan dengan status **Dikirim** pada dropdown status.
+2. Pantau perjalanan paket melalui tombol **Tracking** jika diperlukan.
+3. Klik tombol **Selesai** pada kolom **Aksi** untuk menandai pesanan selesai.
+
+<Callout type="info" title="Cukup Satu Pihak yang Menekan Selesai">
+  Pesanan otomatis berstatus **Selesai** begitu **salah satu pihak**, yaitu **penjual (Pusat atau mitra)** atau **pembeli**, sudah menekan tombol **Selesai**. Pihak lainnya tidak perlu menekan tombol yang sama.
+</Callout>
+
+Pada tab **Pesanan Mitra**, tombol **Selesai** ditekan oleh mitra pada akunnya sendiri, atau oleh pembeli pada akunnya. Admin hanya dapat melihat statusnya karena tab tersebut bersifat *read-only*.
 
 ---
 
@@ -296,16 +364,6 @@ Apabila terdapat pembatalan pesanan yang ditangani pusat, namun sudah berstatus 
   </span>
 </div>
 
-### Filter Status Pembatalan
-
-Pengguna dapat mengubah penyaringan tampilan dengan memilih opsi status pada dropdown:
-
-| Status | Keterangan |
-| :--- | :--- |
-| **Menunggu** | Menampilkan pengajuan pembatalan yang belum diproses. |
-| **Disetujui** | Menampilkan daftar pengajuan pembatalan yang disetujui oleh Admin. |
-| **Ditolak** | Menampilkan daftar pengajuan pembatalan yang ditolak oleh Admin. |
-| **Semua Status** | Menampilkan seluruh riwayat pengajuan pembatalan. |
 
 ### Menyetujui atau Menolak Pengajuan
 
@@ -324,8 +382,9 @@ Pada kolom **Aksi**, Admin dapat meninjau **Alasan Pembatalan** lalu memilih unt
 | **Pembayaran** | Menampilkan total pembayaran, status pembayaran (**Lunas** atau **Belum Bayar**), dan metode pembayaran. |
 | **Ditangani** | Menampilkan pihak yang menangani pesanan, yaitu **Pusat** atau nama mitra. |
 | **Pengiriman** | Menampilkan metode pengiriman dan status pengiriman, seperti **Menunggu**, **Diproses**, **Dikirim**, **Siap Diambil**, **Selesai**, atau **Dibatalkan**. Untuk pengiriman ekspedisi, ditampilkan juga layanan yang dipakai (misalnya **JNE · OKE**). |
+| **Tipe** | Menampilkan jenis pesanan, seperti **Pesanan** atau **Pembelian Awal**. |
 | **Waktu** | Menampilkan waktu sejak transaksi dibuat. |
-| **Aksi** | Menampilkan tombol untuk memproses pesanan, seperti **Terima**, **Tolak**, **→ Proses**, **→ Siap Diambil**, **Cetak Resi**, atau **Tracking**. |
+| **Aksi** | Menampilkan tombol untuk memproses pesanan, seperti **Terima**, **Tolak**, **→ Proses**, **→ Siap Diambil**, **Cetak Resi**, **Tracking**, atau **Selesai**. |
 
 ### Tabel Halaman Pembatalan Pesanan
 
