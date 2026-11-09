@@ -68,6 +68,7 @@
     "administrator/activity-log",
     "administrator/settings/company-profile",
     "administrator/settings/appearance",
+    "administrator/settings/stock",
     "administrator/settings/partnerships",
     "administrator/settings/orders",
     "administrator/settings/finance",

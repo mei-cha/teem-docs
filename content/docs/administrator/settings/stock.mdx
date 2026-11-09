@@ -1,0 +1,46 @@
+---
+title: Tampilkan Stok
+icon: Eye
+---
+
+Halaman **Tampilkan Stok** digunakan oleh Administrator untuk mengatur apakah **stok pusat** dapat dilihat oleh pengguna eksternal pada platform **Teem.id**.
+
+Pengaturan ini berguna jika perusahaan ingin menampilkan ketersediaan stok pusat kepada pelanggan dan mitra, atau sebaliknya menyembunyikannya.
+
+---
+
+## Cara Mengakses Halaman Tampilkan Stok
+
+1. Pada bilah navigasi kiri (*sidebar*), buka modul **Administrator > Pengaturan**.
+2. Pada panel navigasi sebelah kiri di bawah kategori **UMUM**, pilih sub-menu **Tampilkan Stok**.
+3. Sistem akan menampilkan pengaturan **Tampilkan stok pusat ke user**.
+
+<div className="my-6 text-center">
+  <input type="checkbox" id="zoom-tampilkan-stok" className="peer hidden" />
+  <label
+    htmlFor="zoom-tampilkan-stok"
+    className="inline-block cursor-zoom-in peer-checked:fixed peer-checked:inset-0 peer-checked:z-50 peer-checked:flex peer-checked:items-center peer-checked:justify-center peer-checked:bg-black/80 peer-checked:p-4 peer-checked:cursor-zoom-out peer-checked:[&>img]:max-h-[90vh] peer-checked:[&>img]:max-w-full peer-checked:[&>img]:w-auto peer-checked:[&>img]:shadow-2xl"
+  >
+    <img
+      src="/tampilkan-stok.webp"
+      alt="Tampilan Halaman Tampilkan Stok"
+      className="max-w-full h-auto mx-auto rounded-lg border border-gray-200 shadow-sm"
+    />
+  </label>
+  <span className="block text-xs text-gray-400 mt-2">
+    Tampilan Halaman Tampilkan Stok
+  </span>
+</div>
+
+---
+
+## Mengatur Tampilan Stok Pusat
+
+Gunakan sakelar (*toggle*) **Tampilkan stok pusat ke user** untuk menentukan visibilitas stok pusat:
+
+| Kondisi Sakelar | Dampak |
+| :--- | :--- |
+| **Aktif** | Pelanggan dan mitra dapat melihat stok pusat di web utama. |
+| **Nonaktif** | Stok pusat disembunyikan dari pelanggan dan mitra di web utama. |
+
+Pengaturan ini tidak memengaruhi tampilan web admin. Administrator tetap dapat melihat stok pusat melalui modul admin.
