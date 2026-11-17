@@ -3,7 +3,7 @@ title: Realisasi Target
 icon: Target
 ---
 
-Halaman **Realisasi Target** (Target vs Realisasi Penjualan) digunakan oleh Admin untuk memantau perbandingan antara target penjualan yang ditetapkan dengan capaian realisasi aktual milik setiap mitra pada platform **Teem.id**, sekaligus memberikan **poin bonus** kepada mitra berprestasi langsung dari tabel realisasi.
+Halaman **Realisasi Target** (Target vs Realisasi Pembelian) digunakan oleh Admin untuk memantau perbandingan antara target pembelian yang ditetapkan dengan capaian realisasi aktual milik setiap mitra pada platform **Teem.id**, sekaligus memberikan **poin bonus** kepada mitra berprestasi langsung dari tabel realisasi.
 
 Pencapaian dievaluasi secara komprehensif berdasarkan dua indikator utama: **Nominal Nilai Rupiah (Rp)** dan **Kuantitas Satuan Terkecil (Unit)**.
 
@@ -11,10 +11,11 @@ Pencapaian dievaluasi secara komprehensif berdasarkan dua indikator utama: **Nom
 
 ## Cara Mengakses Halaman Realisasi Target
 
-Bagi Admin yang ingin mengevaluasi pencapaian omzet dan kuantitas penjualan mitra, ikuti langkah navigasi berikut:
+Bagi Admin yang ingin mengevaluasi pencapaian omzet dan kuantitas pembelian mitra, ikuti langkah navigasi berikut:
 
 1. Pada bilah navigasi kiri (*sidebar*), buka modul **Kemitraan > Realisasi Target**.
-2. Sistem akan menampilkan tabel **Target vs Realisasi Penjualan** berisi daftar mitra beserta target, realisasi berjalan, dan selisihnya, yang dipisahkan untuk nominal (Rp) dan kuantitas (unit).
+2. Sistem akan menampilkan halaman **Target vs Realisasi Pembelian** beserta **badge indikator tahun** di sebelah judul halaman (secara *default* menampilkan tahun berjalan saat ini, misalnya `Tahun 2026`, dan akan otomatis berubah mengikuti tahun yang diset pada tombol **Filter**).
+3. Di bawahnya ditampilkan tabel daftar mitra beserta target, realisasi berjalan, dan selisihnya, yang dipisahkan untuk nominal (Rp) dan kuantitas (unit).
 
 <div className="my-6 text-center">
   <input type="checkbox" id="zoom-partners" className="peer hidden" />
@@ -41,8 +42,8 @@ Admin dapat menyaring pencapaian mitra menggunakan kombinasi filter periode, jen
 
 ### 1. Pencarian Cepat & Ekspor Data
 
-* **Pencarian Cepat:** Gunakan kolom input **Cari mitra...** di pojok kanan atas tabel untuk menemukan mitra spesifik berdasarkan nama atau ID Mitra.
-* **Export Data:** Klik tombol **Export** di sebelah kiri tombol Filter untuk mengunduh rekapitulasi data perbandingan target ke dalam berkas spreadsheet (Excel/CSV).
+- **Pencarian Cepat:** Gunakan kolom input **Cari mitra...** di pojok kanan atas tabel untuk menemukan mitra spesifik berdasarkan nama atau ID Mitra.
+- **Export Data:** Klik tombol **Export** di sebelah kiri tombol Filter untuk mengunduh rekapitulasi data perbandingan target ke dalam berkas spreadsheet (Excel/CSV).
 
 ---
 
@@ -50,13 +51,13 @@ Admin dapat menyaring pencapaian mitra menggunakan kombinasi filter periode, jen
 
 Klik tombol **Filter** di pojok kanan atas halaman untuk membuka modal **Filter Data**:
 
-* **Periode & Tahun:** Tentukan rentang waktu pemantauan (*Tahunan*, *Bulanan*, dll.) beserta acuan **Tahun** transaksi. Nilai Target, Realisasi, dan Selisih pada tabel menyesuaikan periode yang dipilih (contoh: target tahunan atau target bulan September 2026).
-* **Level Kemitraan:** Saring data berdasarkan tingkatan mitra spesifik (*Semua Level*, *Distributor*, *Agen*, *Sub Agen*).
-* **Wilayah (Hirarki Geografis):**
+- **Periode & Tahun:** Tentukan rentang waktu pemantauan (*Tahunan*, *Bulanan*, dll.) beserta acuan **Tahun** transaksi. Nilai Target, Realisasi, dan Selisih pada tabel—serta **badge indikator tahun** di samping judul halaman—akan menyesuaikan periode dan tahun yang dipilih (contoh: target tahunan atau target bulan September 2026).
+- **Level Kemitraan:** Saring data berdasarkan tingkatan mitra spesifik (*Semua Level*, *Distributor*, *Agen*, *Sub Agen*).
+- **Wilayah (Hirarki Geografis):**
   * **Provinsi:** Saring mitra berdasarkan cakupan provinsi operasional.
   * **Kab/Kota:** Batasi tampilan berdasarkan kabupaten atau kota.
   * **Kecamatan:** Batasi tampilan hingga tingkat kecamatan.
-* **Eksekusi:** Klik tombol **Terapkan** berwarna merah untuk memuat ulang data, atau klik **Reset Filter** untuk mengembalikan setelan bawaan.
+- **Eksekusi:** Klik tombol **Terapkan** berwarna merah untuk memuat ulang data, atau klik **Reset Filter** untuk mengembalikan setelan bawaan ke tahun berjalan saat ini.
 
 ---
 
@@ -64,10 +65,10 @@ Klik tombol **Filter** di pojok kanan atas halaman untuk membuka modal **Filter 
 
 Setiap baris mewakili satu mitra. Pencapaian dibaca dari dua sisi secara terpisah:
 
-* **Sisi Nominal (Rp):** kolom **Target** (baris atas), **Realisasi (Rp)**, dan **Selisih (Rp)**.
-* **Sisi Kuantitas (Unit):** target unit (baris bawah kolom **Target**), **Realisasi (Unit)**, dan **Selisih (Unit)**.
-* Di bawah angka **Realisasi** dan **Selisih** terdapat **persentase** pencapaian terhadap target. Persentase dapat melebihi 100% jika realisasi melampaui target (contoh: *2627.3%*).
-* Angka dan persentase diberi warna (hijau, oranye, merah) sebagai penanda tingkat pencapaian agar mitra yang perlu perhatian lebih mudah dikenali.
+- **Sisi Nominal (Rp):** kolom **Target** (baris atas), **Realisasi (Rp)**, dan **Selisih (Rp)**.
+- **Sisi Kuantitas (Unit):** target unit (baris bawah kolom **Target**), **Realisasi (Unit)**, dan **Selisih (Unit)**.
+- Di bawah angka **Realisasi** dan **Selisih** terdapat **persentase** pencapaian terhadap target. Persentase dapat melebihi 100% jika realisasi melampaui target (contoh: *2627.3%*).
+- Angka dan persentase diberi warna (hijau, oranye, merah) sebagai penanda tingkat pencapaian agar mitra yang perlu perhatian lebih mudah dikenali.
 
 ---
 
@@ -116,41 +117,41 @@ Admin dapat langsung memberikan poin kepada mitra berdasarkan capaian realisasin
 
 <Callout type="warn" title="Realisasi yang Diambil Mengikuti Filter Periode">
   * Jika mitra dipilih saat filter berada dalam kondisi **Tahunan**, sistem mengambil **realisasi tahunan** mitra tersebut.
-  * Jika mitra dipilih saat filter berada dalam kondisi **Bulanan**, sistem mengambil **realisasi pada bulan yang dipilih** .
+  * Jika mitra dipilih saat filter berada dalam kondisi **Bulanan**, sistem mengambil **realisasi pada bulan yang dipilih**.
 
   Karena itu, pastikan periode pada **Filter** sudah benar sebelum mencentang mitra dan mengklik **+ Poin**.
 </Callout>
 
 **Isian otomatis pada halaman Tambah Poin Manual:**
 
-* **Banner informasi:** Menjelaskan sumber data, contoh: *Terisi otomatis dari Target vs Realisasi (Sep 2026)*. Bulan dan tahun pada banner mengikuti periode yang difilter di halaman Realisasi Target.
-* **Tanggal:** Terisi tanggal hari ini.
-* **Keterangan:** Terisi otomatis mengikuti periode, contoh: *Bonus pencapaian target Sep 2026*.
-* **Pilih Penerima:** Mitra yang dicentang sebelumnya sudah terpilih (contoh: *2 dipilih*).
-* **Poin per Penerima:** Poin setiap mitra dihitung otomatis dengan rumus:
+- **Banner informasi:** Menjelaskan sumber data, contoh: *Terisi otomatis dari Target vs Realisasi (Sep 2026)*. Bulan dan tahun pada banner mengikuti periode yang difilter di halaman Realisasi Target.
+- **Tanggal:** Terisi tanggal hari ini.
+- **Keterangan:** Terisi otomatis mengikuti periode, contoh: *Bonus pencapaian target Sep 2026*.
+- **Pilih Penerima:** Mitra yang dicentang sebelumnya sudah terpilih (contoh: *2 dipilih*).
+- **Poin per Penerima:** Poin setiap mitra dihitung otomatis dengan rumus:
 
   **Poin = Realisasi (Unit) + persentase bonus dari Realisasi (Unit)**
 
   Persentase bonus dapat diubah oleh Admin pada halaman **Pengaturan Poin** (blok **Bonus Pencapaian Target**). Contoh dengan persentase bonus 5%: mitra dengan Realisasi 49 unit mendapat 51 poin, dan mitra dengan Realisasi 20 unit mendapat 21 poin.
-* **Total:** Bagian bawah halaman menampilkan ringkasan, contoh: *Total: 72 poin untuk 2 penerima*.
+- **Total:** Bagian bawah halaman menampilkan ringkasan, contoh: *Total: 72 poin untuk 2 penerima*.
 
 <Callout type="info" title="Persentase Bonus Dapat Diatur">
   Persentase bonus pada rumus di atas tidak tetap. Ubah nilainya pada **Pengaturan Poin > Bonus Pencapaian Target > Persentase Bonus (%)**. Isi `0` jika poin yang diberikan hanya sebesar Realisasi (Unit) tanpa bonus tambahan.
 </Callout>
 
 <Callout type="info" title="Poin Masih Dapat Diubah">
-  Poin hasil perhitungan otomatis masih bisa diubah sebelum disimpan. Admin dapat mengedit nominal poin tiap penerima, menghapus penerima dengan ikon **X**, atau menambah penerima lain. Setelah sesuai, klik **Tambah Poin** untuk menyimpan..
+  Poin hasil perhitungan otomatis masih bisa diubah sebelum disimpan. Admin dapat mengedit nominal poin tiap penerima, menghapus penerima dengan ikon **X**, atau menambah penerima lain. Setelah sesuai, klik **Tambah Poin** untuk menyimpan.
 </Callout>
 
 ---
 
-## Struktur Tabel Target vs Realisasi Penjualan
+## Struktur Tabel Target vs Realisasi Pembelian
 
 | Kolom | Keterangan & Deskripsi Fungsi |
 | :--- | :--- |
 | **Kotak Centang** | Memilih satu atau beberapa mitra untuk diberi poin. Kotak di header memilih seluruh mitra pada tabel. |
 | **Mitra** | Nama lengkap mitra, dengan badge **ID Mitra** unik (contoh: `MTR-0067`) dan badge **Level** kemitraan (**Distributor**, **Agen**, atau **Sub Agen**) di baris bawahnya. |
-| **Target** | Target penjualan mitra pada periode terpilih: **Nominal Rupiah (Rp)** pada baris atas dan **Kuantitas Satuan Terkecil (unit)** pada baris bawah. |
+| **Target** | Target pembelian mitra pada periode terpilih: **Nominal Rupiah (Rp)** pada baris atas dan **Kuantitas Satuan Terkecil (unit)** pada baris bawah. |
 | **Realisasi (Rp)** | Pencapaian transaksi aktual mitra dalam **Nilai Rupiah**, beserta persentase pencapaian terhadap target nominal. |
 | **Selisih (Rp)** | Selisih nominal antara realisasi dan target (Realisasi - Target), beserta persentasenya. Bernilai **+** jika surplus dan **-** jika masih kurang dari target. |
 | **Realisasi (Unit)** | Pencapaian **Kuantitas Terjual (unit)** aktual mitra, beserta persentase pencapaian terhadap target unit. Nilai ini menjadi dasar perhitungan poin bonus. |
