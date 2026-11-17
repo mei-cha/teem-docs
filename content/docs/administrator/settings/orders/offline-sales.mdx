@@ -1,0 +1,75 @@
+---
+title: Penjualan Offline
+icon: Store
+---
+
+Halaman pengaturan **Penjualan Offline** digunakan oleh Administrator untuk mengonfigurasi kategori pembeli, batas maksimal kuantitas pembelian per produk, serta kelengkapan data identitas pembeli yang wajib diisi saat mitra mencatat transaksi penjualan luring (*offline*) di panel mitra **Teem.id**.
+
+Konfigurasi yang diatur dan diaktifkan pada halaman ini akan langsung diterapkan sebagai aturan validasi formulir pada menu transaksi **Penjualan Offline** di aplikasi/panel mitra.
+
+---
+
+## Cara Mengakses Pengaturan Penjualan Offline
+
+Bagi Administrator yang ingin mengelola kategori dan aturan transaksi penjualan luring mitra, ikuti langkah navigasi berikut:
+
+1. Pada bilah navigasi kiri (*sidebar*), buka modul **Administrator > Pengaturan**.
+2. Pada panel navigasi sebelah kiri di bawah kategori **PESANAN**, pilih sub-menu **Penjualan Offline**.
+3. Sistem akan menampilkan tabel daftar kategori penjualan offline yang tersedia beserta batas kuantitas dan aturan kolom datanya.
+
+<div className="my-6 text-center">
+  <input type="checkbox" id="zoom-pengaturan-penjualan-offline" className="peer hidden" />
+  <label
+    htmlFor="zoom-pengaturan-penjualan-offline"
+    className="inline-block cursor-zoom-in peer-checked:fixed peer-checked:inset-0 peer-checked:z-50 peer-checked:flex peer-checked:items-center peer-checked:justify-center peer-checked:bg-black/80 peer-checked:p-4 peer-checked:cursor-zoom-out peer-checked:[&>img]:max-h-[90vh] peer-checked:[&>img]:max-w-full peer-checked:[&>img]:w-auto peer-checked:[&>img]:shadow-2xl"
+  >
+    <img
+      src="/penjualan-offline-sett.png"
+      alt="Tampilan Pengaturan Penjualan Offline"
+      className="max-w-full h-auto mx-auto rounded-lg border border-gray-200 shadow-sm"
+    />
+  </label>
+  <span className="block text-xs text-gray-400 mt-2">
+    Tampilan halaman Pengaturan Penjualan Offline
+  </span>
+</div>
+
+---
+
+## Panduan Pengelolaan Kategori Penjualan Offline
+
+Administrator dapat menambah kategori baru, mengatur batas maksimal pembelian, menyesuaikan persyaratan data pembeli, serta mengaktifkan atau menonaktifkan kategori transaksi:
+
+### 1. Menambah Kategori Penjualan Offline
+
+1. Klik tombol merah **+ Tambah** di pojok kanan atas halaman.
+2. Masukkan **Nama Kategori** (contoh: *Reguler*, *Reseller*, *Khusus*) beserta **Deskripsi** singkat peruntukan kategori tersebut.
+3. Tentukan **Batas Maksimal** pembelian barang per produk dalam satu kali transaksi (misalnya *2 Slop*, *7 Slop*, atau *20 Slop*).
+4. Atur persyaratan kelengkapan **Data Pembeli** (*Nama*, *No. Telp*, *Alamat*, atau *Tujuan*) dengan menandai mana kolom yang berstatus **Wajib** dan mana yang **Opsional**.
+5. Pastikan status kategori dalam keadaan **Aktif**, lalu simpan perubahan.
+
+<Callout type="info" title="Sinkronisasi ke Panel Mitra">
+  Setiap kategori yang berstatus **Aktif** akan muncul sebagai pilihan tipe pembeli saat mitra mencatat penjualan offline di panelnya. Sistem di panel mitra akan otomatis membatasi jumlah kuantitas produk sesuai **Batas Maksimal** dan mewajibkan pengisian identitas pembeli sesuai badge **Wajib** yang dikonfigurasi di sini.
+</Callout>
+
+---
+
+### 2. Mengubah Status, Edit, & Hapus Kategori
+
+Pada setiap baris kategori di tabel utama, Administrator dapat melakukan pengelolaan berikut:
+
+* **Toggle Status (Aktif / Nonaktif):** Geser tombol *switch* pada kolom **Status** untuk menampilkan atau menyembunyikan kategori tersebut dari pilihan transaksi di panel mitra tanpa menghapus datanya.
+* **Edit Kategori:** Klik ikon **Pensil** pada kolom **Aksi** untuk memperbarui nama, deskripsi, batas maksimal kuantitas, atau aturan wajib/opsional data pembeli.
+* **Hapus Kategori:** Klik ikon **Tempat Sampah** berwarna merah pada kolom **Aksi** untuk menghapus kategori penjualan offline secara permanen.
+
+---
+
+## Struktur Tabel Pengaturan Penjualan Offline
+
+| Kolom | Keterangan & Fungsi Utama |
+| :--- | :--- |
+| **Kategori** | Menampilkan nama kategori penjualan offline (misal *Reguler*, *Reseller*, *Khusus*) beserta deskripsi peruntukannya. |
+| **Batas Maksimal** | Menentukan batas maksimal kuantitas pembelian per produk dalam satu transaksi (contoh: *2 Slop per produk / transaksi*). |
+| **Data Pembeli** | Menampilkan daftar indikator kolom identitas pembeli yang harus diisi mitra di panelnya beserta status **Wajib** (merah) atau **Opsional** (abu-abu). |
+| **Status** | Tombol *toggle* untuk mengaktifkan (**Aktif**) atau menonaktifkan kategori pada panel mitra. |
+| **Aksi** | Tombol pintas ikon **Pensil** (ubah pengaturan kategori) dan **Tempat Sampah** (hapus kategori). |

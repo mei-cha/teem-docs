@@ -17,6 +17,7 @@
     "sales/dashboard",
     "sales/orders",
     "sales/pending-orders",
+    "sales/direct-sale",
     "sales/delivery-notes",
     "sales/shipping-cost-report",
 

@@ -4,7 +4,8 @@
       "pages":  [
                     "autocomplete",
                     "autocancel",
-                    "shipping-couriers"
+                    "shipping-couriers",
+                    "offline-sales"
                 ]
   }
   
